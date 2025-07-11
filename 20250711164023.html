@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 도입 TF 회의록 (2025.07.01)</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', Arial, sans-serif;
+            background: #f8fafc;
+            color: #222;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(60,60,60,.04);
+            border-radius: 18px;
+            padding: 1.1em;
+        }
+        h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 0.8em;
+        }
+        h2 {
+            font-size: 1.7em;
+            margin-top: 1.6em;
+            font-weight: 700;
+            color: #19335a;
+        }
+        h3 {
+            font-size: 1.23em;
+            margin-top: 1.2em;
+            margin-bottom:0.4em;
+            color: #234;
+            font-weight: 600;
+        }
+        .summary-table {
+            width: 100%;
+            max-width: 450px;
+            margin: 2em auto;
+            background: #f0f4fa;
+            border-collapse: collapse;
+            font-size: 1.08em;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .summary-table th {
+            background: #4255ff;
+            color: #fff;
+            font-size: 1.11em;
+            padding: 0.7em;
+            font-weight: 700;
+        }
+        .summary-table td {
+            padding: 1em 0.7em;
+            border-bottom: 1px solid #e7eaf2;
+            font-size:1em;
+        }
+        .summary-table tr:last-child td {
+            border-bottom: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1em;
+            background: #fafdff;
+            margin-top: 1.2em;
+            margin-bottom: 1.7em;
+            border-radius:12px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 0.65em;
+            text-align: left;
+        }
+        th {
+            background: #eef1f7;
+            font-weight: 600;
+            color: #334;
+        }
+        .section {
+            margin: 0 auto 2.2em auto;
+        }
+        .insights, .plans, .evaluation {
+            background: #e7f2fa;
+            padding: 1.4em 1.1em;
+            margin-bottom:2em;
+            border-radius: 10px;
+            font-size: 1.08em;
+            line-height:1.77em;
+        }
+        @media (max-width:600px) {
+            .container {padding: 0.4em;}
+            h1 {font-size:1.6em;}
+            h2 {font-size: 1.28em;}
+            .summary-table, table {font-size:0.96em;max-width:100%;}
+            th,td {padding:0.51em;}
+        }
+        strong {color:#163075;}
+        .name {font-weight:700;color:#3d4e80;}
+        .minor {font-size:0.92em;color:#8a94b5;}
+    </style>
+</head>
+<body>
+
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+<div class="container">
+    <h1>AI 도입 TF<br><span class="minor">1차 회의록</span></h1>
+    <table class="summary-table">
+        <tr>
+            <th>주요 골자</th>
+            <th>핵심 요약</th>
+        </tr>
+        <tr>
+            <td>회의일시</td>
+            <td>2025년 7월 1일(화) 오후 3:32 ~ 4:08</td>
+        </tr>
+        <tr>
+            <td>참석자</td>
+            <td>임경택(IT), 이은홍(기획), 김정문, 이유라, 강수정, 이인용, 김현주, 이영주, 김세아, 윤태현, 조재훈 외</td>
+        </tr>
+        <tr>
+            <td>주요목표</td>
+            <td><strong>m365 코파일럿 파일럿 도입</strong>, <br>혁신금융서비스 신청 및 인가, 향후 사내 AI 서비스 활용 기반 마련</td>
+        </tr>
+        <tr>
+            <td>핵심 논의</td>
+            <td>TF 역할 및 방향성, 각자 역할 분담, 타 금융사 사례 조사, m365 파일럿 진행 방식, 내부 지식 내재화 방안, 보안 및 법적 이슈 대응, 문서/자료 공유, 실현 가능 목표설정</td>
+        </tr>
+        <tr>
+            <td>주요 과제</td>
+            <td>혁신금융서비스 신청 준비, m365 코파일럿 활용가이드 검토, <br>내부 교육·소통 강화, 부서별 필요 요건 수집</td>
+        </tr>
+    </table>
+
+    <div class="section">
+        <h2>1. 참석자 및 소개</h2>
+        <table>
+            <tr>
+                <th>이름</th>
+                <th>부서/소속</th>
+                <th>주요 역할</th>
+            </tr>
+            <tr>
+                <td class="name">임경택</td>
+                <td>IT 개발부 / 팀장<br>(TF장)</td>
+                <td>TF 총괄, AI 전략 추진, 내부 조정 및 소통, m365 코파일럿 주도</td>
+            </tr>
+            <tr>
+                <td class="name">이은홍</td>
+                <td>증권 경영기획실</td>
+                <td>혁신금융 서비스 신청 지원, TF 관리 지원</td>
+            </tr>
+            <tr>
+                <td class="name">김정문</td>
+                <td>IT 개발부 (모바일)</td>
+                <td>시스템 설계 및 구축, IT 지원</td>
+            </tr>
+            <tr>
+                <td class="name">이유라</td>
+                <td>IT 운영부 운영지원팀</td>
+                <td>m365 파일럿 운영, 인프라 관리</td>
+            </tr>
+            <tr>
+                <td class="name">강수정</td>
+                <td>업무개발부</td>
+                <td>혁신금융 서비스 기획 및 신청 주도</td>
+            </tr>
+            <tr>
+                <td class="name">이인용</td>
+                <td>플랫폼 솔루션부(증권)</td>
+                <td>고객 서비스 측면 AI 적용 기획, 업계 사례 조사</td>
+            </tr>
+            <tr>
+                <td class="name">김현주</td>
+                <td>컴플라이언스부</td>
+                <td>내부 통제, 규제/법무, 컴플라이언스 요건 도출</td>
+            </tr>
+            <tr>
+                <td class="name">이영주</td>
+                <td>정보보호부</td>
+                <td>보안 요건 제시, 보안 정책 검토 및 설계, 정보보호 지원</td>
+            </tr>
+            <tr>
+                <td class="name">김세아</td>
+                <td>카사코리아</td>
+                <td>AI 프로젝트 경험 공유, 비상근 AI 자문, 업계 네트워킹</td>
+            </tr>
+            <tr>
+                <td class="name">윤태현</td>
+                <td>경제연구소 IT플랫폼센터</td>
+                <td>AI 알고리즘 현업적용, 기술 노하우 기여</td>
+            </tr>
+            <tr>
+                <td class="name">조재훈</td>
+                <td>리서치센터</td>
+                <td>AI 모델 개발 실제 경험, 실무 적용 사례 제공</td>
+            </tr>
+            <tr>
+                <td>외 기타</td>
+                <td>장민철, 박종호(교육중)</td>
+                <td>시스템 아키텍처, 사내 AI 교육 로드맵 지원</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>2. TF 결성 배경 및 목적</h2>
+        <ul style="font-size:1.12em;line-height:1.8em;margin-left:-0.5em;">
+            <li>금융시장·IT 업계 내 <strong>생성형 AI·코파일럿 확산 추세</strong> 대응</li>
+            <li><strong>사내 업무 효율성·지식 내재화·고객 서비스 혁신</strong>을 위한 AI 대응력 확보</li>
+            <li>구체적 첫 단계: <strong>m365 코파일럿 파일럿 도입 및 실제 활용</strong></li>
+            <li><strong>혁신금융서비스</strong> 신청 및 인가를 통한 합법적 시범운영</li>
+            <li>내부(임직원), 외부(고객) 대상 향후 AI 접점 발굴·서비스 아이디어 확장</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. 주요 논의 및 상세 내용</h2>
+        <h3>3.1. TF 운영 방안 및 역할 분담</h3>
+        <ul style="line-height:1.85em;">
+            <li>
+                상근조: 임경택, 김정문, 이유라, 강수정(본사 7층)<br>
+                비상근조: 각 소속부서 업무 병행, 지정 시 미팅 및 서포트
+            </li>
+            <li>상근자 업무역할
+                <ul>
+                    <li><b>강수정</b>: 혁신금융서비스 기획 및 신청(주도)</li>
+                    <li><b>김정문</b>: 시스템 설계/구축 주축</li>
+                    <li><b>이유라</b>: m365 관련 운영 주체</li>
+                </ul>
+            </li>
+            <li>비상근자 역할
+                <ul>
+                    <li><b>김현주/이영주</b>: 컴플라이언스·정보보호 요건 도출 및 점검</li>
+                    <li><b>이인용</b>: 고객 서비스 아이디어, 타사 현황조사</li>
+                    <li><b>김세아, 윤태현, 조재훈</b>: AI 활용경험·외부 사례·실전 코드/프롬프트 제공</li>
+                </ul>
+            </li>
+            <li>공용 TF룸 이용: 상근 4석+비상근 2석 / 메일 2시간 단위 탄력적 사용</li>
+        </ul>
+
+        <h3>3.2. 추진 목표, 일정, 과제</h3>
+        <table>
+            <tr>
+                <th>과정</th>
+                <th>주요 내용</th>
+            </tr>
+            <tr>
+                <td>1차 목표</td>
+                <td><b>m365 코파일럿 파일럿 도입 → 신청 준비(~9.15)</b></td>
+            </tr>
+            <tr>
+                <td>2차 목표</td>
+                <td>혁신금융 서비스 인가 및 실제 활용케이스 확보, 실제 활용 효과 검증</td>
+            </tr>
+            <tr>
+                <td>추가 추진</td>
+                <td>내부 AI 서비스 기획 및 아이디어화, 실질적 업무 적용 가능성 검증, 필요시 추가 플랫폼(스몰 LLM) 검토/도입 사전성 검증</td>
+            </tr>
+        </table>
+        <ul style="color:#006cbf;font-size:1.02em;line-height:1.6em;margin-left:-0.7em;">
+            <li>혁신금융 서비스 신청 1차 마감 9월 15일 (분기 단위 신규 접수)</li>
+            <li>타 금융사(최대 26곳) m365 파일럿 도입·인가 사례 참고 및 표준안 확보</li>
+            <li>컴플라이언스 및 정보보호부 협력 강화(규제/보안 특례 이슈)</li>
+            <li>AI 관련 문서공유 효율화 방안 강구 (사내외 계정, Teams 활용 등)</li>
+            <li>파일럿 효과 증명을 위한 사용사례 수집 및 TF 내외 적극적 학습 독려</li>
+        </ul>
+
+        <h3>3.3. 현안 및 실무상 쟁점・논의 요약</h3>
+        <ul style="line-height:1.7em;">
+            <li>참석자들 다수 AI 실무 깊은 경험은 없으나, <b>학습·적용 의지 밝힘</b></li>
+            <li>AI 적용 사례/뉴스는 많은 변화 체감, 구체적 실무는 앞으로 확장 예정</li>
+            <li>회사 내 <b>컴플라이언스/정보보호 이슈 관리 매우 중요</b><br>
+                개인정보, 망분리, 자료유출 등 <b>법적 제약</b>에 맞춰 서비스 기획 필요</li>
+            <li><b>타 금융권 m365 사례</b> 최대한 확보 예정 (파트너사·SI·컨설팅과 연계도 의논)</li>
+            <li>문서관리·공유(계열사 포함) 방안 마련 필요, MS Teams 등 대안 검토</li>
+            <li>비상근 멤버는 특정 미션/조사/자료취합 등 각자 역할 할당 예정</li>
+            <li>회의를 통한 <b>개방적 의사소통 분위기 조성</b> 및 자유로운 피드백 요청</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. 내부 인사이트 및 논의 정리</h2>
+        <div class="insights">
+            <ul>
+                <li><b>초기 TF 주요 멤버 다수는 “AI” 실전 경험 부족을 솔직히 밝힘</b><br>
+                하지만 실제 <span style="color:#365ebf;font-weight:600;">외부 사례, 파일럿 활용 기회</span>를 통해 학습하고 내재화하려는 강한 의지 확인</li>
+                <li><b>외부(카드사/카사 등) 파일럿 정보·경험 적극적으로 공유</b> / 사내외 네트워킹 활용 필요성 공감</li>
+                <li><b>컴플라이언스와 정보보호</b> 등 내부 통제‧보안 이슈, 혁신과 상충 가능성 ⇒ “중간점” 확보를 최우선 과제로 상정</li>
+                <li>실무 담당자의 <b>업무 효율성, 자료 정리, 문서 작업에서 AI 활용 이점</b>에 대한 기대</li>
+                <li><b>조재훈, 윤태현 등 AI 실전 경험자</b>들의 비즈니스 적용 경험 공유로 IT-실무 간 시너지 예상</li>
+                <li>실행 정책 설계 외에도 <b>팀 내 직접적인 AI “파일럿 테스트”와 공유, 실제 성과</b>가 매우 중요하게 부각</li>
+                <li><b>공유 협업의 제약(계열사/망 분리 등)</b> 등 현실적 한계에 대한 논의와 함께 “유연하고 합리적 대안” 고민 병행</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. 향후 계획 (Actions & Next Steps)</h2>
+        <div class="plans">
+            <ul>
+                <li><b>m365 코파일럿 파일럿 도입</b>: 라이선스 확보/업그레이드, 사용계정 할당, 실제 활용 환경 구축</li>
+                <li><b>혁신금융서비스 신청서 작성 및 사내외 최신 사례 조사(9월 15일까지 1차 완료 목표)</b></li>
+                <li>업계 기존 사례(SI/파트너사/금융기관 등) 수집 및 정보공유 채널 활성화</li>
+                <li>컴플라이언스, 정보보호 요건 정리 및 망 분리, 자료공유 안전성 방안 설계</li>
+                <li>팀 계기별 <b>AI교육 정보 및 수강 현황 공유</b>, 실제 업무 활용 프롬프트/코드 등 사례자료 TF내 공유</li>
+                <li>비상근 멤버별 “조사/아이디어/자료정리” 역할 개별 미션 부여 예정</li>
+                <li>효과 검증을 위한 내부 테스트 및 사례화, 개선점 도출</li>
+                <li>예정 일정과 과제: <br>① TF 각 역할별 업무분장 확정 및 실행<br>② 파일럿 도입/테스트 완료 후 피드백 수렴<br>③ 성공적 파일럿 → 추가 AI 서비스 기획 착수</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>6. 회의 평가 및 방향성</h2>
+        <div class="evaluation">
+            <b>총평:</b> <br>
+            본 TF 회의는 <b>구성원의 경험 부족 솔직 인식</b>과 함께, 실질적 <b>학습·실행 중심, 개방형 소통문화</b>의 가능성을 확인한 자리였다. <br><br>
+            <ul>
+                <li>현실성 있는 목표설정(파일럿 도입→혁신금융서비스 신청→내부 적용 검증)으로 업무가 관념에 머물지 않고 실행중심으로 출발</li>
+                <li>혁신추진/내부통제(법무·보안) 간 균형 고민, IT 담당자와 실무·현장 인사이트(자문)의 연결, 효과적 활용사례의 적극적 발굴 의지 등 ‘팀 역량’이 충분히 조화될 가능성 제시</li>
+                <li>아직 “실무적 전문성” “실제 도입 성공 경험”이 절대적으로 부족하나, 각자 학습/정보공유 의지와 네트워킹 사례 융합이 이 TF 발전의 열쇠가 됨을 시사</li>
+            </ul>
+            <b>냉정한 방향성 평가:</b> <br>
+            현실적 난관(혁신금융 신청 절차와 인가 지연, 실질적인 보안 및 망분리 규제, 내부 교육/지식 공백 등)이 분명히 존재하나, <b>“현실 가능한 범위의 첫걸음”에 초점</b>을 맞춘 전략적 방향은 타당하다.<br>
+            단, 향후 <span style="color:#bf5243;font-weight:600;">구체적 책임 배분·과정별 피드백·실행 결과 모니터링</span>이 필수적이며, <b>실제적 성과와 개선</b>으로 신속히 이어지지 못하면 팀 동력 약화 우려.<br>
+            “내부 소통·배움-실행-공유”의 구조적 림보를 뛰어넘는 실행력 확보가 관건.
+        </div>
+    </div>
+
+    <div class="section" style="text-align:center;font-size:1.06em;margin:2em auto 1.8em auto; color:#4255ff;">
+        <b>이상으로 AI 도입 TF 1차 회의록을 마칩니다.<br>지속적 정보 공유와 실행을 통해 혁신을 이루겠습니다.</b>
+    </div>
+</div>
+</body>
+</html>
