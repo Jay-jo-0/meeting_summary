@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대신증권 AI 도입 TFT 회의록</title>
+    <style>
+        /* 기본 모바일 우선 스타일 */
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.2em; /* 메인 제목 */
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        h2 {
+            font-size: 1.8em; /* 소제목 */
+            color: #0056b3;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-size: 1.4em; /* 중소제목 */
+            color: #0056b3;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-size: 1.2em; /* 세부 제목 */
+            color: #0056b3;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        strong {
+            color: #d32f2f; /* 강조 색상 */
+        }
+        em {
+            font-style: normal;
+            color: #007bff; /* 다른 강조 색상 */
+        }
+        table {
+            width: 100%; /* 모바일에서 전체 너비 */
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            word-break: break-word; /* 긴 텍스트 줄바꿈 */
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .summary-box {
+            background-color: #e0f7fa;
+            border-left: 5px solid #00bcd4;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .insight-box, .next-steps-box, .evaluation-box {
+            background-color: #fffde7;
+            border-left: 5px solid #ffeb3b;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .next-steps-box {
+            border-color: #4caf50;
+            background-color: #e8f5e9;
+        }
+        .evaluation-box {
+            border-color: #f44336;
+            background-color: #ffebee;
+        }
+        /* 모바일 기기 (최대 600px) */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.5em; }
+            h3 { font-size: 1.2em; }
+            h4 { font-size: 1.1em; }
+            body { padding: 10px; }
+            .container { padding: 15px; }
+            table, th, td { font-size: 0.85em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>대신증권 AI 도입 TFT 회의록</h1>
+
+        <div class="summary-box">
+            <h2><strong style="color:#0056b3;">회의 핵심 요약</strong></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>회의 주제</strong></td>
+                        <td>대신증권 AI 도입 태스크포스(TFT) 발족 및 운영 방향 논의</td>
+                    </tr>
+                    <tr>
+                        <td><strong>주요 목표</strong></td>
+                        <td>
+                            <ol>
+                                <li><strong>단기:</strong> M365 코파일럿(Copilot) 파일럿 도입 및 혁신금융 서비스 인가 획득 (1차 목표: 9월 15일 신청)</li>
+                                <li><strong>장기:</strong> AI 관련 사내 지식 내재화 및 직원/고객 대상 AI 서비스 아이디어 발굴 및 구체화</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>핵심 결정</strong></td>
+                        <td>
+                            <ul>
+                                <li>내부 LLM 구축 대신 M365 코파일럿 도입으로 현실적 목표 설정</li>
+                                <li>혁신금융 서비스 신청을 위한 역할 분담 및 협력 강조</li>
+                                <li>TF룸 좌석 및 업무망 PC 확보, 비상근 인력의 유연한 참여 독려</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>주요 논의</strong></td>
+                        <td>
+                            <ul>
+                                <li>참석자별 자기소개 및 AI 관련 배경 공유</li>
+                                <li>혁신금융 서비스 인가 기한(6개월)의 현실성 및 타사 사례 활용 방안</li>
+                                <li>망분리 규제 하 M365 코파일럿 도입 방안 및 정보보호/컴플라이언스 요건 논의</li>
+                                <li>TF 자료 공유 방안 (M365 활용 검토)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>향후 계획</strong></td>
+                        <td>
+                            <ul>
+                                <li>상근/비상근 역할 분담에 따른 개별 미션 부여</li>
+                                <li>M365 코파일럿 사전 학습 및 활용 계정 부여 검토</li>
+                                <li>혁신금융 서비스 신청 준비 및 관련 부서(정보보호, 컴플라이언스) 협의 지속</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>회의 개요</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>항목</th>
+                    <th>내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>회의명</strong></td>
+                    <td>대신증권 AI 도입 TFT 발족 및 운영 방안 논의</td>
+                </tr>
+                <tr>
+                    <td><strong>일시</strong></td>
+                    <td>2025년 7월 1일 (화) 오후 3시 32분 (총 36분 48초)</td>
+                </tr>
+                <tr>
+                    <td><strong>장소</strong></td>
+                    <td>TF 룸 (본사 7층)</td>
+                </tr>
+                <tr>
+                    <td><strong>참석자</strong></td>
+                    <td>
+                        <ul>
+                            <li><strong>임경택 팀장</strong> (IT 개발부, TFT 팀장)</li>
+                            <li><strong>이은홍 책임</strong> (증권 경영기획실)</li>
+                            <li><strong>김정문 책임</strong> (IT 개발부, 모바일 아이폰 개발)</li>
+                            <li><strong>이유라 책임</strong> (IT 운영부 운영지원팀)</li>
+                            <li><strong>강수정 팀장</strong> (업무개발부)</li>
+                            <li><strong>이인용 과장</strong> (증권 플랫폼 솔루션부)</li>
+                            <li><strong>김현주 차장</strong> (컴플라이언스부)</li>
+                            <li><strong>이영주 책임</strong> (증권 정보보호부)</li>
+                            <li><strong>김세아</strong> (카사코리아)</li>
+                            <li><strong>윤태현 선임</strong> (경제 연구소 IT 플랫폼 센터)</li>
+                            <li><strong>조재훈 책임</strong> (리서치 센터)</li>
+                            <li><em>(불참: 장민철 차장 - IT 운영부, 박종호 팀장 - 교육 중)</em></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>주요 논의 내용</h2>
+
+        <h3>1. 참석자 소개 및 AI 관련 배경 공유</h3>
+        <p>
+            회의는 임경택 팀장의 발령 첫날을 맞아 참석자 간의 원활한 소통과 유대감 형성을 목표로 시작되었습니다.
+            각 참석자들은 본인 소개와 함께 AI에 대한 관심 및 경험을 간략하게 공유했습니다.
+        </p>
+        <ul>
+            <li><strong>임경택 팀장 (TFT 팀장):</strong> AI 전문가는 아니지만, 회사의 목표 달성을 위해 최선을 다하겠다고 밝히며, TF가 무겁지 않고 원활한 소통의 장이 되기를 희망했습니다. 개인적으로 AI 학습 기회가 되기를 기대했습니다.</li>
+            <li><strong>이은홍 책임 (증권 경영기획실):</strong> 기획실에서 유일하게 파견되어 송구한 마음이 있으나, 최선을 다해 TF를 돕겠다고 전했습니다.</li>
+            <li><strong>김정문 책임 (IT 개발부):</strong> 모바일 아이폰 개발 담당으로 상근하며, AI에 대해 배우고 새로운 것을 만들어보고 싶다고 포부를 밝혔습니다.</li>
+            <li><strong>이유라 책임 (IT 운영부):</strong> 발령받은 지 얼마 되지 않아 TF에 합류하게 되었으며, 잘 부탁드린다고 인사했습니다.</li>
+            <li><strong>강수정 팀장 (업무개발부):</strong> AI에 대한 전문 지식은 부족하다고 밝혔습니다.</li>
+            <li><strong>이인용 과장 (증권 플랫폼 솔루션부):</strong> AI 관련 직접적인 경험은 없으나, 이번 기회를 통해 AI를 깊이 공부하고 TF 목표 달성에 기여하겠다고 다짐했습니다.</li>
+            <li><strong>김현주 차장 (컴플라이언스부):</strong> 비상근임을 밝히며 자주 만나지 못할 것이라고 언급했습니다.</li>
+            <li><strong>이영주 책임 (증권 정보보호부):</strong> 보안 관련 요건 및 제약 사항 설계 구축 역할을 맡았으나, 혼자서는 불가능하며 부서 내 협업을 통해 진행할 것임을 강조했습니다. 임경택 팀장은 정보보호부의 상근 인력 요청이 감사 기간으로 인해 불발된 점을 언급하며 이영주 책임의 역할을 강조했습니다.</li>
+            <li><strong>김세아 (카사코리아):</strong> 현재 카사에서 챗봇 TFT를 진행 중이며, AI 관련 전문가로 평가받았습니다. 생산형 AI 관련 경험을 공유하며 많은 도움이 될 것으로 기대되었습니다.</li>
+            <li><strong>윤태현 선임 (경제 연구소 IT 플랫폼 센터):</strong> PAS 서비스에서 GPT API를 활용한 뉴스 콘텐츠 요약 개발 경험을 공유했습니다. PAS는 내부 직원 및 영업점 대상 시스템이며, TF 멤버들이 계정 신청을 통해 해당 AI 활용 사례를 직접 체험해 볼 수 있도록 임경택 팀장의 계정 공유가 제안되었습니다.</li>
+            <li><strong>조재훈 책임 (리서치 센터):</strong> 개인적으로 GPU를 구매하여 AI 학습을 시킬 정도로 깊이 있는 AI 활용 경험을 보유한 전문가로 소개되었습니다. 데이터 정제 후 생성형 AI를 활용하는 방식을 사용하고 있으며, 그의 활용 사례 공유가 TF에 큰 도움이 될 것으로 기대되었습니다.</li>
+        </ul>
+
+        <h3>2. 사내 AI 교육 현황 공유</h3>
+        <p>
+            현재 사내에서 진행 중인 AI 교육에 대한 논의가 있었습니다.
+        </p>
+        <ul>
+            <li><strong>박종호 팀장:</strong> 현재 생성형 AI 심화 교육에 참석 중이며, 교육 내용 공유의 필요성이 제기되었습니다.</li>
+            <li><strong>이은홍 책임:</strong> 기본 1차 교육을 수강했으며, 프롬프트 작성의 중요성(원하는 답변에 도달하기 위한 반복적인 스크립트 수정)을 깨달았다고 공유했습니다. 코딩 지식 없이도 파이썬 코드 작성을 프롬프트로 이끌어내는 경험을 언급했습니다.</li>
+        </ul>
+
+        <h3>3. TFT의 명확한 목표 및 방향성 설정</h3>
+        <p>
+            임경택 팀장은 이번 TF가 단순한 학습 모임이 아닌, 명확한 목표와 결과물을 도출해야 하는 TF임을 강조하며 주요 목표를 제시했습니다.
+        </p>
+        <h4>3.1. 단기 목표: M365 코파일럿(Copilot) 파일럿 도입</h4>
+        <ul>
+            <li><strong>목표 설정 배경:</strong> 이전에 기획실에서 추진했던 내부 스몰 LLM(Large Language Model) 구축은 현실적으로 달성하기 어려운 목표로 판단되었습니다. 대신, 타사들이 이미 많이 도입하고 있는 M365 코파일럿 파일럿 도입을 첫 번째 목표로 설정했습니다.</li>
+            <li><strong>기대 효과:</strong> 사내 AI 사용 사례를 가장 많이 늘릴 수 있는 효과적인 방법으로 판단되며, 이를 통해 직원들이 생성형 AI 서비스에 대한 아이디어를 발굴하고 확산시키는 계기가 될 것으로 기대됩니다.</li>
+            <li><strong>실현 방안:</strong> M365 코파일럿 도입을 위한 <strong>혁신금융 서비스 신청 및 인가 획득</strong>이 핵심 과제입니다.</li>
+        </ul>
+        <h4>3.2. 장기 목표: AI 지식 내재화 및 서비스 구체화</h4>
+        <ul>
+            <li>M365 코파일럿 도입 외에, 자체적인 AI 서비스 기획 및 제공을 위한 기반 지식 축적과 내재화 과정을 거칠 예정입니다.</li>
+            <li>내부 플랫폼 도입은 비용이 많이 들고 구체적인 아이디어가 필요하므로, 현업 업무와 밀접한 케이스 스터디를 통해 실현 가능한 서비스를 도출하는 데 중점을 둘 것입니다.</li>
+            <li>기술의 거창함이나 비용보다는 <strong>실현 가능한 목표로 단기간에 접근 가능한 서비스 제공</strong>이 중요하다고 강조되었습니다.</li>
+        </ul>
+
+        <h3>4. TFT 운영 방안 및 역할 분담</h3>
+        <p>
+            TF의 효율적인 운영을 위해 대략적인 역할 분담이 논의되었습니다.
+        </p>
+        <h4>4.1. 인력 구성 및 근무 환경</h4>
+        <ul>
+            <li><strong>상근 인력 (4명):</strong> 임경택 팀장, 김정문 책임, 이유라 책임, 강수정 팀장. 본사 7층 TF룸에 상주 근무합니다.</li>
+            <li><strong>비상근 인력 (7명):</strong> 김현주 차장, 이영주 책임, 김세아, 윤태현 선임, 조재훈 책임, 이인용 과장, 이은홍 책임. 일부 비상근 인력은 매일 2시간 근무가 요청되었으나, 현재 TF룸 좌석(상근 4석, 비상근 2석) 제약으로 유연한 시간 조정이 필요합니다.</li>
+            <li><strong>TF룸 PC:</strong> 인터넷망과 업무망 PC가 모두 마련되어 있으며, 비상근 인력은 필요시 본인 사번으로 로그인하여 사용 가능합니다. 감사 기간 종료 후 좌석 추가 확보 가능성이 언급되었습니다.</li>
+            <li><strong>조재훈 책임:</strong> 개인 노트북 사용이 더 효율적이므로 별도 업무망 PC는 불필요합니다.</li>
+            <li><strong>비상근 인력 근무 방식:</strong> TF룸에서 상주하기보다는 본인 자리에서 업무를 준비하고, 회의나 미팅 시 TF룸으로 모이는 형태가 될 것으로 예상됩니다.</li>
+        </ul>
+        <h4>4.2. 주요 역할 분담 (안)</h4>
+        <ul>
+            <li><strong>강수정 팀장 (상근):</strong> <strong>혁신금융 서비스 기획 및 신청</strong> 주도.</li>
+            <li><strong>김정문 책임 (상근):</strong> <strong>시스템 관련 설계 및 구축</strong> 중심 진행.</li>
+            <li><strong>이유라 책임 (상근):</strong> <strong>M365 코파일럿 관련 업무</strong> 주도.</li>
+            <li><strong>김현주 차장 (비상근, 컴플라이언스부):</strong> <strong>생성형 AI 도입 시 내부 통제 이슈 및 필요 요건 도출</strong> 주도. 혁신과 통제 사이의 균형점 모색이 중요합니다.</li>
+            <li><strong>이영주 책임 (비상근, 정보보호부):</strong> <strong>보안 관련 요건 및 제약 사항 설계 구축</strong> 주도. 부서 내 협업을 통해 진행할 예정입니다.</li>
+            <li><strong>이인용 과장 (비상근, 플랫폼 솔루션부):</strong> <strong>고객 서비스 기획 측면에서 AI 도입 방안</strong> 모색. 타사 사례 조사 및 대신증권에 적합한 AI 서비스 아이디어 발굴.</li>
+            <li><strong>이은홍 책임 (비상근, 경영기획실):</strong> 강수정 팀장을 보좌하여 <strong>혁신금융 서비스 신청 지원</strong>.</li>
+            <li><strong>장민철 차장 (불참, IT 운영부):</strong> <strong>시스템 구축 관련 아키텍처</strong> 지원.</li>
+            <li><strong>박종호 팀장 (불참, 교육):</strong> <strong>M365 코파일럿 사내 전파 교육 및 향후 AI 교육 로드맵</strong> 고민.</li>
+        </ul>
+
+        <h3>5. 혁신금융 서비스 신청 관련 질의응답</h3>
+        <p>
+            혁신금융 서비스 신청에 대한 현실적인 우려와 방안이 논의되었습니다.
+        </p>
+        <ul>
+            <li><strong>김현주 차장 질의:</strong> 6개월 안에 혁신금융 서비스 신청 및 인가가 물리적으로 가능한가?</li>
+            <li><strong>임경택 팀장 답변:</strong> 물리적으로는 어려울 수 있으나, 회사에서 내려온 미션이므로 <strong>9월 15일 신청을 목표</strong>로 진행할 예정입니다. 분기별 신청 기한이 존재하며, 금융위 일정 지연 가능성도 인지하고 있습니다.</li>
+            <li><strong>중요 고려사항:</strong> 혁신금융 서비스 신청에는 컴플라이언스 요건, 시스템 요건 등 다양한 요소가 포함되므로 전원이 협력해야 합니다.</li>
+            <li><strong>긍정적 요인:</strong> <strong>타사(26개사)에서 이미 M365 코파일럿 관련 혁신금융 서비스 인가를 받은 사례</strong>가 있으며, 표준안도 나온 것으로 파악되어 아예 없는 것보다는 희망적입니다. 이를 적극 활용하여 신청 절차를 간소화할 계획입니다.</li>
+        </ul>
+
+        <h3>6. M365 코파일럿 도입 및 TF 자료 공유 방안</h3>
+        <p>
+            M365 코파일럿의 기술적 도입 방식과 TF 내 자료 공유 방안에 대한 논의가 이어졌습니다.
+        </p>
+        <ul>
+            <li><strong>이영주 책임 질의:</strong> M365 코파일럿이 내부 업무망에서 SaaS 형태로 제공되는지?</li>
+            <li><strong>임경택 팀장 답변:</strong> 맞습니다. MS에서 제공하는 클라우드 기반 SaaS이며, 망분리 규제에 걸리는 부분이 있어 <strong>규제 특례(혁신금융 서비스 인가)</strong>를 받아 내부망에서 사용하려는 것입니다.</li>
+            <li><strong>김세아 (카사코리아) 제안:</strong> 카사코리아의 파트너사인 메타넷(AWS MSP)이 M365를 판매하며 금융권 도입 사례가 있으니 문의하여 정보를 얻을 수 있을 것 같습니다.</li>
+            <li><strong>임경택 팀장 추가 설명:</strong> 대신증권은 현재 MS 총판인 PDC와 계약 관계에 있으며, PDC를 통해 관련 정보를 요청 중입니다. 현재 E3 라이선스를 보유하고 있으나, M365 코파일럿 사용을 위해서는 E5 라이선스 업그레이드 및 코파일럿 추가 비용 지불이 필요합니다.</li>
+            <li><strong>TF룸 인터넷 접속 문제:</strong> 현재 TF룸 PC는 인터넷 접속이 제한되어 있어 비상근 인력의 업무 수행에 어려움이 있습니다. 임경택 팀장은 6개 좌석(상근 4 + 비상근 2)에 대한 인터넷 접속 허용 신청이 필요하며, 이는 컴플라이언스 경유 사항임을 언급했습니다.</li>
+            <li><strong>TF 자료 공유 방안:</strong>
+                <ul>
+                    <li>내부 문서 관리 시스템은 계열사 접근이 어려움.</li>
+                    <li><strong>M365(팀즈 등)를 활용한 자료 공유 검토:</strong> 내부 자료의 외부 유출이 아닌, TF를 위한 외부 조사 자료, 세미나 자료 등 외부에서 생성된 자료를 공유하는 목적으로는 정보보호 및 컴플라이언스 측면에서 문제가 없을 것으로 판단.</li>
+                    <li>현재 보유 중인 M365 라이선스 중 사용 가능한 캐파가 있는 것으로 파악되어, <strong>TF 멤버들에게 M365 코파일럿 계정을 우선 부여하여 시험 사용</strong>할 수 있도록 추진 중입니다. 이를 통해 서비스에 대한 이해도를 높이고, 원활한 정보 및 자료 공유를 도모할 예정입니다.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>7. TF에 대한 참석자 의견 및 기대</h3>
+        <p>
+            임경택 팀장은 참석자들에게 TF에 대한 개인적인 생각을 물었습니다.
+        </p>
+        <ul>
+            <li><strong>이영주 책임 (정보보호부):</strong> M365 코파일럿 도입에 대해 긍정적으로 평가했습니다. 업무 효율성 향상(문서 작업, 자료 정리 등)에 크게 기여할 것으로 기대했습니다. 다만, 보안 요건 충족을 위해서는 개인정보팀 및 부서 차원의 협력이 필수적임을 다시 한번 강조했습니다.</li>
+        </ul>
+
+        <h2>회의 인사이트</h2>
+        <div class="insight-box">
+            <p>이번 대신증권 AI 도입 TFT의 첫 회의는 단순한 얼굴 익히기를 넘어, <strong>AI 도입에 대한 회사의 강력한 의지와 현실적인 접근 방식을 명확히 제시</strong>한 자리였습니다.</p>
+            <ul>
+                <li><strong>전략적 방향 전환:</strong> 당초의 '내부 LLM 구축'이라는 거창한 목표에서 'M365 코파일럿 파일럿 도입'이라는 <strong>실현 가능하고 즉각적인 효과를 기대할 수 있는 목표로의 전환</strong>은 매우 현실적이고 현명한 결정으로 보입니다. 이는 불확실한 대규모 투자보다는 검증된 솔루션을 통해 빠르게 AI 활용 경험을 축적하고 내부 역량을 강화하려는 실용주의적 접근을 보여줍니다.</li>
+                <li><strong>내부 역량 활용의 중요성:</strong> 조재훈 책임과 김세아(카사코리아)와 같이 <strong>이미 AI 관련 실질적인 경험과 전문성을 가진 내부 인력의 존재는 TF의 성공 가능성을 크게 높이는 요인</strong>입니다. 이들의 경험과 지식을 적극적으로 공유하고 활용하는 것이 중요하며, 이는 외부 컨설팅에만 의존하는 것보다 효과적인 내재화 전략이 될 것입니다.</li>
+                <li><strong>규제 준수와 혁신 간의 균형:</strong> 혁신금융 서비스 신청, 망분리 규제, 정보보호 및 컴플라이언스 요건 등 <strong>금융권의 엄격한 규제 환경 속에서 AI를 도입해야 하는 도전적인 과제</strong>를 안고 있습니다. 김현주 차장과 이영주 책임의 역할이 특히 중요하며, 혁신과 규제 준수 사이의 최적의 균형점을 찾는 것이 TF의 핵심 성공 요인이 될 것입니다. 타사 혁신금융 서비스 인가 사례는 이 과정에서 중요한 참고 자료가 될 것입니다.</li>
+                <li><strong>소통과 협업의 강조:</strong> TF 팀장은 발령 첫날부터 무겁지 않은 분위기와 원활한 소통을 강조했습니다. 다양한 부서의 상근/비상근 인력이 모인 만큼, <strong>개별적인 전문성을 존중하면서도 유기적인 협업 체계를 구축하는 것이 중요</strong>합니다. 특히 비상근 인력에 대한 명확한 미션 부여와 자료 공유 시스템 구축은 필수적입니다.</li>
+                <li><strong>직원들의 AI 경험 확대:</strong> M365 코파일럿 도입을 통해 직원들이 <strong>일상 업무에서 AI를 직접 경험하고 활용할 기회를 제공</strong>하는 것은 단순한 생산성 향상을 넘어, AI에 대한 이해도를 높이고 새로운 서비스 아이디어를 창출하는 문화적 변화를 이끌어낼 잠재력을 가지고 있습니다.</li>
+            </ul>
+        </div>
+
+        <h2>향후 계획 및 다음 단계</h2>
+        <div class="next-steps-box">
+            <ol>
+                <li><strong>혁신금융 서비스 신청 준비 가속화:</strong>
+                    <ul>
+                        <li>강수정 팀장 주도 하에 9월 15일 신청 목표로 관련 서류 및 요건 준비에 박차를 가합니다.</li>
+                        <li>김현주 차장(컴플라이언스) 및 이영주 책임(정보보호)은 내부 통제 및 보안 요건 도출에 집중하고, 혁신과 규제 준수 사이의 균형점을 찾기 위한 협의를 진행합니다.</li>
+                        <li>타사 M365 코파일럿 혁신금융 서비스 인가 사례 및 표준안을 면밀히 분석하여 신청서 작성에 활용합니다.</li>
+                    </ul>
+                </li>
+                <li><strong>M365 코파일럿 사전 학습 및 활용 환경 구축:</strong>
+                    <ul>
+                        <li>TF 멤버들에게 M365 코파일럿 계정 부여를 검토하고, 사용 가능한 라이선스를 활용하여 조속히 시험 환경을 제공합니다.</li>
+                        <li>TF 자료 공유를 위해 M365(팀즈 등) 활용 방안을 구체화하고, 외부 자료 공유에 대한 정보보호 및 컴플라이언스 측면의 문제를 해소합니다.</li>
+                        <li>박종호 팀장(교육)과 협력하여 M365 코파일럿의 사내 전파 교육 로드맵을 구상하고, 향후 AI 교육 방향을 논의합니다.</li>
+                    </ul>
+                </li>
+                <li><strong>AI 지식 내재화 및 서비스 아이디어 발굴:</strong>
+                    <ul>
+                        <li>조재훈 책임의 AI 활용 사례(데이터 정제 후 생성형 AI 활용)를 TF 내에서 공유하고, 다른 멤버들의 학습 기회를 제공합니다.</li>
+                        <li>윤태현 선임의 PAS 서비스 내 GPT API 활용 사례를 TF 멤버들이 직접 체험해 볼 수 있도록 지원합니다.</li>
+                        <li>이인용 과장 주도 하에 고객 서비스 측면에서 AI를 활용할 수 있는 아이디어를 발굴하고, 타사 AI 도입 사례를 지속적으로 조사합니다.</li>
+                    </ul>
+                </li>
+                <li><strong>TF 운영 효율화:</strong>
+                    <ul>
+                        <li>비상근 인력에 대한 개별 미션을 명확히 부여하고, 필요한 경우 TF룸 좌석 및 업무망 PC 사용에 대한 유연한 조정을 진행합니다.</li>
+                        <li>정기적인 소통 채널을 유지하고, 각 역할별 진행 상황을 공유하며 유기적인 협업을 강화합니다.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <h2>회의 총평 및 방향성</h2>
+        <div class="evaluation-box">
+            <p>이번 대신증권 AI 도입 TFT의 첫 회의는 <strong>AI 기술 도입을 통한 업무 혁신과 서비스 개선이라는 명확한 목표를 설정</strong>하고, 이를 위한 <strong>현실적인 첫걸음을 내딛는 중요한 자리</strong>였습니다.</p>
+            <p>회의를 통해 각 부서의 전문성을 가진 인력들이 한자리에 모여 시너지를 낼 수 있는 기반이 마련되었으며, 특히 AI에 대한 깊이 있는 경험을 가진 인력들의 참여는 TF의 성공 가능성을 높이는 핵심 요소로 작용할 것입니다.</p>
+            <p>향후 TF는 <strong>'M365 코파일럿 파일럿 도입 및 혁신금융 서비스 인가'라는 단기 목표에 집중</strong>하면서도, 동시에 <strong>'AI 지식 내재화 및 자체 서비스 아이디어 발굴'이라는 장기적인 관점을 놓치지 않아야</strong> 합니다. 금융권 특유의 규제 환경 속에서 혁신을 추구해야 하는 어려움이 있지만, 타사 사례를 적극 활용하고 정보보호 및 컴플라이언스 부서와의 긴밀한 협력을 통해 이를 극복해나가야 할 것입니다.</p>
+            <p>무엇보다 중요한 것은 <strong>참석자들 간의 활발한 소통과 유기적인 협업</strong>입니다. 각자의 전문 영역을 존중하면서도 공동의 목표 달성을 위해 적극적으로 아이디어를 공유하고 문제를 해결해나가는 태도가 요구됩니다. 이번 TF가 대신증권의 AI 도입을 위한 견고한 초석을 다지고, 궁극적으로는 직원 생산성 향상과 고객 만족도 증진에 기여할 수 있기를 기대합니다.</p>
+            <p><strong>회의의 궁극적인 방향성은 '실현 가능한 AI 기술 도입을 통한 업무 생산성 극대화 및 고객 서비스 혁신'</strong>에 있습니다. 단기적인 M365 코파일럿 도입을 발판 삼아, 장기적으로는 대신증권만의 차별화된 AI 기반 서비스를 구축하여 금융 시장에서의 경쟁 우위를 확보하는 것이 최종 목표가 될 것입니다.</p>
+        </div>
+
+        <p style="text-align: right; margin-top: 30px; font-size: 0.9em; color: #666;">회의록 작성일: 2025년 7월 1일</p>
+    </div>
+</body>
+</html>
