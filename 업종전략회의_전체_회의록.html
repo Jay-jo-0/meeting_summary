@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업종 전략 회의록</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 6px solid #4a90e2;
+            padding-left: 10px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #2980b9;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        strong {
+            color: #d35400;
+        }
+        em {
+            color: #27ae60;
+            font-style: normal;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            table-layout: fixed; /* 테이블 레이아웃 고정 */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            word-wrap: break-word; /* 긴 단어 줄바꿈 */
+        }
+        th {
+            background-color: #ecf0f1;
+            color: #34495e;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+        .summary-table th, .summary-table td {
+            padding: 12px 15px;
+        }
+        .summary-table th {
+            width: 30%; /* 요약 테이블의 첫 번째 열 너비 조정 */
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            margin-bottom: 15px;
+            font-size: 1.0em;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 8px 12px;
+            border-radius: 5px;
+            border-left: 5px solid #ffc107;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+        .note {
+            background-color: #e8f5e9;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border-left: 5px solid #4caf50;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        /* 모바일 최적화 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-size: 1.5em;
+                margin-top: 25px;
+            }
+            h3 {
+                font-size: 1.2em;
+                margin-top: 20px;
+            }
+            table, .summary-table {
+                font-size: 0.85em;
+            }
+            th, td {
+                padding: 8px;
+            }
+            .summary-table th {
+                width: 35%; /* 모바일에서 요약 테이블 첫 번째 열 너비 조정 */
+            }
+            .highlight, .note {
+                padding: 10px;
+                font-size: 0.95em;
+            }
+            ul {
+                margin-left: 20px;
+            }
+            li {
+                margin-bottom: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            h3 {
+                font-size: 1.1em;
+            }
+            table, .summary-table {
+                font-size: 0.8em;
+            }
+            th, td {
+                padding: 6px;
+            }
+            .summary-table th {
+                width: 40%; /* 더 작은 모바일에서 요약 테이블 첫 번째 열 너비 조정 */
+            }
+            .highlight, .note {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+            ul {
+                margin-left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>업종 전략 회의록</h1>
+
+        <p class="highlight">
+            <strong>회의 일시:</strong> 2025년 7월 22일 화요일 오전 9:00 (29분 50초)<br>
+            <strong>참석자:</strong> 조재운 외 다수<br>
+            <strong>주제:</strong> 업종별 시장 전략 및 하반기 전망
+        </p>
+
+        <h2><span style="color: #e74c3c;">8월 KOSPI 전략 요약</span></h2>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>항목</th>
+                    <th>주요 내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>시장 전망</th>
+                    <td>
+                        8월 글로벌 증시는 2021-2024년 계절적 하락 패턴을 답습할 가능성이 있으나, 과거 대비 하락 폭은 제한적일 것으로 예상됨. 8월 1일 미국 상무부 관세 유예 만료 및 8월 12일 무역 협상 시한 도래로 인한 노이즈 발생 가능성. 전반적으로 <strong>과열 매물 소화 과정</strong> 및 <strong>제한적인 상승</strong> 예상.
+                    </td>
+                </tr>
+                <tr>
+                    <th>핵심 변수</th>
+                    <td>
+                        <ul>
+                            <li><strong>미국 관세 정책:</strong> 특히 자동차, IT 디바이스 등 업종에 미치는 영향이 가장 중요. 관세율 완화 시 단기 반등 가능성.</li>
+                            <li><strong>글로벌 금리 변동성:</strong> 장기물 중심 금리 변동성 확대, 하락 속도 더딜 것으로 예상. 한국은 8월 금리 인하 가능성 있으나 마지막 인하일 가능성.</li>
+                            <li><strong>중국 경기 부양책:</strong> 무역 협상 결과 전까지 강한 정책 드라이브 어려움.</li>
+                            <li><strong>국내 정부 정책 기대:</strong> 과열되었던 기대감 되돌림 과정 예상.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>투자 전략</th>
+                    <td>
+                        <ul>
+                            <li><strong>순환매 대응 집중:</strong> 2분기 실적 시즌 동안 기대가 높았던 업종은 쉬고, 우려가 컸던 업종은 반등하는 순환매 예상.</li>
+                            <li><strong>저평가 업종 주목:</strong> 가격적으로 저평가된 2차전지, 반도체, 자동차, 디스플레이. 실적 대비 저평가된 자동차, 제약/바이오, 디스플레이, 미디어/교육.</li>
+                            <li><strong>비중 확대 시점:</strong> 8월보다는 <strong>9월 변동성 확대 시 비중 확대</strong> 고려. (미국 성장 AGI, 우라늄, 원전, 양자 컴퓨터, 스테이블 코인 등)</li>
+                            <li><strong>개별 종목:</strong> 삼성전자(하반기 탑픽), 삼성전기, HL만도, 현대오토에버, SND모티브, 제일기획, 코스맥스, 사조식품, 풍산, 한화에어로스페이스, 네이버, 카카오, 넷마블, 크래프톤, 예스티 등.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>리스크 요인</th>
+                    <td>
+                        <ul>
+                            <li>미국 관세 불확실성 (25% 관세 가정 시 수익성 하향 불가피)</li>
+                            <li>미국 물가 부담 확대 및 소비 부진 가능성 (3분기 말)</li>
+                            <li>미국채 금리 오버슈팅 가능성</li>
+                            <li>단통법 폐지에 따른 통신주 과열 가능성 (단기적)</li>
+                            <li>부동산 시장 혼란 및 주택 가격 하락세 전환</li>
+                            <li>철강 관세율 기대치 하회 가능성</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2><span style="color: #3498db;">회의 상세 내용</span></h2>
+
+        <h3>1. 자동차 업종 (참석자 1)</h3>
+        <ul>
+            <li><strong>2분기 실적 전망:</strong> 완성차는 컨센서스 소폭 하회, 부품사는 회사별 차이 있으나 현대모비스 등 대형주는 소폭 상회 예상.</li>
+            <li><strong>하반기 핵심 변수:</strong> <strong>관세 영향이 가장 중요.</strong> 25% 관세 가정 시 연간 가이던스 및 수익성 전망 하향 불가피.</li>
+            <li><strong>회사 톤:</strong> 단기 긍정적 톤 나오기 어려움. 다만, 주가에는 관세 우려 상당 부분 반영.</li>
+            <li><strong>주가 움직임:</strong> 관세 협상 진행이 중요. 7월 중 관세 완화 시 (25% 이하) 단기 반등 충분히 가능.</li>
+            <li><strong>관세 민감도:</strong> 관세율 5%p당 현대차 연간 영업이익 1조원, 기아 6,500억원 민감도 추정. 관세율 변화에 따라 실적 추정 및 주가 흐름 변화 예상.</li>
+            <li><strong>종목별 전략:</strong>
+                <ul>
+                    <li><strong>완성차:</strong> 외생 변수(관세)에 지속 주목. 우려 선반영으로 관세가 더 커지지 않는다면 반등 폭 문제.</li>
+                    <li><strong>부품사:</strong> 관세로 인한 낙폭 과대 종목 중 현금 전략 보유 및 단기 관세 영향 적은 업체 위주 대응.</li>
+                    <li><strong>추천 종목:</strong> <strong>HL만도</strong> (우려 대비 관세 영향 적음), <strong>현대오토에버, SND모티브</strong> (상대적으로 관세 영향 자유로움).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2. 매크로 및 금리 동향 (참석자 2, 3)</h3>
+        <ul>
+            <li><strong>금리 변동성 확대:</strong> 국내외 장기물 중심 금리 변동성 확대. 코로나 시대 인플레이션 부활, 정부 부채 급증 등 구조적 요인.</li>
+            <li><strong>금리 인하 전망:</strong> 기준금리 인하 사이클은 하향 안정화로 보이나, 수급 요건 및 인플레이션 핵심으로 인해 장기 금리는 잘 안 떨어지는 국면. 하락 폭 및 속도 매우 더딜 것, 기간 길어질 수 있음.</li>
+            <li><strong>한국 금리:</strong> 부동산 이슈로 7월 동결, 8월 인하 가능성 있으나 <strong>마지막 인하일 가능성 큼.</strong></li>
+            <li><strong>미국 실물 지표:</strong> 4~5월 부진했으나 6~7월 개선 전망. 3분기 말 물가 부담 확대되며 소비 다시 부진 가능성.</li>
+            <li><strong>물가 안정 기여 요인:</strong> 충분한 재고, 교육 대상국 수출 가격 인하.</li>
+            <li><strong>향후 물가 전망:</strong> 조만간 관세 확정 및 미국 기업 이익 개선으로 9월 발표 8월 지표부터 <strong>관세 전가 뚜렷하게 나타날 수 있음.</strong> 당분간 금리 인하 기대 약화.</li>
+            <li><strong>마진 축소 압력:</strong> 미국 내 제한적이나 비미국 국가에서 나타날 수 있음. 국가별 협상 모니터링 필요.</li>
+            <li><strong>환율 전망:</strong> 7월 초 오비비비 법안 통과 등 정책 불확실성 완화로 미국 달러 자산 신뢰 개선. TGA 잔고 재축적 등 수급 측면에서 달러 수요 뒷받침 가능성. 최근 가팔랐던 달러 가치 하락세 되돌림.</li>
+            <li><strong>달러 환율:</strong> 미국채 금리 급등 시 오버슈팅 가능성 있으나, 연준 금리 인하 전까지 <strong>1300원 후반대 유지</strong> 예상 (횡보 가능성 높음).</li>
+        </ul>
+
+        <h3>3. 전반적인 시장 전략 (참석자 4, 5)</h3>
+        <ul>
+            <li><strong>실적 시즌 영향:</strong> 본격적인 실적 시즌 진입으로 추가 상승보다는 <strong>상단 제한적</strong>일 것. 과열 매물 소화 과정.</li>
+            <li><strong>8월 노이즈:</strong> 8월 1일 미국 상무부 관세 유예 만료, 8월 12일 무역 협상 시한 도래로 노이즈 재유입 가능성.</li>
+            <li><strong>정책 기대 톤다운:</strong> 중국 기준금리 동결 (무역 협상 결과 전 강한 경기 부양 어려움), 국내 정부 정책 기대 과열 부분 되돌림.</li>
+            <li><strong>순환매 집중:</strong> 2분기 실적 시즌 동안 기대가 높았던 업종은 쉬고, 우려가 컸던 업종은 반등하는 순환매 예상. 레벨보다는 순환매 대응에 집중.</li>
+            <li><strong>저평가 업종:</strong>
+                <ul>
+                    <li><strong>가격적 저평가:</strong> 2차전지, 반도체, 자동차, 디스플레이.</li>
+                    <li><strong>실적 대비 저평가:</strong> 자동차, 제약/바이오, 디스플레이, 미디어/교육.</li>
+                </ul>
+            </li>
+            <li><strong>8월 글로벌 증시:</strong> 21~24년 계절적 하락 패턴 답습 여지. 위험 회피 심리 부각 가능성.</li>
+            <li><strong>하락 폭 제한:</strong> 베트남 사례처럼 미국과 교육국 간 상호 세율 50% 할인 가능성, 연준 금리 인하 시점 임박으로 과거 대비 하락 폭 제한 예상.</li>
+            <li><strong>자산 소모:</strong> 최근 제정된 지니어스 법으로 8~9월 가상자산, 스테이블 코인 등 상대적 자산 소모 커질 것.</li>
+            <li><strong>변동성 확대:</strong> 8월보다 <strong>9월 변동성 확대</strong> 예상. 전략적 비중 확대 시기는 9월.</li>
+            <li><strong>9월 비중 확대 자산:</strong> 미국 성장 AGI, 우라늄, 원전, 양자 컴퓨터, 스테이블 코인.</li>
+        </ul>
+
+        <h3>4. 전기전자 및 반도체 업종 (참석자 6)</h3>
+        <ul>
+            <li><strong>2분기 실적:</strong> 전반적으로 예상보다 부진. 관세 영향 선행 생산, 원달러 환율 하락 영향.</li>
+            <li><strong>하반기 모멘텀:</strong> 3~4분기 계절적 성수기 진입으로 실적 개선 모멘텀 존재.</li>
+            <li><strong>불확실성:</strong> 스마트폰 등 IT 디바이스 관세 불확실성. 하반기 예상 수요 뒷받침 어려움.</li>
+            <li><strong>대형주:</strong> 반도체 제외 전기전자 대형주는 컨빅션 바이 크지 않음. 주가 선반영 및 언더퍼폼으로 순환매 차원 반등 가능.</li>
+            <li><strong>추천 종목:</strong> 삼성전자 움직임에 따른 <strong>삼성전기</strong> 상승 기대. 중소형주 순환매 집중 (애플 아이폰 관련주, PCB).</li>
+            <li><strong>반도체 가격 전망:</strong> 가격 전망 현실화. 하이닉스 주가 하방 추가적으로 열어두지 않음.</li>
+            <li><strong>HBM:</strong> 중국 AI GPU 수출 재개로 수요 전망 상향. 내년 가격 현실화 필요하나 수급 타이트 및 하이닉스 비용 구조 강점 고려 시 바닥 다지기 전략 유효.</li>
+            <li><strong>범용 반도체:</strong> 2분기 판매량 많아 고객 재고 축적. 4분기 미니 다운톤 가능성. 내년 생산 제약 가능성 높아 가격 약세 구간 짧고 반등 기대.</li>
+            <li><strong>탑픽:</strong> <strong>삼성전자</strong> 하반기 탑픽 유지. HBM 충당금 우려(2분기) 있으나 3분기 반영 안 될 가능성, 오히려 중국 판매 재개로 환입 가능성. 범용 반도체 판매 및 파운드리 적자 폭 축소로 분기 이익 모멘텀 지속 강화 예상.</li>
+        </ul>
+
+        <h3>5. 통신 및 미디어 업종 (참석자 4)</h3>
+        <ul>
+            <li><strong>통신 2분기 실적:</strong> SK텔레콤 제외 KT, LG유플러스 안정적 실적 증가.</li>
+            <li><strong>단통법 폐지:</strong> 오늘부터 단통법 폐지. 과열 가능성 높지 않으나 시장 경계 움직임으로 주가 걸림돌 예상.</li>
+            <li><strong>향후 전망:</strong> 한두 달 사태 추이 및 8월 초 실적 확인 후 긍정적 뷰로 전환 예상.</li>
+            <li><strong>추천 종목:</strong> <strong>장기 탑픽 KT</strong>. <strong>단기 LG유플러스</strong> (자사주 발표).</li>
+            <li><strong>미디어 2분기 실적:</strong> 부진. 3분기부터 추경 및 경기 호전 영향으로 광고 회복 예상.</li>
+            <li><strong>광고/콘텐츠:</strong> 광고 회복에 따라 콘텐츠 제작도 하반기 주요 작품 꾸준히 있어 강하게 추천. 한한령 해제 시 밸류에이션 크게 의미 없을 정도로 실적 및 주가 상승 기대.</li>
+            <li><strong>추천 종목:</strong> 다음 한 달간 실적 안정적인 <strong>제일기획</strong>.</li>
+        </ul>
+
+        <h3>6. 유통 및 내수 소비 업종 (참석자 7)</h3>
+        <ul>
+            <li><strong>2분기 실적:</strong> 1분기 비용 절감으로 서프라이즈였으나, 2분기는 높아진 기대치 대비 실적 부진.</li>
+            <li><strong>7월 출발:</strong> 상당히 좋음. 6월 백화점 성장률 플랫이었으나 7월 7%대 (3주 기준).</li>
+            <li><strong>하반기 전망:</strong> 대부분 기업 상반기보다 실적 턴어라운드 모멘텀 큼. <strong>경기 호전에 베팅한 소비주 전략 여전히 유효.</strong></li>
+            <li><strong>민생 회복 지원금:</strong> 이번 주부터 신청 시작. 소비 진작 기대.</li>
+            <li><strong>편의점 vs 백화점:</strong> 편의점은 이미 올랐으나 백화점 (40~70% 상승) 대비 상승 폭 적음 (20%). 백화점과 편의점 같이 주목.</li>
+            <li><strong>투자 기회:</strong> 2분기 실적 부진으로 주가 하락 시 오히려 좋은 매수 기회로 삼을 투자 대기 수요 많을 것.</li>
+            <li><strong>의류 소비:</strong> 3~4분기 의류 소비 개선 예상.</li>
+            <li><strong>추천 종목:</strong> <strong>유통은 백화점 + 편의점. 의류는 영원무역 + 브랜드 기업.</strong></li>
+        </ul>
+
+        <h3>7. 건설, 철강, 비철금속, 방산 업종 (참석자 8)</h3>
+        <h4>7.1 건설</h4>
+        <ul>
+            <li><strong>부동산 시장:</strong> 6월 27일 부동산 대책 이후 서울 수도권 주택 가격 하락세 전환, 시장 혼란.</li>
+            <li><strong>분양 계획:</strong> 하반기 분양 계획 당분간 관망세 유지, 수정 가능성 높음. 현대건설도 분양 축소 발표.</li>
+            <li><strong>주택주:</strong> 시장 회복 기대감으로 멀티플 올랐으나 수급 이탈로 조정 중.</li>
+            <li><strong>원전 테마:</strong> 고밸류 원전 테마도 정보 시장 인식되며 소강 상태.</li>
+            <li><strong>전략:</strong> 당분간 주택주 관망세 필요.</li>
+            <li><strong>단기 추천 종목:</strong> <strong>삼성 E&A</strong> (주택 규제와 동떨어져 있음). 하반기 사우디 파딜리 현장 매출 증가로 증액 구간 진입, 저평가 구간 탈출 가능성 높음. 하반기 수주 파이프라인 양호.</li>
+        </ul>
+        <h4>7.2 철강</h4>
+        <ul>
+            <li><strong>주가 흐름:</strong> 지난달 가장 좋았던 섹터 중 하나. 중국 철강업계 감산 본격 인식.</li>
+            <li><strong>관세 기대감:</strong> 7월 24일 중국 일본산 열연 관세 부과 기대감 흡수되며 반등세 크게 나타남.</li>
+            <li><strong>업사이드:</strong> PBR 0.3~0.4배 고려 시 여전히 업사이드 존재. 하방은 어느 정도 실현.</li>
+            <li><strong>관세율 리스크:</strong> 7월 24일 관세율이 시장 기대치보다 낮을 경우 고려 필요. 현재 20% 이상 나올 가능성 높아 주가 상승 트리거 될 가능성 높음.</li>
+            <li><strong>수익성 개선 시점:</strong> 관세 부과 즉시 가격 상승은 어려움. 중국산 철강 재고 소화 기간 필요. 실제 수익성 개선은 내년 예상.</li>
+            <li><strong>전략:</strong> 하반기 중국 본격 감산 기조 돌입 예상. 추가 악재 없이 호재만 남은 상황으로 섹터 전반적으로 긍정적.</li>
+            <li><strong>단기 추천 종목:</strong> <strong>현대제철</strong> (멀티플 저렴, 유동성 흡수에 따른 상승 기대값 높음).</li>
+        </ul>
+        <h4>7.3 비철금속</h4>
+        <ul>
+            <li><strong>구리 가격:</strong> 트럼프 구리 관세 50% 발표 후 급등했으나 최근 조정 중.</li>
+            <li><strong>산업 금속:</strong> 전반적인 가격 흐름 좋지 않음.</li>
+            <li><strong>귀금속:</strong> 금은 더딘 상황에서 은이 상대적으로 저렴했다가 큰 폭 상승 실현.</li>
+            <li><strong>단기 추천 종목:</strong> <strong>풍산</strong> (구리 가격 상승보다 방산 멀티플 본격 반영). 이란 전쟁 과정에서 155mm 포탄 부족 인식으로 방산 멀티플 획득. 현재 밸류 거의 다 받음.</li>
+        </ul>
+        <h4>7.4 방산</h4>
+        <ul>
+            <li><strong>주가 흐름:</strong> 최근 시장 순환매 과정에서 고밸류 종목 조정 발생 시 주가 더딘 모습.</li>
+            <li><strong>수주 파이프라인:</strong> 폴란드 K2/K21 현대로템 수주 거의 확정. 3분기 다른 종목 수주 파이프라인 약하게 나타날 수 있음 (3분기 예산 의결, 4분기 발주).</li>
+            <li><strong>전략:</strong> 3분기 단기 상승 기대는 높지 않으나 하방은 제한적. <strong>빠지면 다시 매수</strong> 전략 유효.</li>
+            <li><strong>멀티플 유지:</strong> 이스라엘-이란/시리아 무력 마찰 지속으로 고멀티플 유지 가능.</li>
+            <li><strong>주목 지역:</strong> 중동 (사우디가 폴란드 수주 이상의 육상 전력 점유율 확충 목표). 연말 전후 구체화된 정보 및 발주 소식 기대.</li>
+            <li><strong>매수 시점:</strong> <strong>4분기 기대하고 매수 지속.</strong></li>
+            <li><strong>추천 종목:</strong> <strong>한화에어로스페이스</strong> (타 종목 대비 멀티플 저렴, 안전한 선택). 유상증자 성공으로 4조원 현금 확보, 투자 여력 충분. 현재 시점 가장 상승 기대값 높음.</li>
+        </ul>
+
+        <h3>8. 인터넷 및 게임 업종 (참석자 9)</h3>
+        <ul>
+            <li><strong>인터넷 업종:</strong> 6월 대선 이후 주가 좋았으나 7월 단기 차익 실현 매물로 하락세. 8월 2분기 실적 발표 및 하반기 전망 고려 시 주가 회복 가능성.</li>
+            <li><strong>민생 쿠폰 효과:</strong> 13조원 규모 민생 쿠폰이 소비 시장 5% 제고 효과. 소비 심리 개선 효과는 그 이상. 디지털/온라인 시장 침투율 50% 이상으로 커머스, 광고 시장 회복 기대.</li>
+            <li><strong>이커머스 성장률:</strong> 2분기 1% 미만. 네이버는 미들 싱글 기록 중. 하반기 시장 회복 시 네이버 더 크게 성장 가능.</li>
+            <li><strong>2분기 실적:</strong> 네이버 컨센서스 하회 (주식 보상 비용 일회성 요인). 카카오 컨센서스 부합.</li>
+            <li><strong>네이버 하반기:</strong> 본업 문제없고, 커머스 수수료 인상으로 크게 개선 예상. 매출 성장률 상승 기대.</li>
+            <li><strong>카카오 하반기:</strong> 2분기 실적 부합. 8월 2분기 실적, 11월 카카오톡 AI 도입 기대감으로 주가 하락 어려움. 네이버, 카카오 모두 긍정적.</li>
+            <li><strong>게임 업종:</strong> 연말 모든 게임사 대작 준비 중. 실적 받쳐주는 종목 위주 주목.</li>
+            <li><strong>추천 종목:</strong>
+                <ul>
+                    <li><strong>넷마블:</strong> 2분기 호실적, 히트레이션 상승, 하반기 신작 5개 출시 (최소 2개 성공 예상). 영업이익 컨센서스 상향 및 실적 신장 모멘텀 모두 보유.</li>
+                    <li><strong>크래프톤:</strong> 6월부터 시장 하회 (2분기 실적 부진). 한 분기 쉬는 것은 다음 분기 기대. 실적 발표 후 기관 매수세 유입 예상.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>9. 화장품 및 음식료 업종 (참석자 10)</h3>
+        <ul>
+            <li><strong>화장품 2분기 실적:</strong> 1분기에 이어 2분기에도 전반적으로 호실적 예상. 대부분 기업 컨센서스 부합. 시장 기대치가 높아 변동성 확대 가능성.</li>
+            <li><strong>우려 요인:</strong> 주가 상승에 따른 밸류에이션 부담. 미국 관세 대비 선수요 우려로 4분기 실적 꺾일 가능성.</li>
+            <li><strong>긍정 요인:</strong> 여전히 수출 지표 양호. 유럽 및 중국 지역/오프라인 채널 확장으로 하반기 지속 성장 예상.</li>
+            <li><strong>투자 전략:</strong> 밸류에이션 부담에도 불구하고 지속 성장하는 기업 중심 투자.</li>
+            <li><strong>추천 종목:</strong> <strong>코스맥스</strong> (주가 조정으로 밸류에이션 부담 완화), <strong>APR, 달바</strong> (잘하는 브랜드사).</li>
+            <li><strong>음식료 2분기 실적:</strong> 전반적으로 부진 예상.</li>
+            <li><strong>7월 주가 상승:</strong> 민생 쿠폰 지급으로 내수 소비 개선 기대감에 상승. 하이트진로, 롯데칠성 등 내수 비중 높은 종목 NTP 도달.</li>
+            <li><strong>하반기 기대:</strong> 하반기 기저 효과, 환율 하락에 따른 원가 개선으로 이익 모멘텀 견조 예상.</li>
+            <li><strong>추가 상승 조건:</strong> 실적 개선 가시화 필요.</li>
+            <li><strong>투자 포인트:</strong> <strong>해외 확장 스토리</strong>.</li>
+            <li><strong>추천 종목:</strong> <strong>사조식품</strong> (해외 확장 스토리 지속 추천).</li>
+        </ul>
+
+        <h3>10. 반도체 장비 업종 (참석자 5)</h3>
+        <ul>
+            <li><strong>기업:</strong> <strong>예스티 (YES-T)</strong>. 퍼니스, 네오콘 장비 제조사.</li>
+            <li><strong>핵심 포인트:</strong> HPSP가 독점하던 HPA 장비 관련. 특허 이슈로 매출 발생에 어려움 있었으나 4월 특허 고등 심판원에서 판매 관련 이슈 해소.</li>
+            <li><strong>모멘텀:</strong> <strong>올해 8월 일본 키옥시아 향 데모 및 수주 기대.</strong></li>
+            <li><strong>실적 전망:</strong> 수주 및 실적 본격화는 내년부터 예상. 올해 실적은 작년과 유사한 수준.</li>
+        </ul>
+
+        <h2><span style="color: #e67e22;">회의 인사이트</span></h2>
+        <p>이번 업종 전략 회의를 통해 <strong>하반기 시장은 상반기와는 다른 양상으로 전개될 것</strong>이라는 공통된 인식을 확인할 수 있었습니다. 특히 <strong>미국 관세 정책의 불확실성</strong>이 전반적인 업종에 걸쳐 가장 큰 외생 변수로 작용하며, 이에 대한 협상 결과가 시장의 단기 방향성을 결정할 핵심 요인으로 부상했습니다. 금리 인하 기대감은 존재하나, 그 속도와 폭이 제한적일 것이라는 전망은 <strong>유동성 장세보다는 실적과 개별 기업의 펀더멘털에 집중해야 함</strong>을 시사합니다.</p>
+        <p>업종별로는 2분기 실적 발표를 기점으로 <strong>옥석 가리기 및 순환매 장세</strong>가 예상됩니다. 특히, 관세 우려가 선반영되어 낙폭이 과대했던 자동차 부품주, 그리고 하반기 실적 턴어라운드 모멘텀이 강한 유통/소비주, 해외 확장이 기대되는 음식료/화장품 업종에 대한 관심이 필요해 보입니다. 반도체는 HBM 수요 강세와 삼성전자의 펀더멘털 개선이 긍정적이나, 범용 반도체는 단기 조정 가능성도 염두에 두어야 합니다.</p>
+        <p>매크로 변수 중에서는 <strong>미국 물가 부담 확대 가능성</strong>과 <strong>달러 강세 되돌림</strong>이 주목됩니다. 이는 국내 증시에 직접적인 영향을 미칠 수 있으므로 지속적인 모니터링이 필수적입니다. 또한, 국내 부동산 시장의 혼란과 단통법 폐지 등 정책적 변수도 단기적인 업종별 노이즈로 작용할 수 있습니다.</p>
+        <p>전반적으로 <strong>변동성이 높은 장세</strong>가 예상되므로, 무리한 추격 매수보다는 <strong>조정 시 분할 매수</strong>를 통해 우량 기업을 확보하는 전략이 유효할 것으로 판단됩니다. 특히 9월 변동성 확대 시 비중 확대를 고려하는 것이 합리적이라는 의견은 시기적인 투자 전략 수립에 중요한 가이드라인을 제공합니다.</p>
+
+        <h2><span style="color: #2ecc71;">향후 계획 및 다음 스텝</span></h2>
+        <ul>
+            <li><strong>관세 협상 결과 모니터링:</strong> 8월 1일 미국 상무부 관세 유예 만료 및 8월 12일 무역 협상 시한 도래에 따른 관세율 변화를 면밀히 주시하고, 이에 따른 업종별 실적 및 주가 영향 분석을 업데이트할 것.</li>
+            <li><strong>2분기 실적 발표 분석:</strong> 각 업종별 2분기 실적 발표 내용을 심층 분석하여 시장 컨센서스와의 괴리, 기업별 하반기 가이던스 등을 파악하고 투자 전략에 반영할 것. 특히 어닝 서프라이즈/쇼크 기업 및 그 원인에 집중.</li>
+            <li><strong>매크로 지표 추이 관찰:</strong> 미국 물가 지표, 금리 변동성, 환율 동향 등 주요 매크로 지표의 변화를 지속적으로 관찰하고, 국내외 경제 상황 변화에 따른 시장 영향력을 평가할 것.</li>
+            <li><strong>순환매 장세 대응:</strong> 업종별 순환매 가능성에 대비하여 저평가된 업종 및 종목에 대한 분석을 강화하고, 시장의 흐름에 맞춰 유연하게 포트폴리오를 조정할 준비를 할 것.</li>
+            <li><strong>정부 정책 효과 분석:</strong> 국내 민생 회복 지원금 지급, 단통법 폐지 등 정부 정책이 소비 심리 및 특정 업종에 미치는 실제 효과를 정량적으로 분석하여 투자 판단에 활용할 것.</li>
+            <li><strong>9월 비중 확대 준비:</strong> 9월 변동성 확대 시 비중 확대를 고려할 자산군(미국 성장 AGI, 우라늄, 원전, 양자 컴퓨터, 스테이블 코인 등)에 대한 사전 리서치 및 투자 매력도 평가를 진행할 것.</li>
+            <li><strong>개별 추천 종목 심층 분석:</strong> 회의에서 언급된 주요 추천 종목(삼성전자, HL만도, 제일기획, 코스맥스, 넷마블, 한화에어로스페이스 등)에 대해 개별 기업의 펀더멘털, 경쟁력, 리스크 요인을 더욱 심층적으로 분석하여 투자 근거를 강화할 것.</li>
+        </ul>
+
+        <h2><span style="color: #8e44ad;">회의의 방향성 및 최종 평가</span></h2>
+        <p>이번 업종 전략 회의는 <strong>하반기 시장의 불확실성 속에서 기회를 포착하기 위한 전략적 접근의 중요성</strong>을 강조했습니다. 과거와 달리 단순한 유동성 장세가 아닌, <strong>외생 변수(특히 관세)와 개별 기업의 실적 및 펀더멘털이 시장을 주도할 것</strong>이라는 명확한 방향성을 제시했습니다.</p>
+        <p>회의는 각 업종별 전문가들의 심도 깊은 분석을 통해 현재 시장 상황을 정확히 진단하고, <strong>변화하는 환경에 유연하게 대응할 수 있는 실질적인 투자 아이디어</strong>를 제공했습니다. 특히, 2분기 실적 시즌을 기점으로 나타날 수 있는 순환매 장세에 대한 대비와 함께, 장기적인 관점에서 성장 모멘텀을 보유한 기업들에 대한 꾸준한 관심을 당부했습니다.</p>
+        <p>결론적으로, 8월 시장은 단기적인 노이즈와 변동성이 예상되지만, 이는 <strong>우량 자산을 저가에 매수할 수 있는 기회</strong>가 될 수 있습니다. 9월 이후의 시장 반등 가능성을 염두에 두고, <strong>선제적인 리서치와 신중한 포트폴리오 관리</strong>를 통해 하반기 시장에 효과적으로 대응해야 할 것입니다. <strong>리스크 관리와 함께 기회 포착에 집중</strong>하는 것이 이번 회의를 통해 얻은 가장 중요한 최종 평가이자 방향성입니다.</p>
+
+        <div class="footer">
+            <p>&copy; 2025 업종 전략 회의록. 모든 권리 보유.</p>
+            <p>본 회의록은 투자 권유를 목적으로 작성되지 않았으며, 투자 결정은 투자자 본인의 판단과 책임 하에 이루어져야 합니다.</p>
+        </div>
+    </div>
+</body>
+</html>
