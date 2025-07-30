@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <style>
 ul {
@@ -14,7 +14,7 @@ li {
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GS건설 2025년 2분기 실적 발표 회의록</title>
+    <title>GS건설 2025년 2분기 실적 발표 및 후속 논의 통합 회의록</title>
     <style>
         body {
             font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
@@ -90,6 +90,15 @@ li {
         .summary-table th, .summary-table td {
             text-align: center;
         }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        li {
+            margin-bottom: 8px;
+        }
         .highlight {
             background-color: #fff3cd;
             padding: 10px;
@@ -131,6 +140,14 @@ li {
             padding-bottom: 5px;
             margin-top: 0;
         }
+        .note {
+            font-style: italic;
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px dashed #ced4da;
+        }
 
         /* Mobile Optimization */
         @media (max-width: 768px) {
@@ -155,32 +172,40 @@ li {
             h4 {
                 font-size: 1.1em;
             }
-            table, .summary-table {
+            /* Apply stacking for specific financial tables and summary table */
+            table#financial-summary, table#new-orders, table#order-backlog, table#revenue-by-division, table#gp-margin, table#balance-sheet, .summary-table {
                 font-size: 0.85em;
                 display: block;
-                overflow-x: auto;
-                white-space: nowrap;
+                overflow-x: auto; /* Fallback for very wide content */
+                white-space: nowrap; /* Prevent content from wrapping inside cells for initial display */
             }
-            table thead, table tbody, table th, table td, table tr {
+            table#financial-summary thead, table#financial-summary tbody, table#financial-summary th, table#financial-summary td, table#financial-summary tr,
+            table#new-orders thead, table#new-orders tbody, table#new-orders th, table#new-orders td, table#new-orders tr,
+            table#order-backlog thead, table#order-backlog tbody, table#order-backlog th, table#order-backlog td, table#order-backlog tr,
+            table#revenue-by-division thead, table#revenue-by-division tbody, table#revenue-by-division th, table#revenue-by-division td, table#revenue-by-division tr,
+            table#gp-margin thead, table#gp-margin tbody, table#gp-margin th, table#gp-margin td, table#gp-margin tr,
+            table#balance-sheet thead, table#balance-sheet tbody, table#balance-sheet th, table#balance-sheet td, table#balance-sheet tr,
+            .summary-table thead, .summary-table tbody, .summary-table th, .summary-table td, .summary-table tr {
                 display: block;
+                white-space: normal; /* Allow text to wrap within cells after stacking */
             }
-            table thead tr {
+            table#financial-summary thead tr, table#new-orders thead tr, table#order-backlog thead tr, table#revenue-by-division thead tr, table#gp-margin thead tr, table#balance-sheet thead tr, .summary-table thead tr {
                 position: absolute;
                 top: -9999px;
                 left: -9999px;
             }
-            table tr {
+            table#financial-summary tr, table#new-orders tr, table#order-backlog tr, table#revenue-by-division tr, table#gp-margin tr, table#balance-sheet tr, .summary-table tr {
                 border: 1px solid #ddd;
                 margin-bottom: 10px;
             }
-            table td {
+            table#financial-summary td, table#new-orders td, table#order-backlog td, table#revenue-by-division td, table#gp-margin td, table#balance-sheet td, .summary-table td {
                 border: none;
                 border-bottom: 1px solid #eee;
                 position: relative;
                 padding-left: 50%;
                 text-align: right;
             }
-            table td:before {
+            table#financial-summary td:before, table#new-orders td:before, table#order-backlog td:before, table#revenue-by-division td:before, table#gp-margin td:before, table#balance-sheet td:before, .summary-table td:before {
                 position: absolute;
                 top: 6px;
                 left: 6px;
@@ -193,6 +218,7 @@ li {
             /* Specific labels for summary table on mobile */
             .summary-table td:nth-of-type(1):before { content: "구분"; }
             .summary-table td:nth-of-type(2):before { content: "내용"; }
+            .summary-table td:nth-of-type(3):before { content: "향후 전망 및 시사점"; } /* New table has 3rd column */
 
             /* Specific labels for financial tables on mobile */
             #financial-summary td:nth-of-type(1):before { content: "구분"; }
@@ -219,17 +245,20 @@ li {
 </head>
 <body>
     <div class="container">
-        <h1>GS건설 2025년 2분기 잠정 실적 발표 회의록</h1>
+        <h1>GS건설 2025년 2분기 실적 발표 및 후속 논의 통합 회의록</h1>
 
         <p style="text-align: right; font-size: 0.9em; color: #666;">
-            <strong>회의 일시:</strong> 2025년 7월 30일 (수) 오전 10:44 (총 36분 51초)<br>
-            <strong>회의 주제:</strong> GS건설 2025년 2분기 잠정 실적 발표<br>
-            <strong>참석자:</strong> 강영주 상무 (GS건설), 이영복 IR팀장 (GS건설), 이태환 (사회자), 장문준 (KB증권), 강경태 (한국투자증권), 김승준 (하나증권), 류태환 (유진투자증권), 김선미 (신한투자증권), 배세호 (IM증권) 등
+            <strong>회의 일시:</strong><br>
+            - <strong>1차 실적 발표:</strong> 2025년 7월 30일 (수) 오전 10:44 (총 36분 51초)<br>
+            - <strong>2차 후속 논의:</strong> 2025년 7월 30일 (수) 오후 2시 20분 (총 16분 47초)<br>
+            <strong>회의 주제:</strong> GS건설 2025년 2분기 잠정 실적 발표 및 사업 부문별 심층 논의<br>
+            <strong>참석자:</strong> 강영주 상무 (GS건설), 이영복 IR팀장 (GS건설), 박찬민 책임 (GS건설), 이태환 (사회자/참석자 1), 장문준 (KB증권), 강경태 (한국투자증권), 김승준 (하나증권), 류태환 (유진투자증권), 김선미 (신한투자증권), 배세호 (IM증권) 등
         </p>
 
         <h2><span style="color: #007bff;">&#9632;</span> 회의 핵심 요약</h2>
         <div class="highlight">
             <p>이번 2분기 실적은 다양한 이슈로 인해 복합적인 양상을 보였습니다. <strong>영업이익은 개선되었으나, 세전이익 및 당기순이익은 적자 전환</strong>했습니다. 이는 주택 부문 정산 이익과 해외 사업 관련 손실 및 환율 변동성 확대가 주요 원인입니다. 특히, 엘레먼츠 유럽 청산과 사우디 얌부 프로젝트 손실 반영이 큰 영향을 미쳤습니다.</p>
+            <p>후속 논의에서는 일회성 요인을 제외한 '진성' 실적과 미래 성장 동력에 대한 심층적인 분석이 이루어졌습니다. 주택 사업의 점진적인 원가율 개선 기대, 신사업 포트폴리오 재편(엘레먼츠 제외 및 이니마 매각 추진)의 전략적 의미, 그리고 환손실과 같은 비영업성 손실이 재무제표에 미치는 영향에 대한 논의가 중점적으로 다루어졌습니다.</p>
         </div>
         <table class="summary-table">
             <thead>
@@ -264,24 +293,70 @@ li {
                     <td><strong>-871억 원 (적자 전환)</strong></td>
                 </tr>
                 <tr>
-                    <td><strong>주요 이슈 1</strong></td>
+                    <td><strong>주요 이슈 1 (주택)</strong></td>
                     <td><strong>주택 프로젝트 준공 정산 및 도급 증액:</strong> 약 2천억 원 영업이익 개선 효과 (메이플 자이, 철산자이 헤리티지 등)</td>
                 </tr>
                 <tr>
-                    <td><strong>주요 이슈 2</strong></td>
-                    <td><strong>엘레먼츠 유럽 청산:</strong> 영업손실 1,200억 원, 영업외손실 730억 원 반영. 모듈러 사업 방향성에는 차질 없음.</td>
+                    <td><strong>주요 이슈 2 (엘레먼츠)</strong></td>
+                    <td><strong>엘레먼츠 유럽 청산:</strong> 영업손실 1,200억 원, 영업외손실 730억 원 반영. 3분기부터 사업부문에서 제외.</td>
                 </tr>
                 <tr>
-                    <td><strong>주요 이슈 3</strong></td>
-                    <td><strong>인프라 사업본부:</strong> 만덕센텀 도로 450억 원 손실 반영, 카타르 도하 메트로 700억 원 대손환입.</td>
+                    <td><strong>주요 이슈 3 (인프라)</strong></td>
+                    <td><strong>인프라 사업본부:</strong> 만덕센텀 도로 450억 원 손실 반영, 카타르 도하 메트로 700억 원 대손환입 (일회성).</td>
                 </tr>
                 <tr>
-                    <td><strong>주요 이슈 4</strong></td>
-                    <td><strong>플랜트 사업본부:</strong> 얌부 프로젝트 600억 원 손실 반영. 하반기 개선 기대.</td>
+                    <td><strong>주요 이슈 4 (플랜트)</strong></td>
+                    <td><strong>플랜트 사업본부:</strong> 얌부 프로젝트 600억 원 손실 반영. 하반기 주요 3개 프로젝트 매출 기여 기대.</td>
                 </tr>
                 <tr>
-                    <td><strong>주요 이슈 5</strong></td>
-                    <td><strong>영업 외 손익:</strong> 엘레먼츠 유럽 관련 730억 원, 외환 관련 손실 1,870억 원 (환율 변동성, 사우디 자회사 대여금 평가손실)</td>
+                    <td><strong>주요 이슈 5 (영업 외)</strong></td>
+                    <td><strong>영업 외 손익:</strong> 엘레먼츠 유럽 관련 730억 원, 외환 관련 손실 1,870억 원 (환율 변동성, 사우디 자회사 대여금 평가손실). 현금 흐름과 무관한 장부상 손실.</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>주요 내용 (후속 논의)</th>
+                    <th>향후 전망 및 시사점</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>주택 사업</strong></td>
+                    <td>2분기 우수한 원가율은 일회성 도급 증액 영향. 하반기 GPM 한 자릿수 유지 예상.</td>
+                    <td>내년부터 두 자릿수 GPM 진입 기대. 도급 증액은 준공 시점에 발생, 예측 어려움.</td>
+                </tr>
+                <tr>
+                    <td><strong>신사업 (엘레먼츠)</strong></td>
+                    <td>2분기 원가율 악화의 주범. 3분기부터 사업부문에서 제외.</td>
+                    <td>3분기부터 신사업 원가율 개선 (80% 중후반) 기대.</td>
+                </tr>
+                <tr>
+                    <td><strong>신사업 (이니마)</strong></td>
+                    <td>수익성 우수, 전체 매각 방향으로 협상 중.</td>
+                    <td>매각 시 연결 손익에서 즉시 제외될 가능성. 재무 안정성 확보에 기여하나, 이익 감소 우려.</td>
+                </tr>
+                <tr>
+                    <td><strong>신사업 (프리패브/베트남)</strong></td>
+                    <td>프리패브 GPM 한 자릿수 후반 ~ 두 자릿수 초반 (10% 내외), 베트남은 매우 우수.</td>
+                    <td>이니마 매각 후에도 신사업의 전반적인 수익성 양호하게 유지될 전망.</td>
+                </tr>
+                <tr>
+                    <td><strong>플랜트 사업</strong></td>
+                    <td>상반기 부진. 진행 프로젝트 부족.</td>
+                    <td>하반기 주요 3개 프로젝트(파데일리, SAF, LNG 터미널) 매출 기여로 개선 기대. 원가율 90% 초반 예상.</td>
+                </tr>
+                <tr>
+                    <td><strong>인프라 사업</strong></td>
+                    <td>만덕센텀 대손 환입으로 영업이익 개선 (일회성).</td>
+                    <td>일회성 요인 제외 시 경상적 원가율 90% 수준 유지 예상.</td>
+                </tr>
+                <tr>
+                    <td><strong>환손실</strong></td>
+                    <td>영업외손실로 재무제표상 순이익에 큰 영향. 캐시플로우와 무관.</td>
+                    <td>기업 가치 산정 시 왜곡 발생 가능성. 헤징 등 관리 필요성 제기.</td>
                 </tr>
             </tbody>
         </table>
@@ -556,6 +631,7 @@ li {
                 <li>상반기 대규모 주택 프로젝트 준공에 따른 정산 및 도급 증액.</li>
                 <li><strong>약 2천억 원의 영업이익 개선 효과</strong> 발생.</li>
                 <li>주요 프로젝트: <strong>메이플 자이, 철산자이 헤리티지</strong> 등.</li>
+                <li>이러한 도급 증액은 공사 막바지 또는 준공 시점에 발생하는 일회성 요인으로, 예측이 어렵다. 하반기에는 대규모 도급 증액 현장은 적을 것으로 예상된다.</li>
             </ul>
 
             <h4>3.2. 이슈 2: 엘레먼츠 유럽 청산 (07:34 - 11:17)</h4>
@@ -563,6 +639,7 @@ li {
                 <li>2020년 인수한 스틸 모듈러 사업 '엘레먼츠 유럽'에 대한 심도 있는 점검 결과 <strong>청산 결정</strong>.</li>
                 <li><strong>2분기에 영업상 손실 1,200억 원</strong> (매출 감액 및 원가 증가) 반영.</li>
                 <li><strong>영업 외 손실 730억 원</strong> 반영 (비지배주주 지분 관련).</li>
+                <li>엘레먼츠는 2분기 신사업부문 원가율 악화의 주범이었으나, <strong>3분기부터 사업부문에서 제외될 예정</strong>이므로, 신사업부문의 원가율은 기존의 80% 중반에서 후반대(GPM 10% 중반~후반)로 회복될 것으로 기대된다.</li>
                 <li><strong>모듈러 사업 방향성에는 차질 없음:</strong>
                     <ul>
                         <li>엘레먼츠 유럽 제외한 다우드, GPC 자이가이스트는 계획대로 운영 중.</li>
@@ -576,8 +653,8 @@ li {
             <h4>3.3. 이슈 3: 인프라 사업본부 손익 (11:17 - 13:35)</h4>
             <ul>
                 <li><strong>원가율 악화:</strong> 부산 만덕센텀 간 도로 공사 (민자 사업, 난공사) 공기 지연 및 공사 여건 악화로 <strong>450억 원 손실 반영</strong>.</li>
-                <li><strong>영업이익 개선 요인:</strong> 카타르 도하 메트로 프로젝트 장기간 중재 절차 최종 결론. 과거 대손 처리했던 금액 중 <strong>700억 원 환입</strong>.</li>
-                <li>결과적으로 원가율은 안 좋았으나, 대손환입 효과로 인프라 전체 영업이익은 양호한 모습.</li>
+                <li><strong>영업이익 개선 요인:</strong> 카타르 도하 메트로 프로젝트 장기간 중재 절차 최종 결론. 과거 대손 처리했던 금액 중 <strong>700억 원 환입</strong>. 이는 영업이익 단으로 들어와 실제 현금 유출입과는 무관한 회계적 처리였다.</li>
+                <li>결과적으로 원가율은 안 좋았으나, 대손환입 효과로 인프라 전체 영업이익은 양호한 모습. 만덕센텀 관련 환입은 일회성 요인이며, 이를 제외할 경우 인프라 사업부의 경상적 원가율은 약 90% 수준으로 예상된다. 현재로서는 추가적인 대규모 손실 우려는 없을 것으로 본다.</li>
             </ul>
 
             <h4>3.4. 이슈 4: 플랜트 사업본부 손익 (13:35 - 15:49)</h4>
@@ -590,7 +667,7 @@ li {
                     </ul>
                 </li>
                 <li>얌부 프로젝트 관련 <strong>600억 원 손실 반영</strong>.</li>
-                <li>이로 인해 플랜트 원가율 개선 폭이 크지 않았으나, <strong>하반기부터는 개선 기대</strong>.</li>
+                <li>이로 인해 플랜트 원가율 개선 폭이 크지 않았으나, <strong>하반기부터는 개선 기대</strong>. 작년에 수주했던 주요 3개 프로젝트가 매출에 기여하기 시작하면서 하반기에는 개선될 것으로 예상되며, 해당 프로젝트들은 보수적으로 원가율 90%대 초반으로 시작했다. 현재로서 예상 가능한 손실은 모두 반영했으므로, 추가 손실은 없을 것으로 예상한다.</li>
             </ul>
 
             <h4>3.5. 이슈 5: 영업 외 손익 (15:49 - 19:15)</h4>
@@ -601,10 +678,64 @@ li {
                         <li>외화 자산(특히 달러 자산, 약 12억 불 이상)이 많아 환율 변동성 확대 (분기 말 1,356.4원까지 하락)로 인한 평가 손실.</li>
                         <li>주요 원인: 사우디 자회사 대여금 (약 8억 불) 평가 손실. 이는 과거 플랜트 손실 메꾸기 위해 집행된 대여금으로, 이미 손실 반영 및 대손 설정 완료된 금액.</li>
                         <li><strong>실제 현금 흐름에는 영향 없음.</strong> 장부상 평가 손실이며, 작년에는 환율 상승으로 큰 이익 발생. 실질적인 재무 구조나 역량에는 영향 없다고 판단.</li>
+                        <li>환손실은 실제 현금 유출입과는 무관한 금융 자산 평가 손실이지만, 재무제표상 순이익에 직접적인 영향을 미쳐 기업 가치 산정 시 멀티플 적용에 혼란을 줄 수 있다. 특히 영업외손실은 추정이 어렵기 때문에 투자자 입장에서 불편함을 야기할 수 있다. GS건설은 프로젝트 단위에서 헤징을 하고 있으나, 금융 자산 평가로 인한 환손실은 지속적으로 발생할 수 있으며, 이에 대한 보다 적극적인 관리 및 투명한 설명이 필요하다.</li>
                     </ul>
                 </li>
             </ul>
             <p>이슈 사항이 많았음을 강조하며, 질의응답 시간으로 전환.</p>
+        </div>
+
+        <h2><span style="color: #007bff;">&#9632;</span> 후속 논의 및 사업 부문별 심층 분석</h2>
+        <div class="section-content">
+            <h3>1. 주택 사업 원가율 및 GPM 전망 심층 논의</h3>
+            <ul>
+                <li>2분기 주택 원가율이 우수했던 것은 일회성 도급 증액에 기인한 것으로 확인되었다.</li>
+                <li>일회성 도급 증액이 없을 경우, 연말까지 GPM이 한 자릿수대에 머물 것으로 예상된다.</li>
+                <li>내년부터 GPM이 두 자릿수로 넘어갈 수 있을지에 대한 질문에, 아직 내년 사업 계획 수립 전이라 정확한 답변은 어렵지만, 올해까지는 보수적인 가이드라인이 제시되었으며 내년에는 점진적인 개선이 기대된다.</li>
+                <li>도급 증액은 주로 공사 막바지 또는 준공 시점에 발생하며, 설계 변경, 발주처의 추가 요구사항 등 공사 중 발생하는 변동 사항에 대한 정산 과정에서 이루어지므로 현재 시점에서는 예측하거나 추정하기 어렵다.</li>
+            </ul>
+
+            <h3>2. 신사업 부문별 현황 및 전망</h3>
+            <h4>2.1. 엘레먼츠 (Elements)</h4>
+            <ul>
+                <li>2분기 신사업부문의 원가율 악화는 엘레먼츠 사업 때문이었으며, 3분기부터 엘레먼츠가 사업부문에서 제외될 예정이므로 신사업부문의 원가율은 기존의 80% 중반에서 후반대(GPM 10% 중반~후반)로 회복될 것으로 기대된다.</li>
+            </ul>
+
+            <h4>2.2. 이니마 (Inima)</h4>
+            <ul>
+                <li>이니마의 매각이 확정된 방향으로 진행 중임을 확인했다. 정확한 방식(전체 매각 vs. 지분 매각)은 공식적으로 알 수 없으나, 분위기는 전체 매각 쪽으로 흘러가고 있다고 언급되었다.</li>
+                <li>이니마는 GS건설 신사업 내에서 수익성이 매우 좋은 사업부문이었다.</li>
+                <li>매각이 성사될 경우, 해당 시점부터 연결 재무제표에서 즉시 제외되어 '중단 사업 손익'으로 반영될 가능성이 높다. 이는 연말까지 반영 후 다음 해에 제외되는 일반적인 예상과는 다를 수 있다.</li>
+                <li>이니마 매각은 재무 안정성 확보에는 기여하나, 수익성 측면에서는 연결 이익 감소로 이어질 수 있는 중요한 변수이다.</li>
+            </ul>
+
+            <h4>2.3. 프리패브 (Prefab) 및 베트남 사업</h4>
+            <ul>
+                <li>매출이 발생하는 프리패브 사업의 GPM은 한 자릿수 후반에서 두 자릿수 초반 (약 10% 내외) 수준으로 예상된다.</li>
+                <li>베트남 사업은 매우 좋은 수익성을 유지하고 있다.</li>
+                <li>이니마가 매각되더라도 프리패브와 베트남 사업의 수익성이 양호하게 유지될 것이므로, 신사업 전체의 수익성은 크게 훼손되지 않을 것으로 전망된다.</li>
+            </ul>
+
+            <h3>3. 플랜트 및 인프라 사업부 추가 논의</h3>
+            <h4>3.1. 플랜트 사업부 현황</h4>
+            <ul>
+                <li>플랜트 사업부문은 상반기에 실적이 좋지 않았는데, 이는 현재 활발하게 진행되는 프로젝트가 부족하기 때문이었다.</li>
+                <li>작년에 수주했던 주요 3개 프로젝트(파데일리, 지속가능 항공유(SAF) 프로젝트, LNG 터미널)가 매출에 기여하기 시작하면서 하반기에는 개선될 것으로 예상된다.</li>
+                <li>해당 프로젝트들은 보수적으로 원가율 90%대 초반으로 시작했으므로, 플랜트 사업부 전체의 GPM도 그 수준과 비슷하거나 약간 낮은 수준이 될 것으로 보인다.</li>
+            </ul>
+
+            <h4>3.2. 인프라 사업부 현황</h4>
+            <ul>
+                <li>2분기 인프라 사업부 실적이 좋지 않았던 주된 이유는 '만덕센텀' 프로젝트 관련 대손충당금 환입 때문이었다. 이는 기존에 대손으로 잡아놨던 금액이 환입된 것으로, 영업이익 단으로 들어와 실제 현금 유출입과는 무관한 회계적 처리였다.</li>
+                <li>만덕센텀 관련 환입은 일회성 요인이며, 해당 일회성 요인을 제외할 경우, 인프라 사업부의 경상적 원가율은 약 90% 수준으로 예상된다.</li>
+            </ul>
+
+            <h3>4. 기타 사업부 및 연간 가이던스</h3>
+            <ul>
+                <li>기존 그린 사업부는 플랜트 사업부로 통합되었으며, 전체 실적에 미치는 영향은 미미하다.</li>
+                <li>기타 사업부에는 주로 리조트 사업(엘리시안 강촌, 제주) 등이 포함된다.</li>
+                <li>전반적인 연간 매출 및 영업이익 가이던스는 기존 예상 범위 내에서 유지될 것으로 보이며, 이니마 매각의 정확한 결판 시점은 알 수 없다.</li>
+            </ul>
         </div>
 
         <h3>4. 질의응답 (Q&A) (19:15 - 36:21)</h3>
@@ -674,17 +805,20 @@ li {
             <h3>재무 구조의 복합적 변화와 핵심 사업의 견고함</h3>
             <p>GS건설의 2025년 2분기 실적은 표면적으로 당기순이익 적자 전환이라는 부정적인 결과를 보였으나, 그 내면에는 긍정적 요인과 일회성/비경상적 요인이 복합적으로 작용한 결과로 해석됩니다. <strong>주택 사업의 견고한 이익 창출력(2천억 원 영업이익 개선)</strong>은 핵심 사업의 안정성을 보여주었으며, 이는 어려운 시장 환경 속에서도 건설 본연의 역량이 유지되고 있음을 시사합니다.</p>
             <p>반면, <strong>엘레먼츠 유럽 청산과 같은 신사업 구조조정, 만덕센텀 도로와 얌부 프로젝트와 같은 특정 프로젝트의 손실 반영</strong>은 과거 투자 및 사업 진행 과정에서 발생한 리스크가 현실화된 것으로 보입니다. 특히, <strong>외환 관련 손실(1,870억 원)</strong>은 환율 변동성에 따른 평가 손실로, 실제 현금 유출이 없는 장부상 손실이라는 점을 명확히 설명하여 시장의 오해를 줄이려는 노력이 돋보였습니다. 이는 기업의 펀더멘털에는 직접적인 영향을 미치지 않는다는 점을 강조하는 중요한 포인트입니다.</p>
-            <p>모듈러 사업의 경우, 엘레먼츠 유럽 청산에도 불구하고 핵심 기술력 확보와 다른 모듈러 사업(다우드, GPC 자이가이스트)의 순항을 밝힘으로써, <strong>미래 성장 동력으로서의 모듈러 사업에 대한 의지를 재확인</strong>했습니다. 이는 단기적인 손실에도 불구하고 장기적인 관점에서 사업 포트폴리오를 재정비하고 있음을 보여줍니다.</p>
+            <p>모듈러 사업의 경우, 엘레먼츠 유럽 청산에도 불구하고 핵심 기술력 확보와 다른 모듈러 사업(다우드, GPC 자이가이스트)의 순항을 밝힘으로써, <strong>미래 성장 동력으로서의 모듈러 사업에 대한 의지를 재확인</strong>했습니다. 엘레먼츠가 3분기부터 연결에서 제외되면서 신사업 부문 전체의 원가율 개선이 기대됩니다.</p>
+            <p>또한, <strong>이니마 매각 추진</strong>은 고수익 사업의 이탈이라는 우려와 함께 재무 안정성을 확보하고 비핵심 자산을 정리하려는 회사의 전략적 의지를 보여줍니다. 이는 단기적인 이익 감소로 이어질 수 있으나, 장기적인 관점에서 사업 포트폴리오를 재정비하고 재무 건전성을 강화하려는 노력으로 해석됩니다. 남은 신사업(프리패브, 베트남)의 견조한 수익성이 중요해질 것입니다.</p>
+            <p>플랜트 및 인프라 사업은 일회성 손실 반영 이후 추가적인 대규모 손실 우려 없이 하반기에는 신규 프로젝트의 매출 기여와 원가율 개선을 통해 점진적인 회복을 기대할 수 있습니다. 그러나 여전히 보수적인 수익성 관리가 필요해 보입니다.</p>
+            <p>전반적으로 이번 실적 발표와 후속 논의는 GS건설이 현재 <strong>과도기적인 상황에 놓여 있으며, 각 사업 부문의 구조조정과 수익성 개선 노력이 진행 중</strong>임을 명확히 보여주었습니다. 단기적인 실적은 일회성 요인과 외부 변수(환율 등)의 영향을 크게 받을 수 있으므로, 투자자들은 이러한 요인들을 면밀히 분석하고 제거한 '본질적인' 사업 역량과 미래 성장 동력에 집중해야 할 것입니다.</p>
         </div>
 
         <h2><span style="color: #007bff;">&#9632;</span> 향후 계획 및 다음 단계</h2>
         <div class="section-content">
             <ul>
-                <li><strong>주택 사업:</strong> 하반기 대규모 도급 증액 현장은 적으나, 준공 정산에 따른 추가 이익 발생 가능성을 지속적으로 모니터링하고, 90% 초반대의 수익성을 연말까지 유지하는 데 집중할 것. 연간 공급 세대수 가이던스(16,250세대) 달성을 위해 지연 현장 관리에 만전을 기할 것.</li>
-                <li><strong>신사업 (모듈러):</strong> 엘레먼츠 유럽 청산 후에도 다우드, GPC 자이가이스트 등 다른 모듈러 사업의 가동률 및 수주 확대를 통해 사업을 정상적으로 추진하고, 확보된 기술력을 바탕으로 국내 공공/민간 주택사업 수주를 가시화할 것.</li>
-                <li><strong>인프라 및 플랜트 사업:</strong> 만덕센텀 도로 및 얌부 프로젝트 관련 예상 가능한 손실은 모두 반영되었으므로, 추가적인 대규모 손실 우려 없이 하반기에는 원가율 개선 및 수익성 회복에 주력할 것. 카타르 도하 메트로와 같은 성공적인 중재 사례를 통해 잠재적 이익을 지속 발굴할 것.</li>
-                <li><strong>재무 건전성:</strong> 순차입금 감소 추세를 유지하고, 부채 비율을 안정적으로 관리하며, 미착공 PF 리스크를 지속적으로 관리할 것.</li>
-                <li><strong>GS 이니마 매각:</strong> 최종 협상 마무리 단계에 있는 만큼, 조속하고 성공적인 매각을 통해 재무 구조 개선 및 신사업 투자 여력을 확보할 것.</li>
+                <li><strong>주택 사업:</strong> 하반기 대규모 도급 증액 현장은 적으나, 준공 정산에 따른 추가 이익 발생 가능성을 지속적으로 모니터링하고, 90% 초반대의 수익성을 연말까지 유지하는 데 집중할 것. 연간 공급 세대수 가이던스(16,250세대) 달성을 위해 지연 현장 관리에 만전을 기할 것. 내년에는 일회성 요인을 제외한 '진성 원가율' 개선을 통해 두 자릿수 GPM 달성을 목표로 할 것.</li>
+                <li><strong>신사업 (모듈러):</strong> 엘레먼츠 유럽 청산 후 3분기부터 사업부문에서 제외될 예정이며, 다우드, GPC 자이가이스트 등 다른 모듈러 사업의 가동률 및 수주 확대를 통해 사업을 정상적으로 추진하고, 확보된 기술력을 바탕으로 국내 공공/민간 주택사업 수주를 가시화할 것.</li>
+                <li><strong>신사업 (이니마):</strong> 최종 협상 마무리 단계에 있는 만큼, 조속하고 성공적인 매각을 통해 재무 구조 개선 및 신사업 투자 여력을 확보할 것. 매각 시 '중단 사업 손익'으로 연결 재무제표에 반영될 가능성을 주시하고, 프리패브 및 베트남 사업의 수익성 기여를 확대할 것.</li>
+                <li><strong>인프라 및 플랜트 사업:</strong> 만덕센텀 도로 및 얌부 프로젝트 관련 예상 가능한 손실은 모두 반영되었으므로, 추가적인 대규모 손실 우려 없이 하반기에는 원가율 개선 및 수익성 회복에 주력할 것. 특히 플랜트 사업은 작년 수주한 주요 3개 프로젝트의 매출 기여를 통해 실적 개선을 이끌어낼 것.</li>
+                <li><strong>재무 건전성 및 환리스크 관리:</strong> 순차입금 감소 추세를 유지하고, 부채 비율을 안정적으로 관리하며, 미착공 PF 리스크를 지속적으로 관리할 것. 환율 변동에 따른 영업 외 손실이 재무제표상 순이익에 미치는 영향을 최소화하고, 투자자들에게 보다 명확하게 설명할 수 있는 방안 마련에 힘쓸 것.</li>
             </ul>
         </div>
 
@@ -692,7 +826,8 @@ li {
         <div class="evaluation-box">
             <h3>투명한 소통과 사업 재편의 의지 확인</h3>
             <p>이번 회의는 GS건설이 2분기 실적에 영향을 미친 복잡한 이슈들을 <strong>상당히 투명하고 상세하게 설명</strong>하려는 노력이 돋보였습니다. 특히, 영업 외 손실의 큰 비중을 차지하는 환율 평가 손실이 실제 현금 흐름에 미치는 영향이 미미하다는 점을 명확히 전달하여 시장의 불필요한 우려를 해소하려 했습니다. 이는 투자자 신뢰 확보에 긍정적인 영향을 미칠 것으로 보입니다.</p>
-            <p>회사의 방향성은 <strong>핵심 주택 사업의 견고함을 바탕으로, 비효율적인 해외 신사업을 과감히 정리하고, 수익성 개선에 집중하는 사업 재편</strong>으로 요약할 수 있습니다. 단기적인 손실을 감수하더라도 장기적인 성장 동력을 확보하고 재무 건전성을 강화하겠다는 의지가 명확히 드러났습니다. 향후 GS건설은 주택 사업의 안정적인 수익을 기반으로, 플랜트 및 인프라 사업의 원가 관리 역량을 강화하고, 선택과 집중을 통한 신사업 포트폴리오를 구축하는 데 주력할 것으로 예상됩니다. 시장은 이러한 구조조정의 성과와 핵심 사업의 지속적인 성장을 주목할 것입니다.</p>
+            <p>회사의 방향성은 <strong>핵심 주택 사업의 견고함을 바탕으로, 비효율적인 해외 신사업을 과감히 정리하고, 수익성 개선에 집중하는 사업 재편</strong>으로 요약할 수 있습니다. 단기적인 손실을 감수하더라도 장기적인 성장 동력을 확보하고 재무 건전성을 강화하겠다는 의지가 명확히 드러났습니다. 특히 엘레먼츠의 연결 제외와 이니마 매각 추진은 신사업 포트폴리오의 효율성을 높이고 재무 안정성을 확보하려는 중요한 전략적 움직임입니다.</p>
+            <p>향후 GS건설은 주택 사업의 안정적인 수익을 기반으로, 플랜트 및 인프라 사업의 원가 관리 역량을 강화하고, 선택과 집중을 통한 신사업 포트폴리오를 구축하는 데 주력할 것으로 예상됩니다. 시장은 이러한 구조조정의 성과와 핵심 사업의 지속적인 성장을 주목할 것입니다. 재무제표상 비영업성 손실(환손실 등)이 순이익에 미치는 영향에 대한 투명한 설명과 관리는 향후 기업 가치 평가에 중요한 요소가 될 것입니다. 시장의 긍정적인 기대와 내부의 보수적인 시각 사이에서 균형 잡힌 관점으로 지속적인 모니터링이 필요합니다.</p>
         </div>
     </div>
 </body>
