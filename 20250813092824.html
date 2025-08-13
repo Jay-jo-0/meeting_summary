@@ -1,0 +1,472 @@
+<html>
+<head>
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고려아연 회의록</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #343a40;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #0056b3;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #0056b3;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            table-layout: auto; /* Allow columns to size naturally */
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #e9ecef;
+            color: #495057;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .summary-table th, .summary-table td {
+            padding: 10px 12px;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #856404;
+        }
+        .key-point {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .insight {
+            background-color: #e7f3ff;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .next-steps {
+            background-color: #e6ffed;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .evaluation {
+            background-color: #ffebe6;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .date-time {
+            text-align: center;
+            font-size: 1.1em;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        .attendees {
+            font-size: 1.1em;
+            color: #6c757d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section-content {
+            margin-bottom: 25px;
+        }
+        .note {
+            font-style: italic;
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 15px;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-size: 1.6em;
+                margin-top: 25px;
+            }
+            h3 {
+                font-size: 1.2em;
+                margin-top: 20px;
+            }
+            table {
+                font-size: 0.85em;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            th, td {
+                padding: 8px 10px;
+            }
+            .summary-table {
+                width: 100%;
+                display: table; /* Force table display for summary */
+                overflow-x: hidden;
+                white-space: normal;
+            }
+            .summary-table th, .summary-table td {
+                padding: 8px 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+            h3 {
+                font-size: 1.1em;
+            }
+            table {
+                font-size: 0.8em;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>고려아연 회의록</h1>
+        <div class="date-time">
+            <strong>일시:</strong> 2025년 8월 13일 (수) 오전 9시 22분 (47분 7초 소요)<br>
+            <strong>작성자:</strong> 이태환
+        </div>
+        <div class="attendees">
+            <strong>참석자:</strong> 참석자 1, 참석자 2, 참석자 3 (음성 스크립트 기반)
+        </div>
+
+        <h2><span class="highlight">회의 핵심 요약</span></h2>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>항목</th>
+                    <th>주요 내용</th>
+                    <th>핵심 요약</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2분기 실적 및 하반기 전망</td>
+                    <td>희소금속(안티모니, 인듐) 마진율(GP 86% 육박) 및 수율 개선(안티모니 25%↑, 인듐 30%↑)으로 상반기 실적 호조. 3분기 실적도 긍정적 전망.</td>
+                    <td><span class="key-point">희소금속 덕분에 상반기 실적 '매우 양호', 하반기도 '긍정적' 전망.</span></td>
+                </tr>
+                <tr>
+                    <td>희소금속 가격 급락 리스크</td>
+                    <td>중국 수출 통제 해제 외에는 급락 가능성 낮음. 미국 직접 수출 시작 등 비중국 공급망 다변화 수요 증가.</td>
+                    <td><span class="key-point">중국 외 공급 부족으로 가격 급락 리스크 '제한적', 미국과의 '직접 거래' 확대.</span></td>
+                </tr>
+                <tr>
+                    <td>TMC 지분 인수 및 미국 제련소 투자</td>
+                    <td>심해 망간단괴 채굴권 보유 캐나다 회사 TMC 지분 4.9% 인수 (1,000억 원). 국제법 리스크 있으나, 니켈 제련소 톨링 계약으로 소유권 회피. 장기적으로 미국 내 니켈 제련소 투자 가능성 언급 (낮은 확률).</td>
+                    <td><span class="key-point">미래 니켈 공급망 확보 위한 '전략적 투자'. 미국 제련소 투자는 '매우 낮은 확률'의 장기 검토 사항.</span></td>
+                </tr>
+                <tr>
+                    <td>배당 및 주주 환원 정책</td>
+                    <td>올해 중간 배당 없음. 1.7조 원 자사주 소각 진행 중. 9월 중 밸류업 공시 통해 주주 환원 강화 방안 및 이사회 투명성 제고 계획 발표 예정.</td>
+                    <td><span class="key-point">자사주 소각으로 주주 환원 '극대화'. 9월 밸류업 공시로 '구체적인 가이던스' 제시 예정.</span></td>
+                </tr>
+                <tr>
+                    <td>전력 조달 (LNG 발전소 & SMC 신재생)</td>
+                    <td>온산 LNG 발전소 자가 발전으로 2,600억 원 절감 (2021년~현재). 추가 증설 검토 중이나, RE100 가입 및 정부 정책 변화로 불확실성 존재. SMC는 내년 80% 이상 신재생 에너지 조달 목표.</td>
+                    <td><span class="key-point">자가 발전으로 '비용 절감' 효과 큼. 온산 LNG 증설은 '정책 불확실성' 존재. SMC는 '신재생 전환' 가속화.</span></td>
+                </tr>
+                <tr>
+                    <td>자회사 실적 (KZ 트레이딩, SMC, 페달포인트)</td>
+                    <td>KZ 트레이딩: 알루미늄 관세 문제로 적자 전환, 물량 축소 계획. SMC: 선적 지연 이슈 해소로 3분기 실적 개선 전망. 페달포인트: 상반기 흑자 전환, 하반기도 흑자 유지 전망.</td>
+                    <td><span class="key-point">KZ 트레이딩 '일시적 부진', SMC/페달포인트는 '실적 개선' 기대.</span></td>
+                </tr>
+                <tr>
+                    <td>CAPEX 및 현금 흐름</td>
+                    <td>올해 CAPEX 5,000억 원 중반 예상 (NDSI 인수 포함). 내년 니켈 제련소 투자로 올해와 유사한 수준 유지 전망. 충분한 현금 흐름 확보.</td>
+                    <td><span class="key-point">안정적인 CAPEX 및 '충분한 현금 흐름' 유지.</span></td>
+                </tr>
+                <tr>
+                    <td>MBK 이슈 및 경영권 분쟁</td>
+                    <td>MBK 지분 인수 단가, 영풍과의 의결권 계약 등 언론 보도 내용 확인. 홈플러스 문제로 MBK의 엑싯 전략 복잡. 경영권 분쟁 장기화 가능성.</td>
+                    <td><span class="key-point">MBK의 '홈플러스 문제'가 변수. 경영권 분쟁은 '장기화'될 가능성 존재.</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>1. 2분기 실적 및 하반기 전망</h2>
+        <div class="section-content">
+            <p>참석자 1은 1분기 영업이익 2,700억 원, 2분기 1,590억 원으로 상반기 5,300억 원을 기록하며 양호한 실적을 보인 것에 대해 하반기 전망을 질의했습니다.</p>
+            <p>참석자 2는 상반기 실적 선방의 주된 요인으로 <span class="key-point">희소금속(Rare Metal)의 고농도 마진</span>을 꼽았습니다. 특히 희소금속의 매출 총이익률(GP 마진율)이 <span class="key-point">거의 86%에 육박</span>할 정도로 매우 높았으며, 3분기에도 이러한 마진율과 규모가 어느 정도 유지될 것으로 예상했습니다.</p>
+            <ul>
+                <li><strong>가격 지표 상승 효과:</strong> 희소금속 가격 상승이 실적에 긍정적인 영향을 미쳤습니다.</li>
+                <li><strong>수율 개선 효과:</strong> 주요 희소금속인 <span class="key-point">안티모니는 전년 대비 25% 물량 증가</span>, <span class="key-point">인듐은 전년 대비 30% 증가</span>하여 볼륨 효과가 컸습니다. 공정 개선 및 설비 개조를 통한 수율 향상이 주효했습니다.</li>
+                <li><strong>3분기 실적 전망:</strong> 3분기까지 가격이 어느 정도 확보된 상태이므로, 실적 전망은 나쁘지 않다고 밝혔습니다.</li>
+                <li><strong>안티모니 물량 배분:</strong> 연초부터 수요를 많이 올려 상반기 물량의 약 45%를 소화했으며, 하반기에는 55% 이상이 예상됩니다.</li>
+            </ul>
+        </div>
+
+        <h2>2. 희소금속 가격 급락 리스크 및 공급망 다변화</h2>
+        <div class="section-content">
+            <p>참석자 1은 하반기 희소금속 가격 급락 리스크에 대해 우려를 표했습니다. 이에 참석자 2는 현재 상황에서 가격이 급락할 수 있는 유일한 리스크는 <span class="key-point">중국의 수출 통제 해제</span>뿐이라고 설명했습니다.</p>
+            <ul>
+                <li><strong>중국의 수출 통제:</strong> 현재 중국은 관세 관련 노이즈가 진행되는 상황에서 수출 제한을 해제할 가능성이 낮다고 판단하고 있습니다. 이는 중국이 가장 실효성 높은 카드로 쥐고 있기 때문입니다.</li>
+                <li><strong>시장 상황:</strong> 희소금속 시장은 워낙 작고, 중국 외에는 증분 공급(incremental supply)이 거의 없는 상황입니다.</li>
+                <li><strong>고려아연의 역할:</strong> 고려아연은 글로벌 시장 점유율이 5~7% 수준이지만, 전년 대비 30% 가까이 물량이 증가하는 등 비중국 국가 중에서는 공급량이 크게 늘어나는 몇 안 되는 업체입니다.</li>
+                <li><strong>미국 직접 수출:</strong> 최근 상반기에 <span class="key-point">미국 방산업체에 안티모니를 직접 수출</span>하기 시작했으며, 이는 트레이더를 거치지 않은 첫 직수출 사례입니다. 미국 측에서 직접 문의가 많이 들어오고 있으며, 이는 중국 외 공급망 다변화의 필요성을 반영합니다.</li>
+                <li><strong>장기적 관점:</strong> 미국은 중국의 일시적인 수출 통제 해제에도 불구하고, 언제든 재사용될 수 있는 카드로 인식하고 있어 궁극적으로 중국 외 공급망 확보 노력을 지속할 것으로 예상됩니다.</li>
+            </ul>
+            <p class="note"><em><span class="key-point">인사이트:</span> 희소금속 시장의 구조적 공급 부족과 지정학적 리스크가 고려아연의 희소금속 사업에 강력한 우위를 제공하고 있으며, 이는 단기적인 가격 변동성에도 불구하고 장기적인 성장 동력이 될 것으로 보입니다. 특히 미국과의 직접 거래는 향후 전략적 파트너십 확대로 이어질 가능성이 높습니다.</em></p>
+        </div>
+
+        <h2>3. TMC 지분 인수 및 미국 제련소 투자 검토</h2>
+        <div class="section-content">
+            <p>참석자 1은 고려아연이 TMC 지분을 인수한 배경과 미국 제련소 투자 언급에 대해 질의했습니다.</p>
+            <ul>
+                <li><strong>TMC 인수 배경:</strong> TMC는 캐나다 회사로 미국에 상장되어 있으며, 심해 망간단괴 채굴권을 보유하고 있습니다. 고려아연은 TMC와 오랫동안 접촉해 왔으며, <span class="key-point">지분 4.9%를 약 1,000억 원에 취득</span>했습니다.</li>
+                <li><strong>국제법 이슈:</strong> TMC의 심해 자원 채굴은 UN 산하 국제해저기구(ISA)의 국제법 및 해양법과 관련된 이슈가 있습니다. 미국은 ISA 가입 국가가 아니며, 트럼프 행정명령으로 TMC에 개발 권한을 부여했습니다.</li>
+                <li><strong>고려아연의 역할:</strong> 고려아연은 TMC의 망간단괴를 직접 소유하지 않고, 내년 가동 예정인 니켈 제련소에서 <span class="key-point">톨링(Tolling) 계약을 통해 단순 가공만 수행</span>하고 TMC에 다시 넘기는 구조입니다. 이는 국제법적 리스크를 회피하면서도 원료를 확보하기 위한 전략입니다.</li>
+                <li><strong>미국 제련소 투자 검토:</strong> 미국 내 니켈 제련소 투자 언급은 만약 온산 니켈 제련소에서 처리할 수 없는 상황이 발생할 경우를 가정한 것이며, 현재 구체적인 결정은 없습니다. 이는 <span class="key-point">매우 낮은 확률의 시나리오</span>이며, 세제 혜택, 경제성 확보 등 많은 변수가 충족되어야 합니다.</li>
+                <li><strong>투자금 및 워런트:</strong> 초기 투자금 1,000억 원 외에, 상업화 성공 및 주가 안정 등 까다로운 조건 충족 시 워런트 행사를 통해 총 <span class="key-point">약 1,800억 원까지 추가 투자</span>가 가능합니다.</li>
+                <li><strong>주주 구성:</strong> TMC의 주요 주주는 창업자와 네덜란드 회사 '어시스(Assys)'로, 어시스는 2대 주주이자 실제 운영을 담당하고 있습니다.</li>
+            </ul>
+            <p class="note"><em><span class="key-point">인사이트:</span> 고려아연의 TMC 투자는 미래 친환경 배터리 소재의 핵심 원료인 니켈의 안정적인 공급망을 비중국 지역에서 확보하려는 장기적인 전략의 일환입니다. 국제법적 리스크를 최소화하면서도 원료 접근성을 높이는 영리한 계약 구조를 통해 미래 성장 동력을 확보하려는 의지가 엿보입니다.</em></p>
+        </div>
+
+        <h2>4. 배당 및 주주 환원 정책</h2>
+        <div class="section-content">
+            <p>참석자 1은 올해 중간 배당 여부에 대해 질의했습니다.</p>
+            <ul>
+                <li><strong>중간 배당 없음:</strong> 올해는 반기 배당이 없으며, 1조 7천억 원 규모의 자사주 소각이 진행 중이므로 <span class="key-point">중간 배당보다는 연간 배당에 집중</span>할 계획입니다. 자사주 소각은 6월, 9월, 12월 세 차례에 걸쳐 진행됩니다.</li>
+                <li><strong>9월 밸류업 공시 준비:</strong> 9월 중으로 밸류업 공시를 통해 주주 환원 정책에 대한 구체적인 가이던스를 제시할 예정입니다.</li>
+                <li><strong>공시 내용:</strong>
+                    <ul>
+                        <li><span class="key-point">핵심 지표 이행 상황:</span> 작년 10월 공시했던 중장기 및 단기 재무 지표 조정의 1년 이행 상황을 설명합니다.</li>
+                        <li><span class="key-point">거버넌스 내재화:</span> 이사회 투명성 및 전문성 제고 방안을 제시합니다. MBK 측 인사의 이사회 참여로 이사회 분위기가 독특해졌지만, 회사 발전을 위한 공통된 목표는 유지하고 있습니다.</li>
+                        <li><span class="key-point">이사회 객관적 평가 공개:</span> 제3기관을 통한 이사회 평가 결과를 공개하여 투명성을 높일 예정입니다.</li>
+                        <li><span class="key-point">주주 환원 강화:</span> 기존 3년 평균 주주 환원율 40% 이상 유지 목표가 1.7조 원 자사주 소각으로 의미가 없어진 만큼, <span class="key-point">더욱 현실적이고 강화된 주주 환원 방안</span>을 발표할 예정입니다.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="note"><em><span class="key-point">인사이트:</span> 대규모 자사주 소각은 주주 가치 제고에 대한 강력한 의지를 보여주는 동시에, 시장의 단기적인 주가 반응이 미미할 수 있다는 점을 고려하여 분할 소각하는 전략적 접근을 취하고 있습니다. 9월 밸류업 공시는 주주들과의 소통을 강화하고 기업 가치 제고를 위한 구체적인 로드맵을 제시하는 중요한 기회가 될 것입니다.</em></p>
+        </div>
+
+        <h2>5. 전력 조달 전략 (온산 LNG 발전소 & SMC 신재생 에너지)</h2>
+        <div class="section-content">
+            <p>참석자 1은 국내 LNG 발전소 운영 현황과 SMC의 전력 조달 계획에 대해 질의했습니다.</p>
+            <h3>5.1. 온산 LNG 발전소</h3>
+            <ul>
+                <li><strong>자체 발전 현황:</strong> 고려아연은 온산 전력의 약 절반을 LNG 발전소(소규모 석탄 발전소 포함)를 통해 자체 조달하고 있으며, 나머지 절반은 한전에서 수전하고 있습니다.</li>
+                <li><strong>경제적 효과:</strong> 2021년 LNG 발전소 가동 이후 올해 상반기까지 한전 대신 자체 발전을 통해 <span class="key-point">약 2,600억 원의 비용을 절감</span>했습니다. 올해 연간으로는 약 1,000억 원의 절감 효과가 예상되며, 한전 전기료 인상 추세와 유가 안정 시 경제적 효율은 더욱 증가할 것으로 보입니다.</li>
+                <li><strong>LNG 소싱:</strong> 현재 GS에너지를 통해 LNG를 조달하고 있습니다. 미국과의 관세 협상에 따른 직도입 논의도 있으나, 아직 구체적인 계획은 없습니다.</li>
+                <li><strong>추가 증설 검토:</strong> LNG 발전소 추가 건설을 검토 중이며, 장기적으로는 자체 발전 비중을 3분의 2까지 늘리고, 향후 수소 혼소 발전으로 전환하여 탈탄소화를 추진할 계획입니다.</li>
+                <li><strong>불확실성:</strong> RE100 가입 기업으로서 재생에너지가 아닌 발전소 건설 시 퇴출 가능성이 있다는 점, 그리고 현 정부의 LNG 발전 정책 변화로 산업부의 인허가 지연 등 불확실성이 존재합니다.</li>
+            </ul>
+            <h3>5.2. SMC (호주) 신재생 에너지</h3>
+            <ul>
+                <li><strong>자체 조달 현황:</strong> 작년 기준 SMC는 전력의 약 4분의 1을 자체 조달했습니다.</li>
+                <li><strong>신재생 에너지 확대:</strong> 태양광 증설은 더 이상 하지 않지만, 내년 맥킨타이어 풍력 발전소의 상업 가동과 스탠웰 풍력 발전소와의 PPA 계약을 통해 <span class="key-point">내년에는 전력의 80% 이상을 신재생 에너지로 조달</span>할 예정입니다. (태양광 25%, 풍력 55%)</li>
+                <li><strong>경쟁 우위:</strong> 연간 20만 톤이 넘는 아연 생산 글로벌 제련소 중 신재생 에너지 비중이 80%에 육박하는 회사는 거의 유일무이할 것으로 예상됩니다.</li>
+                <li><strong>그린 프리미엄:</strong> 현재는 그린 스틸/징크에 대한 제도화나 규제가 없지만, 향후 톤당 50불이라도 프리미엄이 붙는다면 SMC의 이익률을 한 단계 끌어올릴 수 있는 큰 변화가 될 것입니다.</li>
+                <li><strong>SMSF:</strong> SMC의 솔라팜 자산은 현재 아크 에너지(Arc Energy)가 보유하고 있습니다.</li>
+            </ul>
+            <p class="note"><em><span class="key-point">인사이트:</span> 고려아연은 국내외 사업장에서 에너지 효율화와 친환경 에너지 전환을 적극적으로 추진하고 있습니다. 온산의 LNG 발전소는 단기적인 비용 절감 효과를, SMC의 신재생 에너지 확대는 장기적인 ESG 경쟁력 및 잠재적인 '그린 프리미엄' 확보를 목표로 합니다. 다만, 국내 LNG 발전소 증설은 정책 및 환경 단체와의 협의가 필요한 복잡한 과제입니다.</em></p>
+        </div>
+
+        <h2>6. 자회사 실적 및 CAPEX 전망</h2>
+        <div class="section-content">
+            <h3>6.1. KZ 트레이딩</h3>
+            <ul>
+                <li><strong>실적 부진:</strong> 이익률이 높은 회사는 아니지만 안정적이었던 KZ 트레이딩이 <span class="key-point">알루미늄 관세 문제로 적자 전환</span>했습니다. 미국이 아시아산 알루미늄에 50% 관세를 부과하면서 역내 물량 소화로 마진이 악화되었습니다.</li>
+                <li><strong>하반기 전략:</strong> 당분간 알루미늄 물량을 최소한으로 줄여 손해를 보지 않는 전략을 취할 예정입니다. 수익성 회복은 상반기에도 불확실하며, 구조적인 상황 지속 시 알루미늄 사업 물량에 대한 진지한 재검토가 필요합니다.</li>
+            </ul>
+            <h3>6.2. SMC (호주)</h3>
+            <ul>
+                <li><strong>판매 물량 이연:</strong> 2분기 6.6만 톤 생산에도 불구하고 선적 지연(물류 이슈)으로 5만 톤만 판매되었습니다. 이연된 약 1.6만 톤의 물량은 3분기에 정상적으로 판매될 예정입니다.</li>
+                <li><strong>3분기 실적 전망:</strong> 아연 가격이 2천 중반에 머물러 있어도 손해를 보지 않는 구조이며, 이연된 물량 판매로 <span class="key-point">3분기 매출 규모 및 이익률이 2분기보다 개선될 것</span>으로 예상됩니다.</li>
+            </ul>
+            <h3>6.3. 페달포인트</h3>
+            <ul>
+                <li><strong>흑자 전환:</strong> 작년 약 2천만 달러 영업 적자에서 <span class="key-point">올해 상반기 5백만 달러 흑자 전환</span>했습니다.</li>
+                <li><strong>하반기 전망:</strong> 주력 자회사인 케타맨(Kataman)이 2조 원 규모의 매출을 안정적으로 내고 있어, 페달포인트는 하반기에도 소폭이나마 흑자를 유지할 것으로 보입니다.</li>
+            </ul>
+            <h3>6.4. CAPEX 및 현금 흐름</h3>
+            <ul>
+                <li><strong>올해 CAPEX:</strong> 본사 기준 약 3천억 원 대이며, 해외 투자(NDSI 인수 1억 불, IT 스페셜 업체 인수 등)를 포함하여 <span class="key-point">총 5천억 원 중반 수준</span>이 예상됩니다.</li>
+                <li><strong>내년 CAPEX:</strong> 니켈 제련소 투자가 하반기까지 진행되므로 올해와 비슷한 5~6천억 원 수준이 예상됩니다. 만약 LNG 발전소 추가 건설이 확정될 경우 약 2천억 원이 추가될 수 있습니다.</li>
+                <li><strong>감가상각비:</strong> 연간 약 3~4천억 원 수준입니다.</li>
+                <li><strong>현금 흐름:</strong> 상반기 재고 자산 확보(원료 가격 상승)로 영업 현금 흐름이 다소 부정적이었으나, 연간으로는 1조 원 이상의 현금 흐름이 유지될 것으로 예상되어 <span class="key-point">배당 등 주주 환원을 위한 충분한 현금 확보</span>가 가능합니다.</li>
+            </ul>
+            <p class="note"><em><span class="key-point">인사이트:</span> 자회사별로 희비가 엇갈리지만, 핵심 사업의 견조한 실적과 전략적 투자를 통해 안정적인 재무 구조를 유지하고 있습니다. 특히 CAPEX는 미래 성장 동력 확보를 위한 필수적인 투자로 보이며, 충분한 현금 흐름이 이를 뒷받침하고 있습니다.</em></p>
+        </div>
+
+        <h2>7. MBK 이슈 및 경영권 분쟁</h2>
+        <div class="section-content">
+            <p>참석자 1은 MBK의 존재를 상수(Constant)로 볼 것인지 변수(Variable)로 볼 것인지에 대한 고민을 언급하며, MBK의 엑싯 전략과 경영권 분쟁의 향방에 대해 질의했습니다.</p>
+            <ul>
+                <li><strong>MBK 지분 단가:</strong> MBK가 인수한 지분의 평균 단가는 약 93만 원으로 추정됩니다. 영풍과의 의결권 계약 단가는 언론에 따르면 60만 원 중반대입니다.</li>
+                <li><strong>홈플러스 문제:</strong> MBK의 홈플러스 문제가 엑싯 전략을 복잡하게 만들고 있습니다. 홈플러스의 청산 여부 및 원매자 출현 여부가 불확실하며, 고용 문제 등으로 정부 개입이 어려운 상황입니다. 이는 MBK의 운신의 폭을 좁히는 요인으로 작용할 수 있습니다.</li>
+                <li><strong>경영권 분쟁 장기화 가능성:</strong>
+                    <ul>
+                        <li><span class="key-point">이사회 구성:</span> 내년 정기 주주총회 시 이사회 숫자가 6명으로 늘어날 경우 3:3 또는 4:2 구도가 예상되지만, 현 경영진이 여전히 과반을 유지할 것으로 보입니다.</li>
+                        <li><span class="key-point">직무 정지 이사 복귀:</span> 직무 정지된 이사 4명의 복귀 시기는 본안 소송 결과에 따라 달라지며, 이들이 복귀할 경우 이사회 구성 비율이 12:7로 다시 현 경영진에 유리해져 MBK의 계산이 복잡해질 수 있습니다.</li>
+                        <li><span class="key-point">IRR 목표:</span> MBK가 펀드의 목표 IRR(내부수익률)을 달성하기 위해서는 주가가 현 수준보다 훨씬 높아야 하므로, 영풍과의 주주 간 계약 재검토 또는 다른 엑싯 플랜을 세워야 할 가능성이 있습니다.</li>
+                    </ul>
+                </li>
+                <li><strong>시장 유통 주식 부족:</strong> 고려아연 주식의 유통 주식 수가 적어 대규모 매매가 어렵다는 점도 언급되었습니다.</li>
+                <li><strong>홈플러스 매각 난항:</strong> 유통 업계 애널리스트들도 홈플러스 매각의 어려움을 인정하고 있으며, 정부가 고용 문제로 인해 청산을 쉽게 허용하지 않을 것이라는 전망이 지배적입니다. 알리나 테무 같은 중국 업체들의 관심설도 있으나, 이는 물류 창고 활용 개념일 뿐 대규모 점포 인수로 이어지기는 어려울 것으로 판단됩니다.</li>
+            </ul>
+            <p class="note"><em><span class="key-point">인사이트:</span> 고려아연의 경영권 분쟁은 MBK의 재무적 상황(특히 홈플러스 문제)과 법적 공방의 복잡성으로 인해 단기간 내 해결되기 어려울 것으로 보입니다. 이는 투자자들에게 불확실성을 제공하지만, 동시에 현 경영진의 안정적인 운영 기조가 유지될 가능성도 내포하고 있습니다. 장기적인 관점에서 기업의 본질 가치에 집중하는 것이 중요해 보입니다.</em></p>
+        </div>
+
+        <div class="insight">
+            <h2>회의 인사이트</h2>
+            <p>이번 고려아연 회의는 단순히 실적 보고를 넘어, 회사의 <span class="key-point">미래 성장 전략과 당면 과제를 심도 있게 논의</span>한 자리였습니다. 핵심 인사이트는 다음과 같습니다:</p>
+            <ul>
+                <li><strong>희소금속 사업의 강력한 성장 동력:</strong> 희소금속은 고마진과 높은 성장률을 동시에 보여주며 고려아연의 실적을 견인하는 핵심 사업으로 자리매김했습니다. 특히 중국 의존도를 낮추고 미국 등 비중국 지역으로의 직접 판매를 확대하는 전략은 지정학적 리스크 속에서 안정적인 수익 창출을 가능하게 할 것입니다. 이는 단순한 가격 상승 효과를 넘어선 구조적인 경쟁 우위로 해석됩니다.</li>
+                <li><strong>미래 핵심 광물 확보를 위한 선제적 투자:</strong> TMC 지분 인수는 니켈이라는 미래 배터리 핵심 원료의 공급망을 선제적으로 확보하려는 고려아연의 장기적인 비전을 보여줍니다. 국제법적 리스크를 영리하게 회피하는 톨링 계약 구조는 리스크 관리와 사업 기회 포착이라는 두 마리 토끼를 잡으려는 노력을 반영합니다. 이는 지속 가능한 성장을 위한 필수적인 투자로 평가됩니다.</li>
+                <li><strong>주주 가치 제고에 대한 강력한 의지:</strong> 1.7조 원 규모의 자사주 소각과 9월 밸류업 공시를 통한 주주 환원 정책 강화는 주주 친화적인 경영을 하겠다는 회사의 확고한 의지를 보여줍니다. 이는 경영권 분쟁 상황에서도 주주 이익을 최우선으로 고려하겠다는 메시지로 해석될 수 있습니다.</li>
+                <li><strong>에너지 전환과 ESG 리더십 강화:</strong> 온산 LNG 발전소의 비용 절감 효과와 SMC의 압도적인 신재생 에너지 전환 목표는 고려아연이 친환경 경영과 에너지 효율화에 적극적으로 투자하고 있음을 시사합니다. 이는 장기적으로 기업의 ESG 평가를 높이고, 잠재적인 '그린 프리미엄'을 확보하여 기업 가치를 상승시키는 중요한 요소가 될 것입니다.</li>
+                <li><strong>경영권 분쟁의 복잡성과 장기화 가능성:</strong> MBK의 재무적 상황과 법적 공방의 복잡성으로 인해 경영권 분쟁은 단기간 내 해결되기 어려울 것으로 보입니다. 이는 시장에 불확실성을 제공하지만, 회사의 본질적인 사업 경쟁력과 실적은 견조하게 유지되고 있음을 확인했습니다. 투자자들은 단기적인 노이즈보다는 회사의 장기적인 펀더멘털에 집중할 필요가 있습니다.</li>
+            </ul>
+        </div>
+
+        <div class="next-steps">
+            <h2>향후 계획 및 다음 단계</h2>
+            <p>회의에서 논의된 내용을 바탕으로 고려아연의 향후 주요 계획과 다음 단계는 다음과 같습니다:</p>
+            <ol>
+                <li><strong>희소금속 사업 확장 및 공급망 강화:</strong>
+                    <ul>
+                        <li>미국 방산업체 등과의 직접 계약을 확대하여 비중국 지역으로의 판매 채널을 더욱 다변화할 것입니다.</li>
+                        <li>안티모니, 인듐 등 주요 희소금속의 생산 수율을 지속적으로 개선하고, 시장 수요에 맞춰 물량 증대 방안을 모색할 것입니다.</li>
+                    </ul>
+                </li>
+                <li><strong>니켈 제련소 안정화 및 미래 원료 확보:</strong>
+                    <ul>
+                        <li>내년 가동 예정인 니켈 제련소의 안정적인 풀 캐파(Full Capacity) 운영에 집중할 것입니다.</li>
+                        <li>TMC와의 톨링 계약을 통해 심해 망간단괴의 가공 프로세스를 최적화하고, 니켈 원료의 안정적인 확보를 위한 협력을 강화할 것입니다.</li>
+                        <li>미국 내 니켈 제련소 투자 가능성은 낮은 확률이지만, 장기적인 관점에서 시장 상황 및 정책 변화를 지속적으로 모니터링할 것입니다.</li>
+                    </ul>
+                </li>
+                <li><strong>주주 환원 정책 구체화 및 소통 강화:</strong>
+                    <ul>
+                        <li>9월 중 발표될 밸류업 공시를 통해 강화된 주주 환원 방안(배당 및 자사주 소각 정책)을 명확히 제시하고, 시장과의 소통을 강화할 것입니다.</li>
+                        <li>이사회 투명성 제고 및 제3기관 평가 공개를 통해 지배구조 개선 노력을 지속적으로 보여줄 것입니다.</li>
+                    </ul>
+                </li>
+                <li><strong>친환경 에너지 전환 가속화:</strong>
+                    <ul>
+                        <li>온산 LNG 발전소의 추가 건설 여부는 RE100 가입 기업으로서의 정체성, 정부의 에너지 정책 변화, 그리고 환경 단체와의 협의를 종합적으로 고려하여 신중하게 결정할 것입니다.</li>
+                        <li>SMC의 신재생 에너지 조달 비중을 내년 80% 이상으로 확대하고, 이를 통해 '그린 징크'로서의 프리미엄 가치를 확보하기 위한 노력을 지속할 것입니다.</li>
+                        <li>장기적으로는 LNG 발전소의 수소 혼소 발전 전환 등 탈탄소화 로드맵을 구체화할 것입니다.</li>
+                    </ul>
+                </li>
+                <li><strong>자회사 실적 개선 및 포트폴리오 최적화:</strong>
+                    <ul>
+                        <li>KZ 트레이딩의 알루미늄 사업은 수익성 악화에 따라 물량을 최소화하고, 구조적인 문제 지속 시 사업 포트폴리오 재검토를 진지하게 고려할 것입니다.</li>
+                        <li>SMC의 선적 지연 이슈가 해소된 만큼, 3분기 실적 개선을 통해 안정적인 수익 기여를 이어갈 것입니다.</li>
+                        <li>페달포인트의 흑자 전환 기조를 유지하고, 안정적인 수익을 창출할 수 있도록 지원할 것입니다.</li>
+                    </ul>
+                </li>
+                <li><strong>경영권 분쟁 상황 관리:</strong>
+                    <ul>
+                        <li>MBK의 홈플러스 이슈 등 외부 변수가 회사 경영에 미치는 영향을 면밀히 주시하고, 필요시 선제적인 대응 방안을 모색할 것입니다.</li>
+                        <li>법적 분쟁 상황을 안정적으로 관리하고, 이사회 운영의 투명성과 효율성을 유지하여 경영의 불확실성을 최소화할 것입니다.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="evaluation">
+            <h2>회의 종합 평가 및 방향성</h2>
+            <p>이번 회의는 고려아연이 <span class="key-point">견조한 본업 실적을 바탕으로 미래 성장 동력을 확보하기 위한 전략적 투자를 적극적으로 추진</span>하고 있음을 명확히 보여주었습니다. 특히 희소금속 사업의 호조와 니켈 공급망 확보 노력은 회사의 장기적인 경쟁력을 강화하는 핵심 요소로 평가됩니다.</p>
+            <p>그러나 대외 환경의 불확실성 또한 존재합니다. 중국의 수출 통제 정책, 국내 에너지 정책 변화, 그리고 복잡하게 얽힌 경영권 분쟁은 회사가 직면한 도전 과제입니다. 그럼에도 불구하고, 고려아연은 이러한 도전을 <span class="key-point">성장 기회로 전환하려는 의지</span>를 보이고 있습니다. 미국과의 직접 거래 확대, 친환경 에너지 전환 가속화, 그리고 주주 환원 정책 강화는 이러한 의지의 구체적인 표현입니다.</p>
+            <p>향후 고려아연의 방향성은 다음과 같이 요약될 수 있습니다:</p>
+            <ul>
+                <li><strong>핵심 사업의 초격차 유지:</strong> 희소금속과 같은 고마진 사업의 경쟁 우위를 지속적으로 강화하고, 기술 혁신을 통해 시장 지배력을 확대해야 합니다.</li>
+                <li><strong>미래 성장 동력 확보 가속화:</strong> 니켈 등 미래 산업의 핵심 원료 공급망을 안정적으로 구축하고, 친환경 제련 기술을 선도하여 지속 가능한 성장의 기반을 마련해야 합니다.</li>
+                <li><strong>ESG 경영 강화 및 기업 이미지 제고:</strong> 신재생 에너지 전환을 통해 ESG 리더십을 확고히 하고, 이는 장기적으로 기업 가치 상승의 중요한 축이 될 것입니다.</li>
+                <li><strong>투명하고 주주 친화적인 경영:</strong> 경영권 분쟁 상황에서도 주주 가치 제고를 최우선으로 하고, 시장과의 투명한 소통을 통해 신뢰를 구축하는 것이 중요합니다.</li>
+                <li><strong>유연하고 전략적인 대외 환경 대응:</strong> 변화하는 글로벌 공급망 및 에너지 정책에 유연하게 대응하며, 리스크를 최소화하고 기회를 극대화하는 전략적 의사결정이 요구됩니다.</li>
+            </ul>
+            <p>고려아연은 현재의 견고한 실적을 발판 삼아, 미래 산업 변화에 선제적으로 대응하고 지속 가능한 성장을 추구하는 방향으로 나아가고 있습니다. 복잡한 외부 환경 속에서도 <span class="key-point">본질적인 경쟁력 강화와 주주 가치 제고에 집중하는 전략</span>이 성공의 열쇠가 될 것입니다.</p>
+        </div>
+    </div>
+</body>
+</html>
