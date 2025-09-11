@@ -1,0 +1,341 @@
+<html>
+<head>
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSDB vs AI 회의록</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #2980b9;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 1.0em;
+        }
+        strong {
+            color: #e74c3c;
+        }
+        em {
+            color: #27ae60;
+            font-style: normal;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            table-layout: fixed; /* 표 너비 고정 */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 8px;
+            text-align: left;
+            word-wrap: break-word; /* 긴 텍스트 줄바꿈 */
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+            font-size: 1.0em;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ffc107;
+        }
+        .section-divider {
+            border-top: 1px dashed #ccc;
+            margin: 40px 0;
+        }
+        .evaluation {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #4CAF50;
+            margin-top: 30px;
+        }
+        .insight {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #2196F3;
+            margin-top: 30px;
+        }
+        .next-steps {
+            background-color: #fbe9e7;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #FF5722;
+            margin-top: 30px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            table {
+                font-size: 0.9em;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            th, td {
+                padding: 8px 5px;
+            }
+            .summary-table th, .summary-table td {
+                width: auto; /* 모바일에서 자동 너비로 조정 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DSDB vs AI 회의록</h1>
+
+        <div class="highlight">
+            <h2>리서치 상무님께 드리는 핵심 요약</h2>
+            <p>이번 회의는 <strong>리서치 센터의 데이터 중앙화 및 AI 활용 방안</strong>에 대한 심도 깊은 논의였습니다. 특히, 현재 블룸버그 데이터 수급의 <em>제한 문제 해결</em>과 이를 통한 <em>업무 효율성 증대</em>에 초점을 맞추고 있습니다.</p>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">주요 안건</th>
+                        <th style="width: 35%;">현황 및 문제점</th>
+                        <th style="width: 40%;">제안 및 해결 방안</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>블룸버그 데이터 리밋 문제</strong></td>
+                        <td>개별 파일 수급으로 인한 중복 및 리밋 초과 (월 초 소진)</td>
+                        <td>데이터 중앙화 및 자동화 시스템 구축 (1단계 목표)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI 기반 리서치 시스템 구축</strong></td>
+                        <td>데이터 준비 후 AI 응용 (IB, 영업점 자료 푸시, 리포트 자동화)</td>
+                        <td>10개월 로드맵 (3단계), 앱 개발 및 리포트 자동화 목표</td>
+                    </tr>
+                    <tr>
+                        <td><strong>시스템 구축 방식 및 보안</strong></td>
+                        <td>개인 서버/외부망 활용 시 보안 및 컴플라이언스 이슈 발생</td>
+                        <td>TF팀과의 협의를 통한 <em>정규 프로세스 진행</em> 및 <em>혁신금융서비스 활용 검토</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>TF팀과의 협력 방안</strong></td>
+                        <td>리서치 센터 단독 진행 시 위험 요소 및 비효율성</td>
+                        <td>TF팀의 지원을 받아 공식적인 절차로 진행, 데이터 파이프라인 구축 공동 추진</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>결론적으로, 리서치 센터의 데이터 활용 및 AI 시스템 구축은 <strong>TF팀의 지원을 받아 회사의 공식적인 절차와 보안 규정을 준수하며 진행하는 것이 필수적</strong>이라는 데 의견이 모였습니다. 특히, 현재 비공식적으로 진행되는 방식은 향후 큰 문제로 이어질 수 있음을 강조했습니다. TF팀의 데이터 파이프라인 구축 프로젝트에 리서치 센터의 니즈를 반영하여 통합적으로 추진하는 방안을 모색할 예정입니다.</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>회의 개요</h2>
+        <p><strong>회의 주제:</strong> DSDB vs AI (데이터 중앙화 및 AI 활용 방안 논의)</p>
+        <p><strong>일시:</strong> 2024년 5월 15일</p>
+        <p><strong>참석자:</strong> A, B, C, D, E, F (스크립트 상 익명 처리)</p>
+        <p><strong>회의 목표:</strong> 리서치 센터의 데이터 수급 및 관리 문제 해결, AI 기반 시스템 구축 로드맵 공유, TF팀과의 협력 방안 모색, 시스템 구축 방식에 대한 보안 및 컴플라이언스 검토.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>주요 논의 내용</h2>
+
+        <h3>1. 리서치 센터의 데이터 중앙화 및 AI 활용 계획 (C 책임)</h3>
+        <ul>
+            <li><strong>개인적인 데이터 축적 및 중앙화 필요성:</strong> C 책임은 개인적으로 데이터를 쌓고 있었으며, 센터 차원의 데이터 중앙 관리가 효율적이라고 판단. AI 리서치 시스템 구축에 필수적인 요소로 강조.</li>
+            <li><strong>블룸버그 데이터 수급 문제:</strong>
+                <ul>
+                    <li>현재 블룸버그 터미널의 데이터 추출 리밋(함수 사용 한도)이 존재.</li>
+                    <li>여러 명이 사용하며 월 초에 리밋이 빠르게 소진되어 업무에 지장 초래.</li>
+                    <li>다른 부서의 블룸버그 터미널을 빌려 쓰는 방식도 과도한 사용으로 인해 제한됨.</li>
+                    <li><strong>해결 방안:</strong> DB 중앙화를 통해 데이터 중복 수급을 방지하고, 일괄 관리를 통해 블룸버그 사용 한도 부담을 완화.</li>
+                </ul>
+            </li>
+            <li><strong>데이터 자동화 및 업무 효율화:</strong>
+                <ul>
+                    <li>중앙 DB에서 데이터를 자동화하여 애널리스트들의 수동 리프레시 작업 제거.</li>
+                    <li>블룸버그 외 다양한 소스 데이터(크롤링, API)도 자동화하여 애널리스트들의 데이터 부담 경감 및 업무 편의성 증대.</li>
+                </ul>
+            </li>
+            <li><strong>AI 기반 디지털 전환 목표:</strong>
+                <ul>
+                    <li>데이터 준비가 완료되면 AI 응용을 통해 IB, 영업, 법인영업, 글로벌 영업 등 데이터가 필요한 부서에 자료를 푸시.</li>
+                    <li>단순 조회 방식보다 AI 기반 푸시를 통해 정보 제공의 효율성 극대화.</li>
+                    <li><strong>10개월 로드맵 (3단계):</strong>
+                        <ol>
+                            <li><strong>1단계 (2개월):</strong> 블룸버그 리밋 해결, 애널리스트 데이터 자동화 및 편의성 증대 (DB 중앙화).</li>
+                            <li><strong>2단계 이후:</strong> 쌓인 데이터를 활용하여 앱 개발 (AppSmith 활용), 리포트 자동화 (기존 애널리스트 뷰 모방 AI 개발).</li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>현재 진행 상황:</strong> 어떤 데이터가 필요한지에 대한 정리 작업 중. DB 중앙화가 주된 프로젝트이며, AI 리포트 생성 등은 미래의 영역으로 간주.</li>
+        </ul>
+
+        <h3>2. 시스템 구축 방식 및 보안/컴플라이언스 이슈 (A, B, D 발언자)</h3>
+        <ul>
+            <li><strong>개인 개발 및 인프라 구축:</strong> C 책임은 직접 개발 및 인프라 구축을 계획 중이며, 현재는 리서치 센터 내 워크스테이션급 PC를 활용하고, 향후 전사적 활용을 위해 내부 시스템 연동을 고려.</li>
+            <li><strong>전사 시스템 연동의 필요성:</strong>
+                <ul>
+                    <li>A 발언자는 전사 차원의 AI 통합 관리 필요성 및 IT 부문과의 협의를 강조. 향후 전사 시스템화 시 초기 구조 설계부터 다시 해야 할 가능성 제기.</li>
+                    <li>B 발언자는 소규모 부서 프로젝트로 우선 진행하고, 전사화는 추후 과제로 전환하는 것이 효율적이라고 주장. 전사 프로세스로 띄우면 지연될 수 있음을 우려.</li>
+                </ul>
+            </li>
+            <li><strong>내부 시스템 연동 및 외부망 사용 문제:</strong>
+                <ul>
+                    <li>C 책임은 내부 서버나 망을 사용할 필요 없이 외부 클라우드 서버를 센터 예산으로 구축하여 활용하는 방안을 제시.</li>
+                    <li>A 발언자는 IT 부문의 시스템 관리 역할과 회사 자산(데이터)의 외부 유출에 대한 우려 표명. 전사 R&R 및 관리 체계상 부서별 시스템 구축의 적절성 의문.</li>
+                    <li>D 발언자는 현재 회사 IT 체계상 각 부서가 시스템 도입 판단을 하지만, 코어 시스템 연계 시 IT 부문이 개발 지원을 할 뿐 오너십은 없다고 설명. 그러나 외부망 사용 시 보안 규정 준수 필요성을 강조.</li>
+                </ul>
+            </li>
+            <li><strong>컴플라이언스 및 정보보호 이슈:</strong>
+                <ul>
+                    <li>회사 비용으로 구매한 데이터(자산)를 외부망에 두는 것은 정보 유출 위험이 크며, 회사 보안 정책을 따르지 않는 것은 문제가 될 수 있음 (B 발언자).</li>
+                    <li>현재 블룸버그 터미널, 체크 단말기 등은 외부 인터넷을 사용하지만, 이는 특정 계약 및 보안 승인을 거친 경우이며, 일반적인 외부망 사용과는 다름.</li>
+                    <li>정보보호부에서는 원칙적으로 포트 개방 등 외부망 연동을 허용하지 않음. 이는 보안 사고 발생 시 책임 소재 문제 때문.</li>
+                    <li>개인 PC를 통한 외부 데이터 수급 및 내부망 공유 폴더 저장 방식도 라이선스 계약 및 정보보안 관점에서 문제가 될 수 있음.</li>
+                    <li><strong>결론:</strong> 시스템 구축 방식에 대한 법무실, 정보보호부, 컴플라이언스부 등 통제 부서와의 공식적인 협의 및 승인이 필수적. 비공식적인 진행은 향후 큰 위험을 초래할 수 있음.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>3. TF팀과의 협력 및 향후 방향성</h3>
+        <ul>
+            <li><strong>TF팀의 역할:</strong>
+                <ul>
+                    <li>A 발언자는 TF팀이 내부 정보 보호 및 컴플라이언스 준수를 지원하며, 구현 과정에서도 도움을 줄 수 있다고 설명.</li>
+                    <li>B 발언자는 TF팀이 현재 진행 중인 PoC(개념 증명) 프로젝트를 통해 리서치 센터의 데이터 중앙화 니즈를 흡수하여 공식적인 절차로 빠르게 진행할 수 있음을 강조.</li>
+                    <li>TF팀은 데이터 파이프라인 구축을 포함한 AI 프로젝트를 진행 중이며, 리서치 센터의 DB 중앙화는 이 프로젝트의 첫 단계와 유사하다고 설명.</li>
+                </ul>
+            </li>
+            <li><strong>혁신금융서비스 활용 검토:</strong>
+                <ul>
+                    <li>혁신금융서비스 신청을 통해 외부 인터넷과 내부 시스템 연동, 외부 LLM 활용 등 현재 보안 문제로 막혀 있는 부분을 합법적으로 해결할 수 있음.</li>
+                    <li>다만, 이 과정에서 필요한 시스템 구축 및 보안 요건 만족이 선행되어야 함.</li>
+                </ul>
+            </li>
+            <li><strong>PoC 결과물에 대한 논의:</strong>
+                <ul>
+                    <li>B 발언자는 PoC의 주된 목적이 경영진 설득을 통한 예산 확보임을 강조. 리서치 리포트 생성 외에 MTS 개선 등 대고객 서비스 측면에서 가시적인 결과물을 보여주는 것이 중요하다고 주장.</li>
+                    <li>A 발언자는 데이터 축적이 50% 이상을 차지하는 중요한 단계이며, AI 기술만으로는 지적 산출물을 만들기 어렵다고 판단. 단순 업무 자동화(신입사원 프로젝트)와 같은 실질적인 업무 효율화가 더 와닿을 것이라고 제안.</li>
+                    <li>회의록 요약, 문서 검색 시스템(코파일럿 연동) 등 직원들의 피부에 와닿는 실질적인 업무 효율화 아이디어도 제시됨.</li>
+                </ul>
+            </li>
+            <li><strong>회사 정책 준수의 중요성:</strong>
+                <ul>
+                    <li>B 발언자는 회사의 규칙을 따르는 것이 중요하며, 편법적인 진행은 결국 개인 및 회사에 위험을 초래할 수 있음을 경고.</li>
+                    <li>규칙이 시대에 맞지 않아 업무에 지장을 준다면, 공식적인 절차를 통해 규칙을 바꾸는 노력이 필요하다고 강조.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <div class="insight">
+            <h2>회의 인사이트</h2>
+            <p>이번 회의는 <strong>혁신과 규제, 효율성과 보안</strong>이라는 두 가지 핵심 가치 사이의 균형점을 찾는 중요한 논의였습니다. 리서치 센터의 AI 기반 데이터 활용 계획은 분명 미래 지향적이고 업무 효율성을 크게 높일 잠재력을 가지고 있습니다. 그러나 이를 추진하는 과정에서 <strong>회사의 정보보호 및 컴플라이언스 규정을 준수하는 것이 얼마나 중요한지</strong>를 다시 한번 확인했습니다. 현재 비공식적으로 진행되는 일부 방식은 단기적인 효율성을 제공할 수 있으나, 장기적으로는 회사 전체에 심각한 위험을 초래할 수 있음을 인지해야 합니다.</p>
+            <p>특히, <strong>데이터는 회사의 핵심 자산</strong>이며, 그 수급, 저장, 활용 방식에 대한 명확한 통제와 관리가 필수적입니다. IT 부문, 정보보호부, 법무실 등 관련 부서와의 긴밀한 협의 없이는 어떠한 시스템도 안정적으로 운영될 수 없습니다. 단순한 기술 도입을 넘어, <strong>조직 문화와 프로세스의 변화</strong>가 동반되어야 진정한 디지털 전환이 가능하다는 점을 시사합니다.</p>
+            <p>또한, PoC의 목적이 단순히 기술 구현을 넘어 <strong>경영진을 설득하고 예산을 확보하기 위한 가시적인 성과</strong>를 보여주는 것임을 명확히 했습니다. 대고객 서비스와 내부 업무 효율화라는 두 가지 방향성 중, 회사의 현 상황과 전략적 우선순위를 고려하여 최적의 PoC 주제를 선정하는 지혜가 필요합니다. 직원들의 공감을 얻을 수 있는 실질적인 업무 개선 아이디어와 함께, 회사의 대외 이미지를 높일 수 있는 혁신적인 아이디어를 동시에 고민해야 할 시점입니다.</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="next-steps">
+            <h2>향후 계획 및 다음 단계</h2>
+            <ol>
+                <li><strong>리서치 센터 데이터 중앙화 및 AI 프로젝트 TF팀 협의:</strong> C 책임은 리서치 센터의 데이터 중앙화 및 AI 활용 계획을 TF팀에 공식적으로 전달하고, TF팀의 PoC 프로젝트에 해당 니즈를 반영하는 방안을 논의한다.</li>
+                <li><strong>공식적인 절차 및 보안 규정 준수:</strong> 현재 비공식적으로 진행되는 블룸버그 외 외부 데이터 수급 방식(개인 PC 활용 등)을 중단하고, 정보보호부, 법무실, 컴플라이언스부 등 통제 부서와 협의하여 공식적인 데이터 수급 및 시스템 구축 절차를 마련한다.</li>
+                <li><strong>혁신금융서비스 활용 검토:</strong> 외부 데이터 연동 및 외부 LLM 활용 등 필요한 경우, 혁신금융서비스 신청을 통한 합법적인 시스템 구축 방안을 적극적으로 검토한다. 이 과정에서 필요한 보안 요건 및 아키텍처 구성을 TF팀과 함께 준비한다.</li>
+                <li><strong>PoC 결과물 구체화:</strong> 경영진 설득 및 예산 확보를 위해 가시적인 성과를 낼 수 있는 PoC 결과물을 구체화한다. 대고객 서비스와 내부 업무 효율화(회의록 요약, 문서 검색 등) 아이디어를 종합적으로 검토하여 최적의 주제를 선정한다.</li>
+                <li><strong>코파일럿 도입 및 연계 방안 모색:</strong> 회사 차원에서 진행 중인 코파일럿 도입과 리서치 센터의 업무 효율화 방안을 연계하여 시너지를 창출할 수 있는 부분을 탐색한다.</li>
+                <li><strong>규칙 개선을 위한 노력:</strong> 현재 업무를 저해하는 불합리한 규칙이나 절차가 있다면, 단순히 회피하기보다 공식적인 채널을 통해 개선을 요구하고 변화를 이끌어내는 노력을 지속한다.</li>
+            </ol>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="evaluation">
+            <h2>회의 평가 및 방향성</h2>
+            <p>이번 회의는 <strong>리서치 센터의 혁신 의지와 회사의 안정성 및 규제 준수 사이의 중요한 대화의 장</strong>이었습니다. C 책임의 데이터 중앙화 및 AI 활용 계획은 리서치 센터의 경쟁력을 높일 수 있는 핵심적인 아이디어이며, 이를 통해 업무 효율성을 극대화하고 새로운 가치를 창출할 수 있을 것으로 기대됩니다.</p>
+            <p>그러나 이러한 혁신적인 시도가 <strong>회사의 정보보호 및 컴플라이언스 체계 내에서 이루어져야 한다는 점</strong>을 명확히 인지해야 합니다. 현재의 비공식적인 방식은 단기적인 해결책일 수 있으나, 장기적으로는 회사 전체의 리스크를 높이는 결과를 초래할 것입니다. TF팀과의 협력을 통해 리서치 센터의 니즈를 공식적인 프로젝트로 전환하고, 필요한 절차와 기술적 지원을 받는 것이 가장 합리적이고 안전한 방향입니다.</p>
+            <p>궁극적으로 회사는 <strong>혁신을 장려하되, 그 과정에서 발생할 수 있는 잠재적 위험을 최소화하는 균형 잡힌 접근 방식</strong>을 취해야 합니다. 이를 위해 각 부서는 자신의 업무 효율성뿐만 아니라 회사 전체의 관점에서 시스템과 프로세스를 바라보고, 통제 부서와의 적극적인 소통을 통해 합법적이고 안전한 해결책을 모색하는 노력이 필요합니다. 이번 회의를 계기로 리서치 센터의 AI 프로젝트가 회사의 공식적인 지원 아래 성공적으로 추진될 수 있기를 기대합니다.</p>
+        </div>
+    </div>
+</body>
+</html>
