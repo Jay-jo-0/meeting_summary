@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대신증권 AI 도입 회의록</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            color: #333;
+            -webkit-text-size-adjust: 100%; /* Prevent text scaling on iOS */
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            font-size: 2.5em; /* Larger for main title */
+            color: #004080;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #004080;
+        }
+        h2 {
+            font-size: 1.8em; /* Sub-headings */
+            color: #0056b3;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid #007bff;
+            padding-left: 10px;
+        }
+        h3 {
+            font-size: 1.4em; /* Sub-sub-headings */
+            color: #0069d9;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul, ol {
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        strong {
+            color: #cc0000; /* Emphasize key words */
+        }
+        .summary-table, .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            table-layout: fixed; /* For mobile responsiveness */
+        }
+        .summary-table th, .summary-table td,
+        .data-table th, .data-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            word-wrap: break-word; /* Prevent overflow */
+        }
+        .summary-table th {
+            background-color: #e9ecef;
+            color: #495057;
+            width: 30%; /* Adjust for key-value pairs */
+        }
+        .summary-table td {
+            background-color: #f8f9fa;
+        }
+        .data-table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .section-box {
+            background-color: #f0f8ff;
+            border: 1px solid #cce5ff;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .insights, .next-steps, .evaluation {
+            background-color: #e6f7ff;
+            border: 1px solid #99daff;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        }
+        .insights h2, .next-steps h2, .evaluation h2 {
+            border-left: none;
+            padding-left: 0;
+            color: #0056b3;
+            text-align: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            h3 { font-size: 1.2em; }
+            body { padding: 10px; }
+            .container { padding: 15px; }
+            .summary-table th, .summary-table td,
+            .data-table th, .data-table td {
+                padding: 8px;
+                font-size: 0.85em;
+            }
+            .summary-table th {
+                width: 40%; /* Adjust for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>대신증권 AI 도입 회의록</h1>
+
+        <section class="summary">
+            <h2>핵심 요약</h2>
+            <table class="summary-table">
+                <tr>
+                    <th>회의명</th>
+                    <td>대신증권 AI 도입 프로젝트 - 데이터 소스 및 아키텍처 논의</td>
+                </tr>
+                <tr>
+                    <th>일시</th>
+                    <td>2025년 09월 10일 15:34 (스크립트 기준)</td>
+                </tr>
+                <tr>
+                    <th>장소</th>
+                    <td>(스크립트에 명시되지 않음)</td>
+                </tr>
+                <tr>
+                    <th>참석자</th>
+                    <td>A (발표자), B, C, D, E, F, G, H, I, J, K, L (참여자)</td>
+                </tr>
+                <tr>
+                    <th>회의 주제</th>
+                    <td>대신증권 AI 도입을 위한 데이터 소스 유형, 아키텍처 구성 및 RAG 시스템 상세 논의</td>
+                </tr>
+                <tr>
+                    <th>핵심 논의 사항</th>
+                    <td>
+                        <ul>
+                            <li><strong>정적/동적 데이터 분류 및 활용 방안:</strong> 내부 보유 데이터와 실시간 외부 데이터의 역할 정의.</li>
+                            <li><strong>동적 데이터 수집 툴 검토:</strong> Tabnine Web Search (자연어), FMP API (수치)의 기능 및 POC 활용 범위.</li>
+                            <li><strong>AI 아키텍처 (에이전트 기반) 설명:</strong> 오케스트레이터 및 서치, 요약, 리서치 에이전트의 역할.</li>
+                            <li><strong>RAG 시스템의 '블랙박스' 문제 제기:</strong> Azure AI Search 사용 시 기술적 깊이 및 학습 기회 제한에 대한 우려.</li>
+                            <li><strong>데이터 전처리 파이프라인의 중요성:</strong> 수동 데이터 준비의 한계와 자동화된 파이프라인 구축 필요성 강조.</li>
+                            <li><strong>혁신금융서비스 신청 및 보안:</strong> 관련 요건 및 정보 공유 요청.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>주요 결정 사항</th>
+                    <td>
+                        <ul>
+                            <li>POC에서는 Tabnine Web Search와 FMP API를 동적 데이터 수집 툴로 활용.</li>
+                            <li>AI 아키텍처는 오케스트레이터 기반의 에이전트 시스템으로 구성.</li>
+                            <li>RAG 시스템에 Azure AI Search 활용을 고려하나, 내부 동작 투명성 확보 방안 모색.</li>
+                            <li>대신증권 기존 정적 데이터(애널리스트 리포트 등)를 POC에 활용하기 위해 제공 예정.</li>
+                            <li>향후 POC 범위 및 평가 기준을 다음 주 수요일까지 확정하기로 함.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>향후 계획</th>
+                    <td>
+                        <ul>
+                            <li>RAG 시스템의 내부 동작 (벡터 DB 종류, 청킹 알고리즘 등)에 대한 상세 정보 공유.</li>
+                            <li>데이터 전처리 파이프라인 구축 방안 및 소스 코드 제공 여부 확인.</li>
+                            <li>혁신금융서비스 신청 관련 보안 요건 및 대응 방안 논의.</li>
+                            <li>대신증권에서 제공할 정적 데이터의 전달 방식 및 활용 방안 구체화.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="detail">
+            <h2>1. 데이터 소스 및 유형</h2>
+            <div class="section-box">
+                <p>AI 도입을 위한 데이터는 크게 <strong>정적 데이터(Static Data)</strong>와 <strong>동적 데이터(Dynamic Data)</strong>로 분류하여 논의되었습니다. 각 데이터 유형의 정의와 활용 방안에 대한 설명이 이루어졌습니다.</p>
+
+                <h3>1.1. 정적 데이터 (Static Data)</h3>
+                <ul>
+                    <li><strong>정의:</strong> 대신증권이 이미 보유하고 있거나 미리 확보한 정보로, 정기 보도자료, 대량의 보고서 등을 데이터베이스에 미리 넣어 준비하는 데이터입니다.</li>
+                    <li><strong>유형:</strong>
+                        <ul>
+                            <li><strong>통합 재무제표 (Consolidated Financial Statements)</strong></li>
+                            <li><strong>손익계산서 (Income Statement)</strong></li>
+                            <li><strong>현금흐름표 (Cash Flow Statement)</strong></li>
+                            <li><strong>연간 보고서 (Annual Report)</strong> (예: 현대 연간 리포트)</li>
+                            <li><strong>사용자 업로드 파일:</strong> 챗봇을 통해 고객이 직접 업로드하는 파일 (애플리케이션 DB로 저장).</li>
+                        </ul>
+                    </li>
+                    <li><strong>활용 계획:</strong> 현재 9개 회사에 대한 위 네 종류의 데이터를 미리 확보하여 DB에 넣어 활용할 계획입니다. 이는 프로덕션 환경에서 특정 보고서나 데이터가 필요할 때 활용될 수 있습니다.</li>
+                    <li><strong>참석자 B의 질문:</strong> 유저가 올리는 방식 외에 백엔드에서 파이프라인을 통해 자동으로 들어가는 방식도 있는지 문의. A는 마지막 유형(사용자 업로드)을 제외한 나머지는 백엔드 파이프라인을 통해 들어갈 것이며, POC에서는 수동으로 보고서를 넣고 있지만, 프로덕션에서는 자동화될 것이라고 답변.</li>
+                </ul>
+
+                <h3>1.2. 동적 데이터 (Dynamic Data)</h3>
+                <ul>
+                    <li><strong>정의:</strong> 구독 또는 외부 연동을 통해 실시간으로 외부에서 끌어오거나, 특정 출처가 고정되지 않고 검색을 통해 그때그때 가져와야 하는 데이터입니다.</li>
+                    <li><strong>활용 툴:</strong>
+                        <ul>
+                            <li><strong>Tabnine Web Search:</strong> 자연어(Language) 형태의 데이터를 가져오는 데 사용됩니다.</li>
+                            <li><strong>FMP API:</strong> 수치(Numerical) 형태의 데이터를 가져오는 데 사용됩니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>비용 논의:</strong> 현재 POC 용도로는 두 툴 모두 무료로 사용 가능하나, 실제 프로덕션 적용 시에는 과금 여부 및 안정성 검증이 필요합니다.</li>
+                </ul>
+
+                <h3>1.3. 데이터 처리 파이프라인 (향후 논의)</h3>
+                <p>데이터 전처리 및 가공 방식은 2~3주 차에 '데이터 프로세싱 파이프라인' 주제로 상세 논의될 예정입니다. 특히 정적 데이터의 경우, 수백 페이지에 달하는 보고서의 데이터를 어떻게 가공하고 활용할 것인지가 중요하게 다루어질 것입니다.</p>
+            </div>
+
+            <h2>2. 동적 데이터 활용 툴 상세</h2>
+            <div class="section-box">
+                <p>동적 데이터를 수집하고 활용하기 위한 두 가지 주요 툴인 Tabnine Web Search와 FMP API에 대한 구체적인 설명과 시연이 있었습니다.</p>
+
+                <h3>2.1. Tabnine Web Search (자연어 데이터)</h3>
+                <ul>
+                    <li><strong>기능:</strong> 스마트 검색 엔진과 유사하며, 자연어 형태의 데이터를 웹에서 검색하여 가져옵니다. Google 검색을 API 형태로 활용하는 것과 비슷합니다.</li>
+                    <li><strong>POC 활용:</strong> POC에서는 편리한 인터페이스를 제공하여 '삼성전자'와 같은 쿼리를 통해 URL, 텍스트, 콘텐츠 등 다양한 데이터를 가져오는 데 활용됩니다.</li>
+                    <li><strong>필터링 기능:</strong> 공신력 있는 도메인(예: KDI)만 사용하거나 특정 도메인을 제외하는 등 검색 결과에 조건을 걸 수 있습니다. 검색 결과는 자체적인 스코어(점수)에 따라 우선순위가 매겨져 제공됩니다.</li>
+                    <li><strong>참석자 D의 질문:</strong> 검색 우선순위 설정 가능 여부 문의. C는 검색 결과에 자체 스코어가 매겨져 제공되며, 특정 도메인 제외 기능도 있어 조절 가능하다고 답변.</li>
+                </ul>
+
+                <h3>2.2. FMP API (수치 데이터)</h3>
+                <ul>
+                    <li><strong>기능:</strong> Tabnine과 유사한 검색 툴이지만, 목적은 자연어가 아닌 수치 데이터를 확보하는 데 있습니다. Apple 주식 데이터 검색 시 수치 결과가 나오는 샘플이 시연되었습니다.</li>
+                </ul>
+
+                <h3>2.3. 실시간성 및 프로덕션 고려사항</h3>
+                <ul>
+                    <li><strong>참석자 D의 질문:</strong> FMP API를 통한 수치 데이터가 실시간으로 업데이트되는지, 시차가 발생하지 않는지 문의.</li>
+                    <li><strong>A의 답변:</strong> POC에서는 실시간성에 대한 고려가 제한적이며, FMP의 실시간성은 추가 확인이 필요하다고 답변했습니다. 프로덕션 환경에서는 실시간성 외에도 API의 제약사항(업데이트 주기, 제공 수치 범위 등)을 면밀히 검토해야 한다고 강조했습니다.</li>
+                    <li><strong>C의 의견:</strong> 프로덕션에서는 내부 데이터를 많이 사용하게 될 것이므로, 외부 툴 사용 시 제약사항을 충분히 고려해야 한다고 덧붙였습니다.</li>
+                </ul>
+            </div>
+
+            <h2>3. AI 아키텍처 개요 (에이전트 기반)</h2>
+            <div class="section-box">
+                <p>전체 AI 시스템은 에이전트 기반의 아키텍처로 설계되었으며, 사용자 쿼리 처리부터 최종 응답 생성까지의 흐름이 설명되었습니다.</p>
+
+                <h3>3.1. 사용자 인터페이스 및 백엔드 API</h3>
+                <ul>
+                    <li><strong>프론트엔드 (1):</strong> 사용자가 쿼리를 보내는 챗봇 UI (예: React 기반)입니다.</li>
+                    <li><strong>백엔드 API (2):</strong> 프론트엔드로부터 쿼리를 받아 실제 액션이 일어나는 부분이며, 오케스트레이터 및 데이터 저장소와 통신합니다.</li>
+                </ul>
+
+                <h3>3.2. 데이터 저장소</h3>
+                <ul>
+                    <li><strong>유저 트랜잭션 데이터 저장소 (3):</strong> 사용자와의 대화 내역, 리포트 위치 등 챗봇이 대화를 원활하게 이어가기 위한 데이터를 저장합니다. 대화 메모리 기능과 유사합니다.</li>
+                    <li><strong>블록 스토리지 (4):</strong> 정적 데이터 중 사용자가 업로드한 파일(챗봇을 통해)이 저장되는 공간입니다.</li>
+                </ul>
+
+                <h3>3.3. 오케스트레이터 (마스터 에이전트)</h3>
+                <ul>
+                    <li><strong>역할:</strong> 백엔드 API로부터 쿼리를 받아 의도를 분석하고, 필요한 작업을 자르고 정리하여 다른 에이전트들에게 위임(Delegate)하는 총괄 에이전트입니다. LLM을 활용하여 판단하고 분배합니다.</li>
+                    <li><strong>작업 흐름:</strong> 쿼리 수신 → 의도 분석 → 작업 분배 → 각 에이전트로부터 결과 수신 → 종합하여 사용자에게 최종 LLM 응답 전송.</li>
+                </ul>
+
+                <h3>3.4. 서브 에이전트 (검색, 요약, 리서치)</h3>
+                <p>오케스트레이터의 위임을 받아 특정 작업을 수행하는 세 가지 주요 에이전트가 있습니다.</p>
+                <ul>
+                    <li><strong>서치 에이전트 (7):</strong> 검색 작업을 수행합니다. (예: Tabnine Web Search를 통해 기사 검색) 검색 결과는 다른 에이전트의 입력 값으로 활용될 수 있습니다 (예: 요약 에이전트로 전달).</li>
+                    <li><strong>써머리 에이전트 (8):</strong> 정보 요약 작업을 수행합니다. (예: 서치 에이전트가 가져온 뉴스 기사 요약)</li>
+                    <li><strong>리서치 에이전트 (9) / 딥 리서치 에이전트:</strong> 가장 복잡한 에이전트로, 보고서 생성 등 심층적인 작업을 수행합니다.
+                        <ul>
+                            <li><strong>활용 툴:</strong> FMP 툴(동적 수치 데이터), 리포트 템플릿, 번역 기능, 정적 데이터 저장소(4번 블록 스토리지, 6번 벡터 데이터베이스) 등 다양한 경로의 데이터를 종합하여 리포트를 생성합니다.</li>
+                            <li><strong>보고서 생성 과정:</strong> 데이터를 우선적으로 사용하고 안 하는 것이 아니라, 여러 데이터를 종합적으로 판단하여 어떻게 보고서를 만들지 모델이 결정합니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>LLM 활용:</strong> 오케스트레이터뿐만 아니라 각 서브 에이전트도 LLM을 활용하여 작업을 수행합니다.</li>
+                    <li><strong>동작 방식:</strong> 에이전트들은 비동기적으로 동작하며, 오케스트레이터가 초기 플랜을 짜고 각 에이전트에게 작업을 위임하고 결과를 취합하는 방식으로 진행됩니다. 작업 순서 및 조율은 오케스트레이터가 담당합니다.</li>
+                    <li><strong>MCT (Multi-Agent Collaboration/Communication/Tool-use) 적용 여부:</strong> 현재 POC에서는 직접적인 MCT 구현은 없으나, 향후 필요에 따라 특정 기능을 수행하는 에이전트(예: 뉴스 서치 에이전트)를 추가하여 확장할 수 있습니다.</li>
+                </ul>
+            </div>
+
+            <h2>4. RAG (검색 증강 생성) 시스템 상세</h2>
+            <div class="section-box">
+                <p>RAG 시스템은 AI 모델의 답변 품질과 신뢰도를 높이는 핵심 구성 요소로, 데이터 임베딩 및 벡터 데이터베이스 활용에 대한 논의가 집중되었습니다.</p>
+
+                <h3>4.1. RAG 구성 요소 (임베딩, 벡터 데이터베이스)</h3>
+                <ul>
+                    <li><strong>데이터 임베딩 (5):</strong> 텍스트를 기계가 이해할 수 있는 벡터 형태로 변환하고 청킹(chunking)하는 과정입니다. 이는 RAG의 핵심 기능입니다.</li>
+                    <li><strong>벡터 데이터베이스 (6):</strong> 임베딩된 데이터 벡터를 저장하고 효율적으로 검색하는 데이터베이스입니다. 정적 데이터(미리 확보된 보고서 등)가 임베딩 과정을 거쳐 이곳에 저장됩니다.</li>
+                    <li><strong>RAG 활용:</strong> 리포트 생성 시 어떤 데이터를 사용할지 결정하는 데 주로 사용됩니다. 에이전트들이 RAG 시스템에 요청을 보내 답변을 받습니다.</li>
+                </ul>
+
+                <h3>4.2. Azure AI Search 활용 및 '블랙박스' 우려</h3>
+                <ul>
+                    <li><strong>Azure AI Search (5번 블록 대체 가능성):</strong> Azure AI Search는 임베딩 및 청킹과 같은 RAG 관련 기능을 지원합니다. 현재 POC에서는 Azure AI Search가 충분히 기능을 수행한다면 5번 과정(별도 구축 임베딩 파이프라인)을 제외할 계획입니다.</li>
+                    <li><strong>'블랙박스' 문제 제기 (F의 의견):</strong> Azure AI Search와 같은 관리형 서비스를 사용할 경우, 내부 벡터 DB의 동작 방식(예: 어떤 벡터 DB를 사용하는지, 청킹 알고리즘 등)을 알기 어렵다는 우려가 제기되었습니다. 이는 POC의 목표 중 하나인 'AI 서비스 및 시스템 라이프사이클 경험' 및 '기술적 인사이트 확보'에 제약이 될 수 있다는 지적입니다.
+                        <ul>
+                            <li>다양한 벡터 DB(Quadrant, Chroma, Faiss 등)의 특성 비교 및 경험 기회 상실.</li>
+                            <li>클라우드 플랫폼 종속성 증가 및 향후 자체 구축 시 경험 부족 문제.</li>
+                        </ul>
+                    </li>
+                    <li><strong>A의 답변:</strong> 고객사의 전략에 따라 기술적 깊이 관여 여부가 달라질 수 있다고 설명했습니다. 대신증권이 딥한 기술 스킬 확보를 목표로 한다면 직접 구축이 맞고, 다양한 기술을 접하고 MVP를 빠르게 만드는 것이 목표라면 관리형 서비스 사용이 적합할 수 있다고 언급했습니다. 다만, F의 지적처럼 POC의 목표가 과정 검증 및 인사이트 확보에 있다면, Azure AI Search의 내부 투명성 확보 방안을 모색하겠다고 답했습니다.</li>
+                </ul>
+
+                <h3>4.3. 기술 전략 및 POC 목표 재정의</h3>
+                <p>참석자들은 POC의 목표가 단순히 결과물 도출을 넘어, AI 시스템의 구축 과정에서 기술적 인사이트를 얻고 다양한 기술을 경험하는 데 있다는 점을 재차 강조했습니다. 특히 RAG 시스템의 핵심인 벡터 DB와 데이터 파이프라인에 대한 이해와 제어가 중요하다고 보았습니다.</p>
+
+                <h3>4.4. 소스 코드 및 투명성 요청</h3>
+                <ul>
+                    <li><strong>소스 코드 제공 요청:</strong> POC 결과물에 대한 소스 코드(시스템 프롬프트, Terraform을 이용한 인프라 및 배포 스크립트, RAG의 벡터 DB 설계 코드 등)를 제공받아 내부에서 학습하고 유지보수할 수 있기를 희망했습니다.</li>
+                    <li><strong>A의 답변:</strong> 소스 코드 제공에 대해서는 긍정적으로 답변했으나, RAG 시스템의 내부 설계 코드까지 포함될지는 추가 확인이 필요하다고 언급했습니다. 이는 기존 인지 수준과의 차이가 있어 추가 파악 후 답변하겠다고 했습니다.</li>
+                </ul>
+
+                <h3>4.5. 청킹 알고리즘 및 데이터 전처리 중요성</h3>
+                <ul>
+                    <li><strong>청킹 알고리즘의 중요성 (J의 의견):</strong> RAG의 정확도를 높이기 위해 청킹 알고리즘(텍스트 분할 방식)이 매우 중요하며, 다양한 알고리즘을 적용하여 임베딩 결과값 및 정확도를 확인하고 싶다는 의견이 제시되었습니다.</li>
+                    <li><strong>데이터 파이프라인의 필수성 (D, J, F의 의견):</strong> 5번 과정(데이터 파이프라인)이 '옵셔널'이 되어서는 안 된다고 강력히 주장했습니다. PDF 파싱, 테이블 데이터 추출, 메타데이터 생성 등 데이터 전처리 과정 자체가 AI 도입의 핵심 부분이며, 이를 수동으로 처리하거나 블랙박스에 맡길 경우 새로운 데이터를 활용하기 어렵고 시스템의 확장성이 제한된다는 우려를 표했습니다.
+                        <ul>
+                            <li>데이터 준비 과정은 전체 AI 프로젝트의 50% 이상을 차지하며, 이 부분의 자동화 및 투명성 확보가 필수적입니다.</li>
+                            <li>애저 AI Search가 일부 기능을 지원하지만, 모든 전처리 과정을 커버하지 못할 수 있으므로, 이 부분에 대한 명확한 설명과 구축 방안이 필요합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>5. 정적/동적 데이터 활용 심화 논의</h2>
+            <div class="section-box">
+                <p>동일한 금융 데이터라도 정적 데이터와 동적 데이터로 분류되는 이유와 활용 방식, 그리고 수치 데이터 처리의 어려움에 대한 논의가 이어졌습니다.</p>
+
+                <h3>5.1. 데이터 우선순위 및 활용 방식</h3>
+                <ul>
+                    <li><strong>정적 vs. 동적 데이터 차이:</strong> 정적 데이터는 보고서 전체를 통째로 넣어 텍스트와 숫자를 함께 활용하는 방식이고, 동적 데이터(FMP API)는 실시간으로 숫자 형태의 데이터를 추출하여 활용하는 방식입니다.</li>
+                    <li><strong>우선순위:</strong> 항목이 같다면 <strong>내부 데이터(정적 데이터)가 우선순위</strong>를 가집니다. 사용자는 프롬프트 등을 통해 어떤 데이터를 참조할지 선택할 수 있습니다.</li>
+                </ul>
+
+                <h3>5.2. 수치 데이터 처리 및 계산 모듈 필요성</h3>
+                <ul>
+                    <li><strong>금융 리포트의 특성:</strong> 금융 리포트는 단순히 텍스트를 넘어 '작년 대비 몇 % 상승', '매출액 변화' 등 수치 데이터의 비교 및 계산이 중요합니다.</li>
+                    <li><strong>RAG의 한계:</strong> 현재 RAG는 문장으로 구성된 데이터를 가져오는 데는 효과적이지만, 보고서 내 테이블 형태의 숫자 데이터를 정확히 추출하고, 이를 기반으로 YoY(전년 대비), PoP(직전 기간 대비)와 같은 계산을 직접 수행하는 데는 한계가 있을 수 있습니다.</li>
+                    <li><strong>해결 방안 논의:</strong>
+                        <ul>
+                            <li><strong>메타데이터 활용:</strong> '삼성전자 2024년 매출은 얼마'와 같이 문장 형태로 메타데이터를 만들어 DB에 넣어주는 방식이 제안되었습니다. (현재 POC에서는 이 파이프라인이 축소되어 있음)</li>
+                            <li><strong>계산 에이전트 추가:</strong> 수치 계산을 전담하는 별도의 에이전트를 아키텍처에 추가하는 방안이 논의되었습니다. 이는 금융 리포트의 특성을 고려할 때 필수적인 기능으로 인식되었습니다.</li>
+                            <li><strong>할루시네이션(환각) 문제:</strong> 범용 모델의 계산 능력에만 의존할 경우 할루시네이션 위험이 있으므로, 프로덕션에서는 별도 에이전트 또는 파이프라인 보강이 필요합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>5.3. 데이터 전처리 파이프라인 구축 요청</h3>
+                <ul>
+                    <li><strong>핵심 요구사항:</strong> 대신증권 측은 PDF 보고서 파싱, 테이블 데이터 추출, 메타데이터 생성 등 <strong>데이터 전처리 파이프라인 구축</strong>이 POC에 포함되어야 한다고 강력히 요청했습니다.</li>
+                    <li><strong>이유:</strong>
+                        <ul>
+                            <li>현재 매뉴얼로 데이터를 준비하는 방식은 비효율적이며, 새로운 데이터를 시스템에 넣기 어렵게 만듭니다.</li>
+                            <li>데이터 준비 과정은 AI 프로젝트의 핵심이며, 이 과정을 AI가 처리할 수 있도록 파이프라인을 구축하는 것이 중요합니다.</li>
+                            <li>어떤 데이터를 어떻게 가공하여 넣어야 하는지 그 과정을 알아야 대신증권 내부에서도 시스템을 활용하고 확장할 수 있습니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>A의 답변:</strong> 애저 AI Search가 일부 전처리 기능을 지원하지만, 모든 것을 커버하지 못할 수 있음을 인정했습니다. 이 부분은 POC 스코프에서 고려되지 않았으나, 중요성을 인지하고 추가 파악 후 답변하겠다고 했습니다.</li>
+                </ul>
+            </div>
+
+            <h2>6. 한글 말뭉치(코퍼스) 활용 요청</h2>
+            <div class="section-box">
+                <p>RAG 시스템의 한국어 금융 데이터 처리 능력 향상을 위해 한글 말뭉치 활용에 대한 논의가 있었습니다.</p>
+                <ul>
+                    <li><strong>요청 배경:</strong> 청킹 및 임베딩 과정에서 한국 금융권 고유의 대명사 등을 잘 인식하도록 한글 말뭉치 데이터를 RAG에 활용하고자 했습니다.</li>
+                    <li><strong>현황:</strong> 요청된 한글 말뭉치는 현재 시범 사업 중이며, 외주 업체(대신증권)에 제공될 수 없고, SaaS에 올리거나 공용으로 사용할 수 없다는 제약이 있습니다. 또한, 본 사업 일정이 조직 개편으로 인해 지연되고 있어 제공 시기를 확약하기 어렵습니다.</li>
+                    <li><strong>결론:</strong> 현재로서는 한글 말뭉치 활용이 어렵다는 답변을 받았습니다.</li>
+                </ul>
+            </div>
+
+            <h2>7. 혁신금융서비스 신청 및 보안 아키텍처</h2>
+            <div class="section-box">
+                <p>AI 도입 프로젝트의 중요한 법적/규제적 측면인 혁신금융서비스 신청과 관련 보안 아키텍처에 대한 논의가 이루어졌습니다.</p>
+                <ul>
+                    <li><strong>보안 아키텍처 문서화:</strong> 강력한 보안 접근 통제 아키텍처 문서화가 필요하며, 대신증권 정보보호팀의 참여 범위에 대한 정보 공유가 요청되었습니다.</li>
+                    <li><strong>혁신금융 신청 지원:</strong> 혁신금융서비스 신청 일정이 임박했으므로, 관련 요건 및 필요한 보안 항목에 대한 캔드릴(Candrill) 측의 지원이 요청되었습니다. 특히 내부 망 연계 시 필요한 요건 정의가 중요합니다.</li>
+                    <li><strong>캔드릴의 입장:</strong> 현재 POC 아키텍처 기준으로는 혁신금융 신청에 대한 의미 있는 논의가 어렵다고 밝혔습니다. 대신증권 내부 시스템과의 연계를 가정했을 때 필요한 보안 요건을 함께 찾아나가야 한다고 언급했습니다.</li>
+                    <li><strong>대신증권 내부 상황:</strong> 대신증권 법무팀의 딜레이가 있으며, 보안 관련 논의는 별도 트랙으로 진행될 가능성이 있습니다. 캔드릴 측은 보안 관련 진행 상황 및 요청 사항을 빨리 공유해달라고 요청했습니다.</li>
+                </ul>
+            </div>
+
+            <h2>8. 대신증권 데이터 제공 계획</h2>
+            <div class="section-box">
+                <p>POC의 데이터 다양성 및 풍부화를 위해 대신증권에서 보유한 정적 데이터 제공에 대한 논의가 있었습니다.</p>
+                <ul>
+                    <li><strong>제공 의사:</strong> 대신증권은 현재 보유하고 있는 정적 데이터(애널리스트 리포트 등)를 POC에 활용할 수 있도록 제공할 의사를 밝혔습니다. 데이터 양이 많을수록 좋다는 의견이 있었습니다.</li>
+                    <li><strong>제공 방식:</strong> 대용량 데이터 전송을 위해 Google Drive를 통한 공유 방식이 제안되었으며, 캔드릴 측은 이를 수용했습니다.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="insights">
+            <h2>회의 인사이트</h2>
+            <ul>
+                <li><strong>POC의 목표 재정립 필요성:</strong> 초기 POC의 목표가 '결과물 도출'에 중점을 두었다면, 회의를 통해 '과정의 투명성 확보', '기술적 인사이트 습득', '향후 시스템 확장성 고려' 등 보다 심층적인 목표가 중요하게 부각되었습니다. 단순한 기능 검증을 넘어, AI 시스템의 라이프사이클 전반에 대한 경험과 학습이 대신증권의 핵심 요구사항임을 확인했습니다.</li>
+                <li><strong>RAG 시스템의 핵심 요소에 대한 심도 있는 이해 요구:</strong> 특히 RAG 시스템의 벡터 데이터베이스 선택, 청킹 알고리즘, 데이터 전처리 파이프라인 등 핵심 기술 요소에 대한 '블랙박스' 우려가 컸습니다. 이는 대신증권이 단순히 솔루션을 도입하는 것을 넘어, 내부적으로 AI 기술 역량을 강화하고자 하는 의지가 강함을 시사합니다.</li>
+                <li><strong>데이터 전처리 파이프라인의 중요성 재확인:</strong> 금융 데이터의 특성상 정형/비정형 데이터의 복잡한 전처리 과정이 필수적이며, 이 부분이 POC에서 충분히 다루어지지 않을 경우 실제 운영 단계에서의 활용성이 크게 저해될 수 있음을 양측 모두 인지하게 되었습니다. 이는 POC의 스코프를 재조정해야 할 중요한 포인트입니다.</li>
+                <li><strong>금융 특화 AI 기능 요구:</strong> 일반적인 자연어 처리 외에, 금융 리포트 생성에 필요한 수치 데이터의 정확한 추출, 비교, 계산 기능(예: YoY, PoP)에 대한 구체적인 요구사항이 도출되었습니다. 이는 금융 도메인 특화 에이전트 또는 모듈의 필요성을 시사합니다.</li>
+                <li><strong>내부 역량 강화와 외부 솔루션 활용의 균형점 모색:</strong> 대신증권은 AI 기술의 내부 역량 강화를 중요하게 여기는 반면, 캔드릴은 효율적인 POC를 위해 관리형 서비스 활용을 제안했습니다. 이 두 가지 관점 사이에서 대신증권의 장기적인 AI 전략에 부합하는 최적의 균형점을 찾아야 할 필요성이 제기되었습니다.</li>
+            </ul>
+        </section>
+
+        <section class="next-steps">
+            <h2>향후 계획</h2>
+            <ol>
+                <li><strong>RAG 시스템 상세 정보 공유:</strong> 캔드릴은 Azure AI Search의 내부 동작 방식, 활용되는 벡터 DB의 종류, 청킹 알고리즘 등 RAG 시스템의 기술적 상세 내용을 파악하여 대신증권에 공유해야 합니다. (A 확인 후 답변 예정)</li>
+                <li><strong>데이터 전처리 파이프라인 구축 방안 제시:</strong> PDF 보고서 파싱, 테이블 데이터 추출, 메타데이터 생성 등 데이터 전처리 파이프라인 구축에 대한 구체적인 방안을 제시하고, POC에 포함될 수 있는지 여부를 논의해야 합니다. (A 확인 후 답변 예정)</li>
+                <li><strong>소스 코드 및 시스템 프롬프트 제공 여부 확인:</strong> POC 결과물에 대한 소스 코드, 시스템 프롬프트, Terraform 스크립트 등 학습 및 유지보수에 필요한 자료 제공 가능 여부를 확인하고 공유해야 합니다. (A 확인 후 답변 예정)</li>
+                <li><strong>LLM 선택 기준 및 에이전트별 LLM 정보 공유:</strong> 각 에이전트(오케스트레이터, 서치, 요약, 리서치)에서 사용되는 LLM의 종류와 선택 기준에 대한 정보를 공유해야 합니다. (A 확인 후 답변 예정)</li>
+                <li><strong>혁신금융서비스 신청 및 보안 요건 구체화:</strong> 대신증권 정보보호팀과 캔드릴 간의 협의를 통해 혁신금융서비스 신청에 필요한 보안 요건을 구체적으로 정의하고, 대응 방안을 마련해야 합니다. 캔드릴은 관련 문서 및 정보 공유를 신속히 진행해야 합니다.</li>
+                <li><strong>대신증권 정적 데이터 제공:</strong> 대신증권은 보유 중인 애널리스트 리포트 등 정적 데이터를 Google Drive를 통해 캔드릴에 제공합니다.</li>
+                <li><strong>POC 스코프 및 평가 기준 확정:</strong> 다음 주 수요일까지 POC의 최종 스코프와 평가 기준을 확정하기 위한 협의를 진행합니다.</li>
+                <li><strong>정기적인 미팅 유지:</strong> 초기 단계인 만큼 잦은 정보 공유 및 논의를 위한 정기적인 미팅을 지속합니다.</li>
+            </ol>
+        </section>
+
+        <section class="evaluation">
+            <h2>회의 평가 및 방향성</h2>
+            <p>이번 회의는 대신증권 AI 도입 프로젝트의 핵심인 <strong>데이터 소스 활용 방안</strong>과 <strong>AI 아키텍처 설계</strong>에 대해 심도 있는 논의를 진행한 매우 중요한 자리였습니다. 초기 제안 대비 대신증권 측의 구체적인 기술적 요구사항과 학습 의지를 명확히 파악할 수 있었던 점이 가장 큰 성과입니다.</p>
+            <p>특히, RAG 시스템의 '블랙박스' 문제 제기와 데이터 전처리 파이프라인 구축 요청은 POC의 단순한 기능 구현을 넘어, <strong>대신증권의 장기적인 AI 기술 내재화 전략</strong>에 부합하는 방향으로 프로젝트를 이끌어야 함을 시사합니다. 단순히 외부 솔루션을 가져다 쓰는 것을 넘어, 그 내부 동작 원리를 이해하고 제어할 수 있는 역량을 확보하고자 하는 대신증권의 의지가 강하게 반영된 요구사항들입니다.</p>
+            <p>향후 프로젝트는 이러한 요구사항들을 적극적으로 수용하여, 캔드릴이 제공하는 솔루션의 투명성을 높이고 대신증권이 AI 시스템의 핵심 구성 요소를 직접 경험하고 학습할 수 있는 기회를 제공하는 방향으로 나아가야 합니다. 금융 도메인의 특성을 고려한 수치 데이터 처리 및 계산 모듈 추가 등 <strong>도메인 특화 기능 구현</strong>에 대한 논의도 심화되어야 할 것입니다.</p>
+            <p>이번 회의를 통해 양측의 기대치와 POC의 실제 범위에 대한 간극을 좁히고, 보다 현실적이고 실질적인 목표를 설정할 수 있는 기반을 마련했습니다. 앞으로는 명확히 정의된 스코프와 투명한 정보 공유를 통해 대신증권의 AI 도입이 성공적으로 이루어질 수 있도록 긴밀한 협력을 지속해야 할 것입니다. 특히, <strong>혁신금융서비스 신청</strong>과 관련된 보안 및 규제 준수 사항들을 조기에 명확히 하고, 이를 아키텍처에 반영하는 작업이 병행되어야 합니다.</p>
+            <p><strong>결론적으로, 이번 POC는 단순한 기술 검증을 넘어, 대신증권의 AI 역량 강화를 위한 '학습의 장'이 되어야 하며, 캔드릴은 이에 필요한 기술적 깊이와 투명성을 제공하는 데 주력해야 할 것입니다.</strong></p>
+        </section>
+    </div>
+</body>
+</html>
