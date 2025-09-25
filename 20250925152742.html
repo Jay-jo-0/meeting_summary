@@ -1,0 +1,442 @@
+<html>
+<head>
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>250925 화장품 콥데이 회의록</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #2980b9;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        strong {
+            color: #e74c3c;
+        }
+        em {
+            color: #27ae60;
+            font-style: normal;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            font-size: 0.95em;
+            table-layout: fixed; /* 테이블 너비를 고정 */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            word-break: break-word; /* 긴 단어 줄바꿈 */
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #555;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 25px;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .summary-table th, .summary-table td {
+            text-align: center;
+        }
+        .highlight {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-left: 5px solid #f39c12;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        .evaluation {
+            background-color: #e8f6f3;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #d1eeea;
+            margin-top: 30px;
+        }
+        .evaluation h3 {
+            color: #16a085;
+            border-bottom: 1px solid #a2d9ce;
+            padding-bottom: 10px;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* 모바일 최적화 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px 10px;
+            }
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-size: 1.5em;
+                margin-top: 25px;
+            }
+            h3 {
+                font-size: 1.2em;
+                margin-top: 20px;
+            }
+            p, ul, ol, li, table {
+                font-size: 0.95em;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            thead, tbody, th, td, tr {
+                display: block;
+            }
+            tr {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            th {
+                text-align: center;
+                background-color: #f2f2f2;
+                border-bottom: 1px solid #ddd;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+            td:before {
+                position: absolute;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                content: attr(data-label);
+            }
+            /* 요약 테이블은 모바일에서 일반 테이블처럼 보이도록 조정 */
+            .summary-table table {
+                width: 100%;
+                display: table;
+                overflow-x: unset;
+                white-space: normal;
+            }
+            .summary-table thead, .summary-table tbody, .summary-table th, .summary-table td, .summary-table tr {
+                display: table-row;
+            }
+            .summary-table th, .summary-table td {
+                display: table-cell;
+                text-align: center;
+                padding: 8px;
+            }
+            .summary-table td:before {
+                content: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>250925 화장품 콥데이 회의록</h1>
+        <p class="note"><strong>일시:</strong> 2025년 9월 25일 (목) 오후 3:08 - 3:59 (51분 56초)</p>
+        <p class="note"><strong>작성자:</strong> 정다슬</p>
+
+        <h2>핵심 요약 및 주요 결정 사항</h2>
+        <div class="summary-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>주요 내용</th>
+                        <th>핵심 인사이트</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="구분"><strong>회사 개요</strong></td>
+                        <td data-label="주요 내용">로맨(Rom&nd) 브랜드로 매출 95% 이상 발생. 18~24세 타겟 중저가 브랜드. 립 제품(특히 쥬시 래스팅 틴트)이 매출의 1/3 차지. 아이 카테고리 확장 노력 중 (현재 20% 볼륨).</td>
+                        <td data-label="핵심 인사이트">단일 제품 의존도 탈피 및 카테고리 다각화 성공적 진행 중. 특히 아이 제품의 일본 시장 성장세 주목.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="구분"><strong>재무 성과</strong></td>
+                        <td data-label="주요 내용">1, 2분기 매출 500억대 안착. 원가율 높으나 판관비(특히 마케팅비) 효율적 관리 (5~8%). 마진율 10~15% 유지. 임원 급상여 7억(2분기 일회성 비용).</td>
+                        <td data-label="핵심 인사이트">높은 원가에도 불구하고 효율적인 판관비 관리로 안정적인 마진율 확보. 올리브영 직거래 전환으로 마진율 추가 개선 기대.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="구분"><strong>지역별 현황</strong></td>
+                        <td data-label="주요 내용">한국 30%, 일본 20~25%, 중화권 10%, 동남아 20%, 미주 5%, 유럽 10%. 미국 얼타 온라인/오프라인 론칭 (8월 3일), 기대치 상회하는 판매 실적 (온라인 +20%, 오프라인 +40%). 틱톡샵 '볼륨 핵 듀오' 인기. 일본 아이 카테고리 팝업 및 콜라보 (리세 염색약, 유리아쥬 립밤) 진행. 터키 그라티스 매장 성공적 진출. 캄보디아, 대만 팝업 행사 성황리 종료. 국내 성수 팝업 스토어 해외 인플루언서 방문 및 높은 매출 기록.</td>
+                        <td data-label="핵심 인사이트">글로벌 시장 확장 가속화 및 현지 맞춤형 마케팅 전략 주효. 특히 미국 시장 초기 진입 성공과 일본 아이 카테고리 강화가 긍정적. 팝업 스토어는 단순 마케팅을 넘어 수익 창출 및 브랜드 레퍼런스 역할 수행.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="구분"><strong>향후 프로젝트</strong></td>
+                        <td data-label="주요 내용">11월 지드래곤 IP '조앤 프렌즈' 콜라보 제품 출시 (올리브영 메인 행사). 내년 1분기 기초 제품 론칭 준비. 내년 1월 '제로 라인' 립 제품 출시. 올리브영 직거래 전환 (3분기부터 반영, 마진율 2~3%p 개선).</td>
+                        <td data-label="핵심 인사이트">대형 IP 콜라보를 통한 브랜드 인지도 및 매출 증대 기대. 기초 제품 및 제로 라인 출시로 카테고리 확장 및 고객층 다변화 모색. 올리브영과의 직접 거래는 수익성 개선의 중요한 전환점.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="구분"><strong>재고 관리</strong></td>
+                        <td data-label="주요 내용">작년 말 720억 → 올해 2분기 말 520억 → 현재 400억대 레벨로 재고 감소. 작년 생산 물량 올해 안에 정리 가능할 것으로 예상.</td>
+                        <td data-label="핵심 인사이트">효율적인 재고 관리를 통해 재무 건전성 강화.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>1. 회사 소개 및 개요</h2>
+        <h3>1.1. 아이팸 기업 현황</h3>
+        <ul>
+            <li><strong>설립:</strong> 2000년 (원래 웨딩 서비스 사업)</li>
+            <li><strong>직원 수:</strong> 약 220명</li>
+            <li><strong>주요 연혁:</strong> 2016년 색조 화장품 브랜드 '로맨(Rom&nd)' 론칭, 2021년 상장.</li>
+            <li><strong>성장세:</strong> 로맨 론칭 후 매출 급성장.</li>
+        </ul>
+
+        <h3>1.2. 로맨(Rom&nd) 브랜드 현황</h3>
+        <ul>
+            <li><strong>매출 기여도:</strong> 전체 매출의 95% 이상을 로맨이 차지.</li>
+            <li><strong>타겟층:</strong> 18~24세의 젊은 연령층을 위한 중저가 브랜드.</li>
+            <li><strong>주력 제품:</strong> 립 제품 (특히 '쥬시 래스팅 틴트'가 전체 매출의 약 1/3 차지).</li>
+            <li><strong>제품 다각화:</strong> 과거 '쥬시 래스팅 틴트' 의존도가 90% 이상이었으나, 현재는 다양한 제품 출시로 한국 내 약 400개 SKU 운영.</li>
+            <li><strong>아이(Eye) 카테고리 확장:</strong> 현재 전체 볼륨의 약 20% 차지. 연령층을 높이고 마진 확보를 위해 노력 중. 특히 '한올 브로우 마스카라'는 일본에서 1, 2위를 다투는 인기 제품. 국내에서도 애쉬톤 눈썹 트렌드에 맞춰 3분기에 올리브영 신제품 론칭 및 마케팅 진행.</li>
+            <li><strong>기타 카테고리:</strong> 치크, 쉐딩, 베이스, 선(Sun) 제품은 아직 볼륨이 크지 않으나, 베이스 및 선 제품은 수출 유망 분야로 2026년 신제품 출시 노력.</li>
+            <li><strong>기초 제품 론칭:</strong> 내년 1분기 (빠르면 3월) 기초 제품 론칭 준비 중.</li>
+        </ul>
+
+        <h2>2. 경영 성과 및 재무 현황</h2>
+        <h3>2.1. 매출 및 마진율</h3>
+        <ul>
+            <li><strong>매출 규모:</strong> 올해 1, 2분기 500억대 안착. 3분기에도 높은 목표 달성을 위해 노력 중.</li>
+            <li><strong>원가 구조:</strong> OEM 회사로 코스맥스(60%), CNC 인터내셔널(10~20%), 콜마, 한국화장품제조 등 활용. 원가가 높은 편.</li>
+            <li><strong>마진율:</strong> 중저가 제품 및 B2B 판매 방식(소비자 가격 대비 30~40% 저렴)으로 마진 풀이 크지 않음.</li>
+            <li><strong>판관비 관리:</strong> 판관비는 20% 초반~중반대 유지. 특히 마케팅비(지급 수수료, 판매 촉진비)는 5~8%로 타이트하게 관리.</li>
+            <li><strong>영업 마진율:</strong> 10~15% 전후. 과거 단기적으로 20% 초반을 기록한 적도 있으나, 현재는 안정적인 10~15% 수준.</li>
+            <li><strong>2분기 특이사항:</strong> 임원 급상여 7억 원 지급 (일회성 비용, 3, 4분기에는 없음). 지급 수수료는 온라인 마켓 수수료, 인플루언서 수수료, 운영 분담금 등으로 구성.</li>
+        </ul>
+
+        <h3>2.2. 재고 관리 현황</h3>
+        <ul>
+            <li><strong>재고 감소:</strong> 작년 말 720억 원대 → 올해 1분기 초 580억 원대 → 2분기 말 520억 원대 → 현재 400억 원대 레벨로 재고가 맞춰짐.</li>
+            <li><strong>재고 소진 계획:</strong> 4분기 판매 물량이 많음에도 불구하고, 작년에 생산된 재고를 올해 안에 충분히 정리할 수 있는 수량으로 파악됨. <strong>재고 관리가 잘 되고 있음.</strong></li>
+        </ul>
+
+        <h2>3. 지역별 업데이트 및 현황</h2>
+        <h3>3.1. 글로벌 시장 분포</h3>
+        <p>현재 약 70~80개 국가에 제품 납품 중. 주로 총판 업체 45개 중 메이저 2개를 활용.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>국가/지역</th>
+                    <th>매출 비중 (러프 추정)</th>
+                    <th>특이사항</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="국가/지역">한국</td>
+                    <td data-label="매출 비중">약 30%</td>
+                    <td data-label="특이사항">온라인 매출 견조, 올리브영 매출 40~50억/월. 유튜버 협업, 라이브 방송, 에이블리 등 적극 대응. 4분기 빅 이벤트 기대.</td>
+                </tr>
+                <tr>
+                    <td data-label="국가/지역">일본</td>
+                    <td data-label="매출 비중">약 20~25%</td>
+                    <td data-label="특이사항">오프라인 매출 비중 90% 이상. '한올 브로우 마스카라' 매출 200% 증가. 리세 염색약, 유리아쥬 립밤 등 콜라보 진행. 메가와리 행사 역대 최대 매출 달성. 돈키호테 월 10억 매출.</td>
+                </tr>
+                <tr>
+                    <td data-label="국가/지역">중화권</td>
+                    <td data-label="매출 비중">약 10%</td>
+                    <td data-label="특이사항">라이브 방송을 통한 판매 활발. 9월 말/10월 초 중국형 신규 컬러(차 테마) '쥬시 래스팅 틴트' 출시 예정. 회복세 지속.</td>
+                </tr>
+                <tr>
+                    <td data-label="국가/지역">동남아</td>
+                    <td data-label="매출 비중">약 20%</td>
+                    <td data-label="특이사항">캄보디아 푸놈펜 이온몰 행사 (방문객 2만 4천명, SNS 시청 144만명) 성공. 베트남 '폴루나 에디션' 출시. 귀여운 감성(미니미 제품, 로맨 카) 활용 예정.</td>
+                </tr>
+                <tr>
+                    <td data-label="국가/지역">미주권</td>
+                    <td data-label="매출 비중">약 5%</td>
+                    <td data-label="특이사항">8월 3일 미국 얼타 온라인/오프라인 론칭 (400개 점포). 온라인 기대치 +20%, 오프라인 +40% 달성. 틱톡샵 '볼륨 핵 듀오' 인기. 얼타 200개 점포 분기당 확대 계획 (내년 1분기 700개 목표). 온라인 10개, 오프라인 25~30개 SKU 확장 목표.</td>
+                </tr>
+                <tr>
+                    <td data-label="국가/지역">유럽</td>
+                    <td data-label="매출 비중">약 10%</td>
+                    <td data-label="특이사항">터키 그라티스 매장 (현재 500개 점포) 성공적 진출. 프리미엄 스토어 및 '볼륨 핵 트리오' 론칭 예정. 터키 전용 제품 개발 및 점원 인센티브 프로그램 도입. 유럽은 국가별 개별 격파 전략 필요.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>3.2. 주요 마케팅 및 판매 활동</h3>
+        <ul>
+            <li><strong>팝업 스토어:</strong>
+                <ul>
+                    <li>2분기 한국/일본에서 팝업 스토어 다수 진행.</li>
+                    <li>미국 틱톡샵 '볼륨 핵 듀오' 론칭 (4월), 7월부터 판매 급증. 소비자 및 비트윈 인플루언서 활용 콘텐츠 생성.</li>
+                    <li>일본 아이 카테고리 팝업 존 운영 (8월 말), 매출 증대 및 SNS 콘텐츠 활성화.</li>
+                    <li>캄보디아 푸놈펜 이온몰 행사 (8월 중순), K-뷰티 관심도 확인. 퍼스널 컬러 특색 행사 진행.</li>
+                    <li>대만 타이페이 '핑크 오피스' 팝업 스토어 (9월 중순~내년 1월 1일), 트렌디한 이미지 강조, 목표 매출 초과 달성.</li>
+                    <li>부산 '핑크 오피스' 팝업 스토어 (방문객 3만 2천명, 일평균 매출 1천만원 이상), 소비자 접점 확대 및 지역별 수요 확인.</li>
+                    <li>성수 팝업 스토어 (5월부터 운영), 해외 인플루언서 방문, 일 매출 8천~9천만원 기록 (인형 등 굿즈 판매). 내년 1월 라스베이거스 올리브영 미국 1호점 팝업 담당 예정.</li>
+                    <li>팝업 스토어는 개당 4~5억 원 비용 소요 (인테리어 2~3억, 임대료 1~3천만원/월, 인건비 등). 매출 2~4억 원 발생. 마케팅 비용으로 인식하며, 소비자 접점 확대를 위해 지속 추진.</li>
+                </ul>
+            </li>
+            <li><strong>콜라보레이션:</strong>
+                <ul>
+                    <li>일본 리세 염색약 콜라보 (6월~9월), 염색약에 맞는 틴트 증정 이벤트.</li>
+                    <li>일본 유리아쥬 립밤 콜라보 (9월 30일 온라인, 10월 1일 온오프라인), 색깔 있는 립밤 출시.</li>
+                    <li><strong>11월 지드래곤 IP '조앤 프렌즈' 콜라보:</strong> 올해 가장 큰 콜라보로 예상. 립밤, 아이브로우 마스카라, 블러셔 등 다양한 제품군. 올리브영 메인 행사로 진행 예정.</li>
+                </ul>
+            </li>
+            <li><strong>면세점:</strong> 인천공항 시티 면세점 색조 부문 2위 기록. VMD 및 집기 리뉴얼을 통해 꾸준히 매출 발생.</li>
+            <li><strong>온라인 채널:</strong> 일본 큐텐, 아마존 재팬, 틱톡샵 선점 노력.</li>
+            <li><strong>K-뷰티 트렌드 활용:</strong> 10월 4일 넷플릭스 '메이크업 100명' 프로그램 방영 시 K-뷰티 관심도 증폭 기대.</li>
+        </ul>
+
+        <h2>4. 앞으로의 프로젝트 및 계획</h2>
+        <h3>4.1. 제품 확장 및 개발</h3>
+        <ul>
+            <li><strong>기초 제품 론칭:</strong> 내년 1분기 (빠르면 3월) 준비 중.</li>
+            <li><strong>'제로 라인' 립 제품:</strong> 내년 1월 한국/일본 론칭. 입술이 예민한 소비자들을 위한 자극 없는 제품.</li>
+            <li><strong>해외 시장 맞춤형 제품:</strong> 터키 전용 제품 개발 및 유럽 시장 선호 컬러(센 언니 룩) 반영.</li>
+            <li><strong>미니미 제품 및 굿즈:</strong> 일본, 동남아 시장에 귀여운 감성 통할 것으로 예상, '로맨 카' 등 이벤트 활용.</li>
+        </ul>
+
+        <h3>4.2. 유통 및 판매 전략</h3>
+        <ul>
+            <li><strong>올리브영 직거래 전환:</strong> 8월 초부터 총판 업체 대신 직거래로 전환. 3분기부터 마진율 2~3%p 개선 효과 기대. 국내 매출의 60~70%가 올리브영에서 발생하므로 수익성 개선에 큰 영향.</li>
+            <li><strong>돈키호테 해외 진출:</strong> 대만, 말레이시아, 태국 등 해외 돈키호테 매장에 로맨 제품 입점 요청. 돈키호테 한정 제품 개발 예정.</li>
+            <li><strong>팝업 스토어 확대:</strong> 한국, 일본, 중국, 미국 등 글로벌 팝업 스토어 지속 추진. 성수 팝업은 2년 계약으로 장기 운영 계획.</li>
+            <li><strong>인플루언서 육성:</strong> 일본 등지에서 인플루언서 육성 및 협력 강화.</li>
+        </ul>
+
+        <h3>4.3. 재무 및 투자 계획</h3>
+        <ul>
+            <li><strong>배당 성향 상향:</strong> 현재 약 7%이나, 최소 2배 이상 상향할 계획.</li>
+            <li><strong>4분기 매출 기대:</strong> 올리브영 어워즈 참여 (11월 매출 반영), 조앤 프렌즈 콜라보 (10월 반영) 등으로 4분기 국내 매출 호조 예상.</li>
+        </ul>
+
+        <h2>5. Q&A 세션 요약</h2>
+        <ul>
+            <li><strong>미국 틱톡샵 판매 동향:</strong> 7월 이후 꾸준히 상승세. 8월보다 9월이 더 좋은 추세.</li>
+            <li><strong>일본 3분기 전체 동향:</strong> 2분기보다 회복세. 1, 2분기 총판 재고 소진 후 3분기 발주 재개. 9월 매출은 마지막 주 실적에 따라 변동 가능성 있음.</li>
+            <li><strong>동남아 8, 9월 동향:</strong> 팝업 스토어 및 이벤트 지속. 총판 매출 추이로 볼 때 7~8월 평균이 4~2월 평균보다 좋음.</li>
+            <li><strong>유럽 시장 현황:</strong> 터키 그라티스 매장 판매 호조. 그러나 유럽은 국가별 장벽이 높아 개별 격파 전략 필요. 아직 시작 단계. 영국 퓨어 서울 등 K-뷰티 취급 업체와 접촉 중.</li>
+            <li><strong>3분기 국내 상황:</strong> 올리브영 매출 견조 (월 40~50억). 유튜버 협업, 라이브 방송 등 적극 대응. 더운 날씨에도 색조 제품 수요 유지. 4분기 빅 이벤트로 더 큰 기대.</li>
+            <li><strong>광고 선전비 트렌드:</strong> 아래에서부터의 인플루언서 추가 요청 등으로 소폭 증가 추세. 목표는 5~8% 유지. 지드래곤 콜라보 등 대형 마케팅에도 비용 효율적으로 관리될 것으로 예상.</li>
+            <li><strong>올리브영 직거래 전환 시점:</strong> 8월 초부터 반영. 3분기부터 마진 개선 효과 발생.</li>
+            <li><strong>중국 발주 동향:</strong> 9월 말/10월 초 신규 컬러 '쥬시 래스팅 틴트' 초도 발주 등으로 9월 매출 양호할 것으로 예상. 회복세 지속.</li>
+            <li><strong>넷플릭스 '메이크업 100명' 프로그램:</strong> K-뷰티에 대한 관심 증폭 기회로 활용 가능성. 회사 내부적으로는 시청자로서 기대 중.</li>
+            <li><strong>팝업 스토어 비용 및 운영:</strong> 개당 4~5억 원 소요. 올해 총 4개 팝업 진행 (한국, 타이페이, 부산). 마케팅 비용으로 인식하며, 매출도 상당 부분 발생. 직원 투입이 많아 한 번에 여러 개 운영 어려움. 성수 팝업은 2년 계약, 효율이 좋으면 장기 운영 계획.</li>
+        </ul>
+
+        <h2>6. 회의 인사이트</h2>
+        <div class="highlight">
+            <p>이번 회의를 통해 <strong>로맨(Rom&nd)이 단일 제품 의존도를 벗어나 카테고리 및 글로벌 시장 다각화에 성공적으로 진입하고 있음</strong>을 확인할 수 있었습니다. 특히 립 제품의 강점을 유지하면서도 아이 카테고리(한올 브로우 마스카라)의 일본 시장 성공과 기초 제품 론칭 계획은 브랜드의 성장 동력을 확장하는 중요한 지점입니다.</p>
+            <p><strong>글로벌 시장 진출 전략은 현지 맞춤형으로 매우 적극적</strong>입니다. 미국 얼타 입점 초기 성공, 터키 그라티스 매장 확대, 동남아/대만 팝업 스토어의 성과는 로맨의 제품력과 마케팅 역량이 해외에서도 통하고 있음을 보여줍니다. 특히 팝업 스토어는 단순한 마케팅을 넘어 실질적인 매출을 창출하며 브랜드 인지도와 고객 경험을 동시에 높이는 핵심 전략으로 자리매김했습니다.</p>
+            <p>재무적으로는 높은 원가율에도 불구하고 <strong>효율적인 판관비 관리와 올리브영 직거래 전환을 통한 마진율 개선은 긍정적인 신호</strong>입니다. 재고 관리 역시 안정적으로 이루어지고 있어 회사의 재무 건전성이 강화되고 있습니다.</p>
+            <p>향후 지드래곤 IP 콜라보와 같은 <strong>대형 마케팅 이벤트는 브랜드의 화제성을 극대화하고 젊은 층의 유입을 가속화</strong>할 것으로 기대됩니다. 또한, '제로 라인'과 같은 민감성 피부를 위한 제품 개발은 고객층을 확장하고 브랜드의 사회적 가치를 높이는 데 기여할 것입니다.</p>
+        </div>
+
+        <h2>7. 향후 계획 및 방향성</h2>
+        <ol>
+            <li><strong>카테고리 확장 지속:</strong> 내년 1분기 기초 제품 론칭을 성공적으로 수행하고, '제로 라인' 립 제품 출시를 통해 민감성 피부 고객층을 확보하여 브랜드 포트폴리오를 더욱 강화할 것입니다.</li>
+            <li><strong>글로벌 시장 공략 가속화:</strong>
+                <ul>
+                    <li><strong>미국:</strong> 얼타 매장 입점 점포 수를 분기당 200개씩 늘려 내년 1분기까지 700개 점포 입점 목표를 달성하고, 온라인 SKU를 10개 추가하여 오프라인 25~30개 SKU로 확장할 것입니다. 틱톡샵의 성공 사례를 다른 채널로 확대 적용할 예정입니다.</li>
+                    <li><strong>일본:</strong> '한올 브로우 마스카라'의 성공을 바탕으로 아이 카테고리를 지속적으로 강화하고, 리세, 유리아쥬 등 현지 브랜드와의 콜라보를 통해 시장 점유율을 확대할 것입니다. 돈키호테 해외 매장 입점과 한정 제품 개발을 적극 추진합니다.</li>
+                    <li><strong>유럽:</strong> 터키 그라티스 매장 성공을 발판 삼아 프리미엄 스토어 입점 및 '볼륨 핵 트리오' 론칭을 추진하고, 터키 전용 제품 개발 및 점원 인센티브 프로그램을 통해 현지 시장을 공략합니다. 유럽 각국의 특성을 고려한 개별 격파 전략을 지속합니다.</li>
+                    <li><strong>중국:</strong> 왕홍 콜라보 및 신규 컬러 출시를 통해 회복세를 유지하고, 라이브 방송 등 온라인 채널을 적극 활용합니다.</li>
+                </ul>
+            </li>
+            <li><strong>수익성 개선 및 재무 건전성 강화:</strong> 올리브영 직거래 전환을 통해 마진율을 2~3%p 개선하고, 효율적인 재고 관리를 지속하여 재무 건전성을 유지합니다.</li>
+            <li><strong>브랜드 인지도 및 고객 접점 확대:</strong>
+                <ul>
+                    <li><strong>대형 IP 콜라보:</strong> 지드래곤 IP '조앤 프렌즈' 콜라보를 성공적으로 론칭하여 브랜드 화제성을 극대화하고, 젊은 고객층의 유입을 촉진합니다.</li>
+                    <li><strong>팝업 스토어:</strong> 성수동 팝업 스토어의 성공을 레퍼런스 삼아 국내외 주요 거점에 팝업 스토어를 지속적으로 운영하여 소비자들과의 직접적인 소통을 강화하고, 브랜드 체험 기회를 확대합니다. 팝업 스토어를 단순 마케팅을 넘어 수익 창출의 기회로 활용합니다.</li>
+                    <li><strong>디지털 마케팅 강화:</strong> 인플루언서 협업 및 SNS 콘텐츠 생성을 활발히 진행하여 브랜드 충성도를 높이고, 넷플릭스 등 미디어 콘텐츠를 통한 K-뷰티 트렌드 확산에 주목하여 마케팅 기회를 모색합니다.</li>
+                </ul>
+            </li>
+            <li><strong>주주 가치 제고:</strong> 배당 성향을 최소 2배 이상 상향하여 주주 가치 제고에 힘쓸 것입니다.</li>
+        </ol>
+
+        <div class="evaluation">
+            <h3>회의 평가</h3>
+            <p>이번 회의는 <strong>아이팸의 핵심 브랜드 '로맨'이 국내외 시장에서 보여주고 있는 견고한 성장세와 미래 성장 동력을 명확히 제시</strong>했습니다. 특히, 단일 제품 의존도에서 벗어나 다양한 카테고리로 확장하고 있으며, 글로벌 시장에서도 현지 맞춤형 전략과 적극적인 마케팅으로 성공적인 초기 진입을 이루고 있다는 점이 고무적입니다.</p>
+            <p>재무적으로도 효율적인 비용 관리와 올리브영 직거래 전환을 통한 수익성 개선 노력은 긍정적인 평가를 받을 만합니다. 팝업 스토어와 같은 오프라인 고객 접점 확대 전략은 브랜드 인지도 향상과 함께 실질적인 매출 기여를 통해 성공적인 모델로 자리 잡았습니다.</p>
+            <p>향후 지드래곤 IP 콜라보와 기초 제품, 제로 라인 출시 계획은 브랜드의 성장 잠재력을 더욱 높일 것으로 기대됩니다. 다만, 급변하는 글로벌 시장 환경과 경쟁 심화 속에서 <strong>지속적인 제품 혁신과 유연한 마케팅 전략이 필요</strong>하며, 총판 의존도를 줄이고 직접적인 시장 데이터를 확보하는 노력이 계속되어야 할 것입니다. 전반적으로 <strong>매우 긍정적이고 구체적인 비전을 제시한 회의</strong>로 평가됩니다.</p>
+        </div>
+
+        <p class="note">본 회의록은 회의 스크립트를 바탕으로 작성되었으며, 모든 내용은 참석자의 발언을 토대로 합니다.</p>
+    </div>
+</body>
+</html>
