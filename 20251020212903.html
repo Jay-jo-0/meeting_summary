@@ -1,0 +1,373 @@
+<html lang="ko">
+<head>
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼양식품 1Q25 회의록</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #e74c3c;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid #e74c3c;
+            padding-left: 10px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        strong {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        ul li {
+            margin-bottom: 8px;
+            font-size: 1.0em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            table-layout: auto; /* Allow columns to adjust */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+        .summary-table th {
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .summary-table td {
+            text-align: center;
+            font-weight: 500;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .insight, .next-steps, .evaluation {
+            background-color: #ecf0f1;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+        .insight h3, .next-steps h3, .evaluation h3 {
+            color: #3498db;
+            border-bottom: none;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .evaluation {
+            border-left-color: #27ae60;
+        }
+        .evaluation h3 {
+            color: #27ae60;
+        }
+        .next-steps {
+            border-left-color: #f39c12;
+        }
+        .next-steps h3 {
+            color: #f39c12;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            body {
+                padding: 15px;
+            }
+            .container {
+                padding: 15px;
+            }
+            table, th, td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            th {
+                text-align: left;
+                background-color: #f2f2f2;
+                color: #333;
+            }
+            td {
+                border-top: none;
+                text-align: right;
+                position: relative;
+                padding-left: 50%; /* Space for the label */
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: calc(50% - 20px);
+                white-space: nowrap;
+                font-weight: bold;
+                color: #555;
+                text-align: left;
+            }
+            .summary-table th, .summary-table td {
+                display: table-cell; /* Override for summary table to keep it tabular */
+                width: auto;
+                text-align: center;
+            }
+            .summary-table td::before {
+                content: none; /* Remove pseudo-element for summary table */
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            h3 {
+                font-size: 1.1em;
+            }
+            p, ul li, table {
+                font-size: 0.9em;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>삼양식품 2025년 1분기 실적 회의록</h1>
+        <p class="highlight"><strong>회의 일시:</strong> 2025년 5월 15일</p>
+        <p class="highlight"><strong>회의 주제:</strong> 삼양식품 2025년 1분기 실적 및 향후 전략</p>
+
+        <h2>📊 회의 핵심 요약</h2>
+        <p>이번 회의는 삼양식품의 2025년 1분기 실적을 상세히 분석하고, 주요 시장별 성과 및 향후 전략을 논의하는 자리였습니다. 특히 <strong>해외 수출의 폭발적인 성장</strong>과 <strong>밀양 제2공장 가동</strong>을 통한 생산 능력 확대가 핵심적인 내용으로 다루어졌습니다.</p>
+
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>항목</th>
+                    <th>2025년 1분기 실적</th>
+                    <th>YoY (전년 동기 대비)</th>
+                    <th>QoQ (전 분기 대비)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="항목"><strong>매출액</strong></td>
+                    <td data-label="2025년 1분기 실적">5,290억 원</td>
+                    <td data-label="YoY">+37.1%</td>
+                    <td data-label="QoQ">-</td>
+                </tr>
+                <tr>
+                    <td data-label="항목"><strong>영업이익</strong></td>
+                    <td data-label="2025년 1분기 실적">1,340억 원</td>
+                    <td data-label="YoY">+67.2%</td>
+                    <td data-label="QoQ">-</td>
+                </tr>
+                <tr>
+                    <td data-label="항목"><strong>순이익</strong></td>
+                    <td data-label="2025년 1분기 실적">991억 원</td>
+                    <td data-label="YoY">+49.1%</td>
+                    <td data-label="QoQ">-</td>
+                </tr>
+                <tr>
+                    <td data-label="항목"><strong>별도기준 수출액</strong></td>
+                    <td data-label="2025년 1분기 실적">3,520억 원</td>
+                    <td data-label="YoY">+58%</td>
+                    <td data-label="QoQ">+7%</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>컨센서스 대비:</strong> 매출액 6.2% 상회, 영업이익 28.3% 상회</p>
+
+        <h2>📈 상세 회의 내용</h2>
+
+        <h3>1. 별도기준 수출액 현황</h3>
+        <ul>
+            <li><strong>총 수출액:</strong> 3,520억 원 (전년 동기 대비 58% 증가, 전 분기 대비 7% 증가).</li>
+            <li><strong>증가 요인:</strong> 미국 및 중국 시장 중심의 적극적인 대응이 주효했습니다. 특히 중국은 4분기 춘절 대비 재고 매출 인식이 성장세를 견인했으며, 긍정적인 환율 효과도 매출 증대에 기여했습니다.</li>
+            <li><strong>소스 수출:</strong> 3~4월 소스 수출이 크게 증가했으며, 해외 법인으로의 물량 이전이 많았습니다. 불닭 유통망을 활용한 소스 제품 확장이 적극적으로 추진 중입니다.</li>
+        </ul>
+
+        <h3>2. 주요 해외 시장별 성과</h3>
+
+        <h4>2.1. 🇺🇸 미국 시장</h4>
+        <ul>
+            <li><strong>매출액:</strong> 1,353억 원 (전년 동기 대비 81% 증가, 전 분기 대비 20% 증가).</li>
+            <li><strong>매출 QoQ 증가 요인:</strong>
+                <ul>
+                    <li>코스트코 행사 등 대형 유통 채널에서의 판매 증가.</li>
+                    <li>크로거, 타깃 등 <strong>신규 메인스트림 채널 입점 수량 증가</strong> (기존 물량 부족으로 최소 주문 수량(MOQ)만 입점했던 상황 개선).</li>
+                    <li>다만, 까르보불닭 생산 물량 부족으로 월마트 공급이 소폭 감소했으나, 4월부터 월마트 물량 공급이 대폭 확대될 예정입니다.</li>
+                </ul>
+            </li>
+            <li><strong>채널별 비중 (1Q25):</strong> 메인스트림 56%, 에스닉 31%, 캐나다/멕시코 10%대 (4Q24 대비 메인스트림 비중 증가, 에스닉 비중 유지, 캐나다/멕시코 비중 감소).</li>
+            <li><strong>공급 제약:</strong> 여전히 공급 부족으로 인해 월마트, 코스트코 등 주요 채널 대응에 제한이 있습니다. 현재 월마트 입점율 90%, 코스트코 입점율 50%대입니다.</li>
+            <li><strong>향후 계획:</strong> 하반기 샘스클럽 입점 협의를 진행 중입니다.</li>
+            <li><strong>환율 및 물류:</strong> 1분기 관세 부과 전 미국 물동량 증가로 컨테이너 수급이 원활하지 못했던 부분이 있었습니다. 2분기에는 선적량이 더욱 증가할 것으로 예상되며, 판매량 증가가 환율 하락분을 상쇄할 것으로 기대됩니다.</li>
+            <li><strong>미국 법인 이익률:</strong> 전년 동기 대비 개선되었습니다. 인건비 및 물류비 등의 해외 법인 비용 구조에서 물류비 감소가 주효했습니다. 수출 공급가 변동은 없었습니다.</li>
+            <li><strong>가격 인상 검토:</strong> 시장 상황을 고려하여 가격 인상도 검토 중입니다.</li>
+        </ul>
+
+        <h4>2.2. 🇨🇳 중국 시장</h4>
+        <ul>
+            <li><strong>매출액:</strong> 1,259억 원 (전년 동기 대비 35% 증가, 전 분기 대비 12% 증가).</li>
+            <li><strong>매출 QoQ 증가 요인:</strong>
+                <ul>
+                    <li>춘절 쇼핑 행사 참여와 권역별 대리상 영업 강화 효과.</li>
+                    <li>권역별 지역 영업을 세분화하여 접근하는 전략이 주효했습니다.</li>
+                    <li>학교 매점 등 젊은 층이 많이 이용하는 채널 입점 강화.</li>
+                </ul>
+            </li>
+            <li><strong>오프라인 비중:</strong> 오프라인 매출 비중이 약 80%에 달하며, 이는 현지 시장 침투력이 높음을 시사합니다.</li>
+            <li><strong>시장 잠재력:</strong> 현재 2선 도시 커버율이 50% 미만인 상황입니다. 2선 도시는 1선 도시와 인구수 및 경제력 측면에서 유사한 잠재력을 가지고 있어, 향후 성장 가능성이 매우 큽니다.</li>
+        </ul>
+
+        <h4>2.3. 🇪🇺 유럽 시장</h4>
+        <ul>
+            <li><strong>매출액:</strong> 640억 원 (전년 동기 대비 50% 증가, 전 분기 대비 8% 증가). (법인 기준 246억 원, QoQ -18%).</li>
+            <li><strong>영업 제약:</strong> 여전히 수량 부족으로 영업에 제약이 많습니다.</li>
+            <li><strong>신규 입점:</strong> 1분기 프랑스, 이탈리아 일부 채널에 입점을 시작했습니다.</li>
+            <li><strong>수요 현황:</strong> 알버트/점보 등 메인스트림 채널의 월별 매출액이 증가 추세이며, 네덜란드에서는 컵라면, 봉지면 포함 수요 조사에서 1위를 기록하는 등 수요는 충분한 상황입니다.</li>
+            <li><strong>향후 전망:</strong> 하반기 이후 밀양 2공장 가동으로 물량 대응이 원활해질 것으로 예상됩니다.</li>
+        </ul>
+
+        <h4>2.4. 🇸🇬 동남아시아 시장</h4>
+        <ul>
+            <li><strong>매출액:</strong> 698억 원 (전년 동기 대비 33% 증가, 전 분기 대비 27% 증가).</li>
+            <li><strong>성장 요인:</strong> 동남아시아 수출이 견조하게 유지되고 있으며, 1분기 신제품 출시와 인도네시아/말레이시아 수출 증가가 성장을 견인했습니다.</li>
+            <li><strong>향후 전망:</strong> 2분기에는 1분기 라마단 기간이 끝나고 음식료 소비가 증가하여 수출이 더욱 증가할 것으로 예상됩니다.</li>
+        </ul>
+
+        <h3>3. 내수 매출 현황</h3>
+        <ul>
+            <li><strong>성장 동력:</strong> 면 제품보다는 <strong>기타 부문</strong>에서 매출이 크게 증가했습니다.</li>
+            <li><strong>주요 요인:</strong> 로지스틱스 3자 매출(창고)과 쿠팡 채널에서의 성장이 두드러졌습니다. 물류 창고 확보와 삼양 물량 증가가 지속적인 성장을 이끌고 있습니다.</li>
+        </ul>
+
+        <h3>4. 비용 측면 분석</h3>
+        <ul>
+            <li><strong>매출원가율:</strong> 53.7% (전년 동기 대비 3.9%p 감소). 맥분 가격 하향 안정화 흐름과 1분기 원가 재계약이 긍정적인 영향을 미쳤습니다.</li>
+            <li><strong>판관비율:</strong> 21.0% (전년 동기 대비 0.6%p 감소).</li>
+            <li><strong>인건비:</strong> 전 분기 대비 감소했습니다. 이는 4분기 성과급 충당금 환입에 따른 일시적인 감소입니다.</li>
+            <li><strong>사용권 자산 증가:</strong> 리스 관련 증가로, 중국/미국 물류 창고 확장에 따른 비용 증가가 반영되었습니다.</li>
+            <li><strong>기타 비용 증가:</strong> 유지보수 비용 증가가 주요 원인이며, 신공장 가동 전 집기 구매 비용 등도 포함되어 있습니다.</li>
+            <li><strong>광고비:</strong> 2분기에 코첼라 관련 광고비 약 50억 원 수준이 반영될 것으로 추정됩니다.</li>
+        </ul>
+
+        <h3>5. 밀양 제2공장 가동 계획</h3>
+        <ul>
+            <li><strong>준공식:</strong> 6월 예정.</li>
+            <li><strong>본격 생산:</strong> 7월부터 보수적으로 본격적인 생산을 시작할 예정입니다.</li>
+            <li><strong>가동률 목표:</strong> 내부 목표는 연말까지 가동률 100% (연간 6.9억 식 생산) 달성입니다.</li>
+        </ul>
+
+        <h3>6. CAPA 부족에도 해외 매출 지속 성장 요인</h3>
+        <ul>
+            <li><strong>물량 전환:</strong> 내수용 물량을 해외 수출용으로 전환하고 있습니다. 라면 설비는 내수용/수출용으로 명확히 구분되어 있지 않아 유연한 전환이 가능합니다.</li>
+            <li><strong>가동 시간 확대:</strong> 정규 라인 가동 시간을 기존 20시간에서 23시간으로 늘려 생산량을 증대했습니다.</li>
+        </ul>
+
+        <div class="insight">
+            <h3>💡 회의 인사이트</h3>
+            <ul>
+                <li><strong>글로벌 시장의 강력한 성장 동력:</strong> 삼양식품의 1분기 실적은 해외 시장, 특히 미국과 중국에서의 폭발적인 성장이 핵심 동력임을 명확히 보여줍니다. 이는 '불닭' 브랜드의 글로벌 인지도와 현지 시장에 맞춘 전략적 접근이 성공적으로 작용했음을 의미합니다.</li>
+                <li><strong>생산 능력 확대의 시급성:</strong> 미국, 유럽 등 주요 시장에서 '수량 부족'으로 인한 영업 제약이 지속되고 있다는 점은 현재의 생산 능력이 글로벌 수요를 따라가지 못하고 있음을 시사합니다. 밀양 제2공장의 조속한 가동과 안정적인 생산량 확보가 향후 성장의 필수 조건입니다.</li>
+                <li><strong>채널 다각화 및 시장 침투 전략의 유효성:</strong> 중국 시장에서의 오프라인 영업 강화, 학교 매점 공략, 2선 도시 커버율 확대 노력은 잠재 시장 발굴 및 침투 전략이 효과적임을 보여줍니다. 미국 시장에서도 메인스트림 채널 입점 확대가 매출 증대에 크게 기여했습니다.</li>
+                <li><strong>비용 효율성 개선:</strong> 매출원가율 하락은 원재료 가격 안정화와 효율적인 원가 관리가 이루어지고 있음을 나타냅니다. 이는 수익성 개선에 긍정적인 영향을 미칩니다.</li>
+                <li><strong>내수 시장의 새로운 성장 동력:</strong> 면 제품 외 기타 부문(물류, 쿠팡)에서의 성장은 내수 시장에서 새로운 성장 동력을 발굴하고 있음을 보여주며, 이는 사업 포트폴리오 다각화 측면에서 긍정적입니다.</li>
+            </ul>
+        </div>
+
+        <div class="next-steps">
+            <h3>🚀 향후 계획 및 조치 사항</h3>
+            <ul>
+                <li><strong>밀양 제2공장 조기 안정화:</strong> 7월 본격 생산 시작 후, 연말까지 가동률 100% 달성 목표를 차질 없이 이행하여 글로벌 수요에 대응할 수 있는 생산 능력을 확보해야 합니다.</li>
+                <li><strong>글로벌 공급망 최적화:</strong> 미국, 유럽 등 물량 부족이 심각한 지역에 대한 공급 우선순위를 재조정하고, 물류 효율성을 극대화하여 적시에 제품을 공급할 수 있는 시스템을 구축해야 합니다.</li>
+                <li><strong>미국 시장 채널 확장 가속화:</strong> 샘스클럽 등 신규 대형 유통 채널 입점 협의를 성공적으로 마무리하고, 월마트 등 기존 채널에 대한 공급량을 안정적으로 확대해야 합니다.</li>
+                <li><strong>중국 2선 도시 시장 커버율 확대:</strong> 현재 50% 미만인 2선 도시 커버율을 높이기 위한 구체적인 영업 및 마케팅 전략을 수립하고 실행해야 합니다.</li>
+                <li><strong>소스 제품 글로벌 확장:</strong> 불닭 브랜드의 인지도를 활용하여 소스 제품의 해외 유통망 확장을 지속적으로 추진하고, 현지화된 마케팅 전략을 강화해야 합니다.</li>
+                <li><strong>환율 변동성 관리:</strong> 환율 하락에 따른 영향을 최소화하기 위한 선적량 조절 및 기타 환 헤지 전략을 검토해야 합니다.</li>
+                <li><strong>가격 인상 전략 검토:</strong> 원가 및 시장 상황을 면밀히 분석하여 적절한 시기에 가격 인상을 추진하여 수익성을 더욱 개선하는 방안을 모색해야 합니다.</li>
+            </ul>
+        </div>
+
+        <div class="evaluation">
+            <h3>✅ 회의 총평 및 방향성</h3>
+            <p>삼양식품은 2025년 1분기에도 <strong>글로벌 시장에서의 압도적인 성장세</strong>를 이어가며 견고한 실적을 달성했습니다. 특히 해외 수출이 전체 매출 성장을 견인하는 핵심 동력임을 다시 한번 확인했습니다. 이는 '불닭' 브랜드를 중심으로 한 성공적인 글로벌 전략의 결과입니다.</p>
+            <p>그러나 현재 가장 큰 과제는 <strong>생산 능력 부족</strong>입니다. 미국, 유럽 등 주요 시장에서 수요를 따라가지 못하는 공급 제약은 잠재적 매출 기회를 놓치고 있음을 의미합니다. 따라서 밀양 제2공장의 성공적인 가동과 생산량 증대는 향후 삼양식품의 지속적인 성장을 위한 <strong>가장 중요한 선결 과제</strong>입니다.</p>
+            <p>향후 삼양식품은 <strong>글로벌 생산 능력 확충</strong>을 최우선 과제로 삼고, 이를 바탕으로 <strong>주요 해외 시장에서의 채널 커버리지 및 제품 포트폴리오를 더욱 확장</strong>해야 합니다. 또한, 중국 2선 도시와 같은 <strong>잠재 시장에 대한 적극적인 침투 전략</strong>을 통해 새로운 성장 동력을 확보하고, <strong>소스 제품군 확대를 통한 시너지 창출</strong>에도 집중해야 할 것입니다. 이러한 전략적 방향성을 통해 삼양식품은 글로벌 K-푸드 시장의 선두 주자로서 입지를 더욱 공고히 할 수 있을 것으로 기대됩니다.</p>
+        </div>
+    </div>
+</body>
+</html>
