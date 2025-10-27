@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <style>
 ul {
@@ -14,61 +14,220 @@ li {
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한화오션 미팅 회의록</title>
+    <title>한화오션 통합 회의록 (2025년 3분기 실적 및 전략 업데이트)</title>
     <style>
-        body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f9f9f9; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        h1 { font-size: 2.2em; color: #004080; text-align: center; margin-bottom: 30px; border-bottom: 2px solid #e0e0e0; padding-bottom: 15px; }
-        h2 { font-size: 1.8em; color: #0056b3; margin-top: 30px; margin-bottom: 15px; border-left: 5px solid #007bff; padding-left: 10px; }
-        h3 { font-size: 1.4em; color: #0069d9; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px dashed #e0e0e0; padding-bottom: 5px; }
-        p { font-size: 1.05em; margin-bottom: 10px; }
-        strong { color: #000; }
-        em { color: #555; font-style: normal; }
-        ul { list-style-type: disc; margin-left: 20px; margin-bottom: 10px; }
-        li { font-size: 1.05em; margin-bottom: 5px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 20px; font-size: 1em; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #e9ecef; color: #333; font-weight: bold; }
-        td strong { color: #004080; }
-        .summary-table th { background-color: #d1ecf1; color: #0c5460; }
-        .summary-table td { background-color: #e2f2f7; }
-        .highlight { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin-top: 20px; margin-bottom: 20px; border-radius: 5px; }
-        .section-divider { border-top: 1px dashed #ccc; margin: 40px 0; }
-        .note { font-size: 0.95em; color: #6c757d; margin-top: 15px; }
-        @media (max-width: 768px) {
-            body { padding: 10px; }
-            .container { padding: 20px; }
-            h1 { font-size: 1.8em; margin-bottom: 20px; }
-            h2 { font-size: 1.5em; margin-top: 25px; }
-            h3 { font-size: 1.2em; margin-top: 15px; }
-            p, li, table { font-size: 0.95em; }
-            th, td { padding: 8px; }
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
         }
-        @media (max-width: 480px) {
-            h1 { font-size: 1.5em; }
-            h2 { font-size: 1.3em; }
-            h3 { font-size: 1.1em; }
-            p, li, table { font-size: 0.9em; }
-            table { display: block; overflow-x: auto; white-space: nowrap; } /* Enable horizontal scroll for tables on small screens */
-            thead, tbody, th, td, tr { display: block; }
-            tr { margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
-            td { border: none; border-bottom: 1px solid #eee; position: relative; padding-left: 50%; text-align: right; }
-            td:before { position: absolute; left: 6px; content: attr(data-label); font-weight: bold; text-align: left; width: 45%; white-space: normal; }
-            th { display: none; } /* Hide table headers on small screens */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.2em;
+            color: #004080;
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #004080;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #0056b3;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 6px solid #007bff;
+            padding-left: 10px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #0069d9;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #e0e0e0;
+            padding-bottom: 5px;
+        }
+        h4 {
+            font-size: 1.2em;
+            color: #007bff;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        strong {
+            color: #004080;
+        }
+        .highlight {
+            background-color: #e6f7ff;
+            padding: 8px 12px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            table-layout: fixed; /* Ensures table respects width */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            word-wrap: break-word; /* Prevents long words from breaking layout */
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+        .summary-table th, .summary-table td {
+            text-align: center;
+        }
+        .summary-table th {
+            background-color: #d9edf7;
+            color: #31708f;
+        }
+        .qa-section {
+            background-color: #f0f8ff;
+            border: 1px solid #cce5ff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .qa-section strong {
+            color: #0056b3;
+        }
+        .qa-section p {
+            margin-bottom: 5px;
+        }
+        .next-steps, .insights, .evaluation {
+            background-color: #e9f7ef;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        .next-steps h3, .insights h3, .evaluation h3 {
+            color: #28a745;
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .date-info {
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .attendees {
+            font-size: 0.95em;
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+        .attendees strong {
+            color: #0056b3;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-size: 1.5em;
+                margin-top: 25px;
+            }
+            h3 {
+                font-size: 1.2em;
+                margin-top: 20px;
+            }
+            table, th, td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            th {
+                text-align: center;
+            }
+            td {
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: calc(50% - 20px);
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: #0056b3;
+            }
+            .summary-table th, .summary-table td {
+                text-align: center;
+            }
+            .summary-table td::before {
+                content: ''; /* Hide label for summary table */
+            }
+            .qa-section {
+                padding: 10px;
+            }
+            ul {
+                margin-left: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>한화오션 미팅 회의록</h1>
+        <h1>한화오션 통합 회의록 (2025년 3분기 실적 및 전략 업데이트)</h1>
+        <p class="date-info"><strong>최종 업데이트일:</strong> 2025년 10월 27일</p>
+        <p class="date-info"><strong>관련 회의 일시:</strong> 2025년 10월 13일 (월) 및 2025년 10월 27일 (월)</p>
+        <div class="attendees">
+            <strong>주요 참석자:</strong>
+            이지니, 한상윤 전무 (IR 팀장), 신용희 부사장 (CFO), 방창민 팀장 (기획조정), 최병호 상무 (전략기획/상선사업부), 김운민 팀장 (상선영업기획), 김호중 상무 (특수전사업부 영업), 조용석 담당 (해양사업부 영업), 이규화 팀장 (E&I 기획), 애널리스트 및 투자자 다수
+        </div>
 
-        <p style="text-align: right; font-size: 0.9em; color: #666;"><strong>작성일:</strong> 2025년 10월 13일</p>
-        <p style="text-align: right; font-size: 0.9em; color: #666;"><strong>회의 일시:</strong> 2025년 10월 13일 (월) 오전 9시 12분</p>
-        <p style="text-align: right; font-size: 0.9em; color: #666;"><strong>회의 시간:</strong> 52분 18초</p>
-        <p style="text-align: right; font-size: 0.9em; color: #666;"><strong>참석자:</strong> 이지니, 참석자 1, 참석자 2, 참석자 3, 참석자 4, 참석자 5, 참석자 6, 참석자 7</p>
-
-        <h2><strong style="color: #004080;">회의 핵심 요약</strong></h2>
-        <p>이번 한화오션 미팅에서는 상선, 해양, 방산 각 사업 부문의 현황과 미래 전략에 대한 심도 깊은 논의가 이루어졌습니다. 특히, LNG선 시장의 성장 기회와 해외 방산 시장 확대에 대한 구체적인 계획이 공유되었습니다.</p>
+        <h2>&#128200; 회의 핵심 요약</h2>
+        <div class="highlight">
+            <p>한화오션은 2025년 3분기에 조업일수 감소 및 일회성 비용으로 매출과 영업이익이 전분기 대비 감소했으나, LNG선 중심의 제품 믹스 개선과 특수선 사업부의 해외 수주 성과로 견조한 수익성을 유지했습니다. 특히 캐나다/폴란드 잠수함 프로젝트에서 기술력과 납기 경쟁력을 인정받으며 해외 방산 시장 확대에 박차를 가하고 있습니다. 해양사업부는 일회성 비용으로 적자 전환했으나 4분기 흑자 전환을 전망하며, 해상풍력 등 신사업 다각화도 모색 중입니다. 지정학적 리스크 속에서도 친환경 선박 수요와 해군력 증강 추세에 맞춰 수익성 중심의 선별 수주 전략을 통해 안정적인 성장 기반을 다지고 있습니다.</p>
+        </div>
         <table class="summary-table">
             <thead>
                 <tr>
@@ -79,187 +238,317 @@ li {
             </thead>
             <tbody>
                 <tr>
-                    <td data-label="구분"><strong>상선 수주</strong></td>
-                    <td data-label="주요 내용">2025년 상선 수주 목표 70~80억 불 달성 예상. LNG선 시장 성장 기대, 컨테이너/VLCC도 견조. 2028년 도크는 연말/내년 초까지 거의 채워질 전망.</td>
-                    <td data-label="핵심 요약"><strong>안정적인 수주 목표 달성 및 LNG 시장 선점 준비.</strong></td>
+                    <td data-label="구분"><strong>25년 3분기 실적</strong></td>
+                    <td data-label="주요 내용">매출 3조 234억, 영업이익 2,898억. 조업일수 감소 및 일회성 비용(페트로브라스 사고, 임단협)으로 전분기 대비 감소. 부채 비율 238%로 건전성 유지.</td>
+                    <td data-label="핵심 요약"><strong>일회성 요인에도 견조한 수익성 유지 및 재무 건전성 확보.</strong></td>
+                </tr>
+                <tr>
+                    <td data-label="구분"><strong>상선 사업</strong></td>
+                    <td data-label="주요 내용">LNG선 중심 제품 믹스 개선으로 두 자릿수 이익률 유지. 2025년 수주 목표 70~80억 불 달성 예상. 2028년 도크 연말/내년 초까지 거의 채워질 전망.</td>
+                    <td data-label="핵심 요약"><strong>고부가가치 선종 중심 수익성 확보 및 안정적 수주 잔고 유지.</strong></td>
+                </tr>
+                <tr>
+                    <td data-label="구분"><strong>특수선 사업</strong></td>
+                    <td data-label="주요 내용">캐나다 CPSP 숏리스트, 폴란드 오르카 프로젝트 우협 기대. 기술력, 납기, 가격 경쟁력 우위. 차세대 전략 수상함 개발 박차.</td>
+                    <td data-label="핵심 요약"><strong>해외 방산 시장 확대 가속화 및 기술 경쟁력 강화.</strong></td>
                 </tr>
                 <tr>
                     <td data-label="구분"><strong>해양 사업</strong></td>
-                    <td data-label="주요 내용">지향 화상 프로젝트 진행 중, LD 이슈 최소화 노력. 신안우이 풍력 프로젝트 10월 개시 준비로 신사업 다각화 모색.</td>
-                    <td data-label="핵심 요약"><strong>신사업(풍력) 추진을 통한 포트폴리오 확장.</strong></td>
+                    <td data-label="주요 내용">페트로브라스 사고 비용 반영으로 3분기 적자 전환, 4분기 흑자 전환 목표. 신안우이 풍력 프로젝트 개시 준비. FPSO, FLNG 등 중장기 수요 기대.</td>
+                    <td data-label="핵심 요약"><strong>일시적 손실 후 회복 및 신사업(풍력) 추진을 통한 포트폴리오 확장.</strong></td>
                 </tr>
                 <tr>
-                    <td data-label="구분"><strong>방산 사업</strong></td>
-                    <td data-label="주요 내용">캐나다/폴란드 잠수함 수주전에서 한국의 기술력, 납기, 가격 경쟁력 우위. 미국 존스 액트 관련 법안 개정 동향 주시 및 전략 상선단 수요 대응.</td>
-                    <td data-label="핵심 요약"><strong>해외 방산 시장 확대 및 미국 시장 진출 가시화.</strong></td>
-                </tr>
-                <tr>
-                    <td data-label="구분"><strong>필리/오스탈</strong></td>
-                    <td data-label="주요 내용">필리 조선소 주력 및 오스탈 지분 확보 후 경영 개입을 통한 기술 지원 검토. 미국 내 생산 역량 강화에 기여.</td>
+                    <td data-label="구분"><strong>미국 시장 전략</strong></td>
+                    <td data-label="주요 내용">존스 액트 법안 개정 동향 주시, 전략 상선단 수요 대응. 필리 조선소 및 오스탈 지분 확보를 통한 미국 내 생산 역량 강화 및 기술 지원 검토.</td>
                     <td data-label="핵심 요약"><strong>미국 시장 전략 거점 확보 및 기술 협력 강화.</strong></td>
-                </tr>
-                <tr>
-                    <td data-label="구분"><strong>3분기 실적</strong></td>
-                    <td data-label="주요 내용">조업일수 감소(하계 휴가)로 2분기 대비 마진 소폭 감소 예상되나, 두 자릿수 마진은 유지 전망.</td>
-                    <td data-label="핵심 요약"><strong>계절적 요인에도 견조한 마진 유지.</strong></td>
                 </tr>
             </tbody>
         </table>
 
-        <div class="section-divider"></div>
-
-        <h2><strong style="color: #004080;">세부 논의 내용</strong></h2>
-
-        <h3>1. 상선 사업 현황 및 전망</h3>
+        <h2>&#128187; 1. 2025년 3분기 경영 실적 및 현황 (CFO 신용희 부사장)</h2>
+        <h3>1.1. 연결 기준 실적</h3>
         <ul>
-            <li><strong>LNGC 수주 현황 및 전망:</strong>
-                <ul>
-                    <li>올해 LNGC 6척 수주 완료.</li>
-                    <li>LNG FID(최종 투자 결정)가 활발하게 나오고 있으나, 선박 수주까지는 최소 4~6개월 소요. 올해 연말보다는 <strong>내년에 본격적인 수주가 많이 나올 것</strong>으로 예상.</li>
-                    <li>현재 수주 실적이 충분히 채워져 있어, 내년으로 넘어가는 수주도 긍정적. 내년에는 LNG 위주로 수주 목표 설정.</li>
-                    <li><strong>선가 상승 전망:</strong> 내년에 발주가 많이 몰리면 자연스럽게 선가는 올라갈 수밖에 없으며, LNG선 분야에서는 중국과의 경쟁이 적어질 것으로 예상. 현재 중국과의 가격 차이는 10~15% 수준.</li>
-                    <li><strong>카타르 발주 가능성:</strong> 카타르 3차 또는 추가 발주 가능성이 내년에 논의될 수 있음.</li>
-                </ul>
-            </li>
-            <li><strong>VLCC 및 컨테이너선:</strong>
-                <ul>
-                    <li><strong>VLCC:</strong> VLCC 가격이 꽤 많이 올라 도크를 채우는 데 기여하고 있으며, 마진도 크게 빠지지 않을 것으로 예상.</li>
-                    <li><strong>컨테이너선:</strong> 올해 이미 2개 프로젝트를 완료했으며, 추가로 1~2개 더 진행할 가능성 있음. HMM 및 다른 유럽 선사들의 발주를 노리고 있음.</li>
-                    <li><strong>중국과의 경쟁:</strong> 대만 선사(에버그린, 양밍)의 경우 중국 발주에 대한 불편함으로 한국 조선소에 발주. HMM의 소형 선박은 중국으로 갔으나, 대형 선박은 조선 3사 위주로 진행될 것. USTR 제재 약화에도 불구하고 유럽 선사들은 중국 조선소와 한국 조선소를 비교하며 신중하게 접근.</li>
-                </ul>
-            </li>
-            <li><strong>2025년 수주 목표 달성 및 도크 현황:</strong>
-                <ul>
-                    <li>현재 상선만 60억 불 이상 수주. 연말까지 컨테이너 추가 시 <strong>70~80억 불 달성 가능성</strong>. (작년 90억 불 초과 달성).</li>
-                    <li><strong>2028년 도크는 올해 연말 또는 내년 초까지 거의 채워질 것</strong>으로 예상.</li>
-                </ul>
-            </li>
+            <li><strong>매출액:</strong> 3조 234억 원 (전분기 대비 8% 감소)</li>
+            <li><strong>영업이익:</strong> 2,898억 원 (전분기 대비 22% 감소)</li>
+            <li><strong>당기순이익:</strong> 2,694억 원</li>
+            <li><strong>매출 감소 요인:</strong> 하계 휴가로 인한 조업일수 7일 감소, 안전 관리 강화 및 노후 시설 교체(도크 및 크레인 정기 점검)로 인한 생산 진행률 감소.</li>
+            <li><strong>영업이익 감소 요인:</strong> 조업일수 감소에 따른 고정비 부담 확대, 페트로브라스 FPSO 사고 관련 비용 250억 원, 임단협 타결 비용 250억 원 등 일회성 요인 포함.</li>
         </ul>
 
-        <h3>2. 해양 사업부 현황</h3>
+        <h3>1.2. 재무 현황</h3>
         <ul>
-            <li><strong>지향 화상 프로젝트:</strong> 연말 예정이었던 프로젝트가 연초로 당겨졌으나, 생각보다는 계속 진행 중. 페트로브라스 건 취소 외에는 드롭된 프로젝트 없음.</li>
-            <li><strong>LD(지체상금) 이슈:</strong> 최근 사고로 인한 장비 교체 및 출항 지연 발생. LD를 최소화하기 위한 협상 중이며, 원가 상승은 불가피할 것으로 예상. 현지 사이트 작업 완료일은 26년 3분기에서 <strong>27년 1분기로 연기</strong>됨.</li>
-            <li><strong>풍력 비즈니스 (신한우이):</strong>
+            <li><strong>자산 총계:</strong> 18조 5,339억 원 (전분기 대비 2,302억 원 증가)</li>
+            <li><strong>현금 및 현금성 자산:</strong> 4,410억 원 (전분기 대비 6,058억 원 감소)
                 <ul>
-                    <li>한화오션이 직접 발주처가 되어 사업을 개시하는 형태. 정부 전력 생산 계획에 맞춰 사업을 따내 투자자를 모으고, EPC 및 풍력 터빈 발주 등을 진행하여 전력 생산으로 수익을 창출하는 구조.</li>
-                    <li><strong>10월에 신안우이 풍력 프로젝트 개시를 준비 중</strong>. 해양사업부에서 WTIV(풍력 터빈 설치선) 등 관련 스콥을 담당할 예정.</li>
+                    <li>특수선 수금 집중 및 중도금 연계 지출로 인한 감소.</li>
                 </ul>
             </li>
-            <li><strong>기타 가스선:</strong> LPG선 및 VLGC 수요는 현재 많지 않음.</li>
+            <li><strong>총 부채 총계:</strong> 13조 579억 원 (전분기 대비 200억 원 감소)</li>
+            <li><strong>총 차입금:</strong> 5조 1,724억 원 (전분기 대비 1,442억 원 감소)</li>
+            <li><strong>순차입금:</strong> 4조 7,314억 원 (전분기 대비 7,500억 원 증가)</li>
+            <li><strong>4분기 전망:</strong> KPX 지출 등으로 순차입금 소폭 증가 예상.</li>
+            <li><strong>2026년 전망:</strong> 고성과 LNG선 인도 지속으로 자금 수지 개선 및 차입금 규모 점진적 축소 전망.</li>
+            <li><strong>부채 비율:</strong> 238% (전분기 대비 소폭 하락, 조선업계 평균 수준으로 건전한 재무 구조 유지)</li>
         </ul>
 
-        <h3>3. 방산 사업부 현황</h3>
+        <h3>1.3. 사업 부문별 실적 및 전망</h3>
+        <h4>&#9679; 상선사업부</h4>
         <ul>
-            <li><strong>캐나다 잠수함 수주전:</strong>
+            <li><strong>3분기 매출액:</strong> 2조 4,639억 원 (전분기 대비 12% 감소)</li>
+            <li><strong>3분기 영업이익:</strong> 3,071억 원 (전분기 대비 감소)
                 <ul>
-                    <li><strong>경쟁 구도:</strong> 독일 TKMS와 한국 한화오션이 숏리스트에 올라 경쟁 중.</li>
-                    <li><strong>한국의 우위:</strong>
-                        <ul>
-                            <li><strong>기술력:</strong> 한국은 3600톤급 잠수함 건조 경험(독일은 2800톤급 제안), 수직 발사대 탑재 가능. 무장 능력 강화에 유리.</li>
-                            <li><strong>납기:</strong> 한국은 5~6년 납기 가능(독일은 거의 10년 소요). 캐나다가 빠른 납기를 원함.</li>
-                            <li><strong>가격 경쟁력:</strong> 한국이 독일 대비 가격 우위.</li>
-                            <li><strong>운영 경험:</strong> 한국 해군이 3600톤급 잠수함 운영 중으로 리스크 발굴 및 대응 경험 보유.</li>
-                        </ul>
-                    </li>
+                    <li>매출 감소에 따른 고정비 부담 확대에도 불구하고 LNG선 위주의 제품 믹스 개선 지속으로 두 자릿수 영업이익률 유지.</li>
+                </ul>
+            </li>
+            <li><strong>향후 전망:</strong> 다음 분기에도 상선 사업부 매출이 전사 매출의 70% 이상, LNG선 매출 비중이 전사 매출의 60% 수준 유지 예상. 2023년 이후 계약 프로젝트의 매출 비중 지속 증가로 일회성 요인을 제외한 경상적인 이익 견조한 흐름 유지 전망.</li>
+        </ul>
+
+        <h4>&#9679; 특수선 사업부</h4>
+        <ul>
+            <li><strong>3분기 매출액:</strong> 3,750억 원 (전분기 대비 58% 증가)
+                <ul>
+                    <li>장보고-III Batch-II 선도함에 이어 2번함 원가 투입 본격화.</li>
+                </ul>
+            </li>
+            <li><strong>3분기 영업이익:</strong> 287억 원 (전분기 대비 57% 증가)
+                <ul>
+                    <li>주력 함정 및 MRO 수행을 통한 꾸준한 이익률 유지.</li>
+                </ul>
+            </li>
+            <li><strong>향후 전망:</strong> 다음 분기에도 장보고-III Batch-II 2번함 지속 생산 및 울산급 Batch-III 5, 6번함 생산 착수로 이번 분기와 비슷한 수준의 매출 및 안정적인 이익률 유지 예상.</li>
+        </ul>
+
+        <h4>&#9679; 해양사업부</h4>
+        <ul>
+            <li><strong>3분기 매출액:</strong> 1,024억 원 (주요 진행 공사 마무리 단계 진입에 따른 감소)</li>
+            <li><strong>3분기 손익:</strong> 481억 원 적자 전환
+                <ul>
+                    <li>페트로브라스 FPSO 사고 관련 일회성 비용 250억 원 반영. LD(지체상금) 최소화를 위한 협상 중이며, 현지 사이트 작업 완료일은 26년 3분기에서 27년 1분기로 연기됨.</li>
+                </ul>
+            </li>
+            <li><strong>향후 전망:</strong> 4분기에는 진행 공사 인도 및 신규 수주 수련으로 매출 소폭 감소 예상. 손익은 선 투입 비용에 대한 Change Order 확보를 통해 소폭 흑자 전환 예상.</li>
+        </ul>
+
+        <h2>&#128674; 2. 사업부별 영업 시황 및 수주 전망</h2>
+        <h3>2.1. 상선사업부 (영업기획팀장 김우민 책임)</h3>
+        <ul>
+            <li><strong>글로벌 시장 환경:</strong> 우크라이나 전쟁, 홍해 사태 장기화, 미국의 대중국 통상 관세 강화 등 다층적 지정학적 리스크 지속. 조선업 불확실성 증대.</li>
+            <li><strong>수주 현황:</strong> 2025년 상선 수주 목표 70~80억 불 달성 예상. 3분기 기준 LNGC 6척, VLCC 12척, 컨테이너선 13척 등 총 31척, 약 60.4억 불 수주. 글로벌 신조 발주 감소 속 견조한 흐름 유지. 2028년 도크는 올해 연말 또는 내년 초까지 거의 채워질 것으로 예상.</li>
+            <li><strong>미국 정책 영향:</strong> 미국 무역대표부(USTR)의 중국산 선박 입항세 부과 및 제재 강화 추진으로 선주사들은 신조 시장 관망 전략. 대만 선사(에버그린, 양밍)의 경우 중국 발주에 대한 불편함으로 한국 조선소에 발주.</li>
+            <li><strong>수요 회복 조짐:</strong> 미국의 에너지 수출 확대, LNG 프로젝트 재개 움직임 본격화로 화석 연료 및 대체 연료 운송 수요 회복. LNGC, VLCC, VLEC 등 주요 선종 신조 수요 꾸준히 증가.</li>
+            <li><strong>IMO 규제:</strong> 중기 저감 조치 공식 채택 1년 연기. 일시적 불확실성 확대. 그러나 친환경 추진 선박 확대 및 대체 연료 전환이라는 장기 방향성은 유효.</li>
+            <li><strong>수주 목표:</strong> 구체적 공개는 하지 않으나, LNG선, VLCC, VLEC, 컨테이너선 중심의 수익성 위주 선별 수주 유지. 3년 이상의 안정적인 수주 잔고를 연말까지 유지 목표.</li>
+        </ul>
+
+        <h4>&#9679; 주요 선종별 시장 상황 및 수주 전망</h4>
+        <ul>
+            <li><strong>LNG선:</strong> 신조선가 대비 낮은 용선료로 침체 양상이나, 미국 신규 LNG 수출 터미널 가동 및 장기 계약 재개로 용선율 개선 및 미 용선 선박 감소 가능성 제기. 구형 스팀터빈 LNG선 폐선 가속화로 대체형 신조 수요 확대 전망. IMO 규제 연기에도 중장기적으로 LNGDF 등 친환경 추진형 LNG선 수요 강세 지속 예상. 당사는 프로젝트 기반 수주 역량 강화. 내년에 발주가 많이 몰리면 선가는 자연스럽게 올라갈 것으로 예상되며, 중국과의 경쟁은 적어질 전망. 카타르 3차 또는 추가 발주 가능성도 내년에 논의될 수 있음.</li>
+            <li><strong>VLCC (초대형 유조선):</strong> 선대 대비 잔량 매우 낮아 구조적 교체 수요 풍부. 용선료 반등 조짐과 중동-인도 원유 수요 확대로 신조 발주 전환 환경 조성. 당사는 선택적 수주 집중.</li>
+            <li><strong>가스선 (VLGC, VLEC):</strong> VLGC는 지난 2년간 대량 발주 영향으로 단기적 둔화. VLEC 부문은 아시아 석유화학사 에탄 크래커 증설과 맞물려 에탄 운송 수요 증가, 한국 조선소 중심 발주 집중 가능성 높음. VLAC는 블루 그린 암모니아 연계 프로젝트 중장기 수요 부상하나, 가시화된 발주 수량 제한적.</li>
+            <li><strong>컨테이너선:</strong> 대형 컨테이너선은 이미 발주 상당 부분 진행. 향후 1만 TEU 이하 중소형 친환경 컨테이너선 중심 발주 전환 예상. IMO 규제 연기와 별개로 연료 효율 강화, 친환경 추진선 도입 흐름과 맞물려 교체 수요 지속. 당사는 기술 신뢰도와 비용 경쟁력 기반 질적 수주 확대 추진.</li>
+            <li><strong>종합 전략:</strong> 정책/지정학적 리스크 높으나, 친환경 추진선 확대 장기 방향성 유효. LNGC, VLCC, VLEC 중심 신조 수요 회복 국면. 수익성 위주 선별 수주, 친환경 대체 연료 기술 확보, 안정적 수주 잔고 확보를 통해 안정성 및 성장성 동시 확보.</li>
+        </ul>
+
+        <h3>2.2. 특수선 사업부 (영업 담당 김호중 상무)</h3>
+        <ul>
+            <li><strong>글로벌 해군력 증강:</strong> 해양 분쟁 심화 및 태평양 일대 강대국 간 패권 경쟁으로 다수 국가 자국 해군력 강화 추진 &rarr; 수상함 및 잠수함 해외 수요 꾸준히 증가.</li>
+            <li><strong>캐나다 CPSP 프로젝트:</strong> 약 60조 원 규모 프로젝트 숏리스트 선정 (지난 8월).
+                <ul>
+                    <li><strong>당사의 강점:</strong> 3600톤급 잠수함 건조 경험 및 수직 발사대 탑재 가능 기술력, 5~6년 납기 가능(독일은 거의 10년 소요), 독일 대비 가격 경쟁력 우위. 2035년까지 4척 신형 잠수함 인도 구체적 계획 제시.</li>
+                    <li><strong>효율적 솔루션:</strong> 첨단 자동화 및 원격 감시 시스템 적용, 약 30명의 승무원으로 임무 수행 가능 (인력 확보 어려움 겪는 캐나다 해군 수요 부합).</li>
+                    <li><strong>현지화 전략:</strong> 35개 캐나다 기업과 협력 관계 구축. 단순 수출 넘어 양국 간 전략적 파트너십 심화 계기.</li>
                     <li><strong>진행 상황:</strong> RFP 제출 예정, 우협(우선협상대상자)은 내년 후반, 본 계약은 2027~2028년경 예상. 국산화율 80% 기반으로 제안.</li>
                 </ul>
             </li>
-            <li><strong>폴란드 잠수함 수주전:</strong>
-                <ul>
-                    <li><strong>협상 스킴 변경:</strong> 숏리스트 개념이 없어지고 국가 대 국가 기반 협상으로 변경.</li>
-                    <li><strong>진행 상황:</strong> 우협 연말 발표 기대. EU에 준하는 베네핏(MRO 지원 등) 제공 예정. 경쟁사: 독일, 프랑스, 스웨덴.</li>
-                </ul>
-            </li>
-            <li><strong>태국 및 동남아 시장:</strong> 태국은 올해 연말에서 내년 초에 발주 예상. 필리핀 등 동남아 국가에서도 잠수함 수요가 있으나, 현재는 캐나다, 폴란드, 중동 프로젝트에 집중.</li>
-            <li><strong>미국 존스 액트 및 관련 법안:</strong>
-                <ul>
-                    <li><strong>존스 액트:</strong> 미국 내에서 건조되어야 한다는 원칙. 법 개정이 필요하며, ENRA 및 ECGR과 같이 동맹국에 조건부 예외를 허용하는 법안이 발의 중.</li>
-                    <li><strong>전략 상선단:</strong> 전시 상황을 대비한 전략 상선단(MRPC, MR 탱커) 수요가 존재. 필리 조선소에서 발주한 MR 탱커를 전략 상선단에 편입 목표. 한국에서 조달 시 발생하는 성가 차이에 대한 정부 지원(Ship Act)이 필요.</li>
-                    <li><strong>미국 군함 수주 전략:</strong>
-                        <ul>
-                            <li><strong>타겟 선종:</strong> 전투함보다는 <strong>지원함 위주로 타겟</strong>. 광급 장비 포션이 적어 한국 입장에서 유리할 수 있음.</li>
-                            <li><strong>마진 목표:</strong> 해외 수출 마진과 유사한 <strong>20% 수준</strong>을 목표.</li>
-                            <li><strong>미국 내 건조 원칙:</strong> 미국은 단순히 저가 건조가 아닌, 자국 산업 육성 및 기술 전수를 목적으로 하므로, 필리핀/베트남 등보다는 한국/일본 등 조선 강국과의 협력을 선호. 필리 조선소의 LNG 수주도 미국이 LNG선 건조 기술을 배우려는 목적이 있음.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+            <li><strong>폴란드 오르카 프로젝트:</strong> 조만간 제안서 제출 예정, 빠르면 금년 내 우선 협상 대상자 지정 기대. 다수 유럽 경쟁사 참여 중 정부 대 정부 기반 협상 활발히 진행 중. 우수한 기술력, 건조 역량, 고객 맞춤형 제안으로 최선 결과 도출 목표. 우협 연말 발표 기대. EU에 준하는 베네핏(MRO 지원 등) 제공 예정.</li>
+            <li><strong>기타 지역 수요:</strong> 태국은 올해 연말에서 내년 초에 발주 예상. 그리스, 콜롬비아, 칠레, 필리핀 등 동남아 및 중동 지역 잠수함 및 수상함 수요 꾸준히 증가, 대응 중. 현재는 캐나다, 폴란드, 중동 프로젝트에 집중.</li>
+            <li><strong>차세대 전략 수상함 개발:</strong> 미래 전장에서 대처, 탐지, 감시, 교전 복구 등 다양한 임무 수행 가능한 최첨단 함정 개발 박차. 선진국과의 함정 수출 경쟁에서 강력한 기술 경쟁력 확보 목표.</li>
+            <li><strong>향후 전략:</strong> 글로벌 잠수함 프로젝트 성과와 차세대 전략 수상함 개발을 양축으로 함정 수출 신시장 개척. 검증된 기술력, 현지화 전략, 풍부한 해군 운영 경험 바탕으로 특수선 사업 경쟁력 강화.</li>
         </ul>
 
-        <h3>4. 필리 조선소 및 오스탈 투자 관련</h3>
+        <h3>2.3. 해양사업부 (영업 담당 조용석)</h3>
         <ul>
-            <li><strong>필리 조선소 현황:</strong> 현재 필리에서 건조되는 LNG 캐리어 등은 거제 조선소에서 90% 이상 건조 후 필리에서 행정 절차(US 플래그십 선박 등록 등)를 진행하는 형태. 필리 조선소의 생산 캐파는 아직 부족.</li>
+            <li><strong>글로벌 에너지 해양 시장 변화:</strong> 유가 및 천연가스 가격 변동성 속 2050년까지 글로벌 에너지 수요 25% 증가 전망. 전통 에너지원 개발과 맞닿아 있는 FPSO, FLNG 등 중장기적으로 우호적인 사업 환경 조성 가능성 높음.</li>
+            <li><strong>FPSO (부유식 원유 생산·저장·하역 설비) 시장:</strong> 남미와 서아프리카 주요 심해 유전 중심, 오일메이저들이 시장 주도. 2025~2027년 다수 FPSO 프로젝트 제한 승인 전망. 2025년 11건, 2026년 59건, 2027년 12건의 신조 발주 점진적 확대 예상.</li>
+            <li><strong>FLNG (부유식 LNG 생산 설비) 시장:</strong> 미국 LNG 온쇼어 플랜트 신규 확장 및 생산량 증가, EPC 계약 진행으로 천연가스 수출 시장 긍정적 영향. 다수 오프쇼어 FLNG 프로젝트의 FID 결정에 긍정적 요인으로 작용 예상. 글로벌 FLNG 공급량 2030년 42 MTPA, 2035년 55 MTPA까지 확대 전망.</li>
+            <li><strong>시추 시장:</strong> 중장기적으로 점진적 회복세 예상. 노후 설비 교체와 심해 개발 확대로 2026년 말 부유식 시추 설비 가동률 90% 근접 전망. 서아프리카와 북해 해역 중심 심형 부유식 시추 설비 수요 증가.</li>
+            <li><strong>해상풍력 시장:</strong> 최근 주요 국가 정책 변화와 사업성 악화로 다소 주춤하나, 에너지 다변화와 탈탄소 흐름 속 장기 성장 잠재력 높은 시장.
+                <ul>
+                    <li><strong>국내 시장:</strong> 정부 주도 2024~2026년 총 5GW 규모 고정가격 입찰 예정. 2025년 상반기 689MW 확정, 올해 하반기 1GW 이상 해상풍력 입찰 예정.</li>
+                    <li><strong>신안우이 풍력 프로젝트:</strong> 한화오션이 직접 발주처가 되어 사업을 개시하는 형태로, 10월에 프로젝트 개시를 준비 중. 해양사업부에서 WTIV(풍력 터빈 설치선) 등 관련 스콥을 담당할 예정.</li>
+                    <li><strong>WTIV 시장:</strong> 15MW급 대형 터빈 설치 가능한 선박 수요 지속 확대. 국내 서남해 지역 중심 2028~2032년 대형 터빈 설치 적합 WTIV 수요 본격화 전망.</li>
+                </ul>
+            </li>
+            <li><strong>종합 전략:</strong> 글로벌 에너지 전환 흐름 속 전통 석유가스 자원 안정적 공급과 해상풍력 중심 재생에너지 시장 상황 병행. FPSO, FLNG, 육상 LNG 모듈, WTIV 등 경쟁력 보유 제품군 중심 적극적 수주 활동 전개. 전통/비전통 및 신재생에너지 시장 변화에 유연하게 대응하며 시장 선도와 지속 가능한 이익 창출에 최선.</li>
+        </ul>
+
+        <h2>&#128214; 3. 주요 전략 및 기타 논의 사항</h2>
+        <h3>3.1. 필리 조선소 및 오스탈 투자 관련</h3>
+        <ul>
+            <li><strong>필리 조선소 현황:</strong> 현재 필리에서 건조되는 LNG 캐리어 등은 거제 조선소에서 90% 이상 건조 후 필리에서 행정 절차(US 플래그십 선박 등록 등)를 진행하는 형태. 필리 조선소의 생산 캐파는 아직 부족. 2025년 3분기 누적 매출 1억 2천만 불, 영업 손실 2,770만 불 기록. 2026년 턴어라운드 목표로 생산성 향상 중.</li>
             <li><strong>MRO 사업:</strong> 현재 한국에서 진행되는 MRO는 10% 초반대의 마진. 미국 MRO 시장 진출 시 마진은 불확실하나, 필리 조선소도 MRO 실적을 쌓기 위해 참여를 희망.</li>
-            <li><strong>해외 조선소 인수/투자:</strong> 추가적인 해외 조선소 인수는 현실적으로 어려움. 필리 조선소와 <strong>오스탈(19.8% 지분 확보 후 경영 개입)</strong>에 주력할 계획.</li>
-            <li><strong>오스탈 협력:</strong> 오스탈은 알루미늄 선박에 강점이 있으나, 강철 선박으로 사업 확장을 추진 중. 한화오션이 기술적(설계, 생산 노하우) 지원을 통해 협력할 수 있는 부분이 있을 것으로 예상.</li>
+            <li><strong>오스탈 협력:</strong> 오스탈(19.8% 지분 확보 후 경영 개입)에 주력할 계획. 오스탈은 알루미늄 선박에 강점이 있으나, 강철 선박으로 사업 확장을 추진 중. 한화오션이 기술적(설계, 생산 노하우) 지원을 통해 협력할 수 있는 부분이 있을 것으로 예상. 지분 인수 관련 인허가를 기다리고 있으며, 조만간 완료될 것으로 예상.</li>
+            <li><strong>해외 조선소 인수/투자:</strong> 추가적인 해외 조선소 인수는 현실적으로 어려움.</li>
         </ul>
 
-        <h3>5. 쇄빙선 및 유럽 LNG 인프라</h3>
+        <h3>3.2. 미국 시장 진출 전략 (존스 액트, 전략 상선단, 군함 수주)</h3>
         <ul>
-            <li><strong>쇄빙선 수요:</strong> 쇄빙선에 대한 수요 자체는 있으나, 구체적인 발주 규모(10척 vs 40척)는 불확실.</li>
-            <li><strong>쇄빙 LNG선:</strong> 니키스카 항구는 부동항이므로 일반 LNGC로 운송 가능하여 쇄빙 LNGC의 필요성은 낮음.</li>
+            <li><strong>존스 액트 및 관련 법안:</strong> 미국 내에서 건조되어야 한다는 원칙. 법 개정이 필요하며, ENRA 및 ECGR과 같이 동맹국에 조건부 예외를 허용하는 법안이 발의 중. 미국 무역대표부(USTR)의 중국산 선박 입항세 부과 및 제재 강화 추진은 한국 조선소에 기회가 될 수 있음.</li>
+            <li><strong>전략 상선단:</strong> 전시 상황을 대비한 전략 상선단(MRPC, MR 탱커) 수요가 존재. 필리 조선소에서 발주한 MR 탱커를 전략 상선단에 편입 목표. 한국에서 조달 시 발생하는 성가 차이에 대한 정부 지원(Ship Act)이 필요.</li>
+            <li><strong>미국 군함 수주 전략:</strong> 전투함보다는 <strong>지원함 위주로 타겟</strong>. 광급 장비 포션이 적어 한국 입장에서 유리할 수 있음. 해외 수출 마진과 유사한 <strong>20% 수준</strong>을 목표. 미국은 단순히 저가 건조가 아닌, 자국 산업 육성 및 기술 전수를 목적으로 하므로, 필리핀/베트남 등보다는 한국/일본 등 조선 강국과의 협력을 선호. 필리 조선소의 LNG 수주도 미국이 LNG선 건조 기술을 배우려는 목적이 있음.</li>
+        </ul>
+
+        <h3>3.3. 쇄빙선 및 유럽 LNG 인프라</h3>
+        <ul>
+            <li><strong>쇄빙선 수요:</strong> 쇄빙선에 대한 수요 자체는 있으나, 구체적인 발주 규모(10척 vs 40척)는 불확실. 니키스카 항구는 부동항이므로 일반 LNGC로 운송 가능하여 쇄빙 LNGC의 필요성은 낮음.</li>
             <li><strong>유럽 LNG 인프라:</strong> 유럽이 가스관 대신 미국 LNG를 수입할 경우, 항구의 리가스(액체 LNG를 기체로 전환) 설비 인프라가 필요. 이는 시간이 오래 걸리는 작업. FSRU(부유식 저장 재기화 설비) 수요 가능성이 있으나, 아직 신조 움직임은 미미. 유럽의 환경 규제도 FSRU 도입에 영향을 미칠 수 있음.</li>
         </ul>
 
-        <h3>6. 마스카 투자 비율 관련</h3>
+        <h3>3.4. 마스카 투자 비율 관련</h3>
         <ul>
             <li>미국 측에서 투자 비율 중 현금을 20~30%까지 늘려달라는 요구가 있었음.</li>
             <li>한화오션은 미국 측에 양해 각서 수정안을 보낸 상태이며, 제도 변화에 따라 투자 방향을 조정할 예정.</li>
         </ul>
 
-        <h3>7. 3분기 실적 전망</h3>
-        <ul>
-            <li><strong>조업일수 감소:</strong> 2분기 대비 3분기 조업일수가 61일에서 53일로 감소 (하계 휴가 영향).</li>
-            <li><strong>마진 전망:</strong> 조업일수 감소로 인해 2분기 대비 마진이 소폭 감소할 가능성이 있으나, <strong>두 자릿수 마진은 유지될 것</strong>으로 예상.</li>
-        </ul>
+        <h2>&#128226; 4. 질의응답 (Q&A)</h2>
 
-        <div class="section-divider"></div>
+        <div class="qa-section">
+            <p><strong>Q1 (신한투자증권 이동헌):</strong> FPSO 사고 관련 일회성 비용 외 생산 일정 차질 반영 비용 및 4분기 체인지 오더 내용, 해양 수주 잔고 매출액은?</p>
+            <p><strong>A1 (CFO 신용희 부사장):</strong> 9월 FPSO 하우조리 윈치 사고 관련 일회성 비용 약 250억 원 반영. 보험료 상응 체인지 오더는 추이 지켜봐야 함. 해양 수주 잔고는 대부분 인도 완료. 현재 진행 중인 FPSO 공사, 잔자이오, WTIV 포함 약 23억 불 남아있음.</p>
+        </div>
 
-        <h2><strong style="color: #004080;">회의 인사이트</strong></h2>
-        <div class="highlight">
+        <div class="qa-section">
+            <p><strong>Q2 (유안타증권 김용민):</strong> 4분기 및 내년 상반기 컨테이너선 매출 비중 감소, 유조선 매출 비중 증가 예상. 컨테이너선 마진이 높으므로 믹스 관점에서 영업이익에 부정적 영향은 없는지?</p>
+            <p><strong>A2 (CFO 신용희 부사장):</strong> 컨테이너 비중은 줄지 않고 약간 늘어날 예정. 2026년 하반기부터 2027년부터 중점적으로 생산. LNGC 믹스가 2026년 하반기부터 줄어들 것으로 예상. 컨테이너 마진이 높다고 해도 과거 저선가 물량이 아닌 시장 상회 이익 구조의 믹스를 가져가므로 영업이익에 부정적이지 않을 것.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q3 (다올투자증권 최광식):</strong> 2분기 매출 잡힌 상선 쪽 수주 연도 비중은?</p>
+            <p><strong>A3 (CFO 신용희 부사장):</strong> 2025년 2분기 매출 인식 물량 중 2022년 수주분이 약 79%. 2025년 3분기 매출 인식 물량 중 2022년 수주분은 약 61%.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q4 (IM증권 변용진):</strong> 외국인 지분 확보에 대한 제약 (산업은행, KDB 지분 등). 방위사업법 등 행정적 제약이 있는지, 가능하다면 어느 정도까지 가능한지?</p>
+            <p><strong>A4 (IR 팀장 한상윤 전무):</strong> 외국인 지분 한도에 대해 특별한 제한은 없음.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q5 (한국투자증권 강경태):</strong> 3분기 상선 매출액이 조업일수 감소 외 다른 요인으로 더 크게 감소했는지?</p>
+            <p><strong>A5 (CFO 신용희 부사장):</strong> 7~8월 조업일수 감소 외에 안전 관리 강화 및 노후 시설 교체 관련 도크 및 크레인 정기 점검으로 FD6, FD5 프로젝트가 약 1~2주간 생산되지 않아 매출 인식 진행률이 감소한 영향이 컸음.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q6 (유안타증권 김용민):</strong> 컨테이너선 매출 비중이 지속적으로 늘어난다고 했는데, 내년이나 올해 중 몇 분기부터 늘어날 것으로 예상하는지?</p>
+            <p><strong>A6 (CFO 신용희 부사장):</strong> 2025년 3분기, 4분기는 1, 2분기 대비 줄어드는 것이 맞음. 2026년 2분기부터 컨테이너 매출 비중이 다시 올라갈 것.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q7 (다올투자증권 최광식):</strong> 캐나다 잠수함 사업 및 폴란드 오르카 프로젝트에 원팀 코리아로 참여 시 생산 배분 계획과 해외 잠수함 프로젝트 수익성이 국내 사업 대비 어떠할지?</p>
+            <p><strong>A7 (특수선 영업 담당 김호중 상무):</strong> 금년 초 현대중공업과 한화오션이 해외 수출 프로젝트에 대한 역할 분담 원팀을 구성. 사업 획득 시 생산 배분 일어날 것으로 기대하나 구체적인 이행 방안은 아직 논의 중. 수익성은 국내 방산 사업이 방사능가 제도에 따라 투자 대비 이윤을 받지만, 수출은 판매 가격 및 원가 산정에 제한이 적어 수익성을 상향 확보할 수 있을 것으로 기대.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q8 (NH투자증권 정현승):</strong> LNGC 신조선가 관련, 클락슨 상 소폭 하락세이나 인쿼리 증가 및 모잠비크 LNG 이슈 등으로 내년 LNG선 성과가 다시 올라갈 것으로 기대하는지?</p>
+            <p><strong>A8 (상선영업기획팀장 김우민 책임):</strong> LNG 신조선가 소폭 하락은 시장 환경과 일치. 하반기 들어 인쿼리 증가 추세 확인. 모잠비크 상황 해소 및 2029년 납기 선박 필요성 제기. 그러나 성과가 더 오르기를 기대하지는 않으며, 보합세가 유지될 것으로 전망. 이는 카타르 대규모 물량으로 인한 성과 상승 이전의 시장 상황과 조선소 캐파 등을 고려한 리스크 관리 차원의 보수적 전망.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q9 (삼성증권 한영수):</strong> 일회성 요인 추가 발생 가능성 (야드 사고, 임단협, 연말 성과급 등)?</p>
+            <p><strong>A9 (CFO 신용희 부사장):</strong> 4분기 일회성 비용 예측은 어려움. 다만 올해 실적이 전년 대비 좋아지고 있어 흑자 전환에 따른 성과급 반영 가능성은 있음. 그 외 현재 파악되는 일회성 비용은 없음.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q10 (한국투자증권 강경태):</strong> 2027년 중 확보 예정인 플로팅 도크 및 6500톤급 크레인 투자 결정. 해양 FPSO 수주가 내년으로 수련된 만큼 시설물 확보 시기도 밀리는지, 아니면 시설물은 그대로 들어오고 수주 시기만 지연되는 것인지?</p>
+            <p><strong>A10 (해양 영업 담당 조용석):</strong> 목표로 하는 수주 건들이 입찰 시점이 크게 지연되고 있는 상황은 아님. 따라서 2027년 플로팅 도크 론칭에 맞춰 설비가 필요로 하는 슬롯에 프로젝트가 들어갈 것으로 기대.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q11 (유안타증권 김용민):</strong> 오스탈 인수 현황 업데이트 및 경쟁사의 해외 조선소와의 협력 사례 (MGLS 사업 프로그램 참여)와 관련하여, 한화오션도 최대 주주 변경과 상관없이 수주를 노리는지?</p>
+            <p><strong>A11 (IR 팀장 한상윤 전무):</strong> 오스탈 지분 인수 관련해서는 지난 분기 업데이트 이후 큰 변화 없음. 인허가를 기다리고 있으며, 조만간 완료될 것으로 예상. 현재 2대 주주이므로 어떤 비즈니스 기회가 있는지는 아직 말씀드리기 이르며, 지분 인수 완료 후 상황에 대해 업데이트 예정.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q12 (CLSA 신동철):</strong> 군함 국내 계약은 코스트 플러스, 해외 계약은 픽스 프라이스로 알고 있는데, 폴란드, 캐나다, 미국 등 서방 국가 입찰도 픽스 프라이스로 생각하는지?</p>
+            <p><strong>A12 (특수선 영업 담당 김호중 상무):</strong> 국내 계약도 코스트 플러스와 픽스 프라이스 병행. 새로 개발하는 경우 코스트 플러스 형태. 해외 수출은 픽스 프라이스를 기본으로 하되, 외부 요인에 따라 코스트 플러스가 일부 가미되는 계약도 있음. 폴란드, 캐나다, 미국 건은 아직 확정된 부분이 아니므로 확인되는 대로 알려드릴 것.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q13 (다올투자증권 최광식):</strong> LNG 성과 보합세 전망이 이해가 안 감. 에퀴노르 계약이 낮게 받았고, 2028년 슬롯이 비어있는데, 2022년 슬롯에 대해서는 성과를 올려 부를 수 있는 수요가 많지 않은지? 삼성, 현대, 한화 3사가 선수들을 상대하는데 한 축이 보합세 뷰를 가지면 전체 성과 강화가 어렵지 않은지? 맥스 디케이드 뉴그란데 파일은 모두 한화오션이 건조하는 것인지, 경쟁이 있는지?</p>
+            <p><strong>A13 (상선영업기획팀장 김우민 책임):</strong> 에퀴노르 단일 계약으로 전체 시장 판도 설명은 무리. 성과가 낮냐 높냐는 사양, 척수, 계약 구조 고려해야 함. LNG 성과가 내년에 오를지 보합세일지는 뷰가 다를 수 있음. 모잠비크 프로젝트가 경쟁 조선소 슬롯을 채우면 오를 수 있으나, 더 밀리고 3사가 채워야 하는 상황이면 안 오를 수도 있음. 리스크 관리 차원에서 보합세를 디폴트로 잡는 것이 맞다고 판단. 맥스 디케이드 뉴그란데 파일 관련해서는 답변이 스크립트에 없음.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q14 (IM증권 변용진):</strong> 최근 탱커 수주 증가, LNG 대비 수익성 떨어지는데 경쟁사는 외부 건조로 수익성 확보. 한화오션도 해외 야드 활용 가능성 및 탱커 수주 수익성 확보 방안은?</p>
+            <p><strong>A14 (상선영업기획팀장 김우민 책임):</strong> 당사는 VLCC만 수주. 타 한국 조선소의 해외 건조 사례는 스웨즈 이하 소규모 오일 탱커. VLCC는 해외 건조가 어렵고, 당사는 큰 배에 유리한 야드/도크 특성 보유. VLCC 건조에 있어 경쟁력이 유지되고 있으며, 표준화된 사양으로 연속 건조 시 타 한국 조선소 대비 수익성이 높은 수준을 기대할 수 있는 환경.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q15 (삼성증권 한영수):</strong> 2028년 LNG선 인도 예정량이 줄어 슬롯이 남아있는데, 내년 수주 시 어떻게 채울 계획인지? 가격을 낮춰서라도 가스선 수주를 채울 것인지, 아니면 다른 선종으로 채울 것인지? 다른 선종 대안은?</p>
+            <p><strong>A15 (상선영업기획팀장 김우민 책임):</strong> LNG 인도량 계산 기준이 불명확하지만, LNG선 채우는 데 부족함은 느끼지 않음. 다만 최고 수량만큼 수주하고 있지는 않음. 가격을 낮춰서라도 LNG를 수주할지, 대안 선종으로 수주할지는 시장 상황에 맞춰 대응. 무한히 성과를 낮추면 업계에 안 좋은 영향. 용선료 상황, 시장이 받아들일 수 있는 신조 성과를 고려하여 LNG선 또는 대체 선종(주로 VLCC) 중 취사선택. 야드 작업량 등을 고려하여 적절한 제품 믹스에 맞춰 수주 전략 구사.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q16 (신한투자증권 이동헌):</strong> 필리 조선소 실적이나 생산 현황 업데이트?</p>
+            <p><strong>A16 (전략 장덕훈):</strong> 필리 조선소는 수주 잔고 기준 약 30억 불 보유. 2026년 턴어라운드 목표로 생산성 향상 중. 최근 중국 제재 후속 영향으로 변동성 존재, 최소화를 위해 다각도 검토 중. 2025년 3분기 누적 매출 1억 2천만 불, 영업 손실 2,770만 불 기록. 빠른 턴어라운드를 위해 다양한 활동 진행 중.</p>
+        </div>
+
+        <div class="qa-section">
+            <p><strong>Q17 (NH투자증권 정현승):</strong> 군함 관련, 폴란드나 캐나다 외 소형 프로젝트나 수상함 관련 인쿼리 현황 및 올해 말/내년 상반기 수주 기회는?</p>
+            <p><strong>A17 (특수선 영업 담당 김호중 상무):</strong> 캐나다, 폴란드 프로젝트 외 태국 수상함 협의 진행 중 (내년 상반기 결론, 금년 윤곽 확인 기대). 그리스, 콜롬비아, 칠레, 필리핀 잠수함 및 중동 지역 군함 니즈에 대해 협의 진행 중. 근 시일 내에는 태국과 폴란드가 유력하며, 중동 지역도 빨라지고 있음. 나머지 프로젝트는 여건에 따라 진행 속도 달라질 수 있음.</p>
+        </div>
+
+        <div class="insights">
+            <h3>&#128161; 회의 인사이트</h3>
             <ul>
-                <li><strong>글로벌 시장에서의 경쟁 우위 확보:</strong> 한화오션은 LNG선 시장의 성장과 해외 방산 시장 확대를 통해 글로벌 경쟁력을 강화하고 있습니다. 특히, 잠수함 분야에서는 기술력, 납기, 가격 경쟁력에서 독보적인 위치를 점하며 수주 가능성을 높이고 있습니다.</li>
-                <li><strong>미국 시장 진출의 전략적 중요성:</strong> 미국 시장은 단순한 선박 건조를 넘어선 기술 전수 및 자국 산업 육성이라는 큰 그림 속에서 한국 조선소의 역할이 중요하게 부각되고 있습니다. 존스 액트 등 법적 제약에도 불구하고, 미국 정부의 전략적 필요성과 한화오션의 기술력이 시너지를 창출할 것으로 기대됩니다.</li>
-                <li><strong>포트폴리오 다각화 및 신사업 추진:</strong> 상선 사업의 안정적인 기반 위에 해양 풍력과 같은 신사업을 추진하며 미래 성장 동력을 확보하고 있습니다. 이는 변동성이 큰 조선 시장에서 지속 가능한 성장을 위한 중요한 전략입니다.</li>
-                <li><strong>견조한 수익성 유지:</strong> 단기적인 조업일수 감소 등의 요인에도 불구하고, 고부가가치 선박 수주와 효율적인 생산 관리를 통해 두 자릿수 마진을 유지하며 견조한 수익성을 보여줄 것으로 예상됩니다.</li>
+                <li><strong>견조한 수익성 및 재무 건전성:</strong> 3분기 실적은 일회성 비용과 조업일수 감소로 전분기 대비 하락했으나, LNG선 중심의 고부가가치 선종 믹스를 통해 두 자릿수 영업이익률을 유지하며 견조한 수익성을 입증했습니다. 부채 비율 관리 등 재무 건전성 유지 노력도 긍정적입니다.</li>
+                <li><strong>글로벌 방산 시장 리더십 강화:</strong> 해양 분쟁 심화와 해군력 증강 추세 속에서 캐나다 CPSP, 폴란드 오르카 프로젝트 등 해외 잠수함 수주전에서 한화오션의 기술력, 납기, 가격 경쟁력이 독보적으로 부각되고 있습니다. 차세대 전략 수상함 개발을 통해 미래 시장을 선점하려는 노력도 돋보입니다.</li>
+                <li><strong>친환경 선박 전환 주도:</strong> IMO 규제 연기에도 불구하고, 친환경 추진 선박으로의 전환은 장기적인 시장 방향성으로 확고합니다. LNG선, 친환경 컨테이너선 등 고부가가치 선종에서 한화오션의 기술 신뢰도와 경쟁력이 더욱 부각될 것으로 예상됩니다.</li>
+                <li><strong>미국 시장 진출의 전략적 중요성:</strong> 존스 액트 등 법적 제약에도 불구하고, 미국 정부의 전략적 필요성과 한화오션의 우수한 기술력을 바탕으로 긍정적인 변화 가능성이 높게 평가됩니다. 필리 조선소 및 오스탈과의 협력을 통한 미국 내 생산 역량 강화 및 기술 전수는 장기적인 관점에서 중요한 전략적 선택입니다.</li>
+                <li><strong>포트폴리오 다각화 및 신사업 추진:</strong> 상선 사업의 안정적인 기반 위에 해양 풍력(신안우이 프로젝트)과 같은 신사업을 추진하며 미래 성장 동력을 확보하고 있습니다. 해양사업부의 일시적인 적자는 아쉬우나, 4분기 흑자 전환 전망과 함께 전통 및 신재생에너지 시장에서의 경쟁력 확보 노력은 향후 회복에 대한 기대를 높입니다.</li>
             </ul>
         </div>
 
-        <h2><strong style="color: #004080;">향후 계획 (Next Steps)</strong></h2>
-        <ul>
-            <li><strong>상선 부문:</strong>
-                <ul>
-                    <li>LNG FID 동향 및 카타르 3차 발주 관련 정보를 면밀히 모니터링하여 선제적인 수주 활동을 전개합니다.</li>
-                    <li>컨테이너 및 VLCC 시장의 변동성을 주시하며 균형 잡힌 수주 포트폴리오를 유지합니다.</li>
-                </ul>
-            </li>
-            <li><strong>해양 사업 부문:</strong>
-                <ul>
-                    <li>신안우이 풍력 프로젝트의 성공적인 개시를 위해 관련 주주사들과의 협의를 가속화하고, 해양사업부의 관련 스콥 확보를 추진합니다.</li>
-                    <li>LD 협상에서 최적의 결과를 도출하고, 원가 상승 영향을 최소화하기 위한 방안을 강구합니다.</li>
-                </ul>
-            </li>
-            <li><strong>방산 사업 부문:</strong>
-                <ul>
-                    <li>캐나다 및 폴란드 잠수함 수주전의 최종 결과를 예의주시하고, 본 계약 협상에서 한국의 강점을 최대한 활용하여 유리한 조건을 확보합니다.</li>
-                    <li>미국 존스 액트 관련 법안 개정 동향을 지속적으로 파악하고, 전략 상선단 수요가 구체화될 경우 적극적으로 대응할 수 있는 전략을 수립합니다.</li>
-                    <li>오스탈과의 기술 협력 방안을 구체화하여 시너지를 창출합니다.</li>
-                </ul>
-            </li>
-            <li><strong>재무 및 생산:</strong>
-                <ul>
-                    <li>3분기 실적 발표 전 조업일수 감소에 따른 재무적 영향을 면밀히 분석하고, 효율적인 생산 계획 수립을 통해 마진율을 극대화합니다.</li>
-                </ul>
-            </li>
-        </ul>
+        <div class="next-steps">
+            <h3>&#128202; 향후 계획 및 방향성</h3>
+            <ul>
+                <li><strong>상선사업부:</strong>
+                    <ul>
+                        <li>LNG FID 동향 및 카타르 3차 발주 관련 정보를 면밀히 모니터링하여 선제적인 수주 활동을 전개하고, 내년 LNG선 위주로 수주 목표를 설정합니다.</li>
+                        <li>VLCC, VLEC 등 고수익 선종 중심의 선별 수주 전략을 지속하고, 친환경 대체 연료 기술 확보 및 적용 역량을 강화합니다.</li>
+                        <li>2026년 하반기 이후 컨테이너선 매출 비중 증가에 따른 제품 믹스 최적화를 준비하며, 3년 이상의 안정적인 수주 잔고를 유지합니다.</li>
+                    </ul>
+                </li>
+                <li><strong>특수선 사업부:</strong>
+                    <ul>
+                        <li>캐나다 CPSP 프로젝트 및 폴란드 오르카 프로젝트 최종 수주에 총력을 기울이고, 정부 대 정부 협력 및 현지화 전략을 통한 해외 시장 공략을 강화합니다.</li>
+                        <li>차세대 전략 수상함 개발을 가속화하여 미래 함정 시장을 선도하고, 그리스, 콜롬비아, 칠레, 필리핀, 중동 등 잠재 시장에 대한 적극적인 영업 활동을 전개합니다.</li>
+                    </ul>
+                </li>
+                <li><strong>해양사업부:</strong>
+                    <ul>
+                        <li>페트로브라스 FPSO 사고 관련 Change Order 확보를 통한 손실 최소화 및 4분기 흑자 전환을 달성합니다.</li>
+                        <li>신안우이 풍력 프로젝트의 성공적인 개시를 위해 관련 주주사들과의 협의를 가속화하고, 해양사업부의 관련 스콥 확보를 추진합니다.</li>
+                        <li>FPSO, FLNG, 육상 LNG 모듈, WTIV 등 경쟁력 있는 제품군 중심의 적극적인 수주 활동을 전개하고, 2027년 플로팅 도크 및 크레인 투자 계획에 맞춰 프로젝트 슬롯 확보 및 생산성 극대화를 추진합니다.</li>
+                    </ul>
+                </li>
+                <li><strong>전사적 재무 및 전략:</strong>
+                    <ul>
+                        <li>순차입금 증가 요인을 관리하고 2026년 이후 자금 수지 개선을 통한 차입금 규모 축소를 목표로 합니다.</li>
+                        <li>미국 존스 액트 관련 법안 개정 동향을 지속적으로 파악하고, 전략 상선단 수요가 구체화될 경우 적극적으로 대응할 수 있는 전략을 수립합니다.</li>
+                        <li>오스탈 지분 인수 완료 후 기술 협력 방안을 구체화하여 시너지를 창출합니다.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-        <h2><strong style="color: #004080;">회의의 방향성 및 최종 평가</strong></h2>
-        <p>이번 한화오션 미팅은 현재 사업 부문별 진행 상황과 미래 전략에 대한 심도 깊은 논의를 통해 회사의 견고한 성장 기반과 미래 비전을 명확히 보여주었습니다. 안정적인 상선 사업을 기반으로 고부가가치 해양 신사업 및 해외 방산 시장 확대를 통해 포트폴리오를 고도화하려는 전략적 방향성은 매우 긍정적입니다.</p>
-        <p>특히, 미국 시장 진출과 관련하여 법적 제약에도 불구하고, 미국 정부의 전략적 필요성과 한화오션의 우수한 기술력을 바탕으로 긍정적인 변화 가능성이 높게 평가됩니다. 필리 조선소 및 오스탈과의 협력을 통해 미국 내 생산 역량 강화 및 기술 전수라는 큰 그림을 그려나가는 것은 장기적인 관점에서 매우 중요한 전략적 선택입니다.</p>
-        <p>단기적인 실적 변동 요인(조업일수 감소 등)에도 불구하고, 한화오션은 장기적인 성장 잠재력과 글로벌 조선 산업의 변화에 선제적으로 대응하는 능력을 갖추고 있습니다. 앞으로도 기술 혁신과 전략적 파트너십을 통해 글로벌 조선 해양 방산 분야의 리더십을 더욱 공고히 할 것으로 기대됩니다.</p>
+        <div class="evaluation">
+            <h3>&#128170; 회의 종합 평가</h3>
+            <p>이번 한화오션 통합 회의는 2025년 3분기 실적 발표와 함께 사업 부문별 진행 상황 및 미래 전략에 대한 심도 깊은 논의를 통해 회사의 견고한 성장 기반과 미래 비전을 명확히 보여주었습니다. 단기적인 실적 변동 요인(조업일수 감소, 일회성 비용)에도 불구하고, 핵심 사업부문인 상선과 특수선에서 보여준 견조한 이익률과 해외 수주 성과는 한화오션의 경쟁력을 입증합니다.</p>
+            <p>특히, 글로벌 지정학적 리스크를 기회로 삼아 특수선 사업의 해외 진출을 가속화하고, 친환경 선박 시장의 확대를 선제적으로 준비하는 전략은 매우 긍정적입니다. 미국 시장 진출과 관련하여 법적 제약에도 불구하고, 미국 정부의 전략적 필요성과 한화오션의 우수한 기술력을 바탕으로 긍정적인 변화 가능성이 높게 평가됩니다. 필리 조선소 및 오스탈과의 협력을 통해 미국 내 생산 역량 강화 및 기술 전수라는 큰 그림을 그려나가는 것은 장기적인 관점에서 매우 중요한 전략적 선택입니다.</p>
+            <p>질의응답을 통해 재무 건전성, 사업부별 세부 전략, 시장 전망 등 투자자들이 궁금해하는 핵심 질문들에 대해 상세하고 투명하게 답변함으로써, 회사에 대한 신뢰를 높이는 데 기여했습니다. 전반적으로 불확실한 시장 환경 속에서도 안정적인 재무 구조를 바탕으로 고부가가치 선종 중심의 수익성 전략과 미래 성장 동력 확보에 집중하는 한화오션의 확고한 방향성을 확인할 수 있었습니다. 앞으로도 기술 혁신과 전략적 파트너십을 통해 글로벌 조선 해양 방산 분야의 리더십을 더욱 공고히 할 것으로 기대됩니다.</p>
+        </div>
 
-        <p class="note" style="text-align: center; margin-top: 50px;">본 회의록은 회의 스크립트를 기반으로 작성되었으며, 회의 참석자의 발언을 요약 및 정리한 내용입니다.</p>
+        <p class="note" style="text-align: center; margin-top: 50px;">본 회의록은 두 차례의 회의 스크립트를 기반으로 작성되었으며, 회의 참석자의 발언을 요약 및 정리한 통합 내용입니다.</p>
     </div>
 </body>
 </html>
