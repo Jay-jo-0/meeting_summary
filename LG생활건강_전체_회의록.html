@@ -12,260 +12,309 @@ li {
 }
 </style>
 
+<style>
+/* General Body Styles */
+body {
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Container for content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+h1 {
+    font-size: 2.2em; /* Larger for main title */
+    color: #1a237e;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+h2 {
+    font-size: 1.8em; /* Sub-headings */
+    color: #3f51b5;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.4em; /* Sub-sub-headings */
+    color: #5c6bc0;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.2em; /* Smaller headings */
+    color: #7986cb;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px;
+    font-size: 1.0em;
+}
+
+/* Strong/Emphasis */
+strong {
+    color: #d32f2f; /* Red for emphasis */
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+    color: #616161;
+}
+
+/* Lists */
+ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 1.0em;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+    table-layout: fixed; /* Ensures columns respect width */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: left;
+    word-wrap: break-word; /* Prevents long words from breaking layout */
+}
+
+th {
+    background-color: #e8eaf6;
+    color: #3f51b5;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive table for mobile */
+@media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #555;
+    }
+
+    /* Data-title attributes for responsive tables */
+    td:nth-of-type(1):before { content: attr(data-title); }
+    td:nth-of-type(2):before { content: attr(data-title); }
+    td:nth-of-type(3):before { content: attr(data-title); }
+    td:nth-of-type(4):before { content: attr(data-title); }
+    td:nth-of-type(5):before { content: attr(data-title); }
+    td:nth-of-type(6):before { content: attr(data-title); }
+    td:nth-of-type(7):before { content: attr(data-title); }
+    td:nth-of-type(8):before { content: attr(data-title); }
+    td:nth-of-type(9):before { content: attr(data-title); }
+    td:nth-of-type(10):before { content: attr(data-title); }
+}
+
+/* Specific styles for summary table */
+.summary-table th {
+    background-color: #c5cae9;
+    color: #1a237e;
+}
+/* New summary table for 3Q preview */
+.preview-summary-table th {
+    background-color: #e0f7fa;
+    color: #004d40;
+}
+.preview-summary-table td {
+    background-color: #fafffe;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #757575;
+    font-size: 0.9em;
+}
+
+/* Section for insights/next steps */
+.insight-box {
+    background-color: #e3f2fd;
+    border-left: 5px solid #2196f3;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.insight-box h3 {
+    color: #1976d2;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.evaluation-box {
+    background-color: #fff3e0;
+    border-left: 5px solid #ff9800;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.evaluation-box h3 {
+    color: #f57c00;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* New styles from the second document, integrated */
+.highlight {
+    background-color: #fff3cd;
+    padding: 2px 5px; /* Adjusted from original to be inline */
+    border-radius: 3px;
+    font-weight: bold; /* Added from new doc */
+    color: #856404; /* Added from new doc */
+}
+.time-stamp {
+    font-size: 0.85em;
+    color: #999;
+    margin-right: 5px;
+}
+
+/* New styles for the merged summary table (adapting from new doc's summary table) */
+.merged-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+    table-layout: fixed;
+}
+.merged-summary-table th, .merged-summary-table td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: left;
+    word-wrap: break-word;
+}
+.merged-summary-table th {
+    background-color: #e0f7fa; /* Similar to preview-summary-table th */
+    color: #004d40;
+    font-weight: bold;
+}
+.merged-summary-table tr:nth-child(even) {
+    background-color: #fafffe; /* Similar to preview-summary-table td */
+}
+
+/* Specific responsive rules for the merged summary table to prevent full block display */
+@media screen and (max-width: 600px) {
+    .merged-summary-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap; /* Keep content in one line if possible */
+    }
+    .merged-summary-table thead, .merged-summary-table tbody, .merged-summary-table th, .merged-summary-table td, .merged-summary-table tr {
+        display: table-cell; /* Temporarily set to table-cell to allow normal table behavior within overflow */
+    }
+    .merged-summary-table thead tr, .merged-summary-table tbody tr {
+        display: table-row; /* Restore table-row behavior for rows */
+    }
+    .merged-summary-table th, .merged-summary-table td {
+        display: table-cell; /* Restore table-cell behavior for cells */
+        white-space: normal; /* Allow wrapping */
+        padding-left: 12px;
+        text-align: left; /* Keep left alignment */
+    }
+    .merged-summary-table td:before {
+        content: none; /* Remove pseudo-element for this specific table */
+    }
+}
+</style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LG생활건강 2025년 실적 및 전략 통합 회의록 (2분기 실적 발표 및 3분기 프리뷰)</title>
-    <style>
-        /* General Body Styles */
-        body {
-            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-
-        /* Container for content */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Headings */
-        h1 {
-            font-size: 2.2em; /* Larger for main title */
-            color: #1a237e;
-            text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        h2 {
-            font-size: 1.8em; /* Sub-headings */
-            color: #3f51b5;
-            margin-top: 35px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 8px;
-        }
-
-        h3 {
-            font-size: 1.4em; /* Sub-sub-headings */
-            color: #5c6bc0;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-
-        h4 {
-            font-size: 1.2em; /* Smaller headings */
-            color: #7986cb;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        /* Paragraphs */
-        p {
-            margin-bottom: 15px;
-            font-size: 1.0em;
-        }
-
-        /* Strong/Emphasis */
-        strong {
-            color: #d32f2f; /* Red for emphasis */
-            font-weight: bold;
-        }
-
-        em {
-            font-style: italic;
-            color: #616161;
-        }
-
-        /* Lists */
-        ul {
-            list-style-type: disc;
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-
-        ol {
-            list-style-type: decimal;
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            font-size: 1.0em;
-        }
-
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 25px;
-            font-size: 0.95em;
-            table-layout: fixed; /* Ensures columns respect width */
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px 10px;
-            text-align: left;
-            word-wrap: break-word; /* Prevents long words from breaking layout */
-        }
-
-        th {
-            background-color: #e8eaf6;
-            color: #3f51b5;
-            font-weight: bold;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        /* Responsive table for mobile */
-        @media screen and (max-width: 600px) {
-            table, thead, tbody, th, td, tr {
-                display: block;
-            }
-
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-
-            tr {
-                border: 1px solid #ccc;
-                margin-bottom: 10px;
-            }
-
-            td {
-                border: none;
-                border-bottom: 1px solid #eee;
-                position: relative;
-                padding-left: 50%;
-                text-align: right;
-            }
-
-            td:before {
-                position: absolute;
-                top: 6px;
-                left: 6px;
-                width: 45%;
-                padding-right: 10px;
-                white-space: nowrap;
-                text-align: left;
-                font-weight: bold;
-                color: #555;
-            }
-
-            /* Data-title attributes for responsive tables */
-            td:nth-of-type(1):before { content: attr(data-title); }
-            td:nth-of-type(2):before { content: attr(data-title); }
-            td:nth-of-type(3):before { content: attr(data-title); }
-            td:nth-of-type(4):before { content: attr(data-title); }
-            td:nth-of-type(5):before { content: attr(data-title); }
-            td:nth-of-type(6):before { content: attr(data-title); }
-            td:nth-of-type(7):before { content: attr(data-title); }
-            td:nth-of-type(8):before { content: attr(data-title); }
-            td:nth-of-type(9):before { content: attr(data-title); }
-            td:nth-of-type(10):before { content: attr(data-title); }
-        }
-
-        /* Specific styles for summary table */
-        .summary-table th {
-            background-color: #c5cae9;
-            color: #1a237e;
-        }
-        /* New summary table for 3Q preview */
-        .preview-summary-table th {
-            background-color: #e0f7fa;
-            color: #004d40;
-        }
-        .preview-summary-table td {
-            background-color: #fafffe;
-        }
-
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            color: #757575;
-            font-size: 0.9em;
-        }
-
-        /* Section for insights/next steps */
-        .insight-box {
-            background-color: #e3f2fd;
-            border-left: 5px solid #2196f3;
-            padding: 20px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-
-        .insight-box h3 {
-            color: #1976d2;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .evaluation-box {
-            background-color: #fff3e0;
-            border-left: 5px solid #ff9800;
-            padding: 20px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-
-        .evaluation-box h3 {
-            color: #f57c00;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        /* New styles from the second document, integrated */
-        .highlight {
-            background-color: #fff3cd;
-            padding: 10px;
-            border-left: 4px solid #ffc107;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        .time-stamp {
-            font-size: 0.85em;
-            color: #999;
-            margin-right: 5px;
-        }
-    </style>
+    <title>LG생활건강 2025년 실적 및 전략 통합 회의록 (2분기, 3분기 실적 발표 및 4분기 전망)</title>
 </head>
 <body>
     <div class="container">
-        <h1>LG생활건강 2025년 실적 및 전략 통합 회의록<br>(2분기 실적 발표 및 3분기 프리뷰)</h1>
+        <h1>LG생활건강 2025년 실적 및 전략 통합 회의록<br>(2분기, 3분기 실적 발표 및 4분기 전망)</h1>
 
         <p style="text-align: center; font-size: 1.1em; color: #555;">
             <strong>일시:</strong><br>
             2025년 8월 1일 (금) 오후 5:18 (2분기 실적 발표 컨퍼런스 콜)<br>
             2025년 9월 28일 (일) 오후 6:19 (3분기 실적 프리뷰 회의)<br>
-            <strong>참석자:</strong> 임영석 CFO 전무님, 김한규 금융부문 부문장님, 김현화 IR팀 팀장님 외 관계자
+            2025년 11월 10일 (월) 오후 5:15 (3분기 실적 발표 컨퍼런스 콜)<br>
+            <strong>참석자:</strong> 임영석 CFO 전무님, 김한규 금융부문 부문장님, 김현화 IR팀 팀장님, 이선주 사장님 (11월 10일 회의부터) 외 관계자
         </p>
 
         <h2><span style="color: #d32f2f;">이번 회의 핵심 요약</span></h2>
-        <p>LG생활건강은 2025년 2분기에 전사 매출 및 영업이익이 크게 감소하며 어려운 시장 환경에 직면했음을 확인했습니다. 특히 뷰티 사업의 부진이 두드러졌으며, 이는 장기적인 사업 체질 개선을 위한 면세 채널 물량 조절 및 전통 채널 효율화 등 선제적 구조조정의 영향이 컸습니다. 3분기 실적 프리뷰에서는 이러한 구조조정의 영향이 본격화되며 뷰티 사업의 적자 폭 확대와 전사 수익성 둔화가 예상됩니다.</p>
-        <p>그러나 생활용품(HDB) 사업과 음료(리프레시먼트) 사업은 해외 시장(북미 닥터그루트, 일본 유시몰)에서의 긍정적인 성장세를 이어가며 비중국 해외 시장 다변화 전략의 가능성을 보여주었습니다. 회사는 단기적인 실적 변동성을 감내하고서라도 구조적 혁신을 통해 글로벌 경쟁력을 회복하고 지속 가능한 성장 기반을 재구축하는 데 집중할 계획이며, 해외 사업 확장을 위한 대규모 M&A 가능성도 시사했습니다. 현재는 성장통의 시기로, 비중국 시장 중심의 투자 확대와 디지털 전환 가속화를 통해 미래 도약을 준비하고 있습니다.</p>
+        <p>LG생활건강은 2025년 2분기에 이어 3분기에도 <span class="highlight">전사 매출 및 영업이익이 크게 감소하며 어려운 시장 환경과 강도 높은 사업 구조 재편의 영향</span>을 체감했습니다. 특히 뷰티 사업은 면세 채널 물량 조절과 전통 채널 효율화 등 선제적 구조조정의 영향이 본격화되며 <span class="highlight">적자 폭이 확대</span>되었습니다.</p>
+        <p>그러나 이러한 단기적 실적 부진 속에서도 <span class="highlight">긍정적인 변화의 신호</span>가 뚜렷합니다. 생활용품(HDB) 사업과 음료(리프레시먼트) 사업은 해외 시장(북미 닥터그루트, 일본 유시몰)에서의 견조한 성장세와 계절적 성수기 효과에 힘입어 매출 및 영업이익이 개선되었습니다. 무엇보다 <span class="highlight">북미 시장 매출이 중국 매출을 처음으로 추월</span>하며 비중국 해외 시장 다변화 전략이 성공적으로 작동하고 있음을 입증했습니다. 빌리프, 더페이스샵 등 뷰티 브랜드와 닥터그루트 등 HDB 브랜드가 북미 디지털 채널에서 폭발적인 성장을 기록했으며, LG 프라엘을 통한 뷰티 디바이스 시장 진출 및 글로벌 확장도 순항 중입니다.</p>
+        <p>회사는 단기적인 실적 변동성을 감내하고서라도 구조적 혁신을 통해 글로벌 경쟁력을 회복하고 지속 가능한 성장 기반을 재구축하는 데 집중할 계획입니다. 새로운 리더십 하에 '선택과 집중' 원칙으로 전사적인 경영 효율화와 조직 재편을 추진하며, 해외 사업 확장을 위한 대규모 M&A 가능성도 여전히 시사하고 있습니다. 현재는 성장통의 시기로, 비중국 시장 중심의 투자 확대와 디지털 전환 가속화를 통해 미래 도약을 준비하고 있으며, <span class="highlight">4분기에는 인력 효율화 등 일회성 비용 증가가 예상되나, 뷰티 사업의 적자 규모는 점진적으로 축소될 것으로 전망</span>됩니다.</p>
 
         <h2>1. 2025년 2분기 실적 설명</h2>
 
@@ -423,148 +472,211 @@ li {
             </li>
         </ul>
 
-        <h2>2. 2025년 3분기 실적 프리뷰 및 사업 전략 업데이트</h2>
+        <h2>2. 2025년 3분기 실적 발표 및 4분기 전망</h2>
 
-        <table class="preview-summary-table">
+        <table class="merged-summary-table">
             <thead>
                 <tr>
-                    <th>구분</th>
-                    <th>주요 내용</th>
-                    <th>영향 및 시사점</th>
+                    <th>항목</th>
+                    <th>내용</th>
+                    <th>핵심 요약</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td data-title="구분"><strong>3분기 실적 전망</strong></td>
-                    <td data-title="주요 내용">전사 수익성 2분기 대비 <em>보수적 전망</em> (뷰티 사업 적자 확대 예상)</td>
-                    <td data-title="영향 및 시사점">면세 채널 물량 조절 본격화 및 중국 시황 악화 영향. 생활용품/음료의 개선에도 불구하고 뷰티 사업의 영향이 큼.</td>
+                    <td data-title="항목"><strong>전사 실적 (3Q25)</strong></td>
+                    <td data-title="내용">매출 1조 5,800억 원 (YoY -7.8%), 영업이익 462억 원 (YoY -56.5%). 누계 매출 4조 8,827억 원 (YoY -6.1%), 영업이익 2,434억 원 (YoY -41.4%).</td>
+                    <td data-title="핵심 요약">뷰티 사업 구조 재편 및 전통 채널 재정비 영향으로 <span class="highlight">매출 및 영업이익 큰 폭 감소</span>.</td>
                 </tr>
                 <tr>
-                    <td data-title="구분"><strong>뷰티 사업 구조조정</strong></td>
-                    <td data-title="주요 내용">면세점 공급 물량 대폭 축소, 국내 백화점/방판 매장 효율화 및 축소.</td>
-                    <td data-title="영향 및 시사점">중국 현지 사업의 건전성 확보 및 온라인/H&B 채널 확대를 통한 수익성 개선 도모. 단기적 실적 훼손 불가피.</td>
+                    <td data-title="항목"><strong>뷰티 사업 (3Q25)</strong></td>
+                    <td data-title="내용">매출 4,710억 원 (YoY -26.5%), 영업이익 588억 원 손실 (적자 전환). 면세/방판 등 전통 채널 매출 두 자릿수 하락. HMB, 해외 육성 채널 (북미, 일본) 성장 지속.</td>
+                    <td data-title="핵심 요약">중국 면세 물량 조절 등 <span class="highlight">강도 높은 사업 구조 재편</span>으로 인한 <span class="highlight">단기적 실적 악화</span>.</td>
                 </tr>
                 <tr>
-                    <td data-title="구분"><strong>생활용품/음료</strong></td>
-                    <td data-title="주요 내용">생활용품: 국내 사업 어려움 지속, 해외(북미 닥터그루트, 일본 유시골) 성장. 마진 개선은 쉽지 않음.</td>
-                    <td data-title="영향 및 시사점">음료: 날씨 양호, 프로모션 영향 주시. 10% 마진 목표 유지. 전사 실적에 미치는 영향은 제한적.</td>
+                    <td data-title="항목"><strong>HDB 사업 (3Q25)</strong></td>
+                    <td data-title="내용">매출 5,964억 원 (YoY +4.1%), 영업이익 424억 원 (YoY +6.8%). 유시몰, 닥터그루트 등 프리미엄 브랜드 해외 사업 확대 가속화.</td>
+                    <td data-title="핵심 요약">데일리 뷰티 주력 브랜드의 <span class="highlight">해외 사업 확대</span>로 <span class="highlight">매출 및 영업이익 개선</span>.</td>
                 </tr>
                 <tr>
-                    <td data-title="구분"><strong>해외 사업 전략</strong></td>
-                    <td data-title="주요 내용"><strong>비중국 중심 투자 확대</strong> (북미, 일본). 아마존 등 디지털 채널 세 자릿수 성장 목표 유지.</td>
-                    <td data-title="영향 및 시사점">중국 사업은 마케팅 효율성 제고 및 구조적 변화 대응. 북미에서는 닥터그루트 코스트코 입점 등 생활용품 성장 가시화. 뷰티 전략 브랜드(빌리프, 페이스샵, CNP) 육성 지속.</td>
+                    <td data-title="항목"><strong>리프레시먼트 사업 (3Q25)</strong></td>
+                    <td data-title="내용">매출 5,125억 원 (YoY +2.4%), 영업이익 626억 원 (YoY +16.9%). 계절적 성수기 효과 및 비용 효율화로 성장.</td>
+                    <td data-title="핵심 요약">국내 음료 시장 정체 속 <span class="highlight">계절적 성수기</span> 및 <span class="highlight">비용 효율화</span>로 <span class="highlight">견조한 성장</span>.</td>
                 </tr>
                 <tr>
-                    <td data-title="구분"><strong>M&A 전략</strong></td>
-                    <td data-title="주요 내용">해외 사업 확장 시너지를 최우선 고려. 획기적인 도약을 위한 <em>대규모 M&A 가능성 시사</em>.</td>
-                    <td data-title="영향 및 시사점">중장기 성장 동력 확보를 위한 적극적인 투자 의지.</td>
+                    <td data-title="항목"><strong>해외 사업 (3Q25)</strong></td>
+                    <td data-title="내용">총 매출 4,930억 원 (YoY +6.6%). 중국 매출 1,467억 원 (YoY -4.7%), 북미 매출 1,544억 원 (YoY +21.1%), 일본 매출 1,026억 원 (YoY +6.8%).</td>
+                    <td data-title="핵심 요약"><span class="highlight">북미 시장의 폭발적인 성장</span>이 해외 매출을 견인하며 <span class="highlight">중국 매출을 처음으로 추월</span>.</td>
+                </tr>
+                <tr>
+                    <td data-title="항목"><strong>4분기 전망</strong></td>
+                    <td data-title="내용">뷰티 사업 재정비 영향 지속, 인력 효율화 등 일회성 비용 증가 예상. 뷰티 적자 규모 축소 예상. HDB/음료는 비수기 영향으로 보수적 접근.</td>
+                    <td data-title="핵심 요약"><span class="highlight">전사적 경영 효율화</span> 및 <span class="highlight">사업 경쟁력 강화</span>를 위한 <span class="highlight">선제적 투자 및 구조조정</span> 지속.</td>
+                </tr>
+                <tr>
+                    <td data-title="항목"><strong>새로운 리더십</strong></td>
+                    <td data-title="내용">이선주 사장님 신규 사내이사 및 대표이사 공식 선임. 선택과 집중을 통한 조직 재편 및 변화 추진.</td>
+                    <td data-title="핵심 요약"><span class="highlight">미래 성장 동력 확보</span>를 위한 <span class="highlight">강화된 글로벌 경쟁력</span> 및 <span class="highlight">혁신적인 사업 전략</span> 구축 의지.</td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>2.1. 전사 수익성 전망 (3분기)</h3>
-        <ul>
-            <li>3분기 전사 수익성은 2분기보다 <strong>보수적으로 전망</strong>되며, 뷰티 사업의 적자 폭 확대가 주요 원인입니다.</li>
-            <li>특히, 면세 채널 관련 물량 조절이 3분기부터 <em>분기 전체로 본격 반영</em>되는 첫 분기이므로, 면세 매출의 역성장 폭이 크게 확대될 것으로 예상됩니다.</li>
-            <li>작년 3분기 면세 매출(약 1,600억 후반)을 고려했을 때, 구조조정 작업이 없었더라도 보수적인 가이드를 드릴 수밖에 없는 상황이었다고 설명했습니다.</li>
-        </ul>
+        <h3>2.1. 2025년 3분기 전사 실적 현황</h3>
+        <p>2025년 3분기 전사 실적은 전년 동기 대비 <strong>매출 7.8% 감소한 1조 5,800억 원</strong>, <strong>영업이익은 56.5% 감소한 462억 원</strong>을 기록했습니다. 이는 뷰티 사업의 구조 재편을 위한 면세, 방판 등 전통 채널 재정비 작업이 본격화되면서 나타난 하락세입니다. 다만, HDB(Home Care & Daily Beauty) 사업과 리프레시먼트(음료) 사업은 각각 주력 프리미엄 브랜드의 해외 사업 확대와 계절적 성수기 효과에 힘입어 매출이 증가했습니다.</p>
+        <p>전사 영업이익 감소의 주요 원인은 선제적 물량 조절로 인한 수익성이 높은 국내 전통 채널 매출 감소, 국내외 시장 경쟁 심화로 인한 원가 부담 지속, 그리고 북미, 일본 등 비중국 마케팅 투자 확대 등으로 분석됩니다.</p>
+        <p>3분기 누계 전사 실적은 <strong>매출 4조 8,827억 원 (YoY -6.1%)</strong>, <strong>영업이익 2,434억 원 (YoY -41.4%)</strong>을 기록했습니다.</p>
 
-        <h3>2.2. 뷰티 사업 현황 및 구조조정 심화</h3>
-        <h4>2.2.1. 면세 채널 전략 변화 및 구조조정 배경</h4>
+        <h3>2.2. 2025년 3분기 해외 및 지역별 매출</h3>
+        <p>3분기 해외 매출은 <strong>4,930억 원으로 전년 동기 대비 6.6% 증가</strong>했으며, 전사 매출 중 해외 매출 비중은 31%를 차지했습니다. 지역별로는 다음과 같은 특징을 보였습니다.</p>
         <ul>
-            <li><span class="time-stamp">00:01</span> 면세점 물량 조절은 분기 초부터 논의되었던 내용이며, 2분기 일부 반영 후 3분기부터는 <strong>전체 분기에 걸쳐 영향이 반영</strong>됩니다.</li>
-            <li><span class="time-stamp">01:49</span> 특정 유통 채널의 스탠스 변화(사이공 비즈니스 재개 등)와 별개로, LG생활건강은 <em>자체적인 면세 관련 작업들을 계획대로 진행</em>하고 있습니다. 이는 장기적인 관점에서 중국 법인 사업의 건전성을 확보하기 위함입니다.</li>
-            <li><span class="time-stamp">18:18</span> <strong>사업 구조조정의 배경:</strong>
+            <li><strong>중국 매출:</strong> 1,467억 원 (전년 동기 대비 4.7% 감소)</li>
+            <li><strong>북미 매출:</strong> 1,544억 원 (전년 동기 대비 21.1% 증가)</li>
+            <li><strong>일본 매출:</strong> 1,026억 원 (전년 동기 대비 6.8% 증가)</li>
+        </ul>
+        <p>특히 <strong>북미 매출이 중국 매출을 처음으로 추월</strong>하며 해외 사업 다변화의 긍정적인 신호탄을 쏘아 올렸습니다.</p>
+
+        <h3>2.3. 2025년 3분기 사업 부문별 상세 실적</h3>
+
+        <h4>2.3.1. 뷰티 사업</h4>
+        <p>뷰티 사업은 3분기 <strong>매출 4,710억 원 (YoY -26.5%)</strong>, <strong>영업이익 588억 원 손실을 기록하며 적자 전환</strong>했습니다. 이는 국내 사업 구조 재편을 위한 면세 등 전통 채널 재정비가 본격화된 결과입니다.</p>
+        <ul>
+            <li><strong>매출 감소 및 수익성 악화 요인:</strong>
                 <ul>
-                    <li><strong>전통 채널(면세, 방판, 백화점) 중심의 조정:</strong> 리셀러 시장의 가격 메리트 감소 (중국 온라인 플랫폼 경쟁 심화, 라이브 방송 활성화), 소비자들의 페이크 이슈 리스크 고려.</li>
-                    <li><strong>중국 현지 사업 건전성 확보:</strong> 면세 채널을 통한 저가 유통으로 인한 가격 정책 혼란 방지. 한국에서 중국으로 유통되는 물량을 근절하여 중국 현지 법인의 가격 정책을 보호하고 장기적인 성장을 도모.</li>
+                    <li><strong>전통 채널 재정비:</strong> 중국 내 브랜드 자산 및 가격 건전성 제고를 위해 면세 물량을 강도 높게 조절하면서 면세점, 방판 등 전통 채널 매출이 두 자릿수 하락했습니다.</li>
+                    <li><strong>수익성 하락:</strong> 직전 분기까지 두 자릿수 마진을 기록하던 면세 채널의 매출 하락으로 뷰티 사업 전체의 수익성이 크게 악화되어 적자 전환했습니다.</li>
+                    <li><strong>마케팅비:</strong> 3분기 뷰티 마케팅비는 뷰티 매출의 약 16% 수준을 유지했습니다.</li>
                 </ul>
             </li>
-            <li><span class="time-stamp">23:01</span> <strong>구조조정의 실제 진행:</strong>
+            <li><strong>성장 채널 및 브랜드:</strong>
                 <ul>
-                    <li><strong>면세점:</strong> 공급 물량 대폭 축소.</li>
-                    <li><strong>국내 백화점:</strong> 매장 수 점진적 축소 (작년 말 181개 → 2분기 169개). 특히 빌리프, 오휘, 숨 등 수익성에 크게 도움이 되지 않는 브랜드 매장을 줄이고 올리브영 등 H&B 채널로 전환.</li>
-                    <li><strong>중국 후 매장:</strong> 비효율 매장 모니터링 및 점진적 축소 (2분기 말 기준 208개).</li>
+                    <li><strong>국내 HMB 채널:</strong> CNP, VDL, 빌리프 등 프리미엄 브랜드 판매 호조로 두 자릿수 성장세를 지속했습니다.</li>
+                    <li><strong>해외 육성 채널:</strong> 북미, 일본 등 주요 해외 시장에서 당사 육성 브랜드(CNP, 빌리프, VDL 등)를 중심으로 신규 오프라인 채널 진입 및 주요 디지털 채널 판매 호조에 힘입어 매출 확대를 지속하고 있습니다.</li>
                 </ul>
             </li>
-            <li><span class="time-stamp">27:06</span> <strong>인력 구조조정:</strong> 당장 매장 철수에 따른 의도적인 해고는 없으며, 인력 재배치를 고려하고 있습니다.</li>
-            <li><span class="time-stamp">27:36</span> <strong>향후 실적 영향:</strong> 2분기 적자가 일회성이 아닌 체질 개선 과정에서 발생한 것이므로, 3분기 적자 확대 가능성이 높으며 4분기에도 영향을 미칠 수 있습니다. 다만 4분기는 면세 베이스가 낮아 3분기보다는 영향이 덜할 수 있습니다.</li>
-            <li><span class="time-stamp">33:59</span> <strong>구조조정의 어려움:</strong> 국내 육성 채널(온라인, H&B)의 성장이 면세점 매출 감소를 커버할 만큼 빠르지 않아 단기적인 실적 영향이 불가피합니다. 면세 채널의 인력 및 자원 투입 효율성 문제도 구조조정의 배경입니다.</li>
+            <li><strong>중국 및 국내 주요 채널 현황:</strong>
+                <ul>
+                    <li><strong>중국 뷰티 매출:</strong> 높은 기저 영향으로 한 자릿수 감소했으며, 수익성은 전년 동기와 유사한 적자 트렌드를 보였습니다. 뷰티 매출 내 중국 비중은 23%이며, 중국 뷰티 매출 내 '더 후' 비중은 85%, 중국 온라인 매출 비중은 55%입니다.</li>
+                    <li><strong>국내 사업 채널:</strong> 면세, 방판 등 전통 채널 비중은 26%, 온라인 HMB를 포함한 육성 채널은 10%입니다. 온라인 및 HMB 매출은 3분기에도 고성장을 이어나갔습니다.
+                        <ul>
+                            <li><strong>온라인:</strong> 쿠팡 채널에서 '더 페이스샵' 중심으로 고성장 지속. 무신사, 지그재그 등 버티컬 플랫폼에서 CNP, 더 페이스샵 중심으로 브랜드별 캐릭터 콜라보 제품 선 런칭 등을 통해 성장 지속.</li>
+                            <li><strong>HMB:</strong> CNP, 빌리프, VDL이 판매 호조.
+                                <ul>
+                                    <li><strong>CNP:</strong> 인기 캐릭터와 콜라보한 프로폴리스 앰플 제품이 좋은 반응을 얻으며 성장 견인.</li>
+                                    <li><strong>빌리프:</strong> 8월 아쿠아밤 크로존 크림 성수 단독 팝업 스토어에 9일간 약 1만 명 이상 방문객 유치, 브랜드 언급량 40% 이상 증가 등 바이럴 효과로 매출 성장 기여.</li>
+                                    <li><strong>VDL:</strong> 올리브영 채널에서 신제품마다 큰 사랑을 받으며, 베스트셀러 '커버 스테인 퍼펙팅 쿠션'에 이어 '커버 스테인 하이 커버 쿠션'이 높은 커버 지속력과 인플루언서 바이럴 효과로 매출 증가.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>신제품 출시 및 경쟁력 강화:</strong>
+                <p>3분기에도 시장 트렌드에 부합하는 기능성 제품들을 출시하며 기초 및 색조 브랜드 경쟁력을 강화했습니다.</p>
+                <ul>
+                    <li><strong>CNP:</strong> 차세대 안티에이징 성분(NMN, PDRN, 펩타이드) 조합의 '더마 인서 포어 퍼밍 앰플' 출시.</li>
+                    <li><strong>VDL:</strong> 빛나는 수분 광채와 메이크업 지속력을 높여주는 '로즈 PDRN 프랩 베이스' 출시.</li>
+                    <li><strong>핀스:</strong> 베스트셀러 '블루 쿠션' 이후 2년여 만에 선보이는 신상 쿠션 '커버 마스터 핑크 쿠션' 출시.</li>
+                </ul>
+            </li>
         </ul>
 
-        <h4>2.2.2. 해외 뷰티 사업 (중국, 북미, 일본)</h4>
+        <h4>2.3.2. HDB (Home Care & Daily Beauty) 사업</h4>
+        <p>HDB 사업은 3분기 <strong>매출 5,964억 원 (YoY +4.1%)</strong>, <strong>영업이익 424억 원 (YoY +6.8%)</strong>을 기록했습니다. 데일리 뷰티 주력 브랜드 기반 해외 사업 확대 가속화로 매출이 증가했으며, 북미, 일본 등 해외 시장 공략 강화로 인한 마케팅비 확대에도 불구하고 프리미엄 브랜드 중심으로 매출이 증가하며 영업이익도 개선되었습니다.</p>
         <ul>
-            <li><span class="time-stamp">15:32</span> <strong>2분기 뷰티 적자 원인:</strong> 국내 면세/방판 매출 40% 감소 (마진율 높은 채널), 해외 중국/북미 지역 흑자에서 적자 전환.</li>
-            <li><span class="time-stamp">29:23</span> <strong>중국 사업 수익성:</strong> 마케팅 비용 대비 매출 효율이 낮아 적자 발생. 국내 사업의 이익으로 중국 적자를 메이크업하던 구조였으나, 국내 면세점 매출 감소로 중국 적자가 더욱 부각됨.</li>
-            <li><span class="time-stamp">31:11</span> <strong>중국 사업 과제:</strong> 수익성 안정화가 가장 큰 영향 요인. 마케팅 비용을 무한정 확대할 계획은 없으며, <em>같은 비용 안에서 효율성을 높이는 방향</em>으로 추진.</li>
-            <li><span class="time-stamp">40:56</span> <strong>중국 시장 경쟁 심화:</strong> 618 등 프로모션 경쟁이 심화되고 있으며, 표면적인 가격 할인 대신 샘플 증정 등 <em>원가 부담이 늘어나는 방식</em>으로 변화. 이는 회사 입장에서는 구조적인 부담으로 작용.</li>
-            <li><span class="time-stamp">42:54</span> <strong>중국 사업 방향성:</strong> 올해까지 리브랜딩 마무리. 내년에도 비용을 드라마틱하게 줄여 마진을 개선하기보다는, <em>비중국 중심으로 투자의 무게를 가져가되</em>, 중국은 현재 매출 규모가 가장 크므로 절대적인 비용을 갑자기 줄이기는 어려움.</li>
-            <li><span class="time-stamp">36:57</span> <strong>북미 사업:</strong> 작년 상반기 흑자에서 2분기 적자 전환. TCS(더크림샵)의 역성장 추세.</li>
-            <li><span class="time-stamp">45:28</span> <strong>TCS(더크림샵) 전략:</strong> 인수 후 성장했으나 높은 베이스와 코로나 이후 트렌드 변화(오리지널 K뷰티 선호)로 약세. 신제품 개발 등으로 회복 노력 중이나 올해까지는 쉽지 않을 전망.</li>
-            <li><span class="time-stamp">38:07</span> <strong>일본 사업:</strong> 유시몰 등 수익이 안정적으로 나고 있는 상황.</li>
+            <li><strong>주요 브랜드 성과:</strong>
+                <ul>
+                    <li><strong>유시몰 (Euthymol):</strong> 상반기에 이어 3분기에도 일본, 북미 등 주력 해외 지역에서 고성장세를 이어갔습니다. 영국 해리트리 브랜드와의 콜라보 제품이 올리브영을 중심으로 국내 최대 매출을 달성했으며, 일본 메가와비에서도 좋은 성과를 달성했습니다.</li>
+                    <li><strong>닥터그루트 (Dr. Groot):</strong> 3분기에도 북미 시장 내 온·오프라인 입지를 강화하며 세 자릿수 성장을 지속했습니다.</li>
+                </ul>
+            </li>
+            <li><strong>채널별 매출 비중:</strong>
+                <ul>
+                    <li>온라인 18%</li>
+                    <li>할인점이 포함된 모던 채널 24%</li>                    <li>대리점 4%</li>
+                </ul>
+            </li>
+            <li><strong>고객 접점 강화 및 프리미엄 브랜드 경쟁력 제고:</strong>
+                <p>HDB 사업부는 3분기에도 해외 판매 채널 확장, 한정판 콜라보 기획, 고기능성 신제품 출시 등을 통해 고객 접점을 강화하고 프리미엄 브랜드 경쟁력을 제고했습니다.</p>
+                <ul>
+                    <li><strong>닥터그루트:</strong> 아마존과 틱톡 샵을 중심으로 꾸준한 인기를 보이며 북미 코스트코 오프라인 매점 입점이라는 쾌거를 이뤄냈습니다.</li>
+                    <li><strong>유시몰:</strong> 레인부츠로 유명한 영국 브랜드 헌터와 협업하여 기획한 감각적인 디자인의 부츠들이 출시 일주일 만에 국내 HMB 채널에서 품절 대란을 일으키며 MG 소비자들에게 큰 반응을 얻었습니다.</li>
+                    <li><strong>피지오겔 (Physiogel):</strong> 효용과 기능성을 중시하는 트렌드를 반영하여 프리미엄 안티에이징 라인 '사이언스 스티커스'의 신규 라인업인 '콜라겐 리뷰 리뉴 2종'을 출시하며 주름 완화와 탄력 개선 솔루션을 제공했습니다.</li>
+                </ul>
+            </li>
         </ul>
 
-        <h3>2.3. HDB 사업 현황 (3분기)</h3>
+        <h4>2.3.3. 리프레시먼트 (음료) 사업</h4>
+        <p>리프레시먼트 사업은 3분기 <strong>매출 5,125억 원 (YoY +2.4%)</strong>, <strong>영업이익 626억 원 (YoY +16.9%)</strong>을 기록했습니다. 전반적인 국내 음료 시장 정체 속에서도 무더운 날씨에 기인한 계절적 성수기 효과 등으로 매출이 성장했으며, 매출 증가와 프로모션 축소 등 비용 효율화 영향으로 영업이익도 전년 대비 개선되었습니다.</p>
         <ul>
-            <li><span class="time-stamp">02:38</span> 3분기에도 <strong>한 자릿수 중반 수준의 마진 유지</strong> 예상. 국내 사업의 어려움 지속.</li>
-            <li><span class="time-stamp">02:38</span> <strong>해외 사업 성장:</strong> 닥터그루트(북미), 유시몰(일본) 등 예상보다 선전. 특히 닥터그루트는 코스트코 온라인 입점에 이어 오프라인 입점까지 확정되며 북미 시장 인지도 확대.</li>
-            <li><span class="time-stamp">03:34</span> 닥터그루트 북미 시딩 작업은 수년간 진행되어 왔으며, 하반기에도 북미 및 디지털 채널 성장이 지속될 것으로 예상.</li>
-            <li><span class="time-stamp">05:42</span> <strong>3분기 성수기 여부:</strong> 과거 명절(추석) 선물 세트 효과가 있었으나, 최근 치약/샴푸 선물 세트 인기가 예전만 못해 <em>명절 효과는 크지 않을 것</em>으로 전망.</li>
-            <li><span class="time-stamp">07:14</span> 작년 3분기 QoQ 매출/영업이익 증가는 유시몰, 일본 사업 확대 및 아마존 프라임데이 등 해외 사업 요인이 컸음.</li>
-            <li><span class="time-stamp">09:51</span> <strong>국내/해외 비중:</strong> 생활용품 해외 비중은 약 40% 수준 (에이본 포함). 에이본은 100% 생활용품으로 반영.</li>
-            <li><span class="time-stamp">10:32</span> <strong>북미 닥터그루트:</strong> 틱톡, 아마존 채널 중심으로 인지도 쌓는 중. 코스트코 온라인 입점(1분기)에 이어 9월 말 오프라인 입점 확정. 코스트코 오프라인 입점은 북미 시장 내 브랜드 인정을 의미.</li>
-            <li><span class="time-stamp">2:38:47</span> <strong>마진 개선 어려움:</strong> 해외 사업 성장이 있음에도 마진 개선이 쉽지 않은 이유는 국내 사업 비중이 여전히 크고 어려움을 겪고 있으며, 해외 투자(닥터그루트 등)가 초기 단계라 당장 마진 개선에 기여하기 어렵기 때문.</li>
-        </ul>
-
-        <h3>2.4. 리프레시먼트 사업 현황 (3분기)</h3>
-        <ul>
-            <li><span class="time-stamp">05:42</span> 3분기는 날씨가 더운 시기이므로 <strong>성수기</strong>.</li>
-            <li><span class="time-stamp">48:17</span> <strong>날씨 영향:</strong> 2분기는 비우호적이었으나 8월까지 날씨는 양호. 9월까지 지켜봐야 함.</li>
-            <li><span class="time-stamp">48:17</span> <strong>민생 소비 쿠폰 영향:</strong> 편의점 채널에 일부 긍정적 영향 있을 수 있으나 크지는 않을 것으로 예상.</li>
-            <li><span class="time-stamp">49:18</span> <strong>매출/이익 관건:</strong> 날씨는 좋았으나, 프로모션 강도가 전년 대비 어떻게 가져갔는지가 관건. 비용 부담이 커진 상태에서 작용할지가 중요.</li>
-            <li><span class="time-stamp">50:20</span> <strong>원부자재 가격:</strong> 알루미늄 캔 등 원부자재 가격 부담은 늘 존재.</li>
-            <li><span class="time-stamp">50:58</span> <strong>영업이익 전망:</strong> 소폭의 증익 가능성도 있으나, 뷰티 사업의 영향이 워낙 커서 전사 실적에 미치는 영향은 제한적일 것.</li>
-            <li><span class="time-stamp">51:58</span> 과거 뷰티가 영업이익의 60~70%를 차지했으나, 현재는 생활용품/음료의 비중이 커진 상황.</li>
-            <li><span class="time-stamp">49:08</span> <strong>마진 목표:</strong> 10% 마진 타겟 가이던스 유지.</li>
+            <li><strong>카테고리별 매출:</strong>
+                <ul>
+                    <li><strong>비탄산 매출:</strong> 전년 동기 대비 소폭 하락.</li>
+                    <li><strong>탄산 매출:</strong> 코카콜라, 제로, 에너지 음료 등의 성장세로 전년 동기 대비 4% 증가.</li>
+                </ul>
+            </li>
+            <li><strong>채널별 매출 비중:</strong>
+                <ul>
+                    <li>파트너 등 18%</li>
+                    <li>편의점 21%</li>
+                    <li>온라인 16%</li>
+                    <li>음용 소비 12%</li>
+                </ul>
+                <p>온라인과 음용 소비 채널은 이번 분기에도 성장세를 유지했습니다.</p>
+            </li>
+            <li><strong>마케팅 활동:</strong>
+                <p>리프레시먼트 사업부는 3분기에도 고객 접점 확대를 위해 새로운 브랜드 경험을 제공하고 시장 트렌드에 부합하는 다양한 마케팅 활동을 전개했습니다.</p>
+                <ul>
+                    <li><strong>코카콜라:</strong> 방탄소년단 뷔를 글로벌 앰버서더로 선정했으며, 오리지널 코카콜라와 유사한 맛으로 리뉴얼한 '제로 리뉴얼'을 출시하고 새로운 패키지를 선보였습니다.</li>
+                    <li><strong>스프라이트:</strong> 초대형 워터 페스티벌 '워터밤 서울 2025'에 공식 후원사로 참여하여 제품의 상쾌함을 직관적으로 체험할 수 있는 다양한 프로그램을 선보였습니다.</li>
+                    <li><strong>파워에이드:</strong> 러닝 열풍에 힘입어 GPS 러닝 앱을 활용해 파워에이드의 이니셜 'P' 모양의 러닝 코스를 SNS에 인증하는 '파워런' 이벤트를 진행하며 소비자들에게 새로운 재미와 동기 부여를 제공했습니다.</li>
+                </ul>
+            </li>
         </ul>
 
         <h2>3. 경영진 코멘트 및 중장기 전략</h2>
         <p>CFO는 K뷰티 호황에도 불구하고 2분기 실적이 부진한 점에 대해 송구함을 표하며, 당사의 경쟁력 악화 지적에 대해 무거운 책임감을 느낀다고 밝혔습니다. 시장 변화에 대응하기 위한 강도 높은 뷰티 사업 체질 개선을 결정했으며, 단기 실적 변동성을 감내하고서라도 장기적인 사업 경쟁력을 높이는 데 집중하겠다고 강조했습니다.</p>
+        <p>3분기 실적은 강도 높은 뷰티 사업 체질 개선이 본격화되며 다소 부진했으나, <strong>글로벌 리밸런싱과 브랜드 다변화 성과는 뚜렷하게 나타났습니다.</strong> 특히 북미 매출이 중국 매출을 처음으로 추월하며 해외 사업 다변화의 긍정적인 신호탄을 쏘아 올렸습니다.</p>
 
-        <h3>3.1. 뷰티 사업 체질 개선 핵심 과제</h3>
+        <h3>3.1. 뷰티 사업 체질 개선 핵심 과제 및 성과</h3>
         <ol>
-            <li><strong>북미 핵심 브랜드 마케팅 투자 공격적 전개:</strong> 빌리프, 더페이스샵(TFS), 닥터그루트 등 북미 현지 고객 호응 브랜드 중심 성장 모멘텀 확보. 최근 양수한 프라엘 브랜드를 활용한 홈뷰티 디바이스 해외 사업 육성 계획.</li>
-            <li><strong>'더 후' 브랜드 에쿼티 제고 위한 중국향 유통 정비 과감하고 확고하게 진행.</strong></li>
+            <li><strong>북미 핵심 브랜드 마케팅 투자 공격적 전개:</strong> 빌리프, 더페이스샵(TFS), 닥터그루트 등 북미 현지 고객 호응 브랜드 중심 성장 모멘텀 확보. 최근 양수한 프라엘 브랜드를 활용한 홈뷰티 디바이스 해외 사업 육성 계획. 3분기 북미 매출은 LG 브랜드의 호조에 힘입어 <strong>두 자릿수 성장세로 진입</strong>했으며, <strong>매출 규모 면에서 중국 사업을 처음으로 추월</strong>했습니다. 북미 디지털 매출은 아마존 프라임 데이 성과 등에 힘입어 전년 동기 대비 <strong>190% 성장</strong>하며 분기별 성장세가 가속화되고 있습니다.</li>
+            <li><strong>'더 후' 브랜드 에쿼티 제고 위한 중국향 유통 정비 과감하고 확고하게 진행:</strong> 3분기부터 면세 물량 조절을 본격화하면서 전통 채널의 실적 부진이 확대되었으나, 이러한 노력으로 중국 내 유통 건전성이 점진적으로 개선되고 있어 중장기적으로는 시장 안정화를 위한 기반이 마련되고 있다고 판단하고 있습니다.</li>
             <li><strong>유망 인디 브랜드 발굴, 투자 협업 적극 추진:</strong> 인디 브랜드의 성장 변동성 및 지속 가능성 리스크를 종합적으로 고려하여 투자 대상 선별.</li>
         </ol>
 
         <h3>3.2. 하반기 및 중장기 전망</h3>
         <ul>
-            <li><strong>전사 실적:</strong> 강도 높은 뷰티 사업 체질 개선으로 하반기 실적은 <strong>일시적으로 위축</strong>될 것으로 예상됩니다. 특히 3분기 수익성 트렌드는 2분기 대비 <strong>더욱 보수적으로 예상</strong>되며, 뷰티 사업의 적자 폭 확대가 불가피할 것입니다.</li>
-            <li><strong>면세점 매출:</strong> 중국향 물량 조절 강도 높게 추진됨에 따라 연간 가이던스를 <strong>30% 이상 역성장</strong>으로 하향 조정했습니다.</li>
-            <li><strong>중국 시장:</strong> 상반기까지 유의미한 회복 시그널 부재. 럭셔리 시장 경쟁 심화로 여전히 쉽지 않은 상황이며, 마케팅 효율성 제고를 통한 수익성 안정화에 집중할 것입니다. <strong>중국 흑자 전환은 내년 상반기 중으로 전망.</strong></li>
-            <li><strong>뷰티 수익성 정상화:</strong> 3분기 뷰티 수익성 추이 보수적 예상. 빠르면 올 4분기, 늦어도 내년 3분기 내 정상화 예상.</li>
-            <li><strong>북미/일본 매출:</strong> 국내 사업 구조 전환 가속화에 따른 전통 채널 매출 역성장 확대에도 불구하고, 닥터그루트, 유시몰 등 생활용품 성과가 두드러지고 있는 북미, 일본 매출은 <strong>하반기에도 성장세 지속 예상.</strong></li>
+            <li><strong>전사 실적:</strong> 강도 높은 뷰티 사업 체질 개선으로 하반기 실적은 <strong>일시적으로 위축</strong>될 것으로 예상됩니다. 특히 3분기 수익성 트렌드는 2분기 대비 <strong>더욱 보수적으로 예상</strong>되었고, 실제 뷰티 사업의 적자 폭 확대가 불가피했습니다. 4분기에는 강도 높은 뷰티 사업 구조 재정비의 영향이 지속되는 가운데, 현재 추진 중인 국내외 인력 효율화를 포함하여 전사적인 경영 체계 정비에 따른 <strong>일회성 비용이 전년 대비 크게 증가할 것으로 예상</strong>됩니다.</li>
+            <li><strong>면세점 매출:</strong> 중국향 물량 조절 강도 높게 추진됨에 따라 연간 가이던스를 <strong>30% 이상 역성장</strong>으로 하향 조정했습니다. 면세 물량 조정은 <strong>내년 상반기 중 종료를 목표</strong>로 하고 있으며, 백화점 등 오프라인 매장 효율화는 지속 추진할 예정입니다.</li>
+            <li><strong>중국 시장:</strong> 상반기까지 유의미한 회복 시그널 부재. 럭셔리 시장 경쟁 심화로 여전히 쉽지 않은 상황이며, 마케팅 효율성 제고를 통한 수익성 안정화에 집중할 것입니다. <strong>중국 흑자 전환은 내년 상반기 중으로 전망.</strong> 올해 광군제 성과 변수가 있지만, 작년 4분기 높은 기저를 감안할 때 성장을 기대하기는 어려울 것으로 예상됩니다. 수익성의 경우 직전 분기 대비 적자 규모가 축소되는 트렌드는 올해도 유사할 것으로 보입니다.</li>
+            <li><strong>뷰티 수익성 정상화:</strong> 3분기 뷰티 수익성 추이 보수적 예상. 빠르면 올 4분기, 늦어도 내년 3분기 내 정상화 예상. 4분기에는 3분기 대비 적자 규모는 축소될 것으로 예상됩니다. 다만, 희망퇴직 등 구조조정 작업 진행에 따른 일회성 비용을 고려할 필요가 있습니다.</li>
+            <li><strong>북미/일본 매출:</strong> 국내 사업 구조 전환 가속화에 따른 전통 채널 매출 역성장 확대에도 불구하고, 닥터그루트, 유시몰 등 생활용품 성과가 두드러지고 있는 북미, 일본 매출은 <strong>하반기에도 성장세 지속 예상.</strong> 특히 4분기 북미 사업은 LG 브랜드 중심으로 디지털 매출의 세 자릿수 성장세가 지속될 전망입니다.</li>
             <li><strong>북미 디지털 매출:</strong> 상반기 이미 연간 가이던스 크게 상회. 틱톡 샵과 아마존 간의 선순환 구조 기반으로 <strong>하반기에도 세 자릿수 고성장 전망.</strong></li>
             <li><strong>닥터그루트 북미 성과:</strong> 공격적인 프로모션 위주 디지털 채널에서 프리미엄 가격대로 과도한 할인 없이 세 자릿수 성장 달성. 하반기에도 브랜드 고유 포지셔닝 강화 및 마케팅 투자 확대를 통해 미래 성장 동력 입지 강화 계획. 특히 코스트코 온라인 입점에 이어 9월 말 오프라인 입점까지 확정되며 북미 시장 내 브랜드 인정을 의미하며, 향후 성장에 긍정적입니다.</li>
             <li><strong>중장기 로드맵:</strong> 해외 사업 중심으로 드라이브를 걸 계획입니다. 중국 수익성 안정화와 함께 북미, 일본 등 비중국 지역에서 빠르게 이익 창출 구조를 만들어 기여도를 높이는 것이 큰 방향성입니다. 과거 북미 시장 대응에 있어 시기적인 아쉬움이 있었으나, 현재는 비중국에 대한 전략 방향성이 확고하며, 아마존 등 디지털 채널을 통한 자체 브랜드 성장 동력 확보에 집중하고 있습니다.</li>
+            <li><strong>HDB 및 음료 4분기 전망:</strong> 3분기 예상보다 호조세를 보였으나, 4분기는 상대적으로 수요가 약한 분기인 만큼 보수적 접근이 필요합니다. HDB는 북미, 일본 등 해외 사업 강화를 위한 마케팅비 확대를 고려할 필요가 있으며, 음료 사업은 계절적 비수기 진입 등으로 매출 감소가 예상됩니다.</li>
         </ul>
 
-        <h3>3.3. M&A 전략</h3>
+        <h3>3.3. 새로운 리더십 체제 및 경영 효율화</h3>
+        <p>금요일 오전 개최된 임시 주주총회 및 이사회에서 10월 1일 자로 당사 CEO로 부임하신 <strong>이선주 사장님이 신규 사내이사 및 대표이사로 공식 선임</strong>되었습니다. 새로운 리더십 체제 하에서 당사는 강화된 글로벌 경쟁력과 혁신적인 사업 전략을 기반으로 미래 성장 동력을 확보해 나갈 계획입니다.</p>
+        <p>무엇보다 당사의 핵심 가치와 비전은 흔들림 없이 유지하되, <strong>선택과 집중을 최우선 원칙</strong>으로 조직 전반의 재편과 변화를 적극적으로 추진하고자 합니다. 현재 강도 높게 추진 중인 사업 및 조직 재정비 작업이 반드시 의미 있는 결실로 이루어질 수 있도록 철저히 관리하고, 그 과정에서 본질적인 경쟁력 강화에 필요한 과제들을 놓치지 않도록 노력하겠습니다.</p>
+        <p>또한, 한층 더 민첩하고 효율적인 조직 체계를 구축하여 새로운 출발을 위한 기반을 단단히 하고 글로벌 경쟁력 강화와 미래 성장의 가속화를 반드시 실현해 나가도록 하겠습니다. 현재 2026년 사업 계획을 수립 중이며, 내년도 전사 방향성을 비롯한 주요 사업 정상화 시점은 <strong>내년 초 4분기 실적 발표 때 공유</strong>될 예정입니다. 당사는 전반적인 경영 효율화와 사업 경쟁력 강화를 위해 필요한 사항들을 적극적으로 검토하고 있으며, 향후 새로운 도약을 위한 기반 구축이 필요하다고 판단되는 부분에 대해서는 과감하고 선제적으로 결정해 나갈 계획입니다.</p>
+
+        <h3>3.4. M&A 전략</h3>
         <ul>
             <li>M&A는 계속 검토 중이며, 최우선 고려 사항은 <strong>해외 사업 확대 시너지</strong>입니다. 힌스 인수 목적도 일본 사업 확대였던 것처럼, 해외 확장 가능성이 높은 회사나 브랜드를 우선적으로 보고 있습니다.</li>
             <li>획기적인 도약을 위한 <strong>조 단위 규모의 대규모 M&A 가능성도 충분히 고려</strong>하고 있습니다. 다만, 가격 대비 효율성 및 지속 가능성을 신중하게 검토할 것입니다.</li>
             <li>현재는 기존 사업 성장 및 M&A를 통한 신성장 동력 확보 등 <strong>근본적인 기업 가치 개선을 최우선</strong>으로 고려하고 있습니다.</li>
         </ul>
 
-        <h3>3.4. LG 지주사의 관심</h3>
+        <h3>3.5. LG 지주사의 관심</h3>
         <ul>
             <li>현재 9월 말부터 11월까지가 내년 사업 계획 및 중장기 사업 플랜을 수립하고 그룹에 정기적으로 보고하는 시기이므로, LG생활건강의 실적 변화가 큰 만큼 그룹의 관심이 매우 높은 상황입니다. 경영진 평가 등 중요한 시기입니다.</li>
         </ul>
         <p>LG생활건강은 과거 전통 채널 구조 의존 방식을 넘어 시장 흐름에 민첩하게 대응하는 유연한 체제 구축을 통해 전반적인 뷰티 사업 체질 개선이 완료되면 새로운 도약이 가능할 것으로 기대하고 있습니다. 경영진은 불확실한 시장 환경 속에서도 지속 가능한 성장 기반 확보에 집중하고, 성장통이 최대한 단기간에 마무리될 수 있도록 최선을 다하겠다고 다짐했습니다.</p>
 
         <h2>4. 질의응답 (Q&A)</h2>
-        <p>IR 팀장 김현화님은 사전에 접수된 질문 중 공통적으로 궁금해하는 부분 및 2분기 실적에 대해 회사가 중요하게 생각하는 내용 위주로 답변했으며, 3분기 프리뷰 회의에서는 추가적인 심화 질의응답이 진행되었습니다.</p>
+        <p>IR 팀장 김현화님은 사전에 접수된 질문 중 공통적으로 궁금해하는 부분 및 실적, 전략에 대해 회사가 중요하게 생각하는 내용 위주로 답변했습니다.</p>
 
         <h3>4.1. 주주 환원 정책 (중간 배당 및 자사주 소각 이행 계획)</h3>
         <ul>
@@ -578,20 +690,26 @@ li {
             <li><strong>추가 자사주 매입/소각:</strong> 현재는 기존 사업 성장 및 M&A를 통한 신성장 동력 확보 등 <strong>근본적인 기업 가치 개선을 최우선</strong>으로 고려. 2027년까지 보유 자사주 전량 소각 후, 향후 주가 장기 성장 필요 시 추가 검토.</li>
             <li><strong>배당 성향 확대:</strong> 작년 25%에서 올해부터 30%로 상향. 투자, 캐시플로우, 재무 구조, 배당 안정성 등 종합 판단하여 필요 시 확대 검토.</li>
             <li><strong>현금성 자산:</strong> 25년 6월 말 기준 약 <strong>1조 원 보유.</strong> 자회사 추가 지분 인수, 브랜드 투자, M&A 등 미래 성장 동력 확보에 활용 계획.</li>
-            <li><strong>M&A 추진:</strong> K뷰티 흥행으로 다양한 딜 있으나, 밸류에이션 부담 및 빠르게 변하는 트렌드로 브랜드 수명 짧아지는 상황 고려하여 <strong>신중하게 검토.</strong> 최근 검토 건들은 당사 기준 미달로 미체결. 적극적인 기조 유지하며 내부 기준 부합 시 과감히 투자 계획. 획기적인 도약을 위한 <strong>조 단위 규모의 대규모 M&A 가능성도 충분히 고려</strong>하고 있습니다. (자세한 내용은 3.3 M&A 전략 참조)</li>
+            <li><strong>M&A 추진:</strong> K뷰티 흥행으로 다양한 딜 있으나, 밸류에이션 부담 및 빠르게 변하는 트렌드로 브랜드 수명 짧아지는 상황 고려하여 <strong>신중하게 검토.</strong> 최근 검토 건들은 당사 기준 미달로 미체결. 적극적인 기조 유지하며 내부 기준 부합 시 과감히 투자 계획. 획기적인 도약을 위한 <strong>조 단위 규모의 대규모 M&A 가능성도 충분히 고려</strong>하고 있습니다. (자세한 내용은 3.4 M&A 전략 참조)</li>
         </ul>
 
-        <h3>4.3. 뷰티 디바이스 사업 계획 및 향후 전략</h3>
+        <h3>4.3. 뷰티 디바이스 사업 현황 (LG 프라엘)</h3>
+        <p>6월 말 최초 출시한 LG 프라엘 갈바닉 부스터는 안정적인 판매를 이어가고 있으며, 프라엘 브랜드에 대한 고객 관심도도 빠르게 높아지고 있습니다.</p>
         <ul>
-            <li><strong>시장 진출 배경:</strong> 빠르게 성장 중인 뷰티 디바이스 시장에 본격 진출하여 화장품 제조와 뷰티테크 간 융합 효과 극대화.</li>
-            <li><strong>브랜드 전략:</strong> 단기간 내 시장 대응력 높이기 위해 LG전자 미용기기 브랜드 <strong>LG 프라엘 양수</strong> 및 활용. 신규 디바이스와 전용 화장품 브랜드 출시.</li>
-            <li><strong>제품 출시 및 시장 반응:</strong> 6월 첫 출시된 '슈퍼폼 라인' (갈바닉 부스터, 글라스, 라이스크, 라이드노 앰플 세럼, 립 세럼, 링크 스파렛 3종) 매출 반영. 출시 직후 인플루언서 협업 이벤트 통해 <strong>준비 물량 완판</strong> 등 매우 긍정적 반응. 디바이스와 화장품 연계 사용법 확산으로 수요 지속 증가.</li>
-            <li><strong>경쟁력 확보:</strong> 고성능 디바이스와 전문 화장품 간 시너지를 기반으로 전문가 수준의 홈 케어 효과 제공. 당사의 뷰티 및 글로벌 마케팅 전문성이 큰 장점으로 작용.</li>
+            <li><strong>시장 진출 배경:</strong> 빠르게 성장 중인 뷰티 디바이스 시장에 본격 진출하여 화장품 제조와 뷰티테크 간 융합 효과 극대화. (2Q 내용)</li>
+            <li><strong>브랜드 전략:</strong> 단기간 내 시장 대응력 높이기 위해 LG전자 미용기기 브랜드 <strong>LG 프라엘 양수</strong> 및 활용. 신규 디바이스와 전용 화장품 브랜드 출시. (2Q 내용)</li>
+            <li><strong>제품 출시 및 시장 반응 (2Q):</strong> 6월 첫 출시된 '슈퍼폼 라인' (갈바닉 부스터, 글라스, 라이스크, 라이드노 앰플 세럼, 립 세럼, 링크 스파렛 3종) 매출 반영. 출시 직후 인플루언서 협업 이벤트 통해 <strong>준비 물량 완판</strong> 등 매우 긍정적 반응. 디바이스와 화장품 연계 사용법 확산으로 수요 지속 증가.</li>
+            <li><strong>고객 관심도 상승 (3Q):</strong> 네이버 검색량은 6월 대비 8월에 60% 이상 상승했고 9월, 10월에도 꾸준히 증가세를 이어가고 있으며, 이는 소비자들의 제품에 대한 호기심과 구매 의사 확대를 반영하는 긍정적인 신호로 판단됩니다.</li>
+            <li><strong>제품 라인업 및 채널 확장 (3Q):</strong> 프리미엄 홈 케어 시장을 본격적으로 공략하기 위해 최근 10월 두 번째 프라엘 신제품인 <strong>고주파 멀티 디바이스 '슈퍼폼 서마샷 얼티밋'</strong>을 출시하며 뷰티 테크 라인업을 확대했습니다. 현재는 네이버와 자사 직영몰을 중심으로 판매 중이며, 향후 제품 특성에 맞는 프리미엄 유통 채널 확대도 고려하고 있습니다.</li>
+            <li><strong>서마샷 얼티밋 초기 반응 (3Q):</strong> 출시 초기부터 고무적인 반응을 얻고 있습니다. 고주파 외에도 EP, EMS, MC 기전을 탑재해 전문 관리샵 수준의 케어가 가능한 점이 차별화 포인트로, 고관여 인플루언서와 소비자들로부터 높은 만족도를 이끌어내고 있습니다. 특히 단순한 검색량뿐 아니라 소셜 언급량도 뚜렷하게 상승하고 있으며, 서마샷 얼티밋 출시 이후인 9월, 10월 평균 언급량은 1월에서 8월 대비 20% 이상 증가하며 10월에는 올해 최고치를 기록했습니다. 소셜 언급량은 단순한 화제성을 넘어 실제 구매 의향으로 이어지는 주요 지표로 평가되기 때문에 이러한 증가는 소비자 관심의 질적 심화를 보여주며 LG 프라엘의 브랜드 파워가 빠르게 확대되고 있음을 시사합니다.</li>
+            <li><strong>글로벌 시장 진출 (3Q):</strong> 10월 초에는 LG 프라엘의 첫 글로벌 런칭 제품인 <strong>슈퍼폼 갈바닉 부스터를 미국 아마존과 틱톡 샵에 동시 입점</strong>시키며 현지 MZ세대를 중심으로 디지털 마케팅을 본격화했습니다. 무게 47g의 초소형 디바이스로 갈바닉 기술을 적용해 화장품 유효 성분 흡수율을 최대 182% 향상시킨 것이 특징입니다. 79달러라는 합리적인 가격대와 함께 글로우 스킨 연출 효과로 좋은 반응을 얻고 있으며, 특히 10월 셋째 주에는 미국 아마존 핫 뉴 릴리즈에서 주름 안티에이징 디바이스 부문 1위를 기록했습니다.</li>
+            <li><strong>경쟁력 확보:</strong> 고성능 디바이스와 전문 화장품 간 시너지를 기반으로 전문가 수준의 홈 케어 효과 제공. 당사의 뷰티 및 글로벌 마케팅 전문성이 큰 장점으로 작용. (2Q 내용)</li>
             <li><strong>향후 전략:</strong>
                 <ul>
-                    <li><strong>제품 확대:</strong> 갈바닉 부스터에 이어 하반기 신제품, 이후 단계적 라인업 확장.</li>
-                    <li><strong>채널 확대:</strong> 현재 네이버 자사몰 중심 운영, 하반기 중 글로벌 채널 론칭 시작으로 온/오프라인 유통망 점진적 확대.</li>
-                    <li><strong>뷰티 생태계 구축:</strong> 화장품-디바이스-인공지능으로 이어지는 뷰티 생태계 구축 통해 뷰티 테크 사업 고도화. LG생활건강만의 화장품 R&D 및 글로벌 마케팅 역량 접목하여 진일보한 피부 관리 솔루션 선보일 계획.</li>
+                    <li><strong>제품 확대:</strong> 갈바닉 부스터에 이어 하반기 신제품, 이후 단계적 라인업 확장. (2Q 내용)</li>
+                    <li><strong>채널 확대:</strong> 현재 네이버 자사몰 중심 운영, 하반기 중 글로벌 채널 론칭 시작으로 온/오프라인 유통망 점진적 확대. (2Q 내용)</li>
+                    <li><strong>뷰티 생태계 구축:</strong> 화장품-디바이스-인공지능으로 이어지는 뷰티 생태계 구축 통해 뷰티 테크 사업 고도화. LG생활건강만의 화장품 R&D 및 글로벌 마케팅 역량 접목하여 진일보한 피부 관리 솔루션 선보일 계획. (2Q 내용)</li>
+                    <li><strong>지속적인 강화 (3Q):</strong> 인플루언서 협업, SNS 마케팅, 숏폼 콘텐츠 강화를 통해 브랜드 인지도를 더욱 높이고 신규 오프라인 채널 확대도 지속 추진하여 고객 접점을 강화해 나갈 계획입니다. 또한 전문 관리샵 수준의 효능을 가정에서도 간편하게 경험할 수 있는 차세대 신제품 개발을 가속화하여 뷰티 테크 혁신의 깊이를 지속적으로 확장해 나가겠습니다.</li>
                 </ul>
             </li>
         </ul>
@@ -601,14 +719,15 @@ li {
         <ul>
             <li><strong>빌리프 성과:</strong>
                 <ul>
-                    <li><strong>국내:</strong> 4월 올리브영 론칭 '프로즌 크림'이 성장 주도. 올영 선 론칭 쇼케이스, 올영 페스타, 올영픽 행사 통해 브랜드 인지도 높임.</li>
-                    <li><strong>해외:</strong> 북미에서 고성장 (북미 Q&A에서 상세 설명).</li>
+                    <li><strong>국내 (2Q):</strong> 4월 올리브영 론칭 '프로즌 크림'이 성장 주도. 올영 선 론칭 쇼케이스, 올영 페스타, 올영픽 행사 통해 브랜드 인지도 높임.</li>
+                    <li><strong>국내 (3Q):</strong> 8월 아쿠아밤 크로존 크림 성수 단독 팝업 스토어에 9일간 약 1만 명 이상 방문객 유치, 브랜드 언급량 40% 이상 증가 등 바이럴 효과로 매출 성장 기여.</li>
+                    <li><strong>해외 (2Q):</strong> 북미에서 고성장 (북미 Q&A에서 상세 설명).</li>
                 </ul>
             </li>
             <li><strong>VDL 성과:</strong>
                 <ul>
-                    <li><strong>국내:</strong> 5월 출시 'VDL 커버 스테인 하이커버 쿠션'이 6월 올리브영 행사에서 큰 호응 얻으며 올리브영 색조 탑 브랜드 진입 교두보 마련.</li>
-                    <li><strong>일본:</strong> 온/오프라인 마케팅 강화로 MG 고객층 접점 확대하며 <strong>200% 이상 성장.</strong> 일본 뷰티 플랫폼 앱 코스메 도쿄 팝업 스토어 운영, 큐텐 메가와리 행사 참여로 온라인 판매 채널 입지 강화.</li>
+                    <li><strong>국내 (2Q):</strong> 5월 출시 'VDL 커버 스테인 하이커버 쿠션'이 6월 올리브영 행사에서 큰 호응 얻으며 올리브영 색조 탑 브랜드 진입 교두보 마련.</li>
+                    <li><strong>일본 (2Q):</strong> 온/오프라인 마케팅 강화로 MG 고객층 접점 확대하며 <strong>200% 이상 성장.</strong> 일본 뷰티 플랫폼 앱 코스메 도쿄 팝업 스토어 운영, 큐텐 메가와리 행사 참여로 온라인 판매 채널 입지 강화.</li>
                 </ul>
             </li>
             <li><strong>향후 계획:</strong> 스킨케어 시장뿐 아니라 색조 시장 대응 확대, 각 브랜드별 신규 히어로 아이템 지속 육성, 제품 포트폴리오 다변화 적극 추진.</li>
@@ -619,33 +738,34 @@ li {
         <ul>
             <li><strong>유시몰 (Euthymol) 일본 성과:</strong>
                 <ul>
-                    <li><strong>진출 전략:</strong> K뷰티 관심도 높아진 2024년, 오랄 케어 컨셉트에 뷰티 컨셉을 더한 새로운 개념 소구점으로 일본 시장 진출.</li>
-                    <li><strong>차별점:</strong> 기능성 경쟁사와 차별화 위해 차별화된 페이스트 질감, 일본 전용 피치 플로럴 민트 향, 영국 헤리티지 감성 프리미엄 디자인 강조.</li>
-                    <li><strong>성공 요인:</strong> 젊은 소비자 사이 화제성/바이럴 영향력 큰 오프라인 버라이어티 샵 선행 론칭 후 온라인 마케팅 확대 선순환 구조. 25년 상반기 말 기준 1만 개 이상 점포 입점, 주요 채널/행사 상위 판매 실적 기록.</li>
-                    <li><strong>하반기 전망:</strong> 마케팅 투자 확대로 시장 지위 확대, 매출 역시 상반기에 이어 <strong>세 자릿수 고성장세 지속 전망.</strong></li>
+                    <li><strong>진출 전략 (2Q):</strong> K뷰티 관심도 높아진 2024년, 오랄 케어 컨셉트에 뷰티 컨셉을 더한 새로운 개념 소구점으로 일본 시장 진출.</li>
+                    <li><strong>차별점 (2Q):</strong> 기능성 경쟁사와 차별화 위해 차별화된 페이스트 질감, 일본 전용 피치 플로럴 민트 향, 영국 헤리티지 감성 프리미엄 디자인 강조.</li>
+                    <li><strong>성공 요인 (2Q):</strong> 젊은 소비자 사이 화제성/바이럴 영향력 큰 오프라인 버라이어티 샵 선행 론칭 후 온라인 마케팅 확대 선순환 구조. 25년 상반기 말 기준 1만 개 이상 점포 입점, 주요 채널/행사 상위 판매 실적 기록.</li>
+                    <li><strong>하반기 전망 (2Q):</strong> 마케팅 투자 확대로 시장 지위 확대, 매출 역시 상반기에 이어 <strong>세 자릿수 고성장세 지속 전망.</strong></li>
+                    <li><strong>3분기 성과 (3Q):</strong> 상반기에 이어 3분기에도 일본, 북미 등 주력 해외 지역에서 고성장세를 이어갔습니다. 영국 해리트리 브랜드와의 콜라보 제품이 올리브영을 중심으로 국내 최대 매출을 달성했으며, 일본 메가와비에서도 좋은 성과를 달성했습니다.</li>
                 </ul>
             </li>
-            <li><strong>닥터그루트 북미 성과:</strong> (북미 Q&A에서 상세 설명) 특히 코스트코 온라인 입점(1분기)에 이어 9월 말 오프라인 입점까지 확정되며 북미 시장 내 브랜드 인지도를 인정받고 있습니다.</li>
+            <li><strong>닥터그루트 북미 성과:</strong> (북미 Q&A에서 상세 설명) 특히 코스트코 온라인 입점(1분기)에 이어 9월 말 오프라인 입점까지 확정되며 북미 시장 내 브랜드 인지도를 인정받고 있습니다. 3분기에도 틱톡 기반의 인플루언서 마케팅을 강화하며 성장세를 가속화했습니다. 대형 인플루언서와의 협업을 통해 콘텐츠 전환율을 극대화하고 틱톡 샵과 연계해 신규 콘텐츠를 생성하며 브랜드 노출을 확대했습니다. 이러한 전략을 통해 3분기 북미 닥터그루트 매출은 <strong>네 자릿수 성장</strong>을 기록했습니다.</li>
         </ul>
 
         <h3>4.6. 북미 사업 성과 및 하반기 전망</h3>
-        <p>2분기 북미 사업은 디지털 채널 중심으로 성과. 북미 사업 매출 성장을 가속화하기 위해 올해 상반기까지 아마존 사업을 B2B에서 B2C 구조로 전환 완료. 틱톡, 구글 등 외부 플랫폼 적극적 광고 활동 전개로 브랜드 인지도 및 신뢰도 크게 향상. 북미 아마존 채널과 틱톡 샵까지 디지털 채널 전반 성장 가속화. <strong>북미 디지털 매출은 올해 상반기 만에 작년 연간 매출 수준 달성.</strong></p>
+        <p>3분기 북미 매출은 당사가 전략적으로 육성해 온 LG 브랜드 사업의 성과에 힘입어 <strong>처음으로 두 자릿수 성장세</strong>를 달성했습니다. 온·오프라인 모두에서 브랜드 인지도와 판매량 확대로 채널 다변화 성과도 가시화되고 있습니다.</p>
         <ul>
-            <li><strong>2분기 북미 아마존 전체 매출:</strong> 전년 대비 <strong>120% 성장</strong> (25년 가이던스 70% 이상 성장 목표 크게 초과).</li>
-            <li><strong>주목할 만한 성과 요인:</strong>
+            <li><strong>2분기 북미 아마존 전체 매출 (2Q):</strong> 전년 대비 <strong>120% 성장</strong> (25년 가이던스 70% 이상 성장 목표 크게 초과).</li>
+            <li><strong>주목할 만한 성과 요인 (2Q):</strong>
                 <ul>
                     <li><strong>틱톡 샵의 빠른 성장세:</strong> 아마존 매출의 선행 지표 역할.</li>
                     <li><strong>프리미엄 포지션:</strong> 빌리프, 닥터그루트 모두 30~40달러 수준의 프리미엄 가격대 베스트셀러 제품. 저가 공세 심한 북미 아마존에서 과도한 가격 할인 없이 창출한 성과.</li>
                 </ul>
             </li>
-            <li><strong>빌리프 성과:</strong>
+            <li><strong>빌리프 성과 (3Q):</strong> 아쿠아밤, 쿨링 아이젤, 아쿠아밤 리프팅 아이젤 등 히어로 제품을 중심으로 아마존 프라임데이 판매 호조를 보이며 3분기 북미 아마존 매출이 <strong>세 자릿수 성장</strong>했습니다. 이러한 성과에 힘입어 신규 히어로 제품인 리프팅 아이젤도 7월 얼타 뷰티 전점에 정식 론칭하며 유통망을 확대했습니다.</li>
+            <li><strong>더페이스샵 성과 (3Q):</strong> 클린 뷰티 브랜드 더페이스샵은 아마존 등 디지털 채널에서 미감수 브라이트 포밍 클렌저, 브라이트 클렌징 티슈 등 주력 제품 중심으로 고성장을 이어갔습니다.
                 <ul>
-                    <li>'아쿠아밤 아이젤' 틱톡 샵 론칭. 틱톡 유명 인플루언서 콘텐츠 700만 뷰 기록.</li>
-                    <li>틱톡 샵 6월 아이 카테고리 1위, 뷰티앤 퍼스널 케어 카테고리 전체 16위.</li>
-                    <li>틱톡 샵 성과 바탕으로 아마존 채널에서도 아이트리트먼트 카테고리 2위 기록.</li>
+                    <li><strong>미감수 라인:</strong> 북미 아마존에서 월 평균 약 3만 3천 개가 판매될 정도로 인기를 얻고 있으며, 7월 아마존 프라임데이 기간에는 약 5만 1천 개가 판매되어 클렌징 오일 2위, 클렌징 티슈 3위, 클렌징 폼 8위 등 카테고리 상위권을 기록했습니다.</li>
+                    <li><strong>신제품 출시 및 채널 확장:</strong> 최근 이중 튜브 형태의 신제품 '미감수 브라이트 밀크 젤리 더블 클렌징 폼'을 출시해 북미 틱톡 샵에 런칭하며 제품 포트폴리오를 확장했습니다. 이러한 디지털 채널에서의 성과를 기반으로 오프라인 고객 접점도 빠르게 확대되고 있습니다. 지난해 캐나다 월마트에 이어 미국 월그린스, CVS 등에 미감수 라인을 론칭했으며, 3분기에는 월그린스 입점 점포를 기존 200개에서 1,745개로 확대하고, 미국 전역 약 1,900여 개 매장을 보유한 타겟에 미감수 6종을 신규 입점시켰습니다. 최근 10월에는 캐나다 코스트코에 입점하여 선보인 미감스 제트가 좋은 반응을 얻고 있습니다.</li>
                 </ul>
             </li>
-            <li><strong>닥터그루트 성과:</strong>
+            <li><strong>닥터그루트 성과 (2Q):</strong>
                 <ul>
                     <li>2023년 북미 시장 진출 이후 인플루언서 협업, PR 커버리지 확대, 이커머스 플랫폼 내 광고/판매 최적화, 성과 중심 캠페인 일관되게 추진.</li>
                     <li>2025년 상반기 기준 북미 닥터그루트 전체 매출 전년 동기 대비 <strong>800% 이상 폭발적 성장.</strong> 주요 판매 채널은 아마존, 틱톡 샵 등 온라인 채널.</li>
@@ -655,17 +775,35 @@ li {
                     <li>프라임데이에서 주요 SKU 카테고리 내 판매 순위 2위 진입. 코스트코 전 매장 입점 확정.</li>
                 </ul>
             </li>
+            <li><strong>닥터그루트 성과 (3Q):</strong> 올해 상반기까지 800% 이상 성장세를 보여온 닥터그루트는 3분기에도 틱톡 기반의 인플루언서 마케팅을 강화하며 성장세를 가속화했습니다. 대형 인플루언서와의 협업을 통해 콘텐츠 전환율을 극대화하고 틱톡 샵과 연계해 신규 콘텐츠를 생성하며 브랜드 노출을 확대했습니다. 이러한 전략을 통해 3분기 북미 닥터그루트 매출은 <strong>네 자릿수 성장</strong>을 기록했습니다.</li>
             <li><strong>TCS(더크림샵) 전략:</strong> 인수 후 성장했으나 높은 베이스와 코로나 이후 트렌드 변화(오리지널 K뷰티 선호)로 약세. 신제품 개발 등으로 회복 노력 중이나 올해까지는 쉽지 않을 전망.</li>
-            <li><strong>하반기 전망:</strong>
+            <li><strong>하반기 전망 (2Q):</strong>
                 <ul>
                     <li>소셜 미디어 및 콘텐츠 마케팅 투자 확대로 온라인 채널 리더십 강화. 주요 리테일 채널 입점 확대 추진.</li>
                     <li>북미 디지털 마케팅 투자 확대로 <strong>하반기 아마존 매출 역시 세 자릿수 성장 지속 전망.</strong></li>
                     <li>아마존 스킨케어 시장 경쟁 심화로 헤어케어 시장 신규 기회 확보 움직임 감지. 선제적 시장 트렌드 센싱 통해 닥터그루트 인지도를 발판 삼아 가격 프로모션 대신 브랜드 신뢰도 및 제품력 기반 경쟁 우위 확보. K프리미엄 헤어케어 브랜드 입지 더욱 탄탄하게 구축 계획.</li>
                 </ul>
             </li>
+            <li><strong>향후 계획 (3Q):</strong> 향후에도 당사는 북미에서 주요 육성 브랜드 중심으로 온·오프라인 전 채널에서의 제품군 확장과 고객 접점 확대를 적극적으로 추진해 나갈 계획이며, 현재 긍정적으로 논의되고 있는 추가적인 오프라인 입점 계획들도 다양하게 있는 만큼 향후 구체적인 사항들이 확정되는 시점에 공유할 예정입니다.</li>
         </ul>
 
-        <h3>4.7. 뷰티 사업 구조조정 관련 심화 질의응답 (3분기 프리뷰)</h3>
+        <h3>4.7. 더 후 브랜드 현황 및 광군제 동향 (3분기 발표)</h3>
+        <h4>4.7.1. 더 후 리브랜딩 현황</h4>
+        <p>더 후는 2023년 하반기 선기단 리뉴얼을 시작으로 지난 2년간 대대적인 리브랜딩을 진행하며 핵심 제품 라인 강화, 앰버서더 교체, 카테고리 다변화를 통해 럭셔리 스킨케어 시장 내 입지를 공고히 하고 있습니다.</p>
+        <ul>
+            <li><strong>핵심 제품 라인 강화:</strong> 청계산 중심의 주력 매출 기반 위에 비첩과 환유 라인을 중심으로 글로벌 확장을 적극 전개하고 있습니다. 노화 완화 핵심 성분인 NAD를 담은 비첩 자생 에센스를 중심으로 고객 커뮤니케이션을 강화하고, 선 케어 시장에 적극 대응하고자 다양한 신제품을 출시하여 제품 및 브랜드 경쟁력을 강화했습니다.</li>
+            <li><strong>글로벌 인지도 확대:</strong>
+                <ul>
+                    <li><strong>북미:</strong> 지난 5월 런칭 이후 환유 크림이 CNN 언더, 스쿼드, 하퍼드 바자 등 주요 매체에 소개되었고, 셰이프 매거진 뷰티 워드 2025에서 베스티 럭셔리 부문을 수상했습니다. 9월부터는 트라이얼 키트를 출시해 고가 제품 접근성을 개선하고 신규 고객 기반을 확대하고 있습니다.</li>
+                    <li><strong>동남아 (베트남 중심):</strong> 틱톡 팔로어 140만 명인 최상위 인플루언서 한나 올라아를 초청한 브랜드 투어, 현지 버스 랩핑, 쇼핑몰 디스플레이, 옥외 전광판 광고 등 다양한 마케팅 활동을 전개하며 프리미엄 이미지를 강화하고 있습니다. 베트남 시장에서 더 후의 성장세는 이미 가시화되고 있으며, 대표 제품들이 높은 인기를 얻고 10월에는 쇼피 베트남 및 동남아시아에서 프리미엄 뷰티 브랜드 1위를 달성했습니다.</li>
+                </ul>
+            </li>
+            <li><strong>국제적 위상 강화:</strong> 최근 경주에서 열린 2025 APEC 정상회의에서 더 후가 공식 협찬 브랜드로 선정되며 K-대표 럭셔리 브랜드로서 글로벌 시장에서 존재감을 확실히 각인시켰습니다. 각국 정상 배우자와 전 세계 주요 기업 CEO들에게는 최고급 시그니처 크림 환유고를 서울시 무형유산 장인이 제작한 나전 칠기함에 담아 증정하며 럭셔리 K-뷰티의 품격을 선보였습니다.</li>
+        </ul>
+        <h4>4.7.2. 올해 광군제 동향</h4>
+        <p>광군제 행사가 아직 종료되지 않은 상황이라 제한적이지만, 당사는 이번 광군제에서도 도우인 채널 중심으로 대응하되 기존 대비 왕홍풀을 보다 다양하게 확대하여 운영했습니다. 현재까지는 전체적인 시장 흐름과 유사한 방향으로 진행되고 있습니다. 전반적인 경쟁 동향은 럭셔리 브랜드 자체의 프로모션보다는 여전히 주요 온라인 플랫폼 간 쿠폰 및 판촉 경쟁이 심화되는 양상을 보이며, 당사의 프로모션 수준도 기존과 크게 다르지 않은 수준입니다.</p>
+
+        <h3>4.8. 뷰티 사업 구조조정 관련 심화 질의응답 (3분기 프리뷰)</h3>
         <ul>
             <li><strong>Q: 면세 채널은 고정비가 적어 매출이 빠져도 영업이익률 유지가 가능하지 않나요?</strong>
                 <ul>
@@ -684,7 +822,7 @@ li {
             </li>
         </ul>
 
-        <h3>4.8. 생활용품/음료 사업 관련 심화 질의응답 (3분기 프리뷰)</h3>
+        <h3>4.9. 생활용품/음료 사업 관련 심화 질의응답 (3분기 프리뷰)</h3>
         <ul>
             <li><strong>Q: 생활용품/음료 3분기가 성수기인가요?</strong>
                 <ul>
@@ -708,7 +846,7 @@ li {
             </li>
         </ul>
 
-        <h3>4.9. 중장기 전략 관련 심화 질의응답 (3분기 프리뷰)</h3>
+        <h3>4.10. 중장기 전략 관련 심화 질의응답 (3분기 프리뷰)</h3>
         <ul>
             <li><strong>Q: 중장기적으로 면세점 축소 후 이전 이익을 회복하기 위한 로드맵은 무엇인가요?</strong>
                 <ul>
@@ -727,13 +865,14 @@ li {
             </li>
         </ul>
 
+
         <div class="insight-box">
             <h3>💡 회의 인사이트</h3>
             <ul>
-                <li><strong>성장통의 심화와 구조적 변화 가속화:</strong> LG생활건강은 2분기에 이어 3분기에도 단기적인 실적 부진을 겪고 있으며, 이는 장기적인 사업 체질 개선을 위한 <strong>선제적이고 강도 높은 구조조정의 영향</strong>이 본격화되고 있기 때문입니다. 면세 채널 물량 조절과 전통 채널 효율화는 단기적인 실적 악화를 초래하지만, 장기적인 브랜드 건전성 확보와 유통 구조 개선을 위한 불가피한 선택으로 판단됩니다.</li>
-                <li><strong>비중국 중심의 글로벌 다변화 전략 확고:</strong> 중국 시장의 구조적 어려움과 불확실성이 지속되는 가운데, 회사는 북미와 일본 시장에서의 성장 동력 확보에 더욱 집중하고 있습니다. 닥터그루트의 코스트코 입점, 유시몰의 일본 시장 선전, 아마존/틱톡 샵 등 디지털 채널의 고성장은 <strong>비중국 해외 시장 다변화 전략이 성공적으로 작동하고 있음</strong>을 보여주는 중요한 지표입니다.</li>
-                <li><strong>뷰티테크 및 M&A를 통한 미래 도약 모색:</strong> LG 프라엘 인수를 통한 뷰티 디바이스 시장 진출은 뷰티테크 분야에서의 새로운 성장 동력을 창출하려는 의지를 보여주며, 이는 미래 뷰티 시장 트렌드에 대한 선제적 대응입니다. 더 나아가, 해외 사업 확장 시너지를 최우선으로 고려하는 <strong>대규모 M&A 가능성 시사</strong>는 현재의 성장통을 넘어 획기적인 기업 가치 제고를 위한 경영진의 강한 의지를 반영합니다.</li>
-                <li><strong>수익성 중심의 내실 강화:</strong> 마케팅 비용의 무한정 확대보다는 효율성을 높이고, 비효율적인 매장을 과감히 정리하는 등 수익성을 최우선으로 고려하는 경영 기조가 뚜렷합니다. 이는 어려운 시장 환경 속에서 내실을 다지고, 장기적으로 견고한 수익 구조를 구축하려는 노력으로 해석됩니다.</li>
+                <li><strong>성장통의 심화와 구조적 변화 가속화:</strong> LG생활건강은 2분기에 이어 3분기에도 단기적인 실적 부진을 겪었으며, 이는 장기적인 사업 체질 개선을 위한 <strong>선제적이고 강도 높은 구조조정의 영향</strong>이 본격화되고 있기 때문입니다. 면세 채널 물량 조절과 전통 채널 효율화는 단기적인 실적 악화를 초래하지만, 장기적인 브랜드 건전성 확보와 유통 구조 개선을 위한 불가피한 선택으로 판단됩니다. 4분기에는 인력 효율화 등 일회성 비용이 예상되나, 뷰티 사업 적자 규모는 점진적으로 축소될 것으로 보입니다.</li>
+                <li><strong>비중국 중심의 글로벌 다변화 전략 확고 및 성공적 초기 신호:</strong> 중국 시장의 구조적 어려움과 불확실성이 지속되는 가운데, 회사는 북미와 일본 시장에서의 성장 동력 확보에 더욱 집중하고 있습니다. <strong>북미 매출이 중국 매출을 처음으로 추월</strong>한 것은 비중국 해외 시장 다변화 전략이 성공적으로 작동하고 있음을 보여주는 중요한 지표입니다. 닥터그루트의 코스트코 입점, 유시몰의 일본 시장 선전, 아마존/틱톡 샵 등 디지털 채널의 고성장은 이러한 전략의 가시적인 성과입니다.</li>
+                <li><strong>뷰티테크 및 M&A를 통한 미래 도약 모색:</strong> LG 프라엘 인수를 통한 뷰티 디바이스 시장 진출은 뷰티테크 분야에서의 새로운 성장 동력을 창출하려는 의지를 보여주며, 이는 미래 뷰티 시장 트렌드에 대한 선제적 대응입니다. 특히 성공적인 초기 시장 반응과 글로벌 확장은 긍정적인 신호입니다. 더 나아가, 해외 사업 확장 시너지를 최우선으로 고려하는 <strong>대규모 M&A 가능성 시사</strong>는 현재의 성장통을 넘어 획기적인 기업 가치 제고를 위한 경영진의 강한 의지를 반영합니다.</li>
+                <li><strong>새로운 리더십의 혁신 의지 및 수익성 중심 내실 강화:</strong> 신임 이선주 사장의 선임과 함께 '선택과 집중'을 통한 전사적인 경영 효율화 및 조직 재편 의지가 강하게 표명되었습니다. 마케팅 비용의 무한정 확대보다는 효율성을 높이고, 비효율적인 매장을 과감히 정리하는 등 수익성을 최우선으로 고려하는 경영 기조가 뚜렷합니다. 이는 어려운 시장 환경 속에서 내실을 다지고, 장기적으로 견고한 수익 구조를 구축하려는 노력으로 해석됩니다.</li>
             </ul>
         </div>
 
@@ -742,21 +881,21 @@ li {
             <ol>
                 <li><strong>뷰티 사업 구조 혁신 가속화 및 수익성 개선:</strong>
                     <ul>
-                        <li><strong>중국향 유통 정비 지속:</strong> '더 후' 브랜드의 건전성을 높이기 위한 중국향 물량 조절을 더욱 강도 높게 추진하고, B2C 채널 중심으로 사업 구조를 재편하며 마케팅 효율성을 제고할 것입니다.</li>
+                        <li><strong>중국향 유통 정비 지속:</strong> '더 후' 브랜드의 건전성을 높이기 위한 중국향 물량 조절을 더욱 강도 높게 추진하고, B2C 채널 중심으로 사업 구조를 재편하며 마케팅 효율성을 제고할 것입니다. 면세 물량 조정은 <strong>내년 상반기 중 종료를 목표</strong>로 합니다.</li>
                         <li><strong>국내 채널 효율화:</strong> 방판, 백화점 등 전통 채널의 효율화 작업을 지속하고, 온라인 및 H&B 채널 중심의 육성을 강화할 것입니다.</li>
                         <li><strong>프리미엄 브랜드 육성:</strong> 빌리프, VDL 등 성장 잠재력이 높은 브랜드를 지속적으로 지원하고, 신규 히어로 아이템 발굴에 주력할 것입니다.</li>
                     </ul>
                 </li>
                 <li><strong>글로벌 비중국 시장 확장 및 투자 확대:</strong>
                     <ul>
-                        <li><strong>북미/일본 시장 집중:</strong> 닥터그루트, 유시몰, 빌리프 등 현지에서 성공적인 반응을 얻고 있는 브랜드에 대한 마케팅 투자를 공격적으로 확대하여 성장 모멘텀을 이어갈 것입니다. 특히 닥터그루트의 코스트코 오프라인 입점 성공을 발판 삼아 추가적인 유통 확대를 모색할 것입니다.</li>
+                        <li><strong>북미/일본 시장 집중:</strong> 닥터그루트, 유시몰, 빌리프, 더페이스샵 등 현지에서 성공적인 반응을 얻고 있는 브랜드에 대한 마케팅 투자를 공격적으로 확대하여 성장 모멘텀을 이어갈 것입니다. 특히 닥터그루트의 코스트코 오프라인 입점 성공을 발판 삼아 추가적인 유통 확대를 모색하고, 더페이스샵의 북미 오프라인 채널 확장을 가속화할 것입니다.</li>
                         <li><strong>디지털 채널 강화:</strong> 아마존, 틱톡 샵 등 디지털 플랫폼에서의 리더십을 공고히 하고, 온라인-오프라인 연계를 통한 고객 접점 확대에 힘쓸 것입니다.</li>
                     </ul>
                 </li>
                 <li><strong>뷰티 디바이스 사업 안착 및 글로벌 확장:</strong>
                     <ul>
-                        <li><strong>LG 프라엘 시너지 극대화:</strong> 미용기기와 전용 화장품 간의 시너지를 통해 홈케어 시장에서의 경쟁 우위를 확보하고, 제품 라인업을 단계적으로 확장할 것입니다.</li>
-                        <li><strong>글로벌 채널 확대:</strong> 하반기 중 글로벌 채널 론칭을 시작으로 해외 시장 진출을 본격화할 계획입니다.</li>
+                        <li><strong>LG 프라엘 시너지 극대화:</strong> 미용기기와 전용 화장품 간의 시너지를 통해 홈케어 시장에서의 경쟁 우위를 확보하고, 제품 라인업을 단계적으로 확장할 것입니다. 특히 '슈퍼폼 서마샷 얼티밋'과 같은 고주파 멀티 디바이스 출시를 통해 프리미엄 라인업을 강화할 것입니다.</li>
+                        <li><strong>글로벌 채널 확대:</strong> 미국 아마존과 틱톡 샵에 '슈퍼폼 갈바닉 부스터'를 성공적으로 론칭한 것을 시작으로, 해외 시장 진출을 본격화하고 인플루언서 마케팅을 강화할 계획입니다.</li>
                     </ul>
                 </li>
                 <li><strong>M&A를 통한 신성장 동력 확보:</strong>
@@ -764,9 +903,10 @@ li {
                         <li>내부 기준에 부합하고 해외 사업 확장 시너지를 극대화할 수 있는 유망 인디 브랜드 발굴 및 대규모 M&A를 적극적으로 검토하여 미래 성장을 위한 투자를 단행할 것입니다.</li>
                     </ul>
                 </li>
-                <li><strong>지속 가능한 성장 기반 재구축 및 그룹과의 소통 강화:</strong>
+                <li><strong>전사적 경영 효율화 및 조직 혁신:</strong>
                     <ul>
-                        <li>단기 실적 변동성을 감내하며 장기적인 관점에서 사업 펀더멘탈을 강화하는 핵심 과제들을 결단력 있게 추진하여, 글로벌 뷰티 시장에서 경쟁력을 회복하고 새로운 도약을 이룰 것입니다. 내년 사업 계획 및 중장기 플랜 수립 시 그룹과의 긴밀한 소통을 통해 컨센서스를 확보할 것입니다.</li>
+                        <li>새로운 리더십 하에 '선택과 집중' 원칙으로 전사적인 경영 체계 정비 및 조직 재편을 추진할 것입니다. 4분기에는 인력 효율화 등 일회성 비용 증가가 예상되지만, 이는 장기적인 경쟁력 강화를 위한 선제적 투자로 보고 과감하게 실행할 것입니다.</li>
+                        <li>2026년 사업 계획을 수립 중이며, 내년 초 4분기 실적 발표 시 전사 방향성 및 주요 사업 정상화 시점을 공유할 예정입니다.</li>
                     </ul>
                 </li>
             </ol>
@@ -774,9 +914,9 @@ li {
 
         <div class="evaluation-box">
             <h3>🎯 회의의 방향성 및 최종 평가</h3>
-            <p>이번 LG생활건강의 통합 회의록은 2분기 실적 부진과 3분기 실적 프리뷰를 통해 <strong>회사가 현재 겪고 있는 성장통의 깊이와, 이를 극복하기 위한 구조적 변화의 강도</strong>를 명확히 보여주었습니다. 특히 뷰티 사업의 전통 채널 의존도를 줄이고 중국 현지 사업의 건전성을 확보하며, 비중국 해외 시장과 디지털 채널에서 새로운 성장 동력을 찾는다는 <em>전략적 방향성은 매우 분명하고 일관적</em>입니다.</p>
-            <p>단기적으로는 뷰티 사업의 적자 확대와 전사 수익성 둔화가 불가피할 것으로 예상되지만, 이는 <strong>미래 성장을 위한 전략적 투자이자 근본적인 체질 개선 과정</strong>으로 이해되어야 합니다. 생활용품과 음료 사업의 해외 시장 선전은 이러한 변화의 긍정적인 신호이며, 회사의 글로벌 포트폴리오 다변화 전략이 점진적으로 효과를 발휘하고 있음을 시사합니다.</p>
-            <p>향후 LG생활건강은 <strong>비중국 중심의 해외 사업 확장과 디지털 전환을 가속화</strong>하고, 필요하다면 <strong>대규모 M&A를 통해 획기적인 도약</strong>을 모색할 것으로 보입니다. 현재 진행 중인 구조조정의 성과가 가시화되고 새로운 성장 동력이 견고하게 자리 잡는다면, 장기적으로는 더욱 탄탄하고 유연한 사업 기반을 마련하여 급변하는 글로벌 시장 환경 속에서도 지속적인 경쟁 우위를 확보할 수 있을 것으로 기대됩니다. 다만, 이러한 변화가 시장의 기대치를 충족시키기까지는 상당한 시간과 노력이 필요할 것이며, 경영진의 뚝심 있는 실행이 중요할 것으로 판단됩니다.</p>
+            <p>이번 LG생활건강의 통합 회의록은 2분기와 3분기 실적 부진을 통해 <strong>회사가 현재 겪고 있는 성장통의 깊이와, 이를 극복하기 위한 구조적 변화의 강도</strong>를 명확히 보여주었습니다. 특히 뷰티 사업의 전통 채널 의존도를 줄이고 중국 현지 사업의 건전성을 확보하며, 비중국 해외 시장과 디지털 채널에서 새로운 성장 동력을 찾는다는 <em>전략적 방향성은 매우 분명하고 일관적</em>입니다.</p>
+            <p>단기적으로는 뷰티 사업의 적자 확대와 전사 수익성 둔화가 불가피할 것으로 예상되지만, 이는 <strong>미래 성장을 위한 전략적 투자이자 근본적인 체질 개선 과정</strong>으로 이해되어야 합니다. 특히 <strong>북미 시장 매출이 중국 매출을 추월</strong>한 것은 이러한 변화가 단순히 비용 절감을 넘어 새로운 성장 축을 만들어내고 있음을 강력히 시사하는 긍정적인 신호입니다. 생활용품과 음료 사업의 해외 시장 선전 또한 글로벌 포트폴리오 다변화 전략이 점진적으로 효과를 발휘하고 있음을 보여줍니다.</p>
+            <p>신임 대표이사 선임과 함께 '선택과 집중'을 통한 전사적인 경영 효율화 및 조직 재편 의지가 강하게 표명된 만큼, 향후 LG생활건강은 <strong>비중국 중심의 해외 사업 확장과 디지털 전환을 가속화</strong>하고, 뷰티 디바이스와 같은 <strong>뷰티테크 분야에 대한 투자를 확대</strong>하며, 필요하다면 <strong>대규모 M&A를 통해 획기적인 도약</strong>을 모색할 것으로 보입니다. 현재 진행 중인 구조조정의 성과가 가시화되고 새로운 성장 동력이 견고하게 자리 잡는다면, 장기적으로는 더욱 탄탄하고 유연한 사업 기반을 마련하여 급변하는 글로벌 시장 환경 속에서도 지속적인 경쟁 우위를 확보할 수 있을 것으로 기대됩니다. 다만, 이러한 변화가 시장의 기대치를 충족시키기까지는 상당한 시간과 노력이 필요할 것이며, 새로운 리더십의 뚝심 있는 실행과 명확한 소통이 중요할 것으로 판단됩니다.</p>
         </div>
 
         <div class="footer">
