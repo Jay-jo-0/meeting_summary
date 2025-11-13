@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대신뷰 회의록</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #34495e;
+            font-size: 1.8em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 5px solid #2ecc71;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #2980b9;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #bdc3c7;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        strong {
+            color: #e74c3c;
+        }
+        em {
+            color: #f39c12;
+            font-style: normal;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 25px;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            font-size: 1em;
+            table-layout: fixed; /* Added for mobile optimization */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 10px;
+            text-align: left;
+            word-wrap: break-word; /* Added for mobile optimization */
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .summary-table th {
+            background-color: #2ecc71;
+        }
+        .evaluation-table th {
+            background-color: #e74c3c;
+        }
+        .highlight {
+            background-color: #fffacd;
+            padding: 10px;
+            border-left: 5px solid #f39c12;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            body {
+                padding: 15px;
+            }
+            .container {
+                padding: 15px;
+            }
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+            th {
+                text-align: center;
+                background-color: #3498db;
+                color: white;
+            }
+            td {
+                border-top: none;
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: calc(50% - 20px);
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: #555;
+            }
+            .summary-table td::before { color: #2ecc71; }
+            .evaluation-table td::before { color: #e74c3c; }
+            tr {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                display: block;
+            }
+            tr:nth-child(even) {
+                background-color: #fff; /* Reset for mobile, as each row is now a block */
+            }
+            .summary-table tr:nth-child(even), .evaluation-table tr:nth-child(even) {
+                background-color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>대신뷰 회의록</h1>
+        <p style="text-align: center; font-size: 1.1em; color: #555;"><strong>일시:</strong> 2025년 11월 13일 목요일 오후 2:07 (35분 47초)</p>
+        <p style="text-align: center; font-size: 1.1em; color: #555;"><strong>참석자:</strong> 박민진 외 (스크립트 기반 추정)</p>
+
+        <h2><span style="color: #2ecc71;">핵심 요약</span></h2>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>항목</th>
+                    <th>주요 내용</th>
+                    <th>핵심 인사이트</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="항목"><strong>글로벌 경제 전망</strong></td>
+                    <td data-label="주요 내용">미국 경기 둔화 예상 (4분기 역성장 간당간당), 내년 1~2분기 기저효과로 반등 기대. 중국은 정책 효과 미미, 상반기 정책 기대감 이후 실망 가능성.</td>
+                    <td data-label="핵심 인사이트">미국은 기저효과로 인한 일시적 반등 후 정책 노이즈 우려. 중국은 정책 기대감에 대한 신중한 접근 필요.</td>
+                </tr>
+                <tr>
+                    <td data-label="항목"><strong>환율 및 달러 인덱스</strong></td>
+                    <td data-label="주요 내용">달러 인덱스 90초반 힘들 것, 유럽 경기 둔화로 박스권 유지 예상. 상반기 약세 가능성 있으나 95 밑으로 가기 어려울 것.</td>
+                    <td data-label="핵심 인사이트">미국과 유럽의 성장 격차 둔화로 달러 강세 압력 약화, 하지만 유럽의 부진으로 달러 인덱스의 큰 하락은 제한적.</td>
+                </tr>
+                <tr>
+                    <td data-label="항목"><strong>미국 정책 및 선거</strong></td>
+                    <td data-label="주요 내용">통화 정책은 계속될 것이나 재정 정책은 늦어질 수 있음. 트럼프의 관세 정책 불확실성 (위헌 논란, 품목별 관세 타겟).</td>
+                    <td data-label="핵심 인사이트">정책 실기 및 선거 불확실성이 1분기 시장 노이즈로 작용할 가능성. 관세는 특정 산업(자동차, 철강)에 부정적 영향 예상.</td>
+                </tr>
+                <tr>
+                    <td data-label="항목"><strong>반도체 및 AI 산업</strong></td>
+                    <td data-label="주요 내용">NVIDIA 실적 발표 후 주가 불안정. AI 관련주 조정, 반도체 재고 증가 및 전력 부족 문제 제기. 하이닉스 내년 전망 상향 가능성.</td>
+                    <td data-label="핵심 인사이트">AI 및 반도체 섹터는 단기적으로 조정 압력 있으나, 장기적으로 데이터센터 투자 및 전력 인프라 확충에 따른 성장 잠재력 보유.</td>
+                </tr>
+                <tr>
+                    <td data-label="항목"><strong>국내 경제 및 시장</strong></td>
+                    <td data-label="주요 내용">미국 인프라 투자로 한국 수출은 긍정적이나, 관세 영향으로 마진 악화 우려. 주식 담보 대출 및 신용 대출 증가에 따른 시장 리스크 경고.</td>
+                    <td data-label="핵심 인사이트">수출 호조와 레버리지 리스크의 양면성. 금융 시장의 과열 조짐에 대한 경계심 필요.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2><span style="color: #3498db;">회의 상세 내용</span></h2>
+
+        <h3>1. 글로벌 거시 경제 전망</h3>
+        <h4>1.1. 미국 경제 및 물가</h4>
+        <ul>
+            <li><strong>CPI 및 GDP 전망:</strong> 4분기 GDP는 역성장 간당간당한 수준으로, 올해 4분기가 저점이 될 것으로 예상. 내년 1분기, 2분기는 기저효과로 인해 성장률이 잘 나올 수밖에 없을 것이며, 4분기가 QoQ(전분기 대비) 기준으로 가장 낮을 것으로 전망.</li>
+            <li><strong>YOY(전년 동기 대비) 기준:</strong> 올해 4분기가 낮고, 올해 1분기가 마이너스 역성장이었기 때문에 YOY로 보면 내년 1분기와 4분기가 높고 중간이 낮아지는 형태가 될 것으로 분석.</li>
+            <li><strong>명목 성장률:</strong> 유가와 함께 반영되는 명목 성장률은 4분기에도 크게 빠지는 그림은 아닐 것으로 예상.</li>
+            <li><strong>정책 타이밍:</strong> 미국의 정책 타이밍이 애매하며, 재정 정책이 늦어질 가능성 제기. 1분기까지는 정책 노이즈(관세 등)로 인해 시장이 좋지 않을 수 있다는 우려.</li>
+            <li><strong>디플레이션 우려:</strong> 생각보다 고용 시장이 안 좋고 물가가 2%대로 계속 빠진다면, 연준이 돈을 풀어도 효과가 없을 수 있다는 지적. 전통 산업의 어려움이 정책 실기로 이어질 수 있음.</li>
+        </ul>
+
+        <h4>1.2. 환율 및 달러 인덱스</h4>
+        <ul>
+            <li><strong>달러 인덱스 전망:</strong> 90초반대 진입은 어려울 것으로 예상. 유럽 경제가 박스권에 머무를 것으로 보여 달러 인덱스도 큰 변동 없이 유지될 가능성.</li>
+            <li><strong>상반기 약세 가능성:</strong> 굳이 방향성을 따지자면 상반기에 달러 약세가 있을 수 있으나, 95 밑으로 내려가기는 힘들 것이라는 의견.</li>
+            <li><strong>미국-유럽 격차:</strong> 작년에는 미국 GDP와 유럽의 성장률 격차가 좁혀지면서 달러가 하락했으나, 이후로는 격차가 유지되고 있어 달러의 추가 하락이 제한적.</li>
+        </ul>
+
+        <h4>1.3. 중국 경제</h4>
+        <ul>
+            <li><strong>경기 지표:</strong> 내년에도 경기 지표가 크게 좋아 보이지 않으며, 돈을 풀고 재정 확대를 계속하겠지만 실제 효과는 미미할 것으로 예상.</li>
+            <li><strong>그림자 금융 문제:</strong> 섀도우 뱅킹 및 섀도우 론 문제가 불거지며, 정부의 대출 확대 지시에도 불구하고 상업은행들이 편법을 사용하는 상황.</li>
+            <li><strong>정책 기대감:</strong> 상반기에는 중국의 정책 기대감(디플레 탈피, 재정 확대)이 시장에 반영될 수 있으나, 하반기에는 실망감으로 이어질 가능성.</li>
+        </ul>
+
+        <h3>2. 미국 정책 및 선거 영향</h3>
+        <ul>
+            <li><strong>트럼프 관세 정책:</strong> 트럼프의 관세 정책이 1분기 중 나올 가능성. 위헌 논란이 있을 수 있으며, 품목별 관세 적용 시 한국의 주요 수출 품목(자동차, 철강, 알루미늄, 소프트웨어)이 타겟이 될 수 있다는 우려.</li>
+            <li><strong>중간선거 영향:</strong> 중간선거를 앞두고 관세 정책을 강하게 추진하기는 어려울 것이며, 쇼잉(showing) 위주로 진행될 가능성. 선거 결과에 따라 정책 방향이 달라질 수 있음.</li>
+            <li><strong>인프라 투자:</strong> 미국이 인프라 및 설비 투자를 열심히 하면 한국의 수출에는 긍정적일 수 있으나, 관세로 인해 마진에는 영향을 줄 수 있음.</li>
+        </ul>
+
+        <h3>3. 산업별 전망</h3>
+        <h4>3.1. 반도체 및 AI</h4>
+        <ul>
+            <li><strong>NVIDIA 실적:</strong> NVIDIA 실적 발표 후 주가 흐름이 불안정하며, AI 관련 주식들이 미리 조정을 받고 있는 상황. 반도체 재고 증가 및 전력 부족 문제가 제기되며, 시장 심리가 안 좋을 때 이러한 요인들이 반영될 수 있음.</li>
+            <li><strong>하이닉스 전망:</strong> 내년 하이닉스의 연간 전망 상단이 80조로 계산되나, 컨퍼런스 콜에서 믹스(Mix)가 어디까지 갈지 발표하는 것이 중요. 80조를 뚫으면 주가가 더 상승할 여지가 있음.</li>
+            <li><strong>데이터센터 투자:</strong> 전 세계적으로 전력이 있는 곳을 찾아 데이터센터 투자가 활발히 이루어지고 있으며, 한국도 예외는 아님. 다만 데이터센터가 고용 창출 효과가 크지 않다는 점은 인지해야 함.</li>
+        </ul>
+
+        <h4>3.2. 자동차 및 기타</h4>
+        <ul>
+            <li><strong>자동차 산업:</strong> 관세 타겟이 될 가능성이 높아 국내 자동차 기업 추천에 부담. 중산층을 위한 자동차 가격이 오르면 수요에 부정적 영향. 낮은 PBR(주가순자산비율)에도 불구하고 정치적 리스크가 큼.</li>
+            <li><strong>월마트 실적:</strong> 월마트는 고소득층 대상 서비스 확대 및 인당 매출액 증가로 작년 주가 상승. 필수 소비재(음식료품) 가격 상승으로 매출액은 견조할 수 있으나, 마진 압박 및 보수적인 가이던스 예상.</li>
+        </ul>
+
+        <h3>4. 국내 금융 시장 리스크</h3>
+        <ul>
+            <li><strong>고용 및 CPI 발표 지연:</strong> 미국 정부 셧다운으로 10월 고용 및 CPI 지표 발표가 지연될 가능성. 이는 시장에 불확실성을 가중시킬 수 있음.</li>
+            <li><strong>레버리지 리스크:</strong> 국내 주식 담보 대출 및 신용 대출이 크게 증가하고 있으며, 이는 주가 하락 시 반대매매로 이어져 시장 변동성을 키울 수 있는 요인. 금융당국에서도 이러한 리스크에 대한 경고를 하고 있음.</li>
+            <li><strong>금리 인하 기대:</strong> 12월 미국 금리 인하를 전제로 한 시장 전망이 많으나, 실제 금리 인하가 이루어지더라도 물가 상승 압력과 통화량 증가가 동반될 경우 금융 시장에 새로운 리스크를 초래할 수 있음.</li>
+        </ul>
+
+        <h2><span style="color: #f39c12;">회의 인사이트</span></h2>
+        <div class="highlight">
+            <ul>
+                <li><strong>글로벌 경제의 불확실성 증대:</strong> 미국은 기저효과에 따른 단기 반등 후 정책 노이즈와 실기 가능성, 중국은 정책 기대감의 한계에 직면하며 글로벌 경제의 불확실성이 가중되고 있습니다. 특히 미국 대선과 트럼프의 관세 정책은 한국 수출 기업들에게 직접적인 영향을 미 미칠 수 있는 중요한 변수입니다.</li>
+                <li><strong>AI 및 반도체 섹터의 양면성:</strong> AI와 반도체는 미래 성장 동력이지만, 단기적으로는 재고 증가, 전력 부족, 그리고 시장의 과도한 기대감에 따른 조정 압력을 받고 있습니다. 장기적인 관점에서는 데이터센터 투자와 인프라 확충이 핵심이 될 것이며, 관련 기업들은 이러한 변화에 대한 전략적 대응이 필요합니다.</li>
+                <li><strong>국내 금융 시장의 레버리지 경계:</strong> 국내 주식 시장은 수출 호조라는 긍정적 요인과 함께 주식 담보 대출 및 신용 대출 증가라는 잠재적 리스크를 동시에 안고 있습니다. 이는 시장의 변동성을 확대시키고, 예상치 못한 충격에 취약하게 만들 수 있으므로 투자자들의 신중한 접근이 요구됩니다.</li>
+                <li><strong>정책 효과의 한계와 시장의 심리:</strong> 각국 정부의 경기 부양 노력에도 불구하고, 정책 효과가 기대에 미치지 못하거나 심리적 요인에 의해 시장이 과도하게 반응하는 경향이 나타나고 있습니다. 이는 투자 결정 시 경제 지표뿐만 아니라 정책의 실효성과 시장의 심리를 종합적으로 고려해야 함을 시사합니다.</li>
+            </ul>
+        </div>
+
+        <h2><span style="color: #2ecc71;">향후 계획 및 다음 스텝</span></h2>
+        <ol>
+            <li><strong>환율 레인지 확정:</strong> 주원 참석자는 연간 환율 레인지를 확정하여 다음 회의 전까지 공유할 것. 특히 원/달러 환율의 상단 및 하단에 대한 심층적인 분석이 필요.</li>
+            <li><strong>MP 회의 준비:</strong> 다음 주 MP 회의에서 논의될 안건들을 미리 준비하고, 양기환 상무와 협의하여 필요한 자료를 배포할 것.</li>
+            <li><strong>글로벌 지표 모니터링 강화:</strong> 미국 CPI 및 고용 지표 발표 지연 가능성에 대비하여 관련 정보 수집 및 분석을 강화하고, 사우디의 증산 요구 등 유가 변동 요인도 지속적으로 모니터링할 것.</li>
+            <li><strong>산업별 리스크 점검:</strong> 트럼프 관세 정책의 잠재적 타겟이 될 수 있는 국내 산업(자동차, 철강 등)에 대한 영향을 심층 분석하고, 반도체 및 AI 섹터의 재고 및 전력 문제에 대한 해소 방안 또는 관련 기업들의 대응 전략을 파악할 것.</li>
+            <li><strong>국내 금융 시장 리스크 관리:</strong> 주식 담보 대출 및 신용 대출 증가 현황을 지속적으로 추적하고, 금융 당국의 관련 경고에 대한 시장의 반응 및 잠재적 충격 시나리오를 검토할 것.</li>
+            <li><strong>2026년 연간 전망 보고서 작성:</strong> MP 회의 이후 2026년 연간 전망 보고서 작성을 시작하며, 이번 회의에서 논의된 거시 경제, 산업, 정책, 시장 리스크 요인들을 종합적으로 반영할 것.</li>
+        </ol>
+
+        <h2><span style="color: #e74c3c;">회의 평가 및 방향성</span></h2>
+        <table class="evaluation-table">
+            <thead>
+                <tr>
+                    <th>평가 항목</th>
+                    <th>내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="평가 항목"><strong>정보 공유 및 분석</strong></td>
+                    <td data-label="내용">글로벌 거시 경제, 주요국 정책, 산업별 동향, 국내 금융 시장 리스크 등 광범위한 주제에 대한 심도 깊은 정보 공유와 분석이 이루어졌습니다. 특히 미국과 중국 경제의 불확실성, 트럼프의 관세 정책, AI 및 반도체 산업의 도전 과제에 대한 논의는 향후 시장 전망 수립에 중요한 기반이 될 것입니다.</td>
+                </tr>
+                <tr>
+                    <td data-label="평가 항목"><strong>논의의 깊이</strong></td>
+                    <td data-label="내용">단순한 현상 나열을 넘어, 각 이슈의 배경과 잠재적 영향에 대한 활발한 토론이 진행되었습니다. 특히 달러 인덱스 움직임의 구조적 요인, 중국 정책의 실효성 한계, 국내 레버리지 리스크에 대한 경고 등은 깊이 있는 통찰을 제공했습니다.</td>
+                </tr>
+                <tr>
+                    <td data-label="평가 항목"><strong>향후 과제 도출</strong></td>
+                    <td data-label="내용">회의를 통해 환율 전망 확정, MP 회의 준비, 글로벌 지표 모니터링 강화, 산업별 리스크 점검, 국내 금융 시장 리스크 관리, 연간 전망 보고서 작성 등 구체적인 향후 과제들이 명확하게 도출되었습니다.</td>
+                </tr>
+                <tr>
+                    <td data-label="평가 항목"><strong>전반적인 방향성</strong></td>
+                    <td data-label="내용">
+                        이번 회의는 <strong>'불확실성 속 신중한 접근과 기회 모색'</strong>이라는 큰 방향성을 제시합니다.
+                        <br><br>
+                        글로벌 경제는 미국과 중국의 정책 불확실성, 선거 리스크, 그리고 산업 구조 변화(AI, 반도체)가 복합적으로 작용하며 예측 불가능성이 커지고 있습니다. 이러한 환경 속에서 우리는 다음과 같은 방향으로 나아가야 합니다.
+                        <ol>
+                            <li><strong>리스크 관리 최우선:</strong> 국내외 금융 시장의 잠재적 리스크(레버리지, 정책 실기)를 면밀히 모니터링하고, 최악의 시나리오에 대비한 방어적 전략을 수립해야 합니다.</li>
+                            <li><strong>정확한 정보와 통찰력:</strong> 불확실한 시기일수록 검증된 정보와 깊이 있는 분석을 통해 시장의 심리에 휩쓸리지 않는 객관적인 판단력을 유지해야 합니다. 특히 정책의 실제 효과와 시장 기대감의 괴리를 파악하는 통찰력이 중요합니다.</li>
+                            <li><strong>선별적 기회 포착:</strong> 전반적인 경기 둔화 속에서도 데이터센터 투자, 특정 기술 혁신 등 선별적인 성장 동력은 존재합니다. 이러한 기회를 포착하되, 과도한 기대보다는 현실적인 관점에서 접근해야 합니다.</li>
+                            <li><strong>유연한 전략 수립:</strong> 급변하는 시장 환경에 맞춰 고정된 관점보다는 유연하게 전략을 수정하고 대응할 수 있는 민첩성을 갖추어야 합니다. 특히 환율과 같은 핵심 변수에 대한 지속적인 재평가가 필요합니다.</li>
+                        </ol>
+                        결론적으로, 다가오는 2026년은 복잡다단한 변수들이 얽혀 있는 한 해가 될 것으로 예상됩니다. 우리는 이러한 복합적인 상황을 냉철하게 분석하고, 리스크를 최소화하면서도 잠재적 기회를 놓치지 않는 균형 잡힌 시각으로 시장에 접근해야 할 것입니다.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p>&copy; 2025 대신뷰 회의록. 모든 권리 보유.</p>
+        </div>
+    </div>
+</body>
+</html>
