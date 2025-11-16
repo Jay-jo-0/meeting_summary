@@ -14,63 +14,68 @@ li {
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>빙그레 2분기 사업부별 실적 리뷰 및 질의응답 회의록</title>
+    <title>빙그레 2분기 및 3분기 사업 실적 종합 리뷰 및 전망 회의록</title>
     <style>
         body {
             font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
             line-height: 1.6;
+            color: #333;
             margin: 0;
             padding: 20px;
             background-color: #f9f9f9;
-            color: #333;
+            box-sizing: border-box;
+        }
+        .container {
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px;
             border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
         h1 {
-            font-size: 2.5em; /* 메인 제목 */
+            font-size: 2.5em;
             color: #004d40;
             text-align: center;
             margin-bottom: 30px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #004d40;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e0e0e0;
         }
         h2 {
-            font-size: 1.8em; /* 대제목 */
+            font-size: 1.8em;
             color: #00695c;
-            margin-top: 40px;
+            margin-top: 35px;
             margin-bottom: 15px;
-            border-bottom: 2px solid #00695c;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
         }
         h3 {
-            font-size: 1.4em; /* 소제목 */
-            color: #00796b;
+            font-size: 1.4em;
+            color: #00897b;
             margin-top: 25px;
             margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 4px solid #4db6ac;
         }
-        p {
-            margin-bottom: 10px;
-            font-size: 1em;
-        }
-        strong {
-            color: #d32f2f; /* 강조 색상 */
+        h4 {
+            font-size: 1.1em;
+            color: #26a69a;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            padding-left: 5px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
             margin-bottom: 20px;
             font-size: 0.95em;
-            table-layout: fixed; /* 컬럼 너비 고정 */
+            table-layout: fixed; /* Ensures table respects width */
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 12px;
+            padding: 12px 10px;
             text-align: left;
-            word-wrap: break-word; /* 긴 단어 줄바꿈 */
+            word-wrap: break-word; /* Prevents long words from breaking layout */
         }
         th {
             background-color: #e0f2f1;
@@ -80,59 +85,119 @@ li {
         tr:nth-child(even) {
             background-color: #f5f5f5;
         }
+        .summary-table th {
+            width: 30%;
+        }
+        .summary-table td {
+            width: 70%;
+        }
+        .key-point {
+            font-weight: bold;
+            color: #d32f2f;
+        }
         ul {
             list-style-type: disc;
             margin-left: 20px;
-            margin-bottom: 15px;
-            font-size: 1em;
+            padding-left: 0;
+            margin-bottom: 20px;
         }
         li {
             margin-bottom: 8px;
         }
-        .summary-table th, .summary-table td {
-            text-align: center;
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        strong {
+            color: #004d40;
         }
         .highlight {
             background-color: #fffde7;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .evaluation {
+            background-color: #e8f5e9;
+            border-left: 5px solid #4caf50;
             padding: 15px;
-            border-left: 5px solid #ffeb3b;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 30px;
             border-radius: 5px;
         }
-        .section-content {
-            padding-left: 10px;
-            border-left: 3px solid #b2dfdb;
-            margin-left: 5px;
+        .evaluation h3 {
+            color: #2e7d32;
+            border-left: none;
+            padding-left: 0;
         }
+
+        /* Mobile specific adjustments */
         @media (max-width: 600px) {
             body {
                 padding: 10px;
             }
+            .container {
+                padding: 15px;
+            }
             h1 {
                 font-size: 2em;
+                margin-bottom: 20px;
             }
             h2 {
                 font-size: 1.5em;
+                margin-top: 25px;
             }
             h3 {
                 font-size: 1.2em;
+                margin-top: 20px;
+            }
+            h4 {
+                font-size: 1em;
+                margin-top: 15px;
             }
             table {
-                font-size: 0.85em;
+                font-size: 0.9em;
+                display: block; /* Make table responsive by allowing horizontal scroll */
+                overflow-x: auto;
+                white-space: nowrap; /* Prevent content from wrapping inside cells */
             }
             th, td {
-                padding: 8px;
+                padding: 8px 6px;
+                white-space: normal; /* Allow content to wrap within a cell after all */
+            }
+            .summary-table th, .summary-table td {
+                width: auto; /* Reset width for mobile to allow content to dictate */
+                display: block;
+                text-align: left;
+            }
+            .summary-table tr {
+                margin-bottom: 10px;
+                display: block;
+                border: 1px solid #ddd;
+            }
+            .summary-table tr:nth-child(even) {
+                background-color: #ffffff; /* Reset background for block rows */
+            }
+            .summary-table tr:not(:last-child) {
+                border-bottom: none;
+            }
+            .summary-table td:first-of-type {
+                font-weight: bold;
+                background-color: #e0f2f1;
+                color: #004d40;
             }
         }
     </style>
 </head>
 <body>
-    <h1>빙그레 2분기 사업부별 실적 리뷰 및 질의응답 회의록</h1>
+    <div class="container">
+        <h1>빙그레 2분기 및 3분기 사업 실적 종합 리뷰 및 전망 회의록</h1>
 
-    <h2>회의 핵심 요약</h2>
-    <div class="section-content">
-        <table class="summary-table">
+        <h2><span class="highlight">종합 회의 개요</span></h2>
+        <table>
+            <colgroup>
+                <col style="width:25%;">
+                <col style="width:75%;">
+            </colgroup>
             <thead>
                 <tr>
                     <th>항목</th>
@@ -141,185 +206,239 @@ li {
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>전반적인 실적</strong></td>
-                    <td>2분기 영업이익 <strong>크게 부진 (전년 대비 40% 감소)</strong>, 매출은 소폭 증가했으나 이익률 악화.</td>
+                    <td><strong>회의 기간</strong></td>
+                    <td>2분기 실적 리뷰 (일시 미상) 및 3분기 실적 리뷰 (2025년 11월 14일)</td>
                 </tr>
                 <tr>
-                    <td><strong>주요 부진 원인</strong></td>
+                    <td><strong>참석자</strong></td>
+                    <td>빙그레 IR 안철민 부장 등 (2분기), 빙그레 IR 안철민 부장, 에이닷 (3분기)</td>
+                </tr>
+                <tr>
+                    <td><strong>회의 주제</strong></td>
+                    <td>빙그레 2분기 및 3분기 실적 분석, 사업부별/지역별 현황, 원가/비용 구조, 하반기 및 2025년 사업 전망</td>
+                </tr>
+                <tr>
+                    <td><strong>주요 논의 사항</strong></td>
                     <td>
                         <ul>
-                            <li><strong>높은 매출원가율 (72~73%)</strong>: 원재료 가격 상승 및 통상임금 확대 영향.</li>
-                            <li><strong>내수 매출 부진</strong>: 해태 아이스크림의 날씨 영향 및 전반적인 내수 소비 심리 위축.</li>
-                            <li><strong>일회성 인건비 증가</strong>: 2분기 경력금 지급 영향.</li>
+                            <li>2분기 영업이익 부진 원인 (높은 매출원가율, 내수 부진, 일회성 인건비)</li>
+                            <li>3분기 국내 냉장/냉동 및 기타 부문 실적 상세 분석 및 성장 동력</li>
+                            <li>해외 수출(냉장/냉동) 및 주요 법인(중국, 미국, 베트남) 실적 변화 및 전망</li>
+                            <li>원재료 가격, 환율, 통상임금, 광고선전비 등 원가 및 비용 구조 영향</li>
+                            <li>하반기 실적 개선 조짐 및 4분기/2025년 사업 방향성 및 주요 변수</li>
+                            <li>내수 시장의 변동성 대응 및 해외 시장 다변화의 중요성</li>
                         </ul>
                     </td>
-                </tr>
-                <tr>
-                    <td><strong>긍정적 요인</strong></td>
-                    <td>
-                        <ul>
-                            <li><strong>해외 사업 성장세 지속</strong>: 미국, 베트남 등 냉동 제품 수출 호조.</li>
-                            <li><strong>7월 실적 개선 조짐</strong>: 소비 쿠폰 및 날씨 영향으로 매출 증가, 판관비 관리로 이익 개선.</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td><strong>하반기 전망</strong></td>
-                    <td>원가율 완화 및 내수 소비 심리 회복 기대, 해외 수출 성장세 지속 예상. 7월 개선 흐름 유지 여부 중요.</td>
-                </tr>
-                <tr>
-                    <td><strong>핵심 인사이트</strong></td>
-                    <td>내수 시장의 계절적/환경적 요인에 대한 취약성 확인, 원가 구조 개선 및 해외 시장 다변화의 중요성 재확인.</td>
                 </tr>
             </tbody>
         </table>
-    </div>
 
-    <h2>1. 2분기 실적 개요 및 주요 원인 분석</h2>
-    <div class="section-content">
-        <h3>1.1. 전반적인 실적 부진</h3>
-        <p>2분기 실적은 예상보다 <strong>크게 저조</strong>했습니다. 특히 영업이익이 약 200억 중반으로, 전년 대비 <strong>40% 가량 감소</strong>하며 큰 폭의 역성장을 기록했습니다. 매출 자체는 크게 나쁘지 않았으나, 이익이 급감한 것이 주된 문제로 지적되었습니다.</p>
+        <h2><span class="highlight">종합 핵심 요약 (Executive Summary)</span></h2>
+        <p>빙그레는 2분기 영업이익이 크게 부진했으나, 3분기에는 국내 냉동 및 기타 부문의 성장과 해외 시장의 일부 긍정적인 흐름을 통해 점진적인 회복세를 보였습니다. 특히, 내수 시장의 계절적 취약성과 원가 부담은 지속되는 과제였으나, 해외 시장 다변화와 신성장 동력 발굴 노력이 중요하게 부각되었습니다. 4분기 비수기 영향이 예상되나, 2025년에는 전반적인 실적 개선이 기대됩니다.</p>
+        <table class="summary-table">
+            <colgroup>
+                <col style="width:30%;">
+                <col style="width:70%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>핵심 내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>2분기 실적 (주요 부진)</strong></td>
+                    <td>
+                        <ul>
+                            <li>영업이익 <span class="key-point">전년 대비 40% 감소</span>, 매출원가율 <span class="key-point">72~73%</span>로 급등.</li>
+                            <li><span class="key-point">내수 냉동 부진</span> (해태 아이스크림 날씨 영향), <span class="key-point">일회성 경력금</span> 지급으로 인건비 증가.</li>
+                            <li><span class="key-point">해외 사업 성장세 지속</span> (미국, 베트남 냉동 수출 호조)은 긍정적.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>3분기 실적 (점진적 개선)</strong></td>
+                    <td>
+                        <ul>
+                            <li><span class="key-point">국내 냉장 부진 지속</span> (바나나맛우유 역성장), <span class="key-point">냉동 및 기타 부문 성장 견인</span> ('더담백', '상온커피' 등 20% 이상 고성장).</li>
+                            <li><span class="key-point">해외 냉동 수출 양호</span> (캐나다, 베트남, 필리핀 등), <span class="key-point">중국 냉장 수출 20% 감소</span>로 전체 냉장 수출 부진.</li>
+                            <li>원재료 가격 하락세는 내년 영향 예상, <span class="key-point">높은 환율이 원가 부담</span>.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>주요 이슈 및 과제</strong></td>
+                    <td>
+                        <ul>
+                            <li><span class="key-point">원가율 관리</span>: 원재료 가격 변동성 및 높은 환율 지속. 통상임금 부담 완화는 긍정적.</li>
+                            <li><span class="key-point">내수 시장</span>: 냉장 부문 경쟁력 강화 및 냉동/기타 부문 성장 동력 유지.</li>
+                            <li><span class="key-point">해외 시장</span>: 중국 냉장 회복 및 동남아 등 성장 지역 투자 확대, 미국 관세/물가 영향 주시.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>하반기 및 2025년 전망</strong></td>
+                    <td>
+                        <ul>
+                            <li><span class="key-point">7월 실적 개선</span> (소비 쿠폰, 날씨)은 긍정적 신호였으나, 8~9월 날씨로 냉동 성장 둔화.</li>
+                            <li><span class="key-point">4분기 비수기 영향</span>으로 3분기 대비 부진 예상되나, 상반기 같은 급격한 악화는 아닐 것.</li>
+                            <li><span class="key-point">2025년 전반적인 실적 개선 기대</span>: 중국 시장 회복, 동남아 성장, 비용 효율화. 미국 시장은 불확실성 존재.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-        <h3>1.2. 매출원가율 상승의 심각성</h3>
-        <p>실적 부진의 <strong>가장 큰 원인</strong>은 <strong>매출원가율의 급격한 상승</strong>입니다. 과거 성수기에는 65~67% 수준이었던 원가율이 2분기에는 <strong>72~73%</strong>까지 치솟았습니다. 통상 성수기 원가율은 70%를 잘 넘지 않는다는 점을 고려할 때, 이는 매우 이례적인 수치입니다. 원가율 상승은 매출총이익을 크게 감소시켜 영업이익에 직접적인 타격을 주었습니다.</p>
+        <h2><span class="highlight">상세 분석: 2분기 및 3분기 실적 변화</span></h2>
+
+        <h3>1. 2분기 실적 개요 및 주요 원인 (요약)</h3>
+        <p>2분기 실적은 예상보다 <span class="key-point">크게 저조</span>했습니다. 영업이익이 전년 대비 <span class="key-point">40% 가량 감소</span>하며 큰 폭의 역성장을 기록했습니다. 주된 원인은 <span class="key-point">매출원가율의 급격한 상승 (72~73%)</span>으로, 원재료 가격 상승과 통상임금 확대 적용이 복합적으로 작용했습니다. 내수 시장은 해태 아이스크림의 날씨 영향 등으로 부진했으며, 판관비 내 인건비 증가는 일회성 경력금 지급이 주요 원인이었습니다. 다만, 해외 사업은 견조한 성장세를 유지했습니다.</p>
+
+        <h3>2. 3분기 국내 사업 실적 상세 분석</h3>
+        <h4>2.1. 냉장 부문: 부진 지속 속 소폭 개선</h4>
         <ul>
-            <li><strong>주요 원인</strong>:
+            <li><strong>바나나맛우유:</strong> 연간 기준으로는 지속적인 부진을 겪고 있으나, 3분기에는 감소폭이 다소 줄어들며 소폭 개선되는 모습을 보였습니다. 하지만 여전히 역성장 기조를 벗어나지 못하고 있습니다.</li>
+            <li><strong>기타 냉장 제품:</strong> 바나나맛우유 외 다른 냉장 제품들의 부진이 전체 냉장 부문 실적에 큰 영향을 미쳤습니다. 국내 냉장 시장 전반의 침체와 소비 트렌드 변화가 복합적으로 작용한 것으로 분석됩니다.</li>
+        </ul>
+
+        <h4>2.2. 냉동 및 기타 부문: 성장 동력 확보</h4>
+        <ul>
+            <li><strong>성장세:</strong> 냉동 및 기타 부문은 긍정적인 성장세를 기록했습니다. 이 두 부문을 합치면 전체 매출의 약 50%를 차지하며, 이 중 기타 부문이 약 10%를 구성합니다.</li>
+            <li><strong>기타 부문 성장 동력:</strong> 특히 <span class="key-point">'더담백'</span>과 <span class="key-point">'상온커피'</span>와 같은 기타 제품들은 20% 이상의 높은 성장률을 기록하며 전체 실적 개선에 크게 기여했습니다. 상온 제품군이 전반적으로 높은 성장률을 보였습니다.</li>
+            <li><strong>냉동 부문:</strong>
                 <ul>
-                    <li><strong>원재료 가격 상승</strong>: 원가 상승의 가장 큰 요인으로 지목되었습니다.</li>
-                    <li><strong>통상임금 확대 적용</strong>: 작년까지 없었던 통상임금 확대 적용이 원가에 반영되면서 추가적인 부담이 발생했습니다. 연간 약 60억~80억 원 규모의 원가 반영 효과가 있을 것으로 추정됩니다.</li>
+                    <li><strong>꾸준한 성장:</strong> 아이스크림을 포함한 냉동 제품군은 꾸준히 성장하고 있습니다.</li>
+                    <li><strong>3분기 개선 요인:</strong> 3분기에는 정부의 <span class="key-point">소비 쿠폰</span> 발행과 7월의 양호한 날씨가 냉동 제품 판매에 긍정적인 영향을 미쳤습니다. 이는 2분기 해태 아이스크림의 부진을 일부 만회하는 요인이었습니다.</li>
+                    <li><strong>8~9월 날씨 영향:</strong> 그러나 8월과 9월의 좋지 않은 날씨로 인해 이러한 긍정적인 흐름이 지속되지는 못했습니다. 그럼에도 불구하고 상반기보다는 냉동 부문의 상승세가 두드러졌습니다.</li>
+                    <li><strong>해태아이스크림:</strong> 해태아이스크림 역시 8~9월 날씨 영향으로 성장이 둔화되었으나, 상반기 대비 이익률은 개선되었습니다.</li>
                 </ul>
             </li>
         </ul>
 
-        <h3>1.3. 판매비와관리비(판관비) 분석</h3>
-        <p>판관비는 2분기에 소폭 증가했으나, 전체 실적에 미치는 영향은 매출원가에 비해 미미했습니다. 오히려 펜촉 비용이나 마케팅 비용은 일부 줄어들었습니다. 판관비 내 인건비 증가는 상반기 <strong>일회성 비용(경력금)</strong>이 포함된 영향이 컸습니다. 작년 실적(실제 기준 역대 최대 이익 달성)이 좋았음에도 인센티브 지급 요건에 미달했으나, 최대 이익 달성을 고려하여 2분기에 경력금이 지급되었습니다. 이 일회성 비용을 제외하면 하반기 인건비 증가 부담은 완화될 것으로 예상됩니다.</p>
-        <p>매출총이익이 좋지 않다 보니 7월에도 마케팅비를 늘리지 않는 등 판관비 절감 노력이 지속되고 있습니다.</p>
-    </div>
-
-    <h2>2. 사업부별 및 지역별 실적 상세</h2>
-    <div class="section-content">
-        <h3>2.1. 내수 시장 부진</h3>
-        <p>내수 매출은 전반적으로 성장하지 못했습니다. 특히 <strong>해태 아이스크림</strong>은 2분기 날씨가 좋지 않아 매출이 크게 줄었습니다. 아이스크림은 100% 날씨 영향을 받는 품목이기에 더욱 큰 타격을 받았습니다. 전반적인 내수 소비 심리 위축도 매출 부진에 영향을 미쳤습니다.</p>
-        <p><strong>채널별 냉동 매출 비중 (국내)</strong></p>
-        <table>
-            <thead>
-                <tr>
-                    <th>채널</th>
-                    <th>비중 (대략)</th>
-                    <th>특징</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>일반 대리점/아이스크림 할인 전문점/소매점</td>
-                    <td>약 70%</td>
-                    <td>가장 큰 비중, 소비쿠폰 영향으로 7월 매출 상승 기여</td>
-                </tr>
-                <tr>
-                    <td>편의점</td>
-                    <td>약 10%</td>
-                    <td>상대적으로 비싸고 종류가 적음, 7월 소비쿠폰 영향으로 소폭 상승 예상</td>
-                </tr>
-                <tr>
-                    <td>할인점 (대형마트, 기업형 슈퍼마켓 포함)</td>
-                    <td>10% 미만</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-        <p><strong>채널별 냉장 매출 비중 (국내)</strong></p>
-        <table>
-            <thead>
-                <tr>
-                    <th>채널</th>
-                    <th>비중 (대략)</th>
-                    <th>주요 품목</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>편의점</td>
-                    <td>약 25%</td>
-                    <td>바나나맛 우유 등</td>
-                </tr>
-                <tr>
-                    <td>할인점 (슈퍼마켓 포함)</td>
-                    <td>약 25%</td>
-                    <td>요플레, 바나나맛 우유 등</td>
-                </tr>
-                <tr>
-                    <td>일반 대리점 등</td>
-                    <td>약 30%</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>급식 등</td>
-                    <td>약 10%</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3>2.2. 해외 사업 성과</h3>
-        <p>전반적인 2분기 실적 부진 속에서도 <strong>수출 및 해외 법인 실적은 비교적 양호</strong>했습니다.</p>
+        <h3>3. 해외 사업 실적 변화 및 전망</h3>
+        <p>전반적인 국내 시장의 어려움 속에서도 해외 사업은 빙그레의 중요한 성장 동력으로 작용하고 있습니다. 2분기부터 냉동 제품 수출이 호조를 보였으며, 3분기에도 지역별로 상이한 양상을 보였습니다.</p>
+        <h4>3.1. 수출 현황</h4>
         <ul>
-            <li><strong>중국</strong>: 매출은 다소 감소했으나, 이익은 크게 증가했습니다.</li>
-            <li><strong>미국</strong>: 매출이 전반적으로 증가했습니다.</li>
-            <li><strong>베트남</strong>: 매출이 크게 증가했으나, 이익은 소폭 감소했습니다 (원래 이익 규모가 크지 않음).</li>
-            <li><strong>냉동 제품 수출 호조</strong>: 미국, 베트남, 캐나다, 동남아시아 등에서 아이스크림 수출이 견조한 성장세를 보였습니다. 특히 캐나다는 작년 2분기 기저가 낮았음에도 꾸준히 회복세를 보였습니다.</li>
-            <li><strong>냉장 제품 수출 부진</strong>: 중국 시장의 부진으로 냉장 제품 수출은 전반적으로 좋지 않았습니다. 다만, 대만이나 동아시아 지역의 냉장 매출은 양호했습니다. 미국 역시 냉장 비중이 30% 가량 되며 꾸준히 늘려나가고 있습니다.</li>
+            <li><strong>냉동 수출:</strong> 2분기에 이어 3분기에도 여전히 좋은 흐름을 유지하며 성장세를 이어가고 있습니다. 미국이 일시적으로 부진했음에도 캐나다, 베트남, 필리핀 등 기타 지역의 성장이 이를 상쇄했습니다.</li>
+            <li><strong>냉장 수출:</strong> 2분기부터 중국 시장의 부진으로 지속적인 어려움을 겪고 있으며, 3분기에도 이 추세가 이어졌습니다.</li>
         </ul>
-    </div>
 
-    <h2>3. 주요 질의응답 및 추가 정보</h2>
-    <div class="section-content">
-        <h3>3.1. 통상임금 확대의 영향</h3>
-        <p>통상임금 확대 적용이 원가율 상승에 기여했으나, 다른 음식료 기업에 비해 빙그레만 유독 부담이 큰지에 대한 질문이 있었습니다. 회사 측은 원재료 가격 상승이 가장 큰 요인이며, 통상임금 확대는 추가적인 부담 요인이라고 설명했습니다. 연간 60억~80억 원 수준의 원가 반영이 예상됩니다.</p>
-
-        <h3>3.2. 인건비 증가의 일회성 요인</h3>
-        <p>2분기 인건비가 크게 증가한 것은 <strong>경력금 지급</strong> 때문이었습니다. 2023년 실적이 좋았음에도 인센티브 지급 요건을 충족하지 못했으나, 역대 최대 이익 달성을 고려하여 2분기에 경력금이 지급되었습니다. 이는 일회성 비용으로, 하반기에는 인건비 증가율이 상반기만큼 높지 않을 것으로 예상됩니다. 기본적으로 임금 인상률이 반영되어 전년 대비 인건비는 오르겠지만, 상반기의 급격한 증가 추세는 완화될 것입니다.</p>
-
-        <h3>3.3. 하반기 원가 관리 전략</h3>
-        <p>원가 상승을 완전히 막기는 어렵지만, 원재료 가격 상승세는 3분기까지 피크를 찍고 완화될 것으로 예상됩니다. 또한, 코로나 시기처럼 거래선을 변경하거나 거래처를 다변화하는 등 <strong>원가 절감 노력</strong>을 지속할 예정입니다. 그럼에도 불구하고 원가 자체는 전년 대비 높은 수준을 유지할 것으로 보입니다.</p>
-
-        <h3>3.4. 금융비용 및 법인세 관련</h3>
-        <p>금융비용 증가에 대한 질문에 대해 회사 측은 외환 관련 손실 여부에 대해 정확히 알지 못한다고 답변했습니다. 법인세 비용이 적게 잡힌 것은 작년에 더 납부한 세금이 있어 환급받은 영향이라고 설명했습니다.</p>
-    </div>
-
-    <h2>4. 회의 인사이트</h2>
-    <div class="highlight">
-        <p>이번 2분기 실적은 빙그레가 직면한 <strong>구조적인 원가 부담과 내수 시장의 취약성</strong>을 명확히 보여주었습니다. 특히, 아이스크림과 같은 계절성 품목의 경우 날씨 변동에 따른 매출 변동성이 매우 크다는 점이 다시 한번 확인되었습니다. 그럼에도 불구하고 <strong>해외 시장의 견조한 성장세</strong>는 긍정적인 신호이며, 향후 빙그레의 성장 동력으로서 그 중요성이 더욱 부각될 것입니다.</p>
-        <p>또한, 일회성 비용을 제외한 원가 및 판관비 관리 노력은 긍정적이나, 근본적인 원가율 개선을 위한 장기적인 전략 수립이 시급해 보입니다. 7월 실적 개선 조짐은 긍정적이나, 일시적인 요인(소비쿠폰, 날씨)에 기인한 바가 커 지속 가능성에 대한 면밀한 관찰이 필요합니다.</p>
-    </div>
-
-    <h2>5. 향후 계획 및 전망</h2>
-    <div class="section-content">
-        <h3>5.1. 7월 실적 개선 조짐</h3>
-        <p>7월 매출은 소비 쿠폰 발행 및 날씨 영향으로 크게 증가했습니다. 원가가 여전히 높은 수준임에도 불구하고 매출 증대와 판관비 관리(마케팅비 절감 등)를 통해 7월은 매출과 이익 모두 양호한 흐름을 보였습니다. 이는 하반기 실적 개선에 대한 기대를 높이는 요인입니다.</p>
-
-        <h3>5.2. 하반기 전망</h3>
+        <h4>3.2. 지역별 분석</h4>
         <ul>
-            <li><strong>내수 시장</strong>: 7월의 긍정적인 소비 분위기가 8월, 9월까지 이어질지 주시해야 합니다. 전반적인 소비 심리 개선이 내수 매출 회복에 기여할 것으로 기대됩니다.</li>
-            <li><strong>수출 시장</strong>: 7월까지는 견조한 두 자릿수 성장률을 유지하고 있습니다. 특히 냉동 제품 수출이 강세를 보이고 있습니다. 작년 하반기 수출 기저가 높았던 점을 고려해야 하지만, 현재까지의 흐름은 긍정적입니다. 냉장 제품은 중국 시장 회복이 전반적인 성장률 개선에 중요할 것입니다.</li>
-            <li><strong>원가율</strong>: 원재료 가격 피크가 지나고, 통상임금 확대 적용 효과가 점차 안정화되면서 원가율 부담이 소폭 완화될 가능성이 있습니다.</li>
+            <li><strong>중국 (China):</strong>
+                <ul>
+                    <li><strong>냉장 부진의 핵심 원인:</strong> 중국 시장은 냉장 수출의 가장 큰 비중을 차지하며, 3분기에도 약 20%의 매출 감소를 기록하며 전체 냉장 수출 부진의 주된 원인이 되었습니다. 중국 내 바나나맛우유가 전체 매출의 80~90%를 차지하는 구조입니다.</li>
+                    <li><strong>이익 개선 노력:</strong> 매출은 부진했으나, 이익 측면에서는 개선을 보였습니다. 이는 매출보다 이익 효율성에 중점을 둔 전략 때문입니다.</li>
+                    <li><strong>2025년 전망:</strong> 4분기는 금액 비중이 크지 않으므로 현 추세가 이어질 것으로 보이며, <span class="key-point">2025년에는 회복을 기대</span>하고 있습니다. 마케팅 활동 강화 및 최근 증가하는 중국인 관광객들의 노출도 증가가 긍정적인 영향을 미칠 것으로 예상됩니다.</li>
+                </ul>
+            </li>
+            <li><strong>미국 (USA):</strong>
+                <ul>
+                    <li><strong>냉동 제품:</strong> 2분기에는 매출이 전반적으로 증가했으나, 3분기에는 미국 시장의 냉동 제품 매출이 일시적으로 다소 부진했습니다.</li>
+                    <li><strong>원인 분석:</strong> 이는 관세 확정 전 물량 선적 영향보다는 <span class="key-point">계절적 요인</span>(상반기 성수기 판매를 위한 선적 증가)이 더 컸던 것으로 파악됩니다. 현지 물가 상승도 영향을 미친 것으로 보입니다.</li>
+                    <li><strong>법인 매출 역성장:</strong> 미국 법인 매출은 약 15억 원 감소하며 역성장했습니다. 이익 또한 감소했으나 금액적으로는 미미한 수준(2~3억 원)이며, 관세로 인한 원가 상승 영향도 일부 있었습니다.</li>
+                    <li><strong>2025년 전망:</strong> 4분기에는 매출이 정상화될 것으로 예상됩니다. 붕어싸만코 등 추가적인 수출 확대 노력을 통해 매출 증가는 지속될 것이나, 관세 및 현지 물가 영향으로 증가율이나 이익률은 과거보다 둔화될 수 있습니다. 하지만 연결 기준으로는 여전히 국내 이익보다 높은 수준을 유지할 것으로 전망됩니다.</li>
+                </ul>
+            </li>
+            <li><strong>동남아 (Southeast Asia - 베트남, 필리핀 등):</strong>
+                <ul>
+                    <li><strong>성장 동력:</strong> 중국을 제외한 동남아시아 지역(베트남, 필리핀 등)은 냉장 및 냉동 제품 모두 10% 이상의 견조한 성장세를 보였습니다. 베트남은 냉동 비중이 60~70%로 높습니다. 2분기에도 베트남 매출이 크게 증가했습니다.</li>
+                    <li><strong>코로나19 이후 회복:</strong> 코로나19 이후 다소 부진했던 동남아 시장이 최근 회복세를 보이고 있으며, 붕어싸만코 등 냉동 제품 판매를 지속적으로 확대할 계획입니다.</li>
+                    <li><strong>마케팅 활동:</strong> 베트남에서는 마케팅 활동을 적극적으로 진행하고 있으며, 현지 마트에서의 제품 노출도가 높은 편입니다.</li>
+                    <li><strong>향후 계획:</strong> 베트남 시장은 계속해서 키워나가야 할 중요한 전략 시장으로 인식하고 있습니다.</li>
+                </ul>
+            </li>
+            <li><strong>기타 지역 (Other Regions - 호주, 캐나다 등):</strong>
+                <ul>
+                    <li><strong>성장세:</strong> 캐나다, 호주 등 기타 지역에서도 냉장 및 냉동 제품 모두 꾸준한 성장을 기록하며 전체 수출 실적에 기여하고 있습니다. 미국이 슬로우했음에도 전체 냉동 수출이 10% 성장한 것은 이들 지역의 성장이 뒷받침되었기 때문입니다.</li>
+                </ul>
+            </li>
         </ul>
-    </div>
 
-    <h2>6. 회의의 방향성 및 제언</h2>
-    <div class="section-content">
-        <p>이번 회의를 통해 빙그레는 <strong>내수 시장의 변동성에 대한 대응력 강화</strong>와 <strong>글로벌 시장에서의 경쟁력 확보</strong>라는 두 가지 핵심 과제를 안고 있음을 재확인했습니다.</p>
+        <h3>4. 원가 및 비용 구조 분석</h3>
+        <p>2분기 매출원가율 급등이 실적 부진의 가장 큰 원인이었던 만큼, 원가 및 비용 관리는 지속적인 핵심 과제로 논의되었습니다.</p>
+        <h4>4.1. 원재료 가격 동향 및 통상임금</h4>
         <ul>
-            <li><strong>원가 구조 혁신</strong>: 단기적인 비용 절감 노력과 더불어, 장기적인 관점에서 원재료 조달 다변화 및 생산 효율성 증대를 통한 근본적인 원가 구조 개선이 필수적입니다. 통상임금 확대와 같은 고정비 증가 요인에 대한 선제적인 대응 방안 마련도 중요합니다.</li>
-            <li><strong>내수 시장 경쟁력 강화</strong>: 계절적 요인에 덜 민감한 제품 포트폴리오 강화 및 채널별 맞춤형 전략을 통해 내수 시장의 안정적인 성장을 도모해야 합니다. 소비 심리 변화에 빠르게 대응할 수 있는 유연한 마케팅 전략도 필요합니다.</li>
-            <li><strong>해외 시장 확장 가속화</strong>: 현재의 긍정적인 해외 성장세를 더욱 가속화하여 전체 매출에서 해외 비중을 확대해야 합니다. 특히 냉동 제품의 성공 사례를 바탕으로 다른 지역 및 품목으로의 확장을 적극적으로 모색해야 합니다. 중국 시장의 냉장 제품 부진에 대한 심층 분석 및 회복 전략 수립도 필요합니다.</li>
-            <li><strong>재무 건전성 관리</strong>: 일회성 비용 발생 가능성을 지속적으로 모니터링하고, 금융비용 등 비영업 비용 관리에도 만전을 기해야 합니다.</li>
+            <li><strong>유지류 하락:</strong> 글로벌 시세 기준으로 유지류 등 유제품 원재료 가격은 상반기 대비 하락세를 보이고 있습니다. 이러한 원재료 가격 하락의 긍정적인 영향은 올해 상반기보다는 <span class="key-point">내년 실적에 더 크게 반영될 것</span>으로 예상됩니다.</li>
+            <li><strong>통상임금 확대 영향:</strong> 2분기 실적에 연간 60억~80억 원 규모의 통상임금 확대 적용이 원가 부담으로 작용했으나, 3분기 회의에서는 내년에는 이 부담이 완화될 것으로 예상되었습니다.</li>
         </ul>
-        <p>하반기에는 7월의 긍정적인 흐름을 이어가기 위한 전사적인 노력이 필요하며, 특히 내수 시장의 회복과 해외 시장의 지속적인 성장이 빙그레의 실적 턴어라운드를 이끌 핵심 동력이 될 것입니다.</p>
-    </div>
 
-    <h2>7. 회의 평가</h2>
-    <div class="section-content">
-        <p>이번 회의는 2분기 실적 부진의 <strong>핵심 원인을 명확히 파악</strong>하고, 각 사업부 및 비용 항목별 상세 분석을 통해 현재 빙그레가 직면한 과제를 심도 있게 논의하는 유익한 시간이었습니다. 특히, 원가율 상승의 구체적인 요인과 일회성 인건비 증가의 배경을 이해하는 데 도움이 되었습니다. 해외 사업의 긍정적인 흐름과 7월 실적 개선 조짐을 확인하며 하반기에 대한 기대감을 가질 수 있었습니다. 다만, 금융비용 등 일부 항목에 대한 추가적인 확인이 필요하다는 점은 아쉬웠습니다. 전반적으로 <strong>투명하고 심도 있는 정보 공유</strong>가 이루어져 향후 전략 수립에 중요한 기반을 마련했습니다.</p>
+        <h4>4.2. 환율 영향</h4>
+        <ul>
+            <li><strong>지속적인 부담:</strong> 현재 높은 환율(특히 달러)은 원재료 수입 원가 부담을 가중시키는 주요 요인입니다.</li>
+            <li><strong>헤징(Hedging) 부족:</strong> 미국 법인 외에는 달러 유입이 적어 환율 변동에 대한 자연 헤징 효과가 제한적입니다.</li>
+            <li><strong>양면성:</strong> 환율 상승은 수출 매출액 증가에는 긍정적이지만, 원가 상승을 유발하여 이익 측면에서는 부정적인 영향을 미칠 수 있습니다.</li>
+            <li><strong>내년 전망:</strong> 내년에도 환율이 계속 높은 수준을 유지한다면 부담이 지속될 수 있으나, 전반적인 원가 측면에서는 통상임금 확대 적용 부담 완화 등 긍정적인 요인도 있어 올해보다는 나을 것으로 보입니다.</li>
+        </ul>
+
+        <h4>4.3. 광고 선전비 및 기타 비용</h4>
+        <ul>
+            <li><strong>비용 절감 기조:</strong> 회사는 지속적으로 광고 선전비 등 비용 절감 노력을 이어가고 있습니다. 3분기에도 약 30~40억 원의 광고선전비가 감소했습니다. 2분기에도 판관비 내 마케팅 비용은 일부 줄었습니다.</li>
+            <li><strong>향후 계획:</strong> 비용 절감 기조는 앞으로도 유지될 것이며, 매출 증대와 함께 영업이익 개선의 주요 전략으로 활용될 예정입니다.</li>
+            <li><strong>해외 법인 마진:</strong> 중국 법인은 이익이 크게 개선되었으나, 미국/베트남 법인은 매출 감소 영향으로 마진율이 감소했습니다 (금액적으로는 미미).</li>
+            <li><strong>일회성 인건비:</strong> 2분기 경력금 지급과 같은 일회성 인건비는 3분기에는 발생하지 않아 하반기 인건비 부담은 완화되었습니다.</li>
+        </ul>
+
+        <h2><span class="highlight">종합 인사이트</span></h2>
+        <p>이번 2분기 및 3분기 실적 리뷰를 통해 빙그레는 <span class="key-point">내수 시장의 구조적 변화와 외부 환경 요인의 영향력</span>을 명확히 인지하고 있음을 확인했습니다. 특히, 다음과 같은 핵심 인사이트를 도출할 수 있습니다.</p>
+        <ul>
+            <li><strong>내수 시장의 양극화와 신성장 동력:</strong> 전통적인 냉장 부문(바나나맛우유)의 부진이 지속되는 가운데, 냉동 및 기타(상온) 부문이 국내 성장을 견인하는 핵심 동력으로 자리 잡았습니다. 이는 소비 트렌드 변화에 대한 성공적인 대응이자, 제품 포트폴리오 다변화의 중요성을 재확인시켜 줍니다. 특히 '더담백', '상온커피'와 같은 혁신 제품의 성공은 향후 국내 시장 전략의 방향성을 제시합니다.</li>
+            <li><strong>해외 시장의 전략적 중요성 증대:</strong> 2분기부터 해외 사업은 국내 실적 부진을 상쇄하는 역할을 했으며, 3분기에도 그 중요성이 더욱 부각되었습니다. 중국 시장의 냉장 부진이라는 큰 과제가 있지만, 동남아시아(베트남 등) 및 기타 지역(캐나다, 호주)에서의 냉동/냉장 제품 동반 성장은 해외 시장 다변화의 긍정적 신호입니다. 미국 시장의 관세 및 현지 물가 영향은 면밀한 모니터링이 필요합니다.</li>
+            <li><strong>원가 및 비용 관리의 지속적인 압박:</strong> 2분기 급등했던 매출원가율은 원재료 가격 하락 조짐과 통상임금 부담 완화로 내년에는 개선될 여지가 있으나, 높은 환율은 여전히 원가 부담의 주요 변수입니다. 비용 효율화(광고선전비 절감 등) 노력은 지속적으로 이익 방어에 기여하고 있으며, 이는 어려운 시장 환경 속에서 필수적인 전략입니다.</li>
+            <li><strong>단기적 변동성과 장기적 회복 기대:</strong> 2분기의 급격한 실적 악화 이후 7월의 일시적 개선, 그리고 3분기의 점진적 회복은 빙그레가 시장 변화에 대응하려는 노력을 보여줍니다. 4분기는 비수기 및 높은 기저 효과로 인한 단기적 어려움이 예상되지만, 2025년에는 중국 시장 회복, 동남아 성장, 비용 효율화 등에 힘입어 전반적인 실적 개선 흐름을 기대할 수 있습니다.</li>
+        </ul>
+
+        <h2><span class="highlight">향후 계획 및 전망 (4분기 및 2025년)</span></h2>
+        <p>빙그레는 2분기 및 3분기 실적을 바탕으로 하반기 및 2025년 사업 계획을 다음과 같이 수립하고 있습니다.</p>
+        <h3>1. 4분기 실적 예상 및 대응 전략</h3>
+        <ul>
+            <li><strong>비수기 영향:</strong> 4분기는 계절적 비수기이므로 3분기 대비 숫자상으로는 실적이 좋지 않을 수 있습니다. 전년 4분기 흑자 전환에 따른 기저 부담도 존재하여 감익 가능성도 배제할 수 없습니다.</li>
+            <li><strong>급격한 악화 방지:</strong> 하지만 상반기처럼 급격하게 실적이 악화되는 분위기는 아닐 것이며, 3분기의 개선된 흐름이 내년으로 이어질 것으로 기대됩니다.</li>
+            <li><strong>내수 시장 강화:</strong> 관광객 증가가 바나나맛우유 판매에 긍정적인 영향을 미치고 있으므로, 편의점 채널과의 협력을 강화하여 매대 노출 및 프로모션을 확대할 예정입니다.</li>
+            <li><strong>비용 효율화 지속:</strong> 매출 증대와 함께 광고선전비 등 판관비 절감 노력을 지속하여 이익 방어에 주력할 것입니다.</li>
+        </ul>
+
+        <h3>2. 2025년 사업 전망 및 핵심 액션 아이템</h3>
+        <ul>
+            <li><strong>전반적인 실적 개선 기대:</strong> 2025년에는 올해 상반기의 큰 부담을 덜고 전반적으로 실적이 개선되는 흐름을 보일 것으로 예상됩니다.</li>
+            <li><strong>국내 냉장 부문 경쟁력 강화:</strong>
+                <ul>
+                    <li>바나나맛우유의 판매 부진을 만회하기 위한 신규 마케팅 전략 수립 및 제품 리뉴얼 검토.</li>
+                    <li>편의점 채널과의 협력을 강화하여 매대 노출 및 프로모션 확대.</li>
+                </ul>
+            </li>
+            <li><strong>신성장 동력 지속 발굴 및 투자:</strong>
+                <ul>
+                    <li>'더담백', '상온커피' 등 고성장 기타 부문 제품에 대한 R&D 및 마케팅 투자 확대.</li>
+                    <li>새로운 트렌드에 맞는 제품 개발 가속화.</li>
+                </ul>
+            </li>
+            <li><strong>해외 시장 확장 가속화 및 리스크 관리:</strong>
+                <ul>
+                    <li><strong>중국 시장 회복 전략 구체화:</strong> 2025년 중국 시장 회복을 위한 구체적인 마케팅 계획 수립 (현지 맞춤형 프로모션, 온라인 채널 강화 등). 중국인 관광객 대상 노출도 증대 방안 모색.</li>
+                    <li><strong>동남아 시장 공략 가속화:</strong> 베트남을 거점으로 동남아시아 시장 내 붕어싸만코 등 냉동 제품 판매 확대 전략 실행. 현지 마케팅 활동 강화 및 유통망 확장 검토.</li>
+                    <li><strong>미국 시장 리스크 관리:</strong> 관세 및 현지 물가 상승에 따른 이익률 하락 가능성에 대비하여 효율적인 물류 및 유통 전략 재검토. 붕어싸만코 등 주력 제품의 경쟁력 유지 방안 마련.</li>
+                </ul>
+            </li>
+            <li><strong>원가 및 비용 효율화 지속:</strong>
+                <ul>
+                    <li><strong>환율 변동성 대응 강화:</strong> 달러 유입 확대 방안 모색 또는 환 헤징 전략의 효율성 검토. 원재료 수입 다변화를 통한 환율 리스크 분산.</li>
+                    <li><strong>비용 효율화 지속:</strong> 광고선전비 외 전반적인 판관비 효율화 방안을 지속적으로 모색하고 실행하여 영업이익 개선에 기여.</li>
+                    <li>원재료 가격 하락 효과 및 통상임금 부담 완화로 원가율 개선 기대.</li>
+                </ul>
+            </li>
+            <li><strong>시장 트렌드 및 소비자 행동 분석 강화:</strong> 국내외 시장의 변화와 소비자 구매 패턴을 면밀히 분석하여 제품 개발 및 마케팅 전략에 신속하게 반영.</li>
+        </ul>
+
+        <h2><span class="highlight">종합 평가 및 제언</span></h2>
+        <div class="evaluation">
+            <h3>총평</h3>
+            <p>이번 2분기 및 3분기 실적 리뷰는 빙그레가 겪고 있는 <span class="key-point">내수 시장의 구조적 난관과 외부 환경(원가, 환율)의 압박</span>을 명확히 보여주었습니다. 특히 2분기의 급격한 이익 감소는 원가 관리의 중요성을 다시 한번 상기시켰습니다. 그러나 3분기에는 국내 냉동 및 기타(상온) 부문의 견조한 성장세와 해외 시장의 일부 긍정적인 흐름을 통해 <span class="key-point">점진적인 회복의 가능성</span>을 확인했습니다. 중국 시장의 냉장 부진은 아쉽지만, 동남아시아 등 다른 해외 시장의 성장은 빙그레의 미래 성장 동력으로서 해외 사업의 전략적 중요성을 더욱 부각시킵니다. 비용 효율화 노력은 어려운 시기에도 이익을 방어하는 데 기여하고 있습니다.</p>
+
+            <h3>향후 방향성 제언</h3>
+            <p>빙그레는 <span class="key-point">국내 시장에서 신성장 동력(냉동 및 상온 제품)을 더욱 강화</span>하고, <span class="key-point">해외 시장에서는 중국의 회복을 유도하면서 동시에 동남아시아 등 성장 잠재력이 높은 지역에 대한 투자를 확대</span>하는 투트랙 전략을 더욱 공고히 해야 할 것입니다. 특히, 원재료 가격 하락 효과를 극대화하고 높은 환율 변동성에 대한 선제적인 리스크 관리 방안을 마련하는 것이 중요합니다. 지속적인 비용 효율화 노력과 함께, 시장의 변화에 민첩하게 대응하고 소비자 니즈를 충족시키는 혁신적인 제품 개발 및 마케팅 전략을 통해 2025년 전반적인 실적 개선과 지속 가능한 성장을 추구하는 데 집중해야 합니다. 단기적인 실적 변동성에 일희일비하기보다는, 장기적인 관점에서 사업 체질 개선과 글로벌 경쟁력 강화에 힘써야 할 시점입니다.</p>
+        </div>
     </div>
 </body>
 </html>
