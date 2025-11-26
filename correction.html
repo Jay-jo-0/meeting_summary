@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서 수정 요청사항 (전체)</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --accent-red: #e74c3c;
+            --accent-green: #27ae60;
+            --accent-blue: #2980b9;
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .summary {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            background: #e8f4fc;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ddd;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title span {
+            margin-right: 8px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 5px solid transparent;
+        }
+
+        .card.critical { border-left-color: var(--accent-red); }
+        .card.check { border-left-color: var(--accent-blue); }
+        .card.typo { border-left-color: var(--accent-green); }
+
+        .page-tag {
+            display: inline-block;
+            background-color: #eee;
+            color: #555;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .content-row {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .wrong {
+            color: var(--accent-red);
+            text-decoration: line-through;
+            opacity: 0.8;
+        }
+
+        .correct {
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        .comment {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            background-color: #f9f9f9;
+            padding: 8px;
+            border-radius: 6px;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: 40px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>📄 보고서 수정 요청사항 (전체)</h1>
+        <div class="summary">
+            <strong>긴급:</strong> 일본 내각 정보, 연도 오류 등 <b>Fact Check</b> 사항을 우선적으로 확인해주시기 바랍니다. (총 38건)
+        </div>
+    </header>
+
+    <div class="section-title">
+        <span>🚨</span> 치명적 오류 및 팩트 체크
+    </div>
+
+
+    <div class="card critical">
+        <span class="page-tag">Page 252</span>
+        <div class="content-row"><span class="label">헤더</span> <span class="wrong">20206</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">2026</span></div>
+        <div class="comment">연도 표기 명백한 오타입니다.</div>
+    </div>
+
+    <div class="card critical">
+        <span class="page-tag">Page 76 / 156</span>
+        <div class="content-row"><span class="label">인물</span> <span class="wrong">Miran, Paulson, 케빈 위쉬</span></div>
+        <div class="content-row"><span class="label">확인</span> <span class="correct">Mester?, Harker?, 케빈 워시</span></div>
+        <div class="comment">연준 위원 이름 확인 불가(Miran, Paulson). '위쉬'는 '워시'로 표기 통일.</div>
+    </div>
+
+     <div class="card critical">
+        <span class="page-tag">Page 77</span>
+        <div class="content-row"><span class="label">원문</span> <span class="wrong">Sham' Rule, Sham's Rule</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">Sahm Rule</span></div>
+        <div class="comment">'Sham(가짜)'이 아닌 고안자 이름 'Sahm'이 맞습니다.</div>
+    </div>
+
+    <div class="card critical">
+        <span class="page-tag">Page 135</span>
+        <div class="content-row"><span class="label">원문</span> <span class="wrong">신흥국: 7.9%</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">신흥국: 24년 7.9%</span></div>
+        <div class="comment">연도가 누락된 것으로 보입니다.</div>
+    </div>
+
+    <div class="section-title">
+        <span>⚠️</span> 시나리오 및 논리 점검
+    </div>
+
+
+    <div class="card check">
+        <span class="page-tag">Page 26 vs 163</span>
+        <div class="content-row"><span class="label">용어</span> <span class="wrong">OBBBA vs OBBB 법안</span></div>
+        <div class="content-row"><span class="label">조치</span> <span class="correct">용어 통일</span></div>
+    </div>
+
+    <div class="section-title">
+        <span>📝</span> 전문 용어 및 데이터 표기
+    </div>
+
+    <div class="card check">
+        <span class="page-tag">Page 101</span>
+        <div class="content-row"><span class="label">원문</span> <span class="wrong">NVDIA / SOCAMM2</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">NVIDIA / LPCAMM2 (또는 CAMM2)</span></div>
+    </div>
+
+    <div class="card check">
+        <span class="page-tag">Page 139</span>
+        <div class="content-row"><span class="label">AI</span> <span class="wrong">Dale-E, Stable fussion</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">DALL-E, Stable Diffusion</span></div>
+    </div>
+
+    <div class="card check">
+        <span class="page-tag">Page 102</span>
+        <div class="content-row"><span class="label">원문</span> <span class="wrong">에이젠틱AI</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">에이전틱(Agentic) AI</span></div>
+    </div>
+
+    <div class="section-title">
+        <span>🛠️</span> 단순 오타 및 문맥 수정
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 30</span>
+        <div class="content-row"><span class="label">수정</span> 대외 약달러 국면에 → <span class="correct">국면에서</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 49</span>
+        <div class="content-row"><span class="label">수정</span> 경기 만 보면 → <span class="correct">경기만 보면</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 50</span>
+        <div class="content-row"><span class="label">수정</span> 어렵다면 ?결국 → <span class="correct">어렵다면? 결국</span></div>
+        <div class="content-row"><span class="label">수정</span> 의심 .기준금리 → <span class="correct">의심. 기준금리</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 54 / 58</span>
+        <div class="content-row"><span class="label">수정</span> 화사채 → <span class="correct">회사채</span></div>
+        <div class="content-row"><span class="label">수정</span> 체권금리 → <span class="correct">채권금리</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 62 / 63</span>
+        <div class="content-row"><span class="label">수정</span> Dwnside → <span class="correct">Downside</span></div>
+        <div class="content-row"><span class="label">수정</span> Poliy Mix → <span class="correct">Policy Mix</span></div>
+        <div class="comment">P62 "경기부양 드라2,이48브0" 텍스트 깨짐 수정 필요</div>
+    </div>
+    
+    <div class="card typo">
+        <span class="page-tag">Page 100</span>
+        <div class="content-row"><span class="label">수정</span> 레벨 낮은 → <span class="correct">레벨이 낮은 (조사 누락)</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 107</span>
+        <div class="content-row"><span class="label">수정</span> 국가AI정책비서권 → <span class="correct">비서관</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 108</span>
+        <div class="content-row"><span class="label">수정</span> 인구 충격데 → <span class="correct">충격에</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 113</span>
+        <div class="content-row"><span class="label">수정</span> 레벌업 → <span class="correct">레벨업</span></div>
+    </div>
+    
+    <div class="card typo">
+        <span class="page-tag">Page 152</span>
+        <div class="content-row"><span class="label">수정</span> 성장율 → <span class="correct">성장률</span></div>
+    </div>
+    
+    <div class="card typo">
+        <span class="page-tag">Page 156</span>
+        <div class="content-row"><span class="label">수정</span> 의문을 갖을 → <span class="correct">의문을 가질</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 170 / 182</span>
+        <div class="content-row"><span class="label">수정</span> ChatPGT → <span class="correct">ChatGPT</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 178 / 188</span>
+        <div class="content-row"><span class="label">수정</span> Zangge Mining(Zijin Mining( 등</div>
+        <div class="content-row"><span class="label">-></span> <span class="correct">Zangge Mining, Zijin Mining 등 (쉼표)</span></div>
+    </div>
+    
+    <div class="card typo">
+        <span class="page-tag">Page 204</span>
+        <div class="content-row"><span class="label">수정</span> 거래량 상승키 → <span class="correct">상승폭이 / 상승세가</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">단어 오타 모음</span>
+        <div class="content-row">- P59: 싱승 → <b>상승</b></div>
+        <div class="content-row">- P79: OCED → <b>OECD</b></div>
+        <div class="content-row">- P73: 주가비 → <b>주거비</b></div>
+        <div class="content-row">- P75: 9얼 → <b>9월</b></div>
+        <div class="content-row">- P99: 모메텀 → <b>모멘텀</b></div>
+        <div class="content-row">- P105: KOSP → <b>KOSPI</b></div>
+        <div class="content-row">- P125: 매리트 → <b>메리트</b></div>
+        <div class="content-row">- P147: 대한, 한국 → <b>대만, 한국</b></div>
+        <div class="content-row">- P155: 배팅 → <b>베팅</b></div>
+        <div class="content-row">- P232: 율 흐름 → <b>환율 흐름</b></div>
+    </div>
+
+    <div class="footer">
+        Generated by Gemini<br>
+        Based on User Review
+    </div>
+</div>
+
+</body>
+</html>
