@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서 수정 요청사항 (추가분)</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --accent-red: #e74c3c;
+            --accent-green: #27ae60;
+            --accent-blue: #2980b9;
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .summary {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            background: #e8f4fc;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ddd;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title span {
+            margin-right: 8px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 5px solid transparent;
+        }
+
+        .card.critical { border-left-color: var(--accent-red); }
+        .card.check { border-left-color: var(--accent-blue); }
+        .card.typo { border-left-color: var(--accent-green); }
+
+        .page-tag {
+            display: inline-block;
+            background-color: #eee;
+            color: #555;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .content-row {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .wrong {
+            color: var(--accent-red);
+            text-decoration: line-through;
+            opacity: 0.8;
+        }
+
+        .correct {
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        .comment {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            background-color: #f9f9f9;
+            padding: 8px;
+            border-radius: 6px;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: 40px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>📄 보고서 수정 요청사항 (추가분)</h1>
+        <div class="summary">
+            <strong>긴급:</strong> 수치 오류, 날짜 표기, 지수 데이터 불일치 등 <b>Fact Check</b>가 필요한 항목이 다수 발견되었습니다. (총 24건)
+        </div>
+    </header>
+
+    <div class="section-title">
+        <span>🚨</span> 치명적 오류 및 데이터 검증
+    </div>
+
+    <div class="card critical">
+        <span class="page-tag">Page 15</span>
+        <div class="content-row"><span class="label">원문</span> <span class="wrong">영업이익은 -510% yoy</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">-51.0% yoy</span></div>
+        <div class="comment">소수점 오류로 판단됩니다. (43억 vs 87억 비교 시 약 -50%)</div>
+    </div>
+
+    <div class="card critical">
+        <span class="page-tag">Page 43</span>
+        <div class="content-row"><span class="label">날짜</span> <span class="wrong">20.66월 이후</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">20.06월 (또는 20년 6월)</span></div>
+    </div>
+
+    <div class="card critical">
+        <span class="page-tag">Page 124</span>
+        <div class="content-row"><span class="label">금액</span> <span class="wrong">4조 5,08 억원</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">4조 5,080억원</span></div>
+        <div class="comment">단위 숫자 '0' 누락 추정</div>
+    </div>
+
+    <div class="card critical">
+        <span class="page-tag">Page 212</span>
+        <div class="content-row"><span class="label">주가</span> <span class="wrong">현재주가 ,000원</span></div>
+        <div class="content-row"><span class="label">지수</span> <span class="wrong">KOSPI 4221.87</span></div>
+        <div class="comment"><b>[중요]</b> 현재 주가 누락 및 KOSPI 지수 수치 이상 (타 페이지 3960.87 등과 상이)</div>
+    </div>
+
+    <div class="card critical">
+        <span class="page-tag">Page 214</span>
+        <div class="content-row"><span class="label">주가</span> <span class="wrong">현재주가 ,000원</span></div>
+        <div class="content-row"><span class="label">지수</span> <span class="wrong">KOSPI 3200.83</span></div>
+        <div class="comment"><b>[중요]</b> 현재 주가 누락 및 KOSPI 지수 데이터 교차 검증 필요</div>
+    </div>
+
+    <div class="section-title">
+        <span>⚠️</span> 표기 불일치 및 확인 요망
+    </div>
+
+    <div class="card check">
+        <span class="page-tag">Page 141</span>
+        <div class="content-row"><span class="label">본문</span> <span class="wrong">목표주가 550,000원</span></div>
+        <div class="content-row"><span class="label">요약표</span> <span class="wrong">목표주가 560,000원</span></div>
+        <div class="comment">본문과 요약 박스의 목표주가가 다릅니다. (56만원이 맞는 것으로 추정)</div>
+    </div>
+
+    <div class="card check">
+        <span class="page-tag">Page 179 (차트)</span>
+        <div class="content-row"><span class="label">오류</span> <span class="wrong">6,80 9 0 , 000 / 1,5 1 0 ,6 0 0 0</span></div>
+        <div class="content-row"><span class="label">수정</span> <span class="correct">6,800 / 1,500</span></div>
+        <div class="comment">차트 내 폰트 깨짐 및 숫자/쉼표 표기 오류 수정 필요</div>
+    </div>
+
+    <div class="section-title">
+        <span>🛠️</span> 단순 오타 및 맞춤법
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 4 / 6</span>
+        <div class="content-row"><span class="label">P4</span> 2차적는 → <span class="correct">2차적으로는</span></div>
+        <div class="content-row"><span class="label">P4</span> ASP(평균판매단가)) → <span class="correct">괄호 중복 삭제</span></div>
+        <div class="content-row"><span class="label">P6</span> 폴더블폰에 참여로 → <span class="correct">참여로 / 참여함에 따라</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 7 / 56</span>
+        <div class="content-row"><span class="label">P7</span> 보급율 → <span class="correct">보급률</span></div>
+        <div class="content-row"><span class="label">P56</span> 특별과 이용 → <span class="correct">특별관 이용</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 14 / 28</span>
+        <div class="content-row"><span class="label">P14</span> Lightng → <span class="correct">Lighting (i 누락)</span></div>
+        <div class="content-row"><span class="label">P28</span> 삼성잔자 → <span class="correct">삼성전자</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 41 / 46</span>
+        <div class="content-row"><span class="label">P41</span> 1,960언 → <span class="correct">1,960원</span></div>
+        <div class="content-row"><span class="label">P41</span> 66..42 → <span class="correct">6.42</span></div>
+        <div class="content-row"><span class="label">P46</span> 10..5 → <span class="correct">10.5</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 58</span>
+        <div class="content-row"><span class="label">수정</span> 30,,000원 → <span class="correct">30,000원 (쉼표 중복)</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 68</span>
+        <div class="content-row"><span class="label">수정</span> 서아이벌 → <span class="correct">서바이벌</span></div>
+        <div class="content-row"><span class="label">수정</span> 데스니티 → <span class="correct">데스티니</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 79</span>
+        <div class="content-row"><span class="label">수정</span> PT E. LTD. → <span class="correct">PTE. LTD. (띄어쓰기)</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 153</span>
+        <div class="content-row"><span class="label">수정</span> 9 92 → <span class="correct">992 (공백 제거)</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 203 / 229</span>
+        <div class="content-row"><span class="label">P203</span> 볼놀이는 → <span class="correct">불놀이는 (Boom)</span></div>
+        <div class="content-row"><span class="label">P229</span> 그림차 부채 → <span class="correct">그림자 부채</span></div>
+    </div>
+
+    <div class="card typo">
+        <span class="page-tag">Page 253 / 273</span>
+        <div class="content-row"><span class="label">P253</span> 대형현정 → <span class="correct">대형현장</span></div>
+        <div class="content-row"><span class="label">P273</span> 상단P인 BR → <span class="correct">상단인 PBR</span></div>
+    </div>
+
+    <div class="footer">
+        Generated by Gemini<br>
+        Based on User Review (Batch 2)
+    </div>
+</div>
+
+</body>
+</html>
