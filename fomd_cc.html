@@ -1,0 +1,689 @@
+html_content
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOMC 투자 전략 리포트: December 2025</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary-color: #0d6efd;
+--secondary-color: #6c757d;
+--bg-color: #f8f9fa;
+--surface-color: #ffffff;
+--text-color: #212529;
+--border-color: #dee2e6;
+--red-color: #dc3545;
+--green-color: #198754;
+--orange-color: #fd7e14;
+}
+
+body {
+font-family: 'Inter', 'Roboto', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+line-height: 1.7;
+margin: 0;
+padding: 0;
+}
+
+.container {
+max-width: 960px;
+margin: 20px auto;
+background-color: var(--surface-color);
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+overflow: hidden;
+}
+
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 30px 40px;
+text-align: center;
+}
+
+header h1 {
+margin: 0;
+font-size: 2.2rem;
+font-weight: 700;
+}
+
+header p {
+margin: 5px 0 0;
+font-size: 1.1rem;
+opacity: 0.9;
+}
+
+main {
+padding: 20px 40px;
+}
+
+h2 {
+font-size: 1.8rem;
+font-weight: 600;
+color: var(--text-color);
+border-bottom: 3px solid var(--primary-color);
+padding-bottom: 10px;
+margin-top: 50px;
+margin-bottom: 25px;
+}
+
+h3 {
+font-size: 1.4rem;
+font-weight: 600;
+margin-top: 30px;
+margin-bottom: 15px;
+color: #343a40;
+}
+
+p, ul {
+margin-bottom: 1rem;
+font-size: 1rem;
+}
+
+ul {
+list-style-position: inside;
+padding-left: 5px;
+}
+
+li {
+margin-bottom: 0.5rem;
+}
+
+strong {
+font-weight: 600;
+color: var(--primary-color);
+}
+
+blockquote {
+background-color: #e9ecef;
+border-left: 5px solid var(--primary-color);
+padding: 20px;
+margin: 20px 0;
+font-size: 1.1rem;
+font-style: italic;
+border-radius: 0 5px 5px 0;
+}
+
+.executive-summary blockquote {
+font-size: 1.25rem;
+font-weight: 500;
+text-align: center;
+font-style: normal;
+}
+
+/* Hawk-o-Meter Styles */
+.hawk-o-meter {
+margin: 30px 0;
+padding: 20px;
+background: #f1f3f5;
+border-radius: 8px;
+}
+.hawk-o-meter h3 {
+margin-top: 0;
+text-align: center;
+}
+.progress-bar-container {
+width: 100%;
+height: 30px;
+background-color: var(--border-color);
+border-radius: 15px;
+overflow: hidden;
+position: relative;
+}
+.progress-bar {
+height: 100%;
+background: linear-gradient(90deg, var(--green-color) 0%, var(--orange-color) 50%, var(--red-color) 100%);
+border-radius: 15px;
+transition: width 1s ease-in-out;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-weight: bold;
+font-size: 0.9rem;
+}
+.progress-labels {
+display: flex;
+justify-content: space-between;
+font-size: 0.8rem;
+color: var(--secondary-color);
+padding: 5px 5px 0;
+}
+
+/* Diff Analysis Section */
+.diff-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+.diff-card {
+padding: 20px;
+border-radius: 8px;
+}
+.diff-card.deleted {
+background-color: #fff5f5;
+border: 1px solid var(--red-color);
+}
+.diff-card.added {
+background-color: #f6ffed;
+border: 1px solid var(--green-color);
+}
+.diff-card h4 {
+margin-top: 0;
+font-size: 1.2rem;
+}
+.diff-card.deleted h4 { color: var(--red-color); }
+.diff-card.added h4 { color: var(--green-color); }
+.diff-card blockquote {
+background: var(--surface-color);
+font-size: 0.95rem;
+padding: 15px;
+margin: 10px 0;
+}
+
+/* Market Strategy Section */
+.strategy-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+.strategy-card {
+border: 1px solid var(--border-color);
+padding: 25px;
+border-radius: 8px;
+transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.strategy-card:hover {
+box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+transform: translateY(-5px);
+}
+.strategy-card h3 {
+margin-top: 0;
+border-bottom: 2px solid var(--border-color);
+padding-bottom: 10px;
+}
+
+/* Data Evidence Section (Audit Report) */
+.audit-card {
+background-color: #f8f9fa;
+border: 1px solid #e9ecef;
+border-radius: 8px;
+margin-bottom: 40px;
+padding: 30px;
+}
+
+.audit-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 10px;
+margin-bottom: 20px;
+}
+
+.audit-header h3 {
+margin: 0;
+}
+
+.verdict-badge {
+padding: 6px 12px;
+font-weight: 600;
+border-radius: 20px;
+font-size: 0.9rem;
+color: white;
+}
+
+.verdict-badge.consistent { background-color: var(--green-color); }
+.verdict-badge.alarm { background-color: var(--red-color); }
+.verdict-badge.divergent { background-color: var(--orange-color); }
+
+.analysis-section h4 {
+font-size: 1.1rem;
+color: var(--secondary-color);
+margin-top: 25px;
+margin-bottom: 10px;
+}
+
+.chart-container {
+margin-top: 20px;
+}
+.chart-insight {
+text-align: center;
+font-size: 0.9rem;
+color: var(--secondary-color);
+margin-top: 10px;
+padding: 10px;
+background: #e9ecef;
+border-radius: 5px;
+}
+
+footer {
+text-align: center;
+padding: 20px 40px;
+font-size: 0.8rem;
+color: var(--secondary-color);
+border-top: 1px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+.container {
+margin: 0;
+border-radius: 0;
+}
+}
+@media (max-width: 768px) {
+main {
+padding: 15px 20px;
+}
+header {
+padding: 20px;
+}
+header h1 {
+font-size: 1.8rem;
+}
+h2 {
+font-size: 1.5rem;
+}
+.diff-container, .strategy-container {
+grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>FOMC 투자 전략 리포트</h1>
+<p>December 10, 2025</p>
+</header>
+
+<main>
+<section id="summary">
+<h2>1. Executive Summary</h2>
+<div class="executive-summary">
+<blockquote><strong>"유동성 공급(RMP) 시작과 금리 인하라는 비둘기파적 행동 뒤에 숨겨진 '금리 동결' 신호."</strong></blockquote>
+</div>
+<h3>정책 기조 변화</h3>
+<ul>
+<li><p><strong>균열된 합의 (Fractured Consensus):</strong> 연준은 25bp 금리 인하(3.25~3.50%)를 단행했으나, 투표 결과는 <strong>9대 3</strong>으로 쪼개졌습니다. 특히 비둘기파(Goolsbee)와 매파(Schmid)가 동시에 '금리 동결'을 주장하며 반대표를 던진 것은 <strong>"금리 인하 사이클의 일시 정지(Pause)"가 임박했음</strong>을 시사합니다.</p></li>
+<li><p><strong>RMP 개시 (사실상의 QE Lite):</strong> 대차대조표 축소(QT) 종료를 넘어, 지준(Reserves) 유지를 위해 단기 국채(T-bills) 매입을 시작하는 <strong>RMP(Reserve Management Purchases)</strong>를 공식화했습니다. 이는 시장에 유동성을 공급하는 강력한 호재입니다.</p></li>
+</ul>
+</section>
+
+<section id="hawkometer">
+<div class="hawk-o-meter">
+<h3>Hawk-o-Meter (매파 지수)</h3>
+<div class="progress-bar-container">
+<div class="progress-bar" style="width: 65%;" id="hawkProgressBar">6.5 / 10</div>
+</div>
+<div class="progress-labels">
+<span>비둘기파 (Dovish)</span>
+<span>매파 (Hawkish)</span>
+</div>
+<p style="text-align:center; margin-top:15px; font-size: 0.9rem;"><strong>이전 회의: 4.0 &rarr; 현재: 6.5 (매파적 기조 강화)</strong></p>
+<p><strong>판단 근거:</strong> 행동(금리 인하)은 완화적이었으나, 메시지(3명 반대, 인플레이션 우려)는 <strong>"파티는 곧 끝난다(인하 사이클 종료 임박)"</strong>는 강력한 경고를 담고 있습니다.</p>
+</div>
+</section>
+
+<section id="deep-dive">
+<h2>2. Deep Dive: Key Debates (주요 논쟁점)</h2>
+<h3>A. 인플레이션과 관세(Tariffs)의 충돌</h3>
+<ul>
+<li><strong>Tariff Pass-through:</strong> 위원들은 관세 인상이 핵심 상품(Core Goods) 가격을 밀어올리고 있음을 인정했습니다. 많은 참여자들이 관세 효과가 일시적일 것이라 기대하지만, 일부 기업들은 관세와 무관한 투입 비용 상승까지 보고하고 있어 <strong>인플레이션의 하방 경직성(Stickiness)</strong>에 대한 우려가 커졌습니다.</li>
+<li><strong>서비스 물가:</strong> 주거비(Housing Services) 디스인플레이션은 진행 중이나, 시장 예상보다 더딥니다.</li>
+</ul>
+
+<h3>B. "Strange Bedfellows": Goolsbee와 Schmid의 동반 반란</h3>
+<p>이번 회의록의 가장 충격적인 부분은 <strong>Austan Goolsbee(대표적 비둘기파)가 금리 동결을 주장하며 반대표를 던진 것</strong>입니다.</p>
+<p>통상적인 매파(Schmid)와 비둘기파(Goolsbee)가 동시에 동결을 원했다는 것은, 현재 금리 레벨이 '중립'에 근접했거나, 인플레이션 반등 리스크 때문에 <strong>"보험성 인하(Insurance Cut)"를 멈춰야 할 때</strong>라는 인식이 위원회 내부에 광범위하게 퍼지고 있음을 의미합니다.</p>
+
+<h3>C. 고용 시장: "Cooling" vs "Freezing"</h3>
+<ul>
+<li>실업률이 4.4%로 상승하고 고용 증가세가 둔화되었으나, 해고(Layoffs)가 급증하지는 않았습니다.</li>
+<li>다수 위원은 노동 시장이 "급격히 악화(Sharp deterioration)"되는 것을 막기 위해 인하가 필요하다고 주장했으나, 소수 의견은 현재 데이터만으로는 추가 인하의 정당성이 부족하다고 판단했습니다.</li>
+</ul>
+</section>
+
+<section id="diff-analysis">
+<h2>3. Diff Analysis (문구 변경의 함의)</h2>
+<div class="diff-container">
+<div class="diff-card deleted">
+<h4>🔴 주요 삭제 문구 & 의미</h4>
+<blockquote>"Committee decided to conclude the reduction of its aggregate securities holdings on December 1"</blockquote>
+<p>QT(양적긴축) 종료 선언 문구가 삭제되었습니다. 이는 QT 종료가 이미 과거의 일이 되었으며, 새로운 단계로 진입했음을 의미합니다.</p>
+<blockquote>"Investors expected a... lowering... although some uncertainty... was evident"</blockquote>
+<p>시장 불확실성에 대한 언급이 줄어들고, RMP 도입에 대한 구체적인 서술로 대체되었습니다.</p>
+</div>
+<div class="diff-card added">
+<h4>🟢 주요 추가 문구 & 의미</h4>
+<blockquote>"Initiate purchases of shorter-term Treasury securities as needed to maintain an ample supply of reserves." (핵심)</blockquote>
+<p><strong>해석:</strong> 연준이 공식적으로 <strong>자산 매입(Buying)</strong> 모드로 전환했습니다. 시장은 이를 유동성 공급으로 해석할 것이며, 단기채 매입은 수익률 곡선(Yield Curve)의 스티프닝 요인입니다.</p>
+<blockquote>"Voting against this action: ... Austan D. Goolsbee and Jeffrey R. Schmid, who preferred no change"</blockquote>
+<p><strong>해석:</strong> 1월 FOMC에서의 금리 동결 가능성을 강력하게 시사하는 문구입니다. 인하 사이클이 멈출 수 있습니다.</p>
+</div>
+</div>
+</section>
+
+<section id="market-strategy">
+<h2>4. Market Strategy (투자 전략)</h2>
+<div class="strategy-container">
+<div class="strategy-card">
+<h3>🏳️ Bond (채권)</h3>
+<p><strong>전략:</strong> <strong>Yield Curve Steepener (2s10s 확대 베팅)</strong></p>
+<ul>
+<li><strong>단기물:</strong> 연준의 T-Bill 매입(RMP)으로 가격 지지.</li>
+<li><strong>장기물:</strong> 인플레이션 우려와 금리 인하 사이클 조기 종료 가능성으로 금리 상승 압력.</li>
+</ul>
+</div>
+<div class="strategy-card">
+<h3>📈 Equity (주식)</h3>
+<p><strong>전략:</strong> <strong>AI/Tech Long, Small Cap Caution</strong></p>
+<ul>
+<li>RMP를 통한 유동성 공급은 성장주(Tech)에 우호적.</li>
+<li>금리 동결 가능성으로 금리 민감도가 높은 중소형주보다 현금 흐름 좋은 대형 기술주 선호.</li>
+</ul>
+</div>
+<div class="strategy-card">
+<h3>💵 FX (환율)</h3>
+<p><strong>전략:</strong> <strong>Tactical Long USD</strong></p>
+<ul>
+<li>금리 인하 "속도 조절(Pause)" 신호는 달러 하단을 지지.</li>
+<li>미국 경제의 상대적 회복탄력성과 금리 인하 중단 가능성은 달러 강세 요인.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="data-evidence">
+<h2>5. Data Evidence (데이터 감사)</h2>
+
+<div class="audit-card">
+<div class="audit-header">
+<h3>연준 총자산 (FRB Total Assets)</h3>
+<span class="verdict-badge consistent">✅ Consistent (일치)</span>
+</div>
+<div class="analysis-section">
+<h4>Gap Analysis</h4>
+<p><strong>Fed Says:</strong> QT를 종료하고 단기 국채 매입(RMP)을 통해 유동성 공급을 시작했다고 발표.</p>
+<p><strong>Data Shows:</strong> 2025년 12월 총자산은 전월 대비 <strong>▲0.02% 증가</strong>하며, 장기간의 감소 추세 이후 <strong>첫 월간 증가</strong>로 전환. 이는 연준의 RMP 개시 발표와 정확히 일치.</p>
+
+<div class="chart-container">
+<canvas id="totalAssetsChart"></canvas>
+<p class="chart-insight">QT 종료 후 RMP 개시로 연준의 총자산이 1년여 만에 처음으로 증가세로 돌아섰습니다.</p>
+</div>
+
+<h4>Forward Guidance Check</h4>
+<p><strong>Policy Impact:</strong> RMP를 통한 유동성 공급이 확인되었으므로, 연준은 금리 정책에 있어 '일시 정지'를 주장할 여력을 확보. <strong>더 매파적(금리 동결)</strong>으로 변할 근거 강화.</p>
+<p><strong>Strategy Check:</strong> T-Bill Long(확대), Liquidity Rally(유지), Long USD(축소 - 유동성 공급은 달러 약세 요인이므로).</p>
+</div>
+<blockquote><strong>Critical Signal:</strong> 연준은 의사록에서 언급한 대로 유동성 공급을 실제로 개시했으며, 이는 금리 동결 기조를 지지합니다.</blockquote>
+</div>
+
+<div class="audit-card">
+<div class="audit-header">
+<h3>핵심 개인소비지출 (Core PCE)</h3>
+<span class="verdict-badge alarm">🚨 Alarm (경고)</span>
+</div>
+<div class="analysis-section">
+<h4>Gap Analysis</h4>
+<p><strong>Fed Says:</strong> "인플레이션이 다소 높은 수준을 유지하고 있다"며 하방 경직성에 대한 우려 표명.</p>
+<p><strong>Data Shows:</strong> YoY 상승률이 4월 2.61%에서 8월 <strong>2.91%</strong>로 명확하게 <strong>재가속화</strong>. Z-Score는 +1.51σ로 "Heating Up 🔥" 단계. 연준의 "다소 높은 수준"이라는 표현은 데이터가 보여주는 재가속 위험을 과소평가.</p>
+
+<div class="chart-container">
+<canvas id="pceChart"></canvas>
+<p class="chart-insight">핵심 PCE(YoY)가 다시 상승 추세로 전환되어 연준의 2% 목표에서 멀어지고 있습니다.</p>
+</div>
+
+<h4>Forward Guidance Check</h4>
+<p><strong>Policy Impact:</strong> 인플레이션 재가속은 금리 인하 명분을 약화시키므로 <strong>더 매파적으로</strong> 변해야 함. 금리 동결을 넘어 인상 가능성까지 검토해야 할 수 있음.</p>
+<p><strong>Strategy Check:</strong> Yield Curve Steepener(확대), Equity(주의/축소), Long USD(유지/확대).</p>
+</div>
+<blockquote><strong>Critical Signal:</strong> 핵심 인플레이션의 명확한 재가속화는 연준의 금리 인하 명분을 약화시키고 강력한 매파적 압력을 가중시키는 결정적 증거입니다.</blockquote>
+</div>
+
+<div class="audit-card">
+<div class="audit-header">
+<h3>핵심 생산자물가지수 (Core PPI)</h3>
+<span class="verdict-badge alarm">🚨 Alarm (경고)</span>
+</div>
+<div class="analysis-section">
+<h4>Gap Analysis</h4>
+<p><strong>Fed Says:</strong> "관세 인상이 핵심 상품 가격을 밀어올리고 있다"며 인플레이션 상승 압력을 인정.</p>
+<p><strong>Data Shows:</strong> 핵심 PPI는 "Heating Up 🔥" 상태이며, Z-Score는 +1.32σ. 2025년 YoY 상승률이 3% 중후반을 기록하며 강한 상승 압력을 유지. 연준의 인식이 데이터가 보여주는 근본적인 압력보다 약함.</p>
+
+<div class="chart-container">
+<canvas id="ppiChart"></canvas>
+<p class="chart-insight">생산자 물가(YoY)가 높은 수준을 유지하며, 향후 소비자 물가에 대한 선행적인 상승 압력을 시사합니다.</p>
+</div>
+
+<h4>Forward Guidance Check</h4>
+<p><strong>Policy Impact:</strong> 생산자 물가 과열은 금리 인하 명분을 약화시키므로 <strong>더 매파적으로</strong> 변해야 함.</p>
+<p><strong>Strategy Check:</strong> 기존 전략(Yield Curve Steepener, Quality Bias Equity, Long USD) 모두 <strong>유지</strong>. 인플레이션 우려를 강하게 지지.</p>
+</div>
+<blockquote><strong>Critical Signal:</strong> 연준의 금리 인하에도 불구하고 생산자 물가가 '과열'되고 있어 매파적 정책 전환이 불가피함을 경고합니다.</blockquote>
+</div>
+
+<div class="audit-card">
+<div class="audit-header">
+<h3>10년 만기 국채 수익률</h3>
+<span class="verdict-badge divergent">⚠️ Divergent (괴리)</span>
+</div>
+<div class="analysis-section">
+<h4>Gap Analysis</h4>
+<p><strong>Fed Says:</strong> 인플레이션 우려로 금리 인하 '일시 정지'를 시사. 이는 장기 금리 상승 압력 요인.</p>
+<p><strong>Data Shows:</strong> 10년물 국채 수익률은 "Cooling Down ❄️" 국면. 최근 3개월 연속 하락세를 보이며 Z-Score -1.82σ 기록. 연준의 매파적 메시지와 시장의 장기 금리 하락 간에 명확한 괴리 발생.</p>
+
+<div class="chart-container">
+<canvas id="treasuryYieldChart"></canvas>
+<p class="chart-insight">연준의 매파적 신호에도 불구하고, 10년물 국채 금리는 하락 추세를 보이며 시장의 성장 둔화 우려를 반영하고 있습니다.</p>
+</div>
+
+<h4>Forward Guidance Check</h4>
+<p><strong>Policy Impact:</strong> 장기 금리 하락은 시장이 성장 둔화를 더 우려하고 있음을 시사. 연준은 <strong>더 비둘기파적으로</strong> 변해야 함.</p>
+<p><strong>Strategy Check:</strong> "Yield Curve Steepener" 전략은 데이터와 상충되므로 <strong>수정</strong> 필요.</p>
+</div>
+<blockquote><strong>Critical Signal:</strong> 10년물 국채 수익률의 냉각은 연준의 '매파적 동결' 메시지가 시장의 성장 둔화 전망과 괴리될 수 있음을 경고합니다.</blockquote>
+</div>
+
+<div class="audit-card">
+<div class="audit-header">
+<h3>실업률 (Unemployment Rate)</h3>
+<span class="verdict-badge alarm">🚨 Alarm (경고)</span>
+</div>
+<div class="analysis-section">
+<h4>Gap Analysis</h4>
+<p><strong>Fed Says:</strong> 실업률이 4.4%로 상승했으나, '급격한 악화'는 아니라고 판단.</p>
+<p><strong>Data Shows:</strong> 실업률은 4.40%로 Z-Score +2.13σ (⚠️ Upside Surprise). 이는 단순한 둔화가 아닌 '예상 밖의 가파른 악화'를 의미. 연준이 노동 시장의 악화 속도를 과소평가.</p>
+
+<div class="chart-container">
+<canvas id="unemploymentChart"></canvas>
+<p class="chart-insight">실업률이 4.4%까지 지속적으로 상승하며, 노동 시장의 악화 속도가 예상보다 빠름을 시사합니다.</p>
+</div>
+
+<h4>Forward Guidance Check</h4>
+<p><strong>Policy Impact:</strong> 노동 시장의 예상 밖 악화는 추가 금리 인하 명분을 강화. 연준은 <strong>더 비둘기파적으로</strong> 변해야 함.</p>
+<p><strong>Strategy Check:</strong> "Yield Curve Steepener" 전략 재고, 주식 시장 보수적 접근, "Long USD" 전략 약화 가능성으로 <strong>수정</strong> 필요.</p>
+</div>
+<blockquote><strong>Critical Signal:</strong> 연준은 4.4% 실업률을 단순 '둔화'로 해석하지만, 데이터는 '예상 밖의 가파른 악화'를 경고하며 인하 사이클 종료 시사에 대한 재고를 요구합니다.</blockquote>
+</div>
+
+</section>
+</main>
+
+<footer>
+<p><strong>Compliance Notice:</strong> 본 자료는 인공지능(AI)을 활용하여 자동 생성되었으며, 투자 권유를 목적으로 하지 않습니다. AI 생성 특성상 오류가 포함될 수 있습니다. 모든 투자 결정에 대한 책임은 투자자 본인에게 있습니다.</p>
+</footer>
+</div>
+
+<script>
+// Raw Data for Charts
+const data_Federal_Reserve_Banks_FRB_Total_Assets = [{"d": "2025-04-09", "v": 6727416.0}, {"d": "2025-04-16", "v": 6727113.0}, {"d": "2025-04-23", "v": 6726930.0}, {"d": "2025-04-30", "v": 6709277.0}, {"d": "2025-05-07", "v": 6710889.0}, {"d": "2025-05-14", "v": 6713270.0}, {"d": "2025-05-21", "v": 6688726.0}, {"d": "2025-05-28", "v": 6673244.0}, {"d": "2025-06-04", "v": 6672885.0}, {"d": "2025-06-11", "v": 6677155.0}, {"d": "2025-06-18", "v": 6681056.0}, {"d": "2025-06-25", "v": 6662200.0}, {"d": "2025-07-02", "v": 6659598.0}, {"d": "2025-07-09", "v": 6661912.0}, {"d": "2025-07-16", "v": 6659273.0}, {"d": "2025-07-23", "v": 6657715.0}, {"d": "2025-07-30", "v": 6642578.0}, {"d": "2025-08-06", "v": 6640843.0}, {"d": "2025-08-13", "v": 6643615.0}, {"d": "2025-08-20", "v": 6618415.0}, {"d": "2025-08-27", "v": 6603384.0}, {"d": "2025-09-03", "v": 6602071.0}, {"d": "2025-09-10", "v": 6605962.0}, {"d": "2025-09-17", "v": 6608597.0}, {"d": "2025-09-24", "v": 6608395.0}, {"d": "2025-10-01", "v": 6587119.0}, {"d": "2025-10-08", "v": 6590815.0}, {"d": "2025-10-15", "v": 6596454.0}, {"d": "2025-10-22", "v": 6589533.0}, {"d": "2025-10-29", "v": 6587034.0}, {"d": "2025-11-05", "v": 6572732.0}, {"d": "2025-11-12", "v": 6580462.0}, {"d": "2025-11-19", "v": 6555283.0}, {"d": "2025-12-03", "v": 6535781.0}, {"d": "2025-12-10", "v": 6539303.0}, {"d": "2025-12-17", "v": 6556861.0}];
+const data_PCE_PI_sa_excl_Food_and_Energy = [{"d": "2022-09-01", "v": 115.788, "yoy_pct": 5.61}, {"d": "2022-10-01", "v": 116.204, "yoy_pct": 5.46}, {"d": "2022-11-01", "v": 116.539, "yoy_pct": 5.21}, {"d": "2022-12-01", "v": 116.952, "yoy_pct": 4.97}, {"d": "2023-01-01", "v": 117.505, "yoy_pct": 4.94}, {"d": "2023-02-01", "v": 117.929, "yoy_pct": 4.86}, {"d": "2023-03-01", "v": 118.315, "yoy_pct": 4.78}, {"d": "2023-04-01", "v": 118.734, "yoy_pct": 4.79}, {"d": "2023-05-01", "v": 119.083, "yoy_pct": 4.73}, {"d": "2023-06-01", "v": 119.39, "yoy_pct": 4.38}, {"d": "2023-07-01", "v": 119.556, "yoy_pct": 4.3}, {"d": "2023-08-01", "v": 119.689, "yoy_pct": 3.83}, {"d": "2023-09-01", "v": 120.058, "yoy_pct": 3.69}, {"d": "2023-10-01", "v": 120.241, "yoy_pct": 3.47}, {"d": "2023-11-01", "v": 120.374, "yoy_pct": 3.29}, {"d": "2023-12-01", "v": 120.592, "yoy_pct": 3.11}, {"d": "2024-01-01", "v": 121.217, "yoy_pct": 3.16}, {"d": "2024-02-01", "v": 121.537, "yoy_pct": 3.06}, {"d": "2024-03-01", "v": 122.009, "yoy_pct": 3.12}, {"d": "2024-04-01", "v": 122.304, "yoy_pct": 3.01}, {"d": "2024-05-01", "v": 122.383, "yoy_pct": 2.77}, {"d": "2024-06-01", "v": 122.677, "yoy_pct": 2.75}, {"d": "2024-07-01", "v": 122.911, "yoy_pct": 2.81}, {"d": "2024-08-01", "v": 123.128, "yoy_pct": 2.87}, {"d": "2024-09-01", "v": 123.466, "yoy_pct": 2.84}, {"d": "2024-10-01", "v": 123.832, "yoy_pct": 2.99}, {"d": "2024-11-01", "v": 123.962, "yoy_pct": 2.98}, {"d": "2024-12-01", "v": 124.196, "yoy_pct": 2.99}, {"d": "2025-01-01", "v": 124.587, "yoy_pct": 2.78}, {"d": "2025-02-01", "v": 125.145, "yoy_pct": 2.97}, {"d": "2025-03-01", "v": 125.267, "yoy_pct": 2.67}, {"d": "2025-04-01", "v": 125.502, "yoy_pct": 2.61}, {"d": "2025-05-01", "v": 125.79, "yoy_pct": 2.78}, {"d": "2025-06-01", "v": 126.121, "yoy_pct": 2.81}, {"d": "2025-07-01", "v": 126.418, "yoy_pct": 2.85}, {"d": "2025-08-01", "v": 126.705, "yoy_pct": 2.91}];
+const data_PPI_sa_Final_excl_Food_and_Energy = [{"d": "2022-09-01", "v": 136.618, "yoy_pct": 7.17}, {"d": "2022-10-01", "v": 136.913, "yoy_pct": 6.93}, {"d": "2022-11-01", "v": 137.449, "yoy_pct": 6.26}, {"d": "2022-12-01", "v": 137.722, "yoy_pct": 5.72}, {"d": "2023-01-01", "v": 137.978, "yoy_pct": 5.05}, {"d": "2023-02-01", "v": 138.29, "yoy_pct": 4.69}, {"d": "2023-03-01", "v": 138.24, "yoy_pct": 3.38}, {"d": "2023-04-01", "v": 138.559, "yoy_pct": 3.17}, {"d": "2023-05-01", "v": 138.752, "yoy_pct": 2.81}, {"d": "2023-06-01", "v": 138.7, "yoy_pct": 2.51}, {"d": "2023-07-01", "v": 139.522, "yoy_pct": 2.71}, {"d": "2023-08-01", "v": 139.788, "yoy_pct": 2.48}, {"d": "2023-09-01", "v": 139.761, "yoy_pct": 2.3}, {"d": "2023-10-01", "v": 139.862, "yoy_pct": 2.15}, {"d": "2023-11-01", "v": 140.104, "yoy_pct": 1.93}, {"d": "2023-12-01", "v": 140.174, "yoy_pct": 1.78}, {"d": "2024-01-01", "v": 140.757, "yoy_pct": 2.01}, {"d": "2024-02-01", "v": 141.2, "yoy_pct": 2.1}, {"d": "2024-03-01", "v": 141.375, "yoy_pct": 2.27}, {"d": "2024-04-01", "v": 142.07, "yoy_pct": 2.53}, {"d": "2024-05-01", "v": 142.479, "yoy_pct": 2.69}, {"d": "2024-06-01", "v": 143.245, "yoy_pct": 3.28}, {"d": "2024-07-01", "v": 143.137, "yoy_pct": 2.59}, {"d": "2024-08-01", "v": 143.756, "yoy_pct": 2.84}, {"d": "2024-09-01", "v": 144.376, "yoy_pct": 3.3}, {"d": "2024-10-01", "v": 144.897, "yoy_pct": 3.6}, {"d": "2024-11-01", "v": 144.836, "yoy_pct": 3.38}, {"d": "2024-12-01", "v": 145.431, "yoy_pct": 3.75}, {"d": "2025-01-01", "v": 146.273, "yoy_pct": 3.92}, {"d": "2025-02-01", "v": 146.462, "yoy_pct": 3.73}, {"d": "2025-03-01", "v": 146.73, "yoy_pct": 3.79}, {"d": "2025-04-01", "v": 146.426, "yoy_pct": 3.07}, {"d": "2025-05-01", "v": 147.062, "yoy_pct": 3.22}, {"d": "2025-06-01", "v": 147.042, "yoy_pct": 2.65}, {"d": "2025-07-01", "v": 148.005, "yoy_pct": 3.4}, {"d": "2025-08-01", "v": 147.829, "yoy_pct": 2.83}];
+const data_Treasury_Notes_Yield_Constant_Maturity_Nominal_10_Years = [{"d": "2022-11-01", "v": 3.891}, {"d": "2022-12-01", "v": 3.61619048}, {"d": "2023-01-01", "v": 3.5315}, {"d": "2023-02-01", "v": 3.74684211}, {"d": "2023-03-01", "v": 3.66304348}, {"d": "2023-04-01", "v": 3.46}, {"d": "2023-05-01", "v": 3.57363636}, {"d": "2023-06-01", "v": 3.74809524}, {"d": "2023-07-01", "v": 3.8995}, {"d": "2023-08-01", "v": 4.16782609}, {"d": "2023-09-01", "v": 4.379}, {"d": "2023-10-01", "v": 4.79809524}, {"d": "2023-11-01", "v": 4.50285714}, {"d": "2023-12-01", "v": 4.02}, {"d": "2024-01-01", "v": 4.05809524}, {"d": "2024-02-01", "v": 4.2075}, {"d": "2024-03-01", "v": 4.2085}, {"d": "2024-04-01", "v": 4.53909091}, {"d": "2024-05-01", "v": 4.48227273}, {"d": "2024-06-01", "v": 4.30526316}, {"d": "2024-07-01", "v": 4.24863636}, {"d": "2024-08-01", "v": 3.87090909}, {"d": "2024-09-01", "v": 3.7235}, {"d": "2024-10-01", "v": 4.09545455}, {"d": "2024-11-01", "v": 4.35578947}, {"d": "2024-12-01", "v": 4.39142857}, {"d": "2025-01-01", "v": 4.62904762}, {"d": "2025-02-01", "v": 4.45105263}, {"d": "2025-03-01", "v": 4.28047619}, {"d": "2025-04-01", "v": 4.27904762}, {"d": "2025-05-01", "v": 4.42380952}, {"d": "2025-06-01", "v": 4.3835}, {"d": "2025-07-01", "v": 4.39181818}, {"d": "2025-08-01", "v": 4.2647619}, {"d": "2025-09-01", "v": 4.12047619}, {"d": "2025-10-01", "v": 4.06181818}];
+const data_Unemployment_Rate_sa = [{"d": "2022-10-01", "v": 3.6}, {"d": "2022-11-01", "v": 3.6}, {"d": "2022-12-01", "v": 3.5}, {"d": "2023-01-01", "v": 3.5}, {"d": "2023-02-01", "v": 3.6}, {"d": "2023-03-01", "v": 3.5}, {"d": "2023-04-01", "v": 3.4}, {"d": "2023-05-01", "v": 3.6}, {"d": "2023-06-01", "v": 3.6}, {"d": "2023-07-01", "v": 3.5}, {"d": "2023-08-01", "v": 3.7}, {"d": "2023-09-01", "v": 3.8}, {"d": "203-10-01", "v": 3.9}, {"d": "2023-11-01", "v": 3.7}, {"d": "2023-12-01", "v": 3.8}, {"d": "2024-01-01", "v": 3.7}, {"d": "2024-02-01", "v": 3.9}, {"d": "2024-03-01", "v": 3.9}, {"d": "2024-04-01", "v": 3.9}, {"d": "2024-05-01", "v": 4.0}, {"d": "2024-06-01", "v": 4.1}, {"d": "2024-07-01", "v": 4.2}, {"d": "2024-08-01", "v": 4.2}, {"d": "2024-09-01", "v": 4.1}, {"d": "2024-10-01", "v": 4.1}, {"d": "2024-11-01", "v": 4.2}, {"d": "2024-12-01", "v": 4.1}, {"d": "2025-01-01", "v": 4.0}, {"d": "2025-02-01", "v": 4.1}, {"d": "2025-03-01", "v": 4.2}, {"d": "2025-04-01", "v": 4.2}, {"d": "2025-05-01", "v": 4.2}, {"d": "2025-06-01", "v": 4.1}, {"d": "2025-07-01", "v": 4.2}, {"d": "2025-08-01", "v": 4.3}, {"d": "2025-09-01", "v": 4.4}];
+
+document.addEventListener('DOMContentLoaded', function() {
+const commonOptions = {
+responsive: true,
+maintainAspectRatio: true,
+plugins: {
+legend: { display: false },
+tooltip: {
+mode: 'index',
+intersect: false,
+backgroundColor: 'rgba(0,0,0,0.8)',
+titleFont: { size: 14, weight: 'bold' },
+bodyFont: { size: 12 },
+padding: 10,
+}
+},
+scales: {
+x: {
+grid: { display: false },
+ticks: {
+autoSkip: true,
+maxTicksLimit: 10,
+font: { size: 10 }
+}
+},
+y: {
+grid: { color: '#e9ecef' },
+ticks: { font: { size: 10 } }
+}
+}
+};
+
+const filterLastNMonths = (data, months) => data.slice(-months);
+
+// 1. Total Assets Chart
+const totalAssetsCtx = document.getElementById('totalAssetsChart').getContext('2d');
+const totalAssetsData = filterLastNMonths(data_Federal_Reserve_Banks_FRB_Total_Assets, 36);
+new Chart(totalAssetsCtx, {
+type: 'line',
+data: {
+labels: totalAssetsData.map(row => row.d),
+datasets: [{
+label: '총자산 (백만 $)',
+data: totalAssetsData.map(row => parseFloat(row.v)),
+borderColor: '#0d6efd',
+backgroundColor: 'rgba(13, 110, 253, 0.1)',
+borderWidth: 2,
+pointRadius: 1,
+fill: true,
+tension: 0.1
+}]
+},
+options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: true } } }
+});
+
+// 2. PCE Chart
+const pceCtx = document.getElementById('pceChart').getContext('2d');
+const pceData = filterLastNMonths(data_PCE_PI_sa_excl_Food_and_Energy, 36);
+new Chart(pceCtx, {
+type: 'line',
+data: {
+labels: pceData.map(row => new Date(row.d).toLocaleDateString('ko-KR', { year: '2-digit', month: 'short' })),
+datasets: [{
+label: '핵심 PCE (YoY %)',
+data: pceData.map(row => parseFloat(row.yoy_pct)),
+borderColor: '#dc3545',
+borderWidth: 2,
+pointRadius: 2,
+tension: 0.1
+}]
+},
+options: {
+...commonOptions,
+plugins: { ...commonOptions.plugins, legend: { display: true },
+annotation: {
+annotations: {
+line1: {
+type: 'line',
+yMin: 2,
+yMax: 2,
+borderColor: '#198754',
+borderWidth: 2,
+borderDash: [6, 6],
+label: {
+content: 'Fed Target 2%',
+enabled: true,
+position: 'end'
+}
+}
+}
+}
+},
+scales: { ...commonOptions.scales, y: { ...commonOptions.scales.y, title: { display: true, text: 'YoY %' }}}
+}
+});
+
+// 3. PPI Chart
+const ppiCtx = document.getElementById('ppiChart').getContext('2d');
+const ppiData = filterLastNMonths(data_PPI_sa_Final_excl_Food_and_Energy, 36);
+new Chart(ppiCtx, {
+type: 'line',
+data: {
+labels: ppiData.map(row => new Date(row.d).toLocaleDateString('ko-KR', { year: '2-digit', month: 'short' })),
+datasets: [{
+label: '핵심 PPI (YoY %)',
+data: ppiData.map(row => parseFloat(row.yoy_pct)),
+borderColor: '#fd7e14',
+borderWidth: 2,
+pointRadius: 2,
+tension: 0.1
+}]
+},
+options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: true }}, scales: { ...commonOptions.scales, y: { ...commonOptions.scales.y, title: { display: true, text: 'YoY %' }}} }
+});
+
+// 4. Treasury Yield Chart
+const treasuryYieldCtx = document.getElementById('treasuryYieldChart').getContext('2d');
+const treasuryYieldData = filterLastNMonths(data_Treasury_Notes_Yield_Constant_Maturity_Nominal_10_Years, 36);
+new Chart(treasuryYieldCtx, {
+type: 'line',
+data: {
+labels: treasuryYieldData.map(row => new Date(row.d).toLocaleDateString('ko-KR', { year: '2-digit', month: 'short' })),
+datasets: [{
+label: '10년물 국채 수익률 (%)',
+data: treasuryYieldData.map(row => parseFloat(row.v)),
+borderColor: '#198754',
+backgroundColor: 'rgba(25, 135, 84, 0.1)',
+borderWidth: 2,
+pointRadius: 2,
+fill: true,
+tension: 0.1
+}]
+},
+options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: true } }, scales: { ...commonOptions.scales, y: { ...commonOptions.scales.y, title: { display: true, text: '%' }}} }
+});
+
+// 5. Unemployment Rate Chart
+const unemploymentCtx = document.getElementById('unemploymentChart').getContext('2d');
+const unemploymentData = filterLastNMonths(data_Unemployment_Rate_sa, 36);
+new Chart(unemploymentCtx, {
+type: 'bar',
+data: {
+labels: unemploymentData.map(row => new Date(row.d).toLocaleDateString('ko-KR', { year: '2-digit', month: 'short' })),
+datasets: [{
+label: '실업률 (%)',
+data: unemploymentData.map(row => parseFloat(row.v)),
+backgroundColor: 'rgba(108, 117, 125, 0.7)',
+borderColor: 'rgba(108, 117, 125, 1)',
+borderWidth: 1
+}]
+},
+options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: true } }, scales: { ...commonOptions.scales, y: { ...commonOptions.scales.y, title: { display: true, text: '%' }}} }
+});
+});
+</script>
+</body>
+</html>
