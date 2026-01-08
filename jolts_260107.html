@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOLTS 종합 분석: K자형 둔화와 스태그플레이션의 전조 (2026-01-08)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<style>
+:root {
+--bg-color: #f8f9fa;
+--surface-color: #ffffff;
+--primary-text-color: #212529;
+--secondary-text-color: #495057;
+--border-color: #dee2e6;
+--accent-color: #0052FF;
+--red-color: #d94848;
+--green-color: #28a745;
+--font-family-main: 'Inter', 'Roboto', sans-serif;
+}
+
+body {
+font-family: var(--font-family-main);
+background-color: var(--bg-color);
+color: var(--primary-text-color);
+margin: 0;
+padding: 0;
+line-height: 1.7;
+font-size: 16px;
+}
+
+.container {
+max-width: 1000px;
+margin: 2rem auto;
+padding: 1rem;
+background-color: var(--surface-color);
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+.container {
+margin: 1rem;
+padding: 0.5rem;
+}
+body {
+font-size: 15px;
+}
+}
+
+header {
+text-align: center;
+padding-bottom: 2rem;
+border-bottom: 1px solid var(--border-color);
+margin-bottom: 2rem;
+}
+
+header h1 {
+font-size: 2.5rem;
+font-weight: 700;
+color: var(--primary-text-color);
+margin: 0;
+}
+
+header .subtitle {
+font-size: 1.1rem;
+color: var(--secondary-text-color);
+margin-top: 0.5rem;
+}
+
+h2 {
+font-size: 1.8rem;
+font-weight: 600;
+color: var(--accent-color);
+border-bottom: 2px solid var(--accent-color);
+padding-bottom: 0.5rem;
+margin-top: 3rem;
+margin-bottom: 1.5rem;
+}
+
+h3 {
+font-size: 1.4rem;
+font-weight: 600;
+margin-top: 2rem;
+margin-bottom: 1rem;
+}
+
+p, ul, li {
+color: var(--secondary-text-color);
+margin-bottom: 1rem;
+}
+
+ul {
+padding-left: 20px;
+}
+
+li {
+margin-bottom: 0.5rem;
+}
+
+strong {
+color: var(--primary-text-color);
+font-weight: 600;
+}
+
+blockquote {
+border-left: 4px solid var(--accent-color);
+padding: 1rem 1.5rem;
+margin: 1.5rem 0;
+background-color: #f1f3f5;
+border-radius: 0 4px 4px 0;
+font-style: italic;
+}
+
+.card-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 1.5rem;
+}
+
+.card {
+background-color: var(--surface-color);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+padding: 1.5rem;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+margin-top: 0;
+font-size: 1.2rem;
+color: var(--accent-color);
+}
+
+.chart-container {
+margin-top: 2rem;
+padding: 1.5rem;
+border: 1px solid var(--border-color);
+border-radius: 8px;
+}
+
+.chart-insight {
+text-align: center;
+font-size: 0.9rem;
+color: var(--secondary-text-color);
+margin-top: 1rem;
+font-style: italic;
+}
+
+.strategy-section {
+display: flex;
+gap: 2rem;
+margin-top: 2rem;
+}
+@media (max-width: 768px) {
+.strategy-section {
+flex-direction: column;
+}
+}
+
+.strategy-box {
+flex: 1;
+padding: 1.5rem;
+border-radius: 8px;
+}
+.strategy-box.overweight {
+border: 2px solid var(--green-color);
+background-color: #f0fff4;
+}
+.strategy-box.underweight {
+border: 2px solid var(--red-color);
+background-color: #fff5f5;
+}
+.strategy-box h4 {
+margin-top: 0;
+font-size: 1.3rem;
+display: flex;
+align-items: center;
+}
+.strategy-box.overweight h4 { color: var(--green-color); }
+.strategy-box.underweight h4 { color: var(--red-color); }
+
+.strategy-box h4::before {
+content: '';
+display: inline-block;
+width: 24px;
+height: 24px;
+margin-right: 0.5rem;
+background-size: contain;
+}
+.strategy-box.overweight h4::before {
+content: '▲';
+color: var(--green-color);
+}
+.strategy-box.underweight h4::before {
+content: '▼';
+color: var(--red-color);
+}
+
+.footer {
+margin-top: 3rem;
+padding-top: 1.5rem;
+border-top: 1px solid var(--border-color);
+text-align: center;
+font-size: 0.8rem;
+color: #868e96;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>JOLTS 종합 분석: K자형 둔화와 스태그플레이션의 전조</h1>
+<p class="subtitle">보고서 날짜: 2026년 1월 8일</p>
+</header>
+
+<main>
+<section id="executive-summary">
+<h2>Executive Summary: 노동시장 건전성 진단</h2>
+<blockquote>
+미국 노동시장은 단순한 둔화를 넘어 <strong>'K자형 침체(K-Shaped Recession)'</strong>에 진입하고 있습니다. 고임금 화이트칼라 직종의 해고는 급증하는 반면, 저임금 서비스 직종은 인력 부족으로 고용을 유지하는 극심한 양극화가 나타나고 있습니다. 이는 스태그플레이션 리스크를 증대시켜 연준의 정책 경로에 심각한 딜레마를 안겨줄 것입니다.
+</blockquote>
+
+<h3>핵심 진단 (The Big Picture)</h3>
+<p>이번 JOLTS 데이터의 각 지표들을 종합 분석한 결과, 미국 노동 시장의 건전성은 총량 지표가 시사하는 것보다 훨씬 취약한 것으로 판단됩니다. 표면적으로는 점진적 둔화처럼 보이지만, 그 이면에는 산업별, 직종별로 극명한 괴리가 발생하며 구조적인 균열이 심화되고 있습니다.</p>
+<ul>
+<li><strong>지표 간 충돌과 그 이면의 진실 (Conflict Check):</strong>
+<ul>
+<li><strong>구인(Openings) 급감 vs. 낮은 총 해고율(Layoffs):</strong> 기업들이 신규 채용의 문은 걸어 잠갔지만, 팬데믹 이후 겪었던 인력난에 대한 트라우마로 기존 인력은 해고하지 않고 최대한 붙잡아두는 <strong>'노동 비축(Labor Hoarding)'</strong> 현상이 저임금 서비스업을 중심으로 나타나고 있습니다. 하지만 이는 시장 전체의 건전성을 의미하지 않으며, 오히려 고임금 전문직에서는 해고가 급증하고 있습니다.</li>
+<li><strong>자발적 퇴사(Quits) 감소:</strong> 노동자들의 자신감 하락과 이직 시장 냉각을 의미합니다. 더 나은 기회를 찾아 직장을 옮기던 '대퇴사(Great Resignation)' 시대는 완전히 끝났으며, 이제는 고용 안정성을 우선시하는 분위기가 팽배합니다.</li>
+</ul>
+</li>
+<li><strong>경기 사이클 위치 (Cycle Positioning):</strong> 현재 미국 경제는 '과열' 단계를 지나 '연착륙' 가능성마저 희미해지고 있습니다. 일부 섹터는 이미 침체에 진입했으며, 다른 섹터는 여전히 견조한 수요를 보이며 인플레이션 압력을 가중시키는 <strong>'스태그플레이션적 둔화(Stagflationary Slowdown)'</strong> 초기 국면에 위치해 있습니다.</li>
+</ul>
+</section>
+
+<section id="deep-dive">
+<h2>Deep Dive: 지표별 교차 검증 및 섹터 분석</h2>
+<p>JOLTS의 주요 4대 지표(구인, 채용, 퇴사, 해고)를 종합적으로 분석하면 노동 시장의 다층적인 현실이 드러납니다. 각 지표는 개별적으로 해석될 때보다 상호 연관성을 통해 볼 때 더 명확한 시그널을 제공합니다.</p>
+
+<div class="card-container">
+<div class="card">
+<h4>📊 구인 (Job Openings): 수요의 급격한 양극화</h4>
+<p>전체 구인 건수는 <strong>전년 대비 11.0% 감소</strong>하며 광범위한 수요 둔화를 확인시켜주었습니다. 하지만 이는 절반의 진실에 불과합니다.</p>
+<ul>
+<li><strong>과열 섹터 (Hot):</strong> <strong>소매 유통(Retail trade, +40.6% YoY)</strong>은 이례적인 과열 양상을 보이며 강력한 소비 수요가 여전히 살아있음을 증명했습니다.</li>
+<li><strong>냉각 섹터 (Cold):</strong> 반면, <strong>금융(-38.2% YoY), 정보통신(-23.0% YoY), 주/지방정부(-19.8% YoY)</strong> 등 금리 민감 섹터와 공공 부문은 구인 수요가 급격히 얼어붙었습니다. 이는 K자형 둔화의 가장 명확한 증거입니다.</li>
+</ul>
+</div>
+<div class="card">
+<h4>📉 채용 (Hires): 광범위한 침체의 증거</h4>
+<p>총 채용 건수는 전년 대비 <strong>3.6% 감소</strong>하며 구인 감소가 실제 고용 위축으로 이어지고 있음을 보여줍니다. 특히 우려스러운 점은 전통적인 방어 섹터의 붕괴입니다.</p>
+<ul>
+<li><strong>심각한 냉각:</strong> <strong>부동산(-35.3% YoY), 주/지방정부(-21.4% YoY)</strong> 뿐만 아니라, 대표적인 방어주인 <strong>교육 및 보건 서비스(-10.8% YoY)</strong>마저 채용이 급감했습니다. 이는 경기 침체의 충격이 예상보다 깊고 광범위하게 퍼지고 있음을 시사하는 강력한 경고 신호입니다.</li>
+</ul>
+</div>
+<div class="card">
+<h4>🚶 자발적 퇴사 (Quits): 자신감의 종말</h4>
+<p>자발적 퇴사율의 둔화는 노동자들의 경기 전망과 자신감이 크게 위축되었음을 나타냅니다. 특히 공공 및 금리 민감 섹터에서 두드러집니다.</p>
+<ul>
+<li><strong>이직 감소:</strong> <strong>주/지방 교육(-21.5% YoY), 부동산(-16.2% YoY), 도매업(-14.1% YoY)</strong> 등에서 퇴사율이 급락했습니다. 노동자들이 더 나은 기회를 찾기보다 현재의 자리를 지키려는 경향이 강해졌음을 의미합니다.</li>
+<li><strong>예외:</strong> 그러나 <strong>숙박 및 요식업(+31.4% YoY)</strong> 등 대면 서비스업은 여전히 높은 퇴사율을 보여, 소비 부문의 활력이 부분적으로 유지되고 있음을 시사합니다.</li>
+</ul>
+</div>
+<div class="card">
+<h4>🚫 해고 (Layoffs): 질적 악화의 핵심</h4>
+<p>총 해고율은 안정적으로 보이지만, 이는 저임금 직종의 노동 비축 효과에 의한 착시입니다. 실제로는 고임금 화이트칼라 직종에서 <strong>'조용한 해고(Silent Layoffs)'</strong>가 급증하고 있습니다.</p>
+<ul>
+<li><strong>화이트칼라 위기:</strong> <strong>금융 및 보험(+147.1% YoY), 정보통신(+34.2% YoY), 전문/비즈니스 서비스(+24.1% YoY)</strong>에서 해고가 폭발적으로 증가했습니다. 이는 AI 도입과 비용 절감 압박에 따른 구조조정이 본격화되었음을 의미하며, 소비 여력의 핵심인 중산층 이상 가구에 직접적인 타격을 줄 것입니다.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="data-evidence">
+<h2>Data Evidence: 차트로 보는 섹터별 괴리</h2>
+
+<div class="chart-container">
+<h3>구인(Job Openings) 및 채용(Hires) 증감률 (YoY)</h3>
+<canvas id="jobOpeningsHiresChart"></canvas>
+<p class="chart-insight">소매 유통 섹터의 구인 수요는 폭발적으로 증가했지만, 대부분의 섹터는 구인과 채용 모두에서 마이너스 성장을 기록하며 노동 시장의 전반적인 위축을 보여줍니다.</p>
+</div>
+
+<div class="chart-container">
+<h3>자발적 퇴사(Quits) 및 해고(Layoffs) 증감률 (YoY)</h3>
+<canvas id="quitsLayoffsChart"></canvas>
+<p class="chart-insight">금융/보험, 정보통신 등 고임금 전문직의 해고가 급증하는 반면, 숙박/요식업에서는 여전히 자발적 퇴사가 많아 노동 시장의 극심한 양극화를 드러냅니다.</p>
+</div>
+</section>
+
+<section id="investment-strategy">
+<h2>Final Investment Strategy: 스태그플레이션 환경에서의 포트폴리오 전략</h2>
+<p>현재의 K자형 둔화 및 스태그플레이션 리스크는 포트폴리오 전략의 전면적인 재검토를 요구합니다. 경기 사이클에 대한 민감도를 낮추고, 구조적 변화의 수혜를 입는 섹터와 방어적 성격이 강한 섹터에 집중해야 합니다.</p>
+
+<div class="strategy-section">
+<div class="strategy-box overweight">
+<h4>매수 / 비중 확대 (Overweight)</h4>
+<ul>
+<li><strong>AI 및 자동화 솔루션:</strong> 정보통신 섹터 내에서도 해고가 아닌 채용이 증가하는 분야는 AI 기술 통합과 관련된 핵심 기술 인력입니다. 기업들의 비용 절감 및 효율화 요구가 커질수록 구조적 성장이 기대됩니다.</li>
+<li><strong>필수 소비재 (Consumer Staples):</strong> 경기 둔화에도 불구하고 비내구재(Nondurable Goods) 제조업의 이직률은 높고 해고율은 낮게 유지되고 있습니다. 이는 안정적인 수요를 바탕으로 한 고용 유연성을 의미하며, 인플레이션 환경에서 가격 전가 능력이 있는 기업들이 유리합니다.</li>
+<li><strong>헬스케어 (선별적 접근):</strong> 전반적인 고용은 둔화되었으나, 인구 고령화와 신기술 도입이라는 구조적 성장 동력은 유효합니다. 특히 공공 지출의 영향을 덜 받는 민간 헬스케어 및 바이오테크 분야가 매력적입니다.</li>
+</ul>
+</div>
+<div class="strategy-box underweight">
+<h4>매도 / 비중 축소 (Underweight)</h4>
+<ul>
+<li><strong>금융 및 부동산:</strong> 고금리 환경의 직격탄을 맞은 섹터입니다. 구인, 채용, 퇴사 모든 지표에서 급격한 냉각 신호가 나타났으며, 특히 금융권의 해고 급증은 향후 실적 악화와 신용 리스크 확대를 예고합니다.</li>
+<li><strong>전문 및 비즈니스 서비스:</strong> 기업들의 비용 절감 1순위 타겟입니다. 해고가 급증하고 있으며, 경기 침체 진입 시 가장 큰 타격을 받을 수 있는 섹터 중 하나입니다.</li>
+<li><strong>주/지방 정부 관련 채권 및 인프라:</strong> 공공 부문의 구인 및 채용이 전반적으로 급감하고 있습니다. 이는 세수 감소와 재정 압박이 심화되고 있음을 의미하므로, 관련 채권의 신용 스프레드 확대 위험에 대비해야 합니다.</li>
+</ul>
+</div>
+</div>
+
+<h3>거시 경제 베팅 (Macro Bet)</h3>
+<p><strong>연준의 정책 경로에 대한 시장의 낙관론은 과도합니다.</strong> 현재 데이터는 연준이 '인플레이션 재점화'와 '경기 침체'라는 두 가지 위협 사이에서 이러지도 저러지도 못하는 상황에 처할 가능성을 높입니다. '더 높게, 더 오래(Higher for Longer)' 기조가 예상보다 길어지거나, 섣부른 금리 인하가 인플레이션을 다시 자극하여 긴축으로 급선회하는 'Stop-and-Go' 정책의 위험이 커졌습니다.</p>
+<blockquote>
+<strong>결론:</strong> 금리 인하에 대한 섣부른 기대를 버리고, <strong>장기 국채 금리의 변동성 확대</strong>에 베팅하는 전략이 유효합니다. 또한, 달러는 연준의 정책적 딜레마 속에서 안전자산 선호 심리와 맞물려 강세를 보일 가능성이 높습니다.
+</blockquote>
+
+</section>
+</main>
+
+<footer class="footer">
+<p>Compliance Notice</p>
+<p>본 자료는 제공된 데이터를 기반으로 AI를 활용하여 자동 생성되었으며, 투자 권유를 목적으로 하지 않습니다. AI 생성 정보의 특성상 일부 오류가 포함될 수 있으며, 투자에 대한 최종 결정과 책임은 투자자 본인에게 있습니다.</p>
+</footer>
+</div>
+<script>
+// Data Parsing & Chart Generation
+document.addEventListener('DOMContentLoaded', function () {
+
+const jobOpeningsData = {
+'Retail trade': 40.6,
+'Construction': 5.4,
+'Trade, transport, utilities': 25.1,
+'Educational services': 4.4,
+'Federal': -22.3,
+'Manufacturing': -9.0,
+'Health care': -12.2,
+'State and local education': -10.8,
+'State and local': -19.8,
+'Information': -23.0,
+'Real estate': -37.5,
+'Financial activities': -38.2,
+};
+
+const hiresData = {
+'Federal': 17.9,
+'Information': 10.4,
+'Construction': 1.5,
+'Manufacturing': -3.6,
+'Financial activities': -4.4,
+'Trade, transport, utilities': -9.5,
+'Education and health': -10.8,
+'State and local education': -20.9,
+'State and local': -21.4,
+'Real estate': -35.3,
+};
+
+const quitsData = {
+'Mining and logging': 45.5,
+'Accommodation and food': 31.4,
+'Leisure and hospitality': 27.7,
+'Federal': 14.3,
+'Durable goods': 9.8,
+'Retail trade': 7.8,
+'Nondurable goods': 7.3,
+'Construction': 4.2,
+'Professional and business': -2.7,
+'State and local': -13.7,
+'Wholesale trade': -14.1,
+'Education and health': -16.1,
+'Real estate': -16.2,
+'State and local education': -21.5,
+};
+
+const layoffsData = {
+'Finance and insurance': 147.1,
+'Federal': 40.0,
+'Information': 34.2,
+'Private educational services': 28.6,
+'Professional and business': 24.1,
+'Construction': 2.9,
+'Health care': -4.3,
+'State and local': -10.5,
+'Manufacturing': -14.3,
+'Trade, transport, utilities': -20.2,
+'Educational services': -24.1,
+'Nondurable goods': -26.2,
+'Retail trade': -27.5,
+'Real estate': -44.8,
+'Accommodation and food': -53.7,
+};
+
+const generateBarChart = (canvasId, datasetsConfig) => {
+const ctx = document.getElementById(canvasId).getContext('2d');
+new Chart(ctx, {
+type: 'bar',
+data: {
+labels: datasetsConfig[0].labels,
+datasets: datasetsConfig.map(config => ({
+label: config.label,
+data: config.data,
+backgroundColor: config.data.map(value => value > 0 ? 'rgba(0, 82, 255, 0.7)' : 'rgba(217, 72, 72, 0.7)'),
+borderColor: config.data.map(value => value > 0 ? 'rgba(0, 82, 255, 1)' : 'rgba(217, 72, 72, 1)'),
+borderWidth: 1
+}))
+},
+options: {
+indexAxis: 'y',
+responsive: true,
+maintainAspectRatio: false,
+scales: {
+x: {
+title: {
+display: true,
+text: '전년 동기 대비 증감률 (%)'
+}
+},
+y: {
+ticks: {
+autoSkip: false
+}
+}
+},
+plugins: {
+legend: {
+display: true
+},
+tooltip: {
+callbacks: {
+label: function(context) {
+let label = context.dataset.label || '';
+if (label) {
+label += ': ';
+}
+if (context.parsed.x !== null) {
+label += context.parsed.x.toFixed(1) + '%';
+}
+return label;
+}
+}
+}
+}
+}
+});
+};
+
+const sortedOpenings = Object.entries(jobOpeningsData).sort((a, b) => b[1] - a[1]);
+const sortedHires = Object.entries(hiresData).sort((a, b) => b[1] - a[1]);
+
+const openingsLabels = sortedOpenings.map(entry => entry[0]);
+const openingsValues = sortedOpenings.map(entry => entry[1]);
+
+const hiresLabels = sortedHires.map(entry => entry[0]);
+const hiresValues = sortedHires.map(entry => entry[1]);
+
+// For combined chart, we need common labels
+const commonLabelsOpeningsHires = [...new Set([...openingsLabels, ...hiresLabels])];
+const openingsDataForChart = commonLabelsOpeningsHires.map(label => jobOpeningsData[label] || 0);
+const hiresDataForChart = commonLabelsOpeningsHires.map(label => hiresData[label] || 0);
+
+const ctxOH = document.getElementById('jobOpeningsHiresChart').getContext('2d');
+new Chart(ctxOH, {
+type: 'bar',
+data: {
+labels: commonLabelsOpeningsHires,
+datasets: [
+{
+label: '구인 (Job Openings) YoY %',
+data: openingsDataForChart,
+backgroundColor: 'rgba(0, 82, 255, 0.7)',
+borderColor: 'rgba(0, 82, 255, 1)',
+borderWidth: 1
+},
+{
+label: '채용 (Hires) YoY %',
+data: hiresDataForChart,
+backgroundColor: 'rgba(217, 72, 72, 0.7)',
+borderColor: 'rgba(217, 72, 72, 1)',
+borderWidth: 1
+}
+]
+},
+options: {
+indexAxis: 'y',
+responsive: true,
+plugins: {
+legend: { position: 'top' },
+title: { display: false },
+tooltip: {
+callbacks: {
+label: (context) => `${context.dataset.label}: ${context.formattedValue}%`
+}
+}
+},
+scales: {
+x: { title: { display: true, text: '전년 동기 대비 증감률 (%)' } }
+},
+aspectRatio: 1
+}
+});
+
+
+const sortedQuits = Object.entries(quitsData).sort((a, b) => b[1] - a[1]);
+const sortedLayoffs = Object.entries(layoffsData).sort((a, b) => b[1] - a[1]);
+
+const commonLabelsQuitsLayoffs = [...new Set([...sortedQuits.map(e => e[0]), ...sortedLayoffs.map(e => e[0])])];
+const quitsDataForChart = commonLabelsQuitsLayoffs.map(label => quitsData[label] || 0);
+const layoffsDataForChart = commonLabelsQuitsLayoffs.map(label => layoffsData[label] || 0);
+
+const ctxQL = document.getElementById('quitsLayoffsChart').getContext('2d');
+new Chart(ctxQL, {
+type: 'bar',
+data: {
+labels: commonLabelsQuitsLayoffs,
+datasets: [
+{
+label: '해고 (Layoffs) YoY %',
+data: layoffsDataForChart,
+backgroundColor: 'rgba(217, 72, 72, 0.7)',
+borderColor: 'rgba(217, 72, 72, 1)',
+borderWidth: 1
+},
+{
+label: '자발적 퇴사 (Quits) YoY %',
+data: quitsDataForChart,
+backgroundColor: 'rgba(40, 167, 69, 0.7)',
+borderColor: 'rgba(40, 167, 69, 1)',
+borderWidth: 1
+}
+]
+},
+options: {
+indexAxis: 'y',
+responsive: true,
+plugins: {
+legend: { position: 'top' },
+title: { display: false },
+tooltip: {
+callbacks: {
+label: (context) => `${context.dataset.label}: ${context.formattedValue}%`
+}
+}
+},
+scales: {
+x: {
+title: { display: true, text: '전년 동기 대비 증감률 (%)' },
+type: 'linear',
+ticks: {
+callback: function(value, index, values) {
+return value + '%';
+}
+}
+}
+},
+aspectRatio: 1
+}
+});
+});
+</script>
+</body>
+</html>
