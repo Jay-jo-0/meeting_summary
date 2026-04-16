@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+ul {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4월 셋째주 대신뷰 회의록</title>
+    <style>
+        /* 기본 스타일 */
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 제목 스타일 */
+        h1 {
+            font-size: 2.2em; /* 모바일에서 크게 */
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 5px solid #2980b9;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        h4 {
+            font-size: 1.2em;
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* 텍스트 스타일 */
+        p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        strong {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        em {
+            color: #27ae60;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        /* 목록 스타일 */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        /* 표 스타일 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fcfcfc;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* 모바일 최적화 */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+
+            h3 {
+                font-size: 1.2em;
+                margin-top: 25px;
+                margin-bottom: 10px;
+            }
+
+            h4 {
+                font-size: 1.1em;
+                margin-top: 20px;
+                margin-bottom: 8px;
+            }
+
+            p, ul li, table {
+                font-size: 0.95em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            h4 {
+                font-size: 1em;
+            }
+
+            p, ul li, table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+
+            /* 표가 너무 길 경우 스크롤 가능하게 */
+            table.responsive-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            table.responsive-table thead, table.responsive-table tbody, table.responsive-table th, table.responsive-table td, table.responsive-table tr {
+                display: block;
+            }
+            table.responsive-table thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            table.responsive-table tr {
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+            }
+            table.responsive-table td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+            table.responsive-table td:before {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+            }
+            /* 각 셀에 대한 레이블 설정 (CSS content 속성 활용) */
+            table.responsive-table td:nth-of-type(1):before { content: "구분"; }
+            table.responsive-table td:nth-of-type(2):before { content: "내용"; }
+            /* 이 방식은 요약 테이블에만 적용하고, 상세 테이블은 그냥 스크롤로 가는게 나을 수 있음 */
+            /* 현재 회의록 요약 테이블은 컬럼이 적어서 이 방식까지는 필요 없을 듯 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>4월 셋째주 대신뷰 회의록</h1>
+
+        <h2>회의 개요 및 핵심 요약</h2>
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>회의 주제</strong></td>
+                    <td>4월 셋째주 대신뷰 정기 회의</td>
+                </tr>
+                <tr>
+                    <td><strong>일시</strong></td>
+                    <td>2026년 4월 16일 (목) 오전 9시 20분 (총 9분 38초 진행)</td>
+                </tr>
+                <tr>
+                    <td><strong>참석자</strong></td>
+                    <td>안범수, 이경민, 이정훈, 배상영, 권순호</td>
+                </tr>
+                <tr>
+                    <td><strong>주요 안건</strong></td>
+                    <td>
+                        <ul>
+                            <li>국내외 경제 지표 및 시장 동향 분석 (한국 GDP, 코스피 전망)</li>
+                            <li>미국 연준 최민호 관련 금융 정책 방향 논의</li>
+                            <li>중동 지역 지정학적 리스크 (휴전, 종전 협상) 점검</li>
+                            <li>주요 기업 실적 예상 및 다음 주 업무 계획 공유</li>
+                            <li>시장 상황 업데이트 및 향후 대응 전략 논의</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>핵심 결정사항</strong></td>
+                    <td>
+                        <ul>
+                            <li><strong>코스피</strong>는 12개월 선행 EPS가 꺾이지 않는 한 <em>등락은 있어도 상승 추세 유지</em> 전망 (타겟 PR 7배 달성 목표).</li>
+                            <li><strong>최민호 연준 의장</strong>의 청문회 및 실제 정책 방향을 <em>지속적으로 주시</em>하기로 함.</li>
+                            <li><strong>중요한 시장 변화</strong> (휴전 협상, 기업 실적 등) 발생 시 <em>즉시 단톡방 및 센터 방에 업데이트</em>하기로 함.</li>
+                            <li>금요일 성현 담당 업무 중 <strong>장중 시황은 이경민이 대리 작성</strong>하고, 성현은 자료 업로드만 진행.</li>
+                            <li>다음 주 <strong>휴가/출장자 현황을 재집계</strong>하여 업무 공백 최소화.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>회의 상세 내용</h2>
+
+        <h3>1. 경제 지표 및 시장 동향 분석</h3>
+        <h4>한국 GDP 전망 및 국내 경기 평가</h4>
+        <p>
+            이정훈 연구원은 한국의 1분기 GDP 성장률을 <strong>QoQ 기준 1.2% (실질적으로는 2.9% 수준)</strong>로 비교적 강하게 전망했습니다. 이는 시장 컨센서스(0.9%~1.0%)를 상회하는 수준입니다. 그러나 2분기에는 생산 부진, 특히 석유화학(석화) 부문의 생산 감소 영향으로 <strong>마이너스 성장률을 기록할 가능성</strong>이 있다고 언급했습니다. 그럼에도 불구하고, <strong>YOY(전년 동기 대비) 기준으로는 2분기까지 2%대 성장률을 유지할 것</strong>으로 예상했습니다.
+        </p>
+        <p>
+            하반기 전망에 대해서는 작년 하반기에 있었던 소비 쿠폰 지급 등의 기저 효과로 인해 <strong>3분기에는 성장세가 다소 꺾일 수 있으나, 4분기에는 다시 회복될 것</strong>으로 보았습니다. 현재 정부에서 '전쟁 쿠폰'과 같은 소비 지원책을 논의 중이지만, 그 규모가 작년 대비 현저히 작아 큰 영향은 없을 것으로 판단됩니다. 전반적으로 작년 하반기부터 수출 및 제조업 경기가 지속적으로 양호했던 점을 고려할 때, 아직까지 국내 경기가 크게 나쁘다고 보기는 어렵다는 의견이 지배적이었습니다.
+        </p>
+
+        <h4>코스피 시장 분석 및 전망</h4>
+        <p>
+            이경민 연구원은 최근 코스피가 저점에서 <strong>약 20% 상승</strong>하여 긍정적인 흐름을 보이고 있다고 언급했습니다. 현재 코스피의 주요 밸류에이션 레벨을 다음과 같이 제시하며 향후 시장 대응 전략을 논의했습니다:
+            <ul>
+                <li><strong>PR 8배:</strong> 약 6,150 ~ 6,600 포인트</li>
+                <li><strong>PR 9배:</strong> 약 7,450 포인트</li>
+                <li><strong>PR 10배:</strong> 약 8,150 ~ 8,180 포인트</li>
+            </ul>
+            현재 시장은 PR 7배 수준에 도달하면 <strong>무조건 상승할 것이라는 강한 확신</strong>을 가지고 있으며, 12개월 선행 EPS가 꺾이지 않는 한 <em>단기적인 등락은 있더라도 장기적인 상승 추세는 지속될 것</em>으로 전망했습니다. 과거 코로나 팬데믹이나 금융 위기 사례에서 추세 반전에 약 6개월이 소요되었던 점을 미루어 볼 때, 갑작스러운 하락보다는 완만한 추세 전환이 예상됩니다.
+        </p>
+        <p>
+            다만, 내년 시장에 대해서는 <strong>다소 약세로 볼 여지도 있다</strong>는 의견도 제시되었습니다. 특히, 진영 연구원의 '폭망 시나리오'와 개인적인 유가 250달러 전망 등은 시장의 잠재적 리스크 요인으로 언급되었습니다. 현재 센터 내부에서는 시장을 아주 강하게 보지는 않으며, 6,300 포인트 수준에서 헤지 전략을 지속할 예정이므로 베어 마켓(하락장)에 대한 부담은 크지 않다고 판단했습니다. 시장이 상승하더라도 방송 출연 등 외부 활동보다는 내부 세미나를 통해 시장과 소통하는 방향을 고려하고 있습니다.
+        </p>
+
+        <h3>2. 주요 금융 정책 및 시장 이슈</h3>
+        <h4>연준 최민호 관련 논의</h4>
+        <p>
+            최민호 연준 의장 확정 소식과 관련하여 이정훈 연구원은 최 의장이 인플레이션을 중요하게 여기는 만큼 <strong>매파적인 스탠스</strong>를 취해야 할 것이라고 언급했습니다. 그러나 현 상황에서는 그렇게까지 강경한 태도를 보이지는 않을 것으로 예상했습니다. 최 의장이 주장했던 유동성 관련 정책 방식 (양적 긴축 지속, 기준금리 인하, 장기 금리 인상 유도, 은행 대출 활성화)에 대해 연준 내부에서 <strong>이견이 많아 실제 정책으로 이어질지는 미지수</strong>라는 의견이 제시되었습니다. 금융 위기 이후 구축된 기존 시스템을 되돌리는 것에 대한 회의적인 시각이 존재하며, 청문회 발언과 실제 취임 후 정책 실행 능력은 별개로 봐야 한다는 입장이었습니다.
+        </p>
+
+        <h4>최민호 청문회 일정 확인</h4>
+        <p>
+            이경민 연구원은 최민호 의장의 청문회가 <strong>며칠 동안 진행되는지 확인</strong>해 줄 것을 이정훈 연구원에게 요청했습니다. (이정훈 연구원: "청문회는 하루 아닌가요?" -> 이경민 연구원: "한 번 확인해 줘 봐.")
+        </p>
+
+        <h3>3. 지정학적 리스크 점검</h3>
+        <h4>중동 지역 휴전 및 협상 동향</h4>
+        <p>
+            이경민 연구원은 <strong>22일이 휴전 기간이 맞는지</strong> 확인을 요청했습니다. 중동 지역의 종전 협상 진행 상황에 대한 지속적인 관심과 업데이트가 필요하다는 점을 강조했습니다.
+        </p>
+
+        <h4>이스라엘-헤즈볼라 합의</h4>
+        <p>
+            안범수 연구원이 <strong>이스라엘과 헤즈볼라 간의 합의 기사</strong>가 보도되었다고 공유했습니다. 이경민 연구원은 해당 내용을 정리하여 공유해 줄 것을 요청했습니다. 이는 중동 지역의 긴장 완화에 긍정적인 신호로 해석될 수 있으므로, 관련 정보의 신속한 파악과 공유가 중요합니다.
+        </p>
+
+        <h3>4. 기업 실적 및 향후 일정</h3>
+        <h4>하이닉스 실적 예상</h4>
+        <p>
+            하이닉스의 3분기 실적에 대해 현재 컨센서스는 40조 원으로 잡혀있으나, 실제로는 <strong>38조 원 수준으로 나올 가능성</strong>이 있다는 정보가 공유되었습니다. 이는 컨센서스를 소폭 하회하는 수준이 될 수 있으므로, 실적 발표 시 시장의 반응을 주시해야 할 것입니다.
+        </p>
+
+        <h4>다음 주 주요 일정</h4>
+        <p>
+            미국 실적 발표 외에 다음 주에는 특별한 경제 지표나 이벤트는 없는 것으로 파악되었습니다. 다만, 중동 지역의 종전 협상 진행 여부가 중요한 변수가 될 수 있으므로 지속적인 모니터링이 필요합니다.
+        </p>
+
+        <h3>5. 업무 분장 및 휴가 계획</h3>
+        <h4>금요일 업무 조정</h4>
+        <p>
+            성현 연구원이 금요일에 하루 종일 자리를 비우게 됨에 따라 업무 분장 조정이 필요하다는 논의가 있었습니다. 성현 연구원의 금요일 주요 업무는 주간 자료 발간, 장중 시황 작성, 컨디션 시 플랜 등이었습니다. 이경민 연구원은 <strong>장중 시황 작성은 본인이 담당</strong>할 것이며, 성현 연구원에게는 자료 업로드 등 간단한 업무만 처리해 줄 것을 요청했습니다. 이로써 업무 공백을 최소화하고 원활한 진행을 도모하기로 했습니다.
+        </p>
+
+        <h4>다음 주 휴가/출장 현황</h4>
+        <p>
+            다음 주 휴가 및 출장 계획에 대한 논의가 있었습니다. 성현 연구원은 휴가, 셋 연구원은 연주, 대표님과 이경민 연구원은 출장이 예정되어 있습니다. 또한, 수요일에는 광주 출장이 있는 참석자도 있었습니다. 이경민 연구원은 <strong>정확한 휴가/출장자 현황을 재집계</strong>하여 업무 계획에 반영할 것을 지시했습니다.
+        </p>
+
+        <h3>6. 기타 논의 및 건의사항</h3>
+        <h4>위드 방문 교통편 논의</h4>
+        <p>
+            권순호 연구원은 위드 방문 시 교통편에 대해 논의했습니다. 대중교통 이용 시 약 2시간 이상 소요되는 반면, 자가용 이용 시 약 1시간 30분 정도 소요될 것으로 예상되어 <strong>자가용 이용을 고려 중</strong>이라고 밝혔습니다. 다만, 퇴근 시 교통 체증 문제가 있을 수 있다는 점이 언급되었습니다.
+        </p>
+
+        <h4>시장 상황 업데이트 요청</h4>
+        <p>
+            이경민 연구원은 시장 상황에 변화가 있을 경우 <strong>단톡방이나 센터 내부 방에 즉시 공유</strong>해 줄 것을 당부했습니다. 특히, 다음 주가 중동 지역 임시 정리가 마지막 기한이므로, 이때 큰 변화 (합의, 연기 등)가 발생할 가능성이 높습니다. 따라서 관련 정보가 업데이트되는 대로 신속하게 공유하여 팀 전체가 시장 변화에 빠르게 대응할 수 있도록 할 것을 강조했습니다.
+        </p>
+
+        <h2>회의 인사이트</h2>
+        <ul>
+            <li>
+                <strong>거시 경제 지표의 상반된 흐름과 해석의 중요성:</strong> 한국 GDP는 단기적으로 긍정적이나, 석화 부문 생산 부진 등 구조적 요인으로 인한 하방 압력도 상존합니다. 특히, 컨센서스와 실제 전망치 간의 차이를 이해하고, YOY와 QoQ 지표를 종합적으로 분석하여 시장에 미칠 영향을 다각도로 평가하는 것이 중요합니다.
+            </li>
+            <li>
+                <strong>연준 정책 방향의 불확실성:</strong> 최민호 의장의 매파적 발언에도 불구하고, 연준 내부의 이견과 실제 정책 실행의 어려움이 존재한다는 점은 향후 금융 시장의 변동성을 키울 수 있는 요인입니다. 청문회와 실제 정책 간의 괴리를 주시하며 유동성 환경 변화에 대한 면밀한 분석이 요구됩니다.
+            </li>
+            <li>
+                <strong>코스피 시장의 견고한 상승 추세:</strong> 12개월 선행 EPS가 꺾이지 않는 한 코스피의 상승 추세는 지속될 것이라는 강한 믿음은 긍정적입니다. 다만, 과거 사례를 통해 추세 반전에 시간이 걸린다는 점을 인지하고, 내년 시장의 잠재적 약세 가능성도 함께 고려하여 유연한 대응 전략을 수립해야 합니다. 특히, 밸류에이션 레벨에 따른 대응 전략이 명확하게 제시되어 있어 시장 참여자들에게 중요한 가이드라인이 될 것입니다.
+            </li>
+            <li>
+                <strong>지정학적 리스크의 상시 모니터링 필요성:</strong> 중동 지역의 휴전 협상 및 이스라엘-헤즈볼라 합의 소식은 시장에 긍정적인 영향을 미칠 수 있으나, 언제든 돌발 변수가 발생할 수 있는 만큼 지속적인 정보 업데이트와 리스크 관리가 필수적입니다.
+            </li>
+            <li>
+                <strong>내부 소통 및 정보 공유의 중요성:</strong> 중요한 시장 변화나 내부 업무 조정 사항에 대한 신속한 공유는 팀의 효율적인 운영과 위기 대응 능력 강화에 핵심적인 역할을 합니다. 특히, 다음 주와 같이 중요한 이벤트가 예정된 시기에는 정보 공유의 속도와 정확성이 더욱 강조됩니다.
+            </li>
+        </ul>
+
+        <h2>향후 계획 및 다음 스텝</h2>
+        <ul>
+            <li><strong>최민호 청문회 일정 확인:</strong> 이정훈 연구원은 최민호 연준 의장의 청문회 일정을 정확히 확인하고 팀원들에게 공유할 예정입니다.</li>
+            <li><strong>이스라엘-헤즈볼라 합의 내용 정리:</strong> 안범수 연구원은 이스라엘과 헤즈볼라 간의 합의 관련 기사를 정리하여 팀 내에 공유할 것입니다.</li>
+            <li><strong>금요일 업무 분장 이행:</strong> 이경민 연구원은 금요일 성현 연구원의 부재 시 장중 시황 작성을 담당하며, 성현 연구원은 자료 업로드 등 지원 업무를 수행합니다.</li>
+            <li><strong>다음 주 휴가/출장자 현황 재집계:</strong> 이경민 연구원은 다음 주 휴가 및 출장 예정자의 최종 현황을 재집계하여 업무 공백이 발생하지 않도록 조치할 것입니다.</li>
+            <li><strong>시장 상황 실시간 업데이트:</strong> 모든 팀원은 중동 지역 휴전 협상, 기업 실적 등 시장에 영향을 미칠 수 있는 중요한 변화 발생 시 즉시 단톡방 및 센터 내부 방에 공유하여 팀 전체의 정보 비대칭을 해소하고 빠른 대응을 가능하게 합니다. 특히, 다음 주 임시 정리가 마지막 기한인 만큼 관련 소식에 대한 집중적인 모니터링이 요구됩니다.</li>
+            <li><strong>코스피 밸류에이션 추이 지속 관찰:</strong> 코스피의 PR 밴드 추이를 지속적으로 관찰하며, 12개월 선행 EPS 변화 및 시장의 반응에 따라 대응 전략을 유연하게 조정할 준비를 합니다.</li>
+        </ul>
+
+        <h2>회의 종합 평가 및 방향성</h2>
+        <p>
+            이번 회의는 국내외 경제 지표 분석부터 지정학적 리스크, 주요 금융 정책 방향, 그리고 내부 업무 조정까지 <strong>다각적인 측면에서 현재 시장 상황을 점검하고 향후 대응 전략을 논의하는 매우 생산적인 시간</strong>이었습니다. 특히, 코스피 시장에 대한 긍정적인 시각과 함께 잠재적 리스크 요인에 대한 경계심을 늦추지 않는 균형 잡힌 시각이 돋보였습니다.
+        </p>
+        <p>
+            회의를 통해 <strong>명확한 시장 방향성 (12개월 선행 EPS가 꺾이지 않는 한 상승 추세 유지)</strong>이 제시되었으며, 이는 팀원들이 시장 변화에 일관된 관점으로 대응할 수 있는 중요한 기준점이 될 것입니다. 또한, 최민호 연준 의장의 정책 불확실성, 중동 지역의 지정학적 긴장 등 <strong>외부 변수에 대한 지속적인 모니터링과 신속한 정보 공유의 중요성</strong>이 다시 한번 강조되었습니다.
+        </p>
+        <p>
+            앞으로 팀은 제시된 시장 방향성을 기반으로 하되, 주요 경제 지표와 외부 변동성에 대한 <strong>실시간 분석 및 유연한 대응 전략 수립</strong>에 집중해야 할 것입니다. 특히, 다음 주에 예정된 중동 지역의 중요한 기한을 앞두고 정보 공유 채널을 적극 활용하여 팀 전체의 협업 시너지를 극대화하는 것이 중요합니다. 시장의 등락에 일희일비하기보다는 <strong>장기적인 관점에서 견고한 리서치와 분석을 바탕으로 시장을 선도하는 대신뷰의 역할을 지속적으로 강화</strong>해 나갈 것입니다.
+        </p>
+    </div>
+</body>
+</html>
